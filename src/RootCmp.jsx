@@ -7,6 +7,7 @@ import { TripsPage } from './Pages-AirBnB/TripsPage.jsx'
 import { HostPage } from './Pages-AirBnB/HostPage.jsx'
 import { WishListPage } from './Pages-AirBnB/WishListPage.jsx'
 import { HomePage } from './Pages-AirBnB/HomePage.jsx'
+import { AboutPage } from './Pages-AirBnB/AboutPage.jsx'
 import { InboxPage } from './Pages-AirBnB/InboxPage.jsx'
 import { HomePage } from './pages/HomePage'
 import { AboutUs, AboutTeam, AboutVision } from './pages/AboutUs'
@@ -23,6 +24,7 @@ import { TaskDetails } from './pages/TaskDetails'
 
 import { AppHeader } from './cmps/AppHeader'
 import { AppFooter } from './cmps/AppFooter'
+
 
 export function RootCmp() {
     return (
@@ -63,10 +65,11 @@ export function RootCmp_AirBnB() {
                     </Route>
 
                     <Route path="/trips" element={<TripsPage />} />
-                    <Route path="/Login" element={<LoginPage />} />
+                    <Route path="/login" element={<LoginPage />} />
                     <Route path="/wish" element={<WishListPage />}/>
                     <Route path="/inbox" element={<InboxPage />}/>
                     <Route path="/host" element={<HostPage />}/>
+                    <Route path="/about" element={<AboutPage />}/>
 
 
 
