@@ -1,3 +1,6 @@
+
+
+
 // Setup
 @import "setup/variables";
 @import "setup/functions";
@@ -28,8 +31,49 @@
 @import "cmps/UserMsg";
 
 
+:root {
+    // colors
+    
+    --clr-btn:#FF385C;
+    --clr-fltr-font:#222;
+    --clr-sub-font : #717171;
+    --clr-fltr-border:#DDDDDD;
+    --clr-fltr-bg:white;
+    --clr-fltr-spliter:#ddd;
+    
+    
+    
+
+    // fonts
+    --main-fnt:cereal, sans-serif;
+    --host-fnt :cereal-medium;
+    --sub-fnt :cereal-light;
+    
+    
+
+    //font-sizes
+    --bold-fnt:600;
+    --title-fnt-desc:1.625rem;
+    --sub-fnt: 0.875rem;
+    --amenity-font:1rem
 
 
+    // radius
+    --circle-rad: 50%;
+    --picture-rad:5%;
+    --filter-rad:40px;
+
+    
+
+    //border
+    --fltr-user-border:1px solid #DDDDDD;
 
 
+    //shadow 
+    --user-hvr-shad:0 2px 4px #0000002e;
+    --fltr-shad:0 1px 2px #00000014,0 4px 12px #0000000d;
+    --fltr-hvr-shad:0 2px 4px #0000002e;
+    --categ-shad:0 0 20px 22px #fff;
+    --categ-hvr-shad:0 6px 16px #0000001f;
 
+  }
