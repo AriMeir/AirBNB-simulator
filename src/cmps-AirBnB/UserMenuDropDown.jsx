@@ -1,7 +1,7 @@
 export function UserMenuDropDown() {
     return (
         <section>
-            <h1>Home sweet Home</h1>
+            <h1>Drop down</h1>
         </section >
     )
 }

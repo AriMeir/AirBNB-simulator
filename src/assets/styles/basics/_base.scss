@@ -21,12 +21,14 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: caveat;
+    font-family: var(--main-fnt);
     margin: 0 0 0.6em;
     line-height: 1;
 }
 
-
+.header {
+    width: 100%;
+}
 section, main, footer {
     padding: 5px;
 }
@@ -44,5 +46,22 @@ a {
 }
 a:hover {
     text-decoration: underline;
+}
+.flex-row-center{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.space-between {
+    justify-content: space-between;
+}
+.padding {
+    padding:20px
+}
+.center{
+    justify-content: center;
+}
+.grid {
+    display: grid;
 }
 

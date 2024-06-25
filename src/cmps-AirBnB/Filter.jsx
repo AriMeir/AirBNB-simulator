@@ -1,7 +1,7 @@
 export function Filter() {
     return (
         <section>
-            <h1>Home sweet Home</h1>
+            <h1>Filter</h1>
         </section >
     )
 }

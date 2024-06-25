@@ -1,4 +1,4 @@
-export function Chat() {
+export function InboxChat() {
     return (
         <section>
             <h1>Home sweet Home</h1>

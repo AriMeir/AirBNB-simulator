@@ -26,7 +26,11 @@
 @import "views/TaskDetails";
 
 // Components
-@import "cmps/AppHeader";
+@import "cmps/Header";
+@import "cmps/Footer";
+@import "cmps/Categories";
+@import "cmps/StayList";
+@import "cmps/StayPreview";
 @import "cmps/AppFooter";
 @import "cmps/UserMsg";
 

@@ -1,7 +1,7 @@
 export function Footer() {
     return (
-        <section>
-            <h1>Home sweet Home</h1>
+        <section className="footer flex-row-center center">
+            <h1>Footer</h1>
         </section >
     )
 }
