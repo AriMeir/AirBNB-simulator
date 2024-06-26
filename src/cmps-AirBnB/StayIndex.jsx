@@ -16,6 +16,6 @@ export function StayIndex() {
     }, [location.pathname]);
 
     return (
-        <StayList isWish={isWish} />   
+        <StayList isWish={isWish} />
     );
 }

@@ -1,5 +1,5 @@
 
-// import { storageService } from './async-storage.service'
+import { storageService } from './async-storage.service'
 import { Children } from 'react'
 import { httpService } from './http.service'
 import { utilService } from './util.service'
@@ -19,29 +19,29 @@ window.cs = tripService
 
 
 async function query(filterBy = { location:'', dates: '', Adults: 0, Children:0, Infants:0, Pets: 0 }) {
-    return httpService.get(STORAGE_KEY, filterBy)
+    return storageService.get(STORAGE_KEY, filterBy)
 }
 
 function getById(tripId) {
-    return httpService.get(`trip/${tripId}`)
+    return storageService.get(`trip/${tripId}`)
 }
 
 async function remove(tripId) {
-    return httpService.delete(`trip/${tripId}`)
+    return storageService.delete(`trip/${tripId}`)
 }
 async function save(trip) {
     var savedTrip
     if (trip._id) {
-        savedTrip = await httpService.put(`trip/${trip._id}`, trip)
+        savedTrip = await storageService.put(`trip/${trip._id}`, trip)
 
     } else {
-        savedTrip = await httpService.post('trip', trip)
+        savedTrip = await storageService.post('trip', trip)
     }
     return savedTrip
 }
 
 async function addTripMsg(tripId, txt) {
-    const savedMsg = await httpService.post(`trip/${tripId}/msg`, {txt})
+    const savedMsg = await storageService.post(`trip/${tripId}/msg`, {txt})
     return savedMsg
 }
 

@@ -1,6 +1,6 @@
 import { tripService } from '../services/trip.service.local'
-import { store } from '../store/store'
-import { ADD_TRIP, REMOVE_TRIP, SET_TRIPS, SET_TRIP, UPDATE_TRIP, ADD_TRIP_MSG } from './trip.reducer'
+import { store } from '../../store/store'
+import { ADD_TRIP, REMOVE_TRIP, SET_TRIPS, SET_TRIP, UPDATE_TRIP, ADD_TRIP_MSG } from '../reducers/trip.reducer'
 
 export async function loadTrips() {
     try {

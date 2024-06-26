@@ -11,7 +11,7 @@ export function StayList({isWish}) {
         if(isWish)
         console.log("Im on the stay list, and I will take care of only the favorite locations")
     })
-    
+
 
     return (
         <section className='stay-list grid'>

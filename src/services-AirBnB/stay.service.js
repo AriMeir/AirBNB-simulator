@@ -1,5 +1,5 @@
 
-// import { storageService } from './async-storage.service'
+import { storageService } from './async-storage.service'
 import { httpService } from './http.service'
 import { utilService } from './util.service'
 
@@ -11,38 +11,38 @@ export const stayService = {
     getById,
     save,
     remove,
-    getEmptyStay,
-    addStayMsg
+    getEmptyStay
+    // addStayMsg
 }
 window.cs = stayService
 
 
 async function query(filterBy = { location:'', dates: '', Adults: 0, Children:0, Infants:0, Pets: 0 }) {
-    return httpService.get(STORAGE_KEY, filterBy)
+    return storageService.get(STORAGE_KEY, filterBy)
 }
 
 function getById(stayId) {
-    return httpService.get(`stay/${stayId}`)
+    return storageService.get(`stay/${stayId}`)
 }
 
 async function remove(stayId) {
-    return httpService.delete(`stay/${stayId}`)
+    return storageService.delete(`stay/${stayId}`)
 }
 async function save(stay) {
     var savedStay
     if (stay._id) {
-        savedStay = await httpService.put(`stay/${stay._id}`, stay)
+        savedStay = await storageService.put(`stay/${stay._id}`, stay)
 
     } else {
-        savedStay = await httpService.post('stay', stay)
+        savedStay = await storageService.post('stay', stay)
     }
     return savedStay
 }
 
-async function addStayMsg(stayId, txt) {
-    const savedMsg = await httpService.post(`stay/${stayId}/msg`, {txt})
-    return savedMsg
-}
+// async function addStayMsg(stayId, txt) {
+//     const savedMsg = await httpService.post(`stay/${stayId}/msg`, {txt})
+//     return savedMsg
+// }
 
 
 function getEmptyStay() {
@@ -53,7 +53,7 @@ function getEmptyStay() {
         imgUrls: [],
         price: utilService.getRandomIntInclusive(200, 1000),
         summary: "",
-        capacity: 0,
+        capacity: utilService.getRandomIntInclusive(2, 10),
         amenities: utilService.getRandomAmenities(),
         labels: [],
         host: {},
