@@ -52,8 +52,8 @@ export function stayReducer(state = initialState, action) {
     return newState
 }
 
-// unitTestReducer()
 
+// unitTestReducer()
 function unitTestReducer() {
     var state = initialState
     const stay1 = {_id: 'b101', title: 'Stay ' + parseInt(Math.random()*10)}

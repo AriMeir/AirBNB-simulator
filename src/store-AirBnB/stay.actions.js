@@ -1,122 +1,123 @@
-import { carService } from '../services/car.service.local'
+import { stayService } from '../services/stay.service.local'
 import { store } from '../store/store'
-import { ADD_CAR, REMOVE_CAR, SET_CARS, SET_CAR, UPDATE_CAR, ADD_CAR_MSG } from './car.reducer'
+import { ADD_STAY, REMOVE_STAY, SET_STAYS, SET_STAY, UPDATE_STAY, ADD_STAY_MSG } from './stay.reducer'
 
-export async function loadCars() {
+export async function loadStays() {
     try {
-        const cars = await carService.query()
-        console.log('Cars from DB:', cars)
-        store.dispatch(getCmdSetCars(cars))
+        const stays = await stayService.query()
+        console.log('Stays from DB:', stays)
+        store.dispatch(getCmdSetStays(stays))
     } catch (err) {
-        console.log('Cannot load cars', err)
+        console.log('Cannot load stays', err)
         throw err
     }
 }
 
-export async function loadCar(carId) {
+export async function loadStay(stayId) {
     try {
-        const car = await carService.getById(carId)
-        console.log('Car from DB:', car)
-        store.dispatch(getCmdSetCar(car))
+        const stay = await stayService.getById(stayId)
+        console.log('Stay from DB:', stay)
+        store.dispatch(getCmdSetStay(stay))
     } catch (err) {
-        console.log('Cannot load car', err)
+        console.log('Cannot load stay', err)
         throw err
     }
 }
 
-
-export async function removeCar(carId) {
+export async function removeStay(stayId) {
     try {
-        await carService.remove(carId)
-        store.dispatch(getCmdRemoveCar(carId))
+        await stayService.remove(stayId)
+        store.dispatch(getCmdRemoveStay(stayId))
     } catch (err) {
-        console.log('Cannot remove car', err)
+        console.log('Cannot remove stay', err)
         throw err
     }
 }
 
-export async function addCar(car) {
+export async function addStay(stay) {
     try {
-        const savedCar = await carService.save(car)
-        console.log('Added Car', savedCar)
-        store.dispatch(getCmdAddCar(savedCar))
-        return savedCar
+        const savedStay = await stayService.save(stay)
+        console.log('Added Stay', savedStay)
+        store.dispatch(getCmdAddStay(savedStay))
+        return savedStay
     } catch (err) {
-        console.log('Cannot add car', err)
+        console.log('Cannot add stay', err)
         throw err
     }
 }
 
-export async function updateCar(car) {
+export async function updateStay(stay) {
     try {
-        const savedCar = await carService.save(car)
-        console.log('Updated Car:', savedCar)
-        store.dispatch(getCmdUpdateCar(savedCar))
-        return savedCar
+        const savedStay = await stayService.save(stay)
+        console.log('Updated Stay:', savedStay)
+        store.dispatch(getCmdUpdateStay(savedStay))
+        return savedStay
     } catch (err) {
-        console.log('Cannot save car', err)
+        console.log('Cannot save stay', err)
         throw err
     }
 }
 
-export async function addCarMsg(carId, txt) {
+export async function addStayMsg(stayId, txt) {
     try {
-        const msg = await carService.addCarMsg(carId, txt)
-        console.log('Added Car message', msg)
-        store.dispatch(getCmdAddCarMsg(msg))
+        const msg = await stayService.addStayMsg(stayId, txt)
+        console.log('Added Stay message', msg)
+        store.dispatch(getCmdAddStayMsg(msg))
         return msg
     } catch (err) {
-        console.log('Cannot add car msg', err)
+        console.log('Cannot add stay msg', err)
         throw err
     }
 }
 
+
 // Command Creators:
-function getCmdSetCars(cars) {
+function getCmdSetStays(stays) {
     return {
-        type: SET_CARS,
-        cars
+        type: SET_STAYS,
+        stays
     }
 }
-function getCmdSetCar(car) {
+function getCmdSetStay(stay) {
     return {
-        type: SET_CAR,
-        car
+        type: SET_STAY,
+        stay
     }
 }
-function getCmdRemoveCar(carId) {
+function getCmdRemoveStay(stayId) {
     return {
-        type: REMOVE_CAR,
-        carId
+        type: REMOVE_STAY,
+        stayId
     }
 }
-function getCmdAddCar(car) {
+function getCmdAddStay(stay) {
     return {
-        type: ADD_CAR,
-        car
+        type: ADD_STAY,
+        stay
     }
 }
-function getCmdUpdateCar(car) {
+function getCmdUpdateStay(stay) {
     return {
-        type: UPDATE_CAR,
-        car
+        type: UPDATE_STAY,
+        stay
     }
 }
-function getCmdAddCarMsg(msg) {
+function getCmdAddStayMsg(msg) {
     return {
-        type: ADD_CAR_MSG,
+        type: ADD_STAY_MSG,
         msg
     }
 }
 
+
 // unitTestActions()
 async function unitTestActions() {
-    await loadCars()
-    await addCar(carService.getEmptyCar())
-    await updateCar({
+    await loadStays()
+    await addStay(stayService.getEmptyStay())
+    await updateStay({
         _id: 'm1oC7',
-        title: 'Car-Good',
+        title: 'Stay-Good',
     })
-    await removeCar('m1oC7')
-    // TODO unit test addCarMsg
+    await removeStay('m1oC7')
+    // TODO unit test addStayMsg
 }
