@@ -18,7 +18,7 @@ export function RootCmp() {
         <div>
             <main>
                 <Routes>
-                    <Route path="/stay" element={<HomePage />} >
+                    <Route path="/stay?" element={<HomePage />} >
                         <Route path="/stay/:stayId" element={<StayDetailsPage />}/>             
                     </Route>
                     <Route path="/trips" element={<TripsPage />} />
