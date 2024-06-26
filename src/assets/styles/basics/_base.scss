@@ -52,6 +52,11 @@ a:hover {
     flex-direction: row;
     align-items: center;
 }
+.flex-column-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .space-between {
     justify-content: space-between;
 }
@@ -69,5 +74,15 @@ a:hover {
 }
 .border{
     border: 1px solid black;
+}
+.semi-title{
+    font-size: (var(--sub-fnt));
+    margin:auto;
+    width: 90%;
+    height: 70px;
+    border-bottom:1px solid var(--clr-fltr-spliter) ;
+}
+.normal-button{
+    min-width: 500px;
 }
 

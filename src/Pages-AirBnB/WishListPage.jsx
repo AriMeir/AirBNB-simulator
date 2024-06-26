@@ -1,7 +1,12 @@
+import { Header } from "../cmps-AirBnB/Header"
+import { StayIndex } from "../cmps-AirBnB/StayIndex"
+
+
 export function WishListPage() {
     return (
         <section>
-            <h1>Home sweet Home</h1>
+            <Header/>
+            <StayIndex/>
         </section >
     )
 }

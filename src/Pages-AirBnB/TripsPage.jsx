@@ -1,8 +1,14 @@
-export function TripsPage() {
-    return (
-        <section>
-            <h1>Home sweet Home</h1>
-        </section >
-    )
-}
+import { Header } from "../cmps-AirBnB/Header";
+import { TripTable } from "../cmps-AirBnB/TripTable";
 
+export function TripsPage() {
+   
+
+    return (
+        <>
+            <Header />
+            
+            <TripTable/>
+        </>
+    );
+}

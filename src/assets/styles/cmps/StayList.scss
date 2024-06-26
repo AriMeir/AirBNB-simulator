@@ -1,5 +1,8 @@
 .stay-list {
     border:1px solid black;
     grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+    aspect-ratio: 2.6 / 1;
+    gap: 8px;
+    border-radius: 12px;
     
 }
