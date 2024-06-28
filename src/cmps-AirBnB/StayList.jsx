@@ -2,9 +2,9 @@ import { useEffect } from 'react';
 import { StayPreview } from './StayPreview';
 import { useNavigate } from 'react-router-dom'; // Ensure the correct import
 
-export function StayList({ stays, isWish}) {
+export function StayList({ stays, isWish, onHeartClick}) {
 
-    
+
     const navigate = useNavigate();
 
 
@@ -21,6 +21,7 @@ export function StayList({ stays, isWish}) {
                     key={stay._id}
                     stay={stay}
                     onClick={() => navigate(`/stay/${idx + 1}`)} // Dynamic path for illustration
+                    onHeartClick={() => onHeartClick(stay)}
                 />
             ))}
         </section>
