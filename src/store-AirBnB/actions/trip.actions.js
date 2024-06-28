@@ -1,6 +1,6 @@
-import { tripService } from '../services/trip.service.local'
-import { store } from '../../store/store'
-import { ADD_TRIP, REMOVE_TRIP, SET_TRIPS, SET_TRIP, UPDATE_TRIP, ADD_TRIP_MSG } from '../reducers/trip.reducer'
+import { tripService } from '../../services-AirBnB/trip.service'
+import { store } from '../../store-AirBnB/store'
+import { ADD_TRIP, REMOVE_TRIP, SET_TRIPS, SET_TRIP, UPDATE_TRIP, /* ADD_TRIP_MSG */ } from '../reducers/trip.reducer'
 
 export async function loadTrips() {
     try {
@@ -58,7 +58,7 @@ export async function updateTrip(trip) {
     }
 }
 
-export async function addTripMsg(tripId, txt) {
+/* export async function addTripMsg(tripId, txt) {
     try {
         const msg = await tripService.addTripMsg(tripId, txt)
         console.log('Added Trip message', msg)
@@ -68,7 +68,7 @@ export async function addTripMsg(tripId, txt) {
         console.log('Cannot add trip msg', err)
         throw err
     }
-}
+} */
 
 
 // Command Creators:

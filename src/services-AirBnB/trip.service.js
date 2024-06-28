@@ -3,9 +3,10 @@ import { storageService } from './async-storage.service'
 import { Children } from 'react'
 import { httpService } from './http.service'
 import { utilService } from './util.service'
+import { orders1, orders2 } from '../Data/stay'
 
 
-const STORAGE_KEY = 'trip'
+const STORAGE_KEY = 'trips'
 
 export const tripService = {
     query,
@@ -13,37 +14,43 @@ export const tripService = {
     save,
     remove,
     getEmptyTrip,
-    addTripMsg
 }
 window.cs = tripService
 
+_createTrips()
 
-async function query(filterBy = { location:'', dates: '', Adults: 0, Children:0, Infants:0, Pets: 0 }) {
-    return storageService.get(STORAGE_KEY, filterBy)
+async function query(filterBy /* = { check_in:'', check_out: '', booked: 0, price:0} */) {
+
+    let trips = await storageService.query(STORAGE_KEY);
+    if (filterBy) {
+        return storageService.get(STORAGE_KEY, filterBy) 
+    } else {
+        return trips
+    }
 }
 
 function getById(tripId) {
-    return storageService.get(`trip/${tripId}`)
+    return storageService.get(tripId)
 }
 
 async function remove(tripId) {
-    return storageService.delete(`trip/${tripId}`)
+    return storageService.delete(tripId)
 }
 async function save(trip) {
     var savedTrip
     if (trip._id) {
-        savedTrip = await storageService.put(`trip/${trip._id}`, trip)
+        savedTrip = await storageService.put(STORAGE_KEY, trip)
 
     } else {
-        savedTrip = await storageService.post('trip', trip)
+        savedTrip = await storageService.post(STORAGE_KEY, trip)
     }
     return savedTrip
 }
 
-async function addTripMsg(tripId, txt) {
+/* async function addTripMsg(tripId, txt) {
     const savedMsg = await storageService.post(`trip/${tripId}/msg`, {txt})
     return savedMsg
-}
+} */
 
 
 function getEmptyTrip() {
@@ -51,5 +58,14 @@ function getEmptyTrip() {
         Place: 'LakeView-' + utilService.makeId(),
         price: utilService.getRandomIntInclusive(1000, 9000),
         reviews: []
+    }
+}
+
+function _createTrips() {
+    let trips = utilService.loadFromStorage(STORAGE_KEY);
+    if (!trips || !trips.length) {
+        trips = [orders1, orders2]
+        
+        utilService.saveToStorage(STORAGE_KEY, trips);
     }
 }
