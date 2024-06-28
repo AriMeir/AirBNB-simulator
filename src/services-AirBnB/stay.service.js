@@ -1,4 +1,5 @@
 
+import { stay1, stay2 } from '../Data/stay'
 import { storageService } from './async-storage.service'
 import { httpService } from './http.service'
 import { utilService } from './util.service'
@@ -15,10 +16,16 @@ export const stayService = {
     // addStayMsg
 }
 window.cs = stayService
+_createStays()
 
-
-async function query(filterBy = { location:'', dates: '', Adults: 0, Children:0, Infants:0, Pets: 0 }) {
-    return storageService.get(STORAGE_KEY, filterBy)
+async function query(filterBy /* = { location:'', dates: '', Adults: 0, Children:0, Infants:0, Pets: 0 } */) {
+    let stays = await storageService.query(STORAGE_KEY);
+    if (filterBy) {
+        return storageService.get(STORAGE_KEY, filterBy) 
+    } else {
+        return stays
+    }
+   
 }
 
 function getById(stayId) {
@@ -60,5 +67,13 @@ function getEmptyStay() {
         loc: {},
         reviews: [{},{}],
         likedByUsers: []
+    }
+}
+function _createStays() {
+    let stays = utilService.loadFromStorage(STORAGE_KEY);
+    if (!stays || !stays.length) {
+        stays = [stay1,stay2];
+        
+        utilService.saveToStorage(STORAGE_KEY, stays);
     }
 }

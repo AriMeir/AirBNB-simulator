@@ -3,10 +3,11 @@ import { Outlet, useParams } from 'react-router'
 import {Categories} from '../cmps-AirBnB/Categories'
 import {StayIndex} from '../cmps-AirBnB/StayIndex'
 import {Footer} from '../cmps-AirBnB/Footer'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 export function HomePage() {
     const {stayId} = useParams()
     const [showCategories, setShowCategories] = useState(stayId)
+ 
     return (
         <section>
             <Header/>
