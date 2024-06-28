@@ -1,3 +1,4 @@
+import { stay1,stay2 } from "../Data/stay"
 export const storageService = {
     query,
     get,
@@ -7,7 +8,7 @@ export const storageService = {
 }
 
 function query(entityType, delay = 500) {
-    var entities = JSON.parse(localStorage.getItem(entityType)) || []
+    var entities = JSON.parse(localStorage.getItem(entityType)) 
     return new Promise(resolve => setTimeout(() => resolve(entities), delay))
 }
 

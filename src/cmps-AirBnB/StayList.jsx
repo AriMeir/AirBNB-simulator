@@ -2,8 +2,9 @@ import { useEffect } from 'react';
 import { StayPreview } from './StayPreview';
 import { useNavigate } from 'react-router-dom'; // Ensure the correct import
 
-export function StayList({isWish}) {
-    const previews = ['preview', 'preview', 'preview', 'preview', 'preview', 'preview', 'preview', 'preview', 'preview', 'preview', 'preview'];
+export function StayList({ stays, isWish}) {
+
+    
     const navigate = useNavigate();
 
 
@@ -11,14 +12,14 @@ export function StayList({isWish}) {
         if(isWish)
         console.log("Im on the stay list, and I will take care of only the favorite locations")
     })
-    
+
 
     return (
         <section className='stay-list grid'>
-            {previews.map((preview, idx) => (
+            {stays.map((stay, idx) => (
                 <StayPreview
-                    key={idx}
-                    preview={preview}
+                    key={stay._id}
+                    stay={stay}
                     onClick={() => navigate(`/stay/${idx + 1}`)} // Dynamic path for illustration
                 />
             ))}

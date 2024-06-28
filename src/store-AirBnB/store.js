@@ -1,8 +1,8 @@
 import { createStore, combineReducers } from 'redux'
 
-import { stayReducer } from './stay.reducer'
-import { userReducer } from './user.reducer'
-import { tripReducer } from './trip.reducer'
+import { stayReducer } from './reducers/stay.reducer'
+import { userReducer } from './reducers/user.reducer'
+import { tripReducer } from './reducers/trip.reducer'
 
 
 const rootReducer = combineReducers({

@@ -1,6 +1,6 @@
-import { stayService } from '../services/stay.service.local'
-import { store } from '../store/store'
-import { ADD_STAY, REMOVE_STAY, SET_STAYS, SET_STAY, UPDATE_STAY, ADD_STAY_MSG } from './stay.reducer'
+import { stayService } from '../../services-AirBnB/stay.service'
+import { store } from '../../store-AirBnB/store'
+import { ADD_STAY, REMOVE_STAY, SET_STAYS, SET_STAY, UPDATE_STAY, ADD_STAY_MSG } from '../reducers/stay.reducer'
 
 export async function loadStays() {
     try {
@@ -58,17 +58,17 @@ export async function updateStay(stay) {
     }
 }
 
-export async function addStayMsg(stayId, txt) {
-    try {
-        const msg = await stayService.addStayMsg(stayId, txt)
-        console.log('Added Stay message', msg)
-        store.dispatch(getCmdAddStayMsg(msg))
-        return msg
-    } catch (err) {
-        console.log('Cannot add stay msg', err)
-        throw err
-    }
-}
+// export async function addStayMsg(stayId, txt) {
+//     try {
+//         const msg = await stayService.addStayMsg(stayId, txt)
+//         console.log('Added Stay message', msg)
+//         store.dispatch(getCmdAddStayMsg(msg))
+//         return msg
+//     } catch (err) {
+//         console.log('Cannot add stay msg', err)
+//         throw err
+//     }
+// }
 
 
 // Command Creators:
@@ -102,12 +102,12 @@ function getCmdUpdateStay(stay) {
         stay
     }
 }
-function getCmdAddStayMsg(msg) {
-    return {
-        type: ADD_STAY_MSG,
-        msg
-    }
-}
+// function getCmdAddStayMsg(msg) {
+//     return {
+//         type: ADD_STAY_MSG,
+//         msg
+//     }
+// }
 
 
 // unitTestActions()

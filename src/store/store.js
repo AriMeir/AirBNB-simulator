@@ -24,6 +24,3 @@ export const store = createStore(rootReducer, middleware)
 //     console.log('storeState:\n', store.getState())
 //     console.log('*******************************')
 // })
-
-
-

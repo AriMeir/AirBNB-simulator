@@ -1,5 +1,3 @@
-import { userService } from '../services/user.service'
-
 export const INCREMENT = 'INCREMENT'
 export const DECREMENT = 'DECREMENT'
 export const CHANGE_COUNT = 'CHANGE_COUNT'
@@ -11,7 +9,7 @@ export const SET_SCORE = 'SET_SCORE'
 
 const initialState = {
     count: 10,
-    user: userService.getLoggedinUser(),
+    // user: userService.getLoggedinUser(),
     users: [],
     watchedUser : null
 }
