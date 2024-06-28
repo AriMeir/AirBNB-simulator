@@ -1,5 +1,5 @@
 import { Header } from "../cmps-AirBnB/Header";
-import { TripTable } from "../cmps-AirBnB/TripTable";
+import { TripIndex } from "../cmps-AirBnB/TripIndex";
 
 export function TripsPage() {
    
@@ -8,7 +8,7 @@ export function TripsPage() {
         <>
             <Header />
             
-            <TripTable/>
+            <TripIndex/>
         </>
     );
 }
