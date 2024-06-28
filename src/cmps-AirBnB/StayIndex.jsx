@@ -12,10 +12,10 @@ export function StayIndex() {
 
     const stays = useSelector(storeState => storeState.stayModule.stays)
 
-
     //useEffects
     useEffect(() => {
         loadStays()
+        console.log({stays})
     }, [])
 
 

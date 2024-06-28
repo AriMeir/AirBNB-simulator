@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import * as serviceWorkerRegistration from './serviceWorkerRegistration'
-import { store } from './store/store'
+import { store } from './store-AirBnB/store'
 import { RootCmp } from './RootCmp'
 import './assets/styles/main.scss'
 
