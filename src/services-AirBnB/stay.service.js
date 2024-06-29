@@ -21,27 +21,28 @@ _createStays()
 async function query(filterBy /* = { location:'', dates: '', Adults: 0, Children:0, Infants:0, Pets: 0 } */) {
     let stays = await storageService.query(STORAGE_KEY);
     if (filterBy) {
-        return storageService.get(STORAGE_KEY, filterBy) 
+        return storageService.get(STORAGE_KEY, filterBy)
     } else {
         return stays
     }
-   
+
 }
 
 function getById(stayId) {
-    return storageService.get(`stay/${stayId}`)
+    return storageService.get(stayId)
 }
 
 async function remove(stayId) {
-    return storageService.delete(`stay/${stayId}`)
+    return storageService.delete(stayId)
 }
+
 async function save(stay) {
     var savedStay
     if (stay._id) {
-        savedStay = await storageService.put(`stay/${stay._id}`, stay)
-
+        console.log(stay._id);
+        savedStay = await storageService.put(STORAGE_KEY, stay)
     } else {
-        savedStay = await storageService.post('stay', stay)
+        savedStay = await storageService.post(STORAGE_KEY, stay)
     }
     return savedStay
 }
@@ -73,7 +74,7 @@ function _createStays() {
     let stays = utilService.loadFromStorage(STORAGE_KEY);
     if (!stays || !stays.length) {
         stays = [stay1,stay2];
-        
+
         utilService.saveToStorage(STORAGE_KEY, stays);
     }
 }
