@@ -1,4 +1,4 @@
-import { stay1 } from "../../Data/stay"
+import { stay1, stay4, stay5, stay6, stay7, stay8, stay9 } from "../../Data/stay"
 import { stay2 } from "../../Data/stay"
 
 export const SET_STAYS = 'SET_STAYS'
@@ -62,12 +62,17 @@ export function unitTestReducer() {
     var state = initialState
     const stay_1 = stay1
     const stay_2 = stay2
+    const stay_3 = stay3
+    const stay_4 = stay4
+    const stay_5 = stay5
+    const stay_6 = stay6
+    const stay_7 = stay7
+    const stay_8 = stay8
+    const stay_9 = stay9
+    const stay_10 = stay10
 
-    console.log('Stay 1:', stay_1)
-    console.log('Stay 2:', stay_2)
 
-
-    state = stayReducer(state, {type: SET_STAYS, stays: [stay_1, stay_2]})
+    state = stayReducer(state, {type: SET_STAYS, stays: [stay_1,stay_2,stay_3,stay_4,stay_5,stay_6,stay_7,stay_8,stay_9,stay_10]})
     console.log('After SET_STAYS:', state)
 
     state = stayReducer(state, {type: REMOVE_STAY, stayId: stay_2._id})

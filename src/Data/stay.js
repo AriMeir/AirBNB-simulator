@@ -148,6 +148,15 @@ export const stay2 = {
   likedByUsers: ['mini-user']
 }
 
+export const stay3 = stay2
+export const stay4 = stay2
+export const stay5 = stay2
+export const stay6 = stay2
+export const stay7 = stay2
+export const stay8 = stay2
+export const stay9 = stay2
+export const stay10 = stay2
+
 export const orders = [
   {
     _id: "o1225",
@@ -172,7 +181,7 @@ export const orders = [
     status: "pending" // approved, rejected
   }
 ]
-export const orders1 = 
+export const orders1 =
   {
     _id: "o1226",
     hostId: "u102",
@@ -196,7 +205,7 @@ export const orders1 =
     status: "pending" // approved, rejected
   }
 
-export const orders2 = 
+export const orders2 =
   {
     _id: "o1227",
     hostId: "u102",

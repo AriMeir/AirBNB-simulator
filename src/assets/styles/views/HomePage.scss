@@ -1,17 +1,17 @@
-// .main-content {
-//     height: 100%;
-//     overflow: auto;
-//     display: grid;
-//     grid-template-columns: 1fr;
-//     grid-template-rows: auto auto 1fr auto;
-//     transition: grid-template-rows .7s ease;
-// }
-
 .main-content {
     height: 100%;
+    width: 100%;
     overflow: auto;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto 1fr auto;
+    margin-top: 120px; /* Adjust based on the combined height of the header and categories */
+    // margin: 0;
+    padding: 0;
     transition: grid-template-rows .7s ease;
+}
+
+.home {
+    height: 100%;
+    // grid-row: 2;
 }

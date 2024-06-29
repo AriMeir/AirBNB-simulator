@@ -1,4 +1,4 @@
-import { stay1,stay2 } from "../Data/stay"
+import { stay1,stay2,stay3,stay4,stay5,stay6,stay7,stay8,stay9,stay10 } from "../Data/stay"
 export const storageService = {
     query,
     get,

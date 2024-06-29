@@ -1,7 +1,13 @@
 .header{
     border:1px solid black;
 }
+.header{
+    // height: 60px; /* Adjust based on your design */
+    background: white; /* Example styling */
+    border-bottom: 1px solid #ccc; /* Example styling */}
 
 .header-container{
     width: 100%;
-}
+    // grid-row: 1;
+    position: fixed;
+    width: 100%;}
