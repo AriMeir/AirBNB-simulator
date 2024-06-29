@@ -1,4 +1,14 @@
-.stay-preview{
+.stay-preview {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+        "photo"
+        "info";
+    border-radius: 5%;
     cursor: pointer;
-    
+    max-width: 300px;
+    justify-content: center;
+    position: relative;
+    min-height: 300px;
 }

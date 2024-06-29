@@ -3,6 +3,19 @@
     grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
     aspect-ratio: 2.6 / 1;
     gap: 8px;
-    border-radius: 12px;
-    
+
+
+}
+
+.stay-list {
+    border:1px solid black;
+    display: grid;
+    padding: 50px;
+    width: 90%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 150px; /* Adjust height of squares */
+    gap: 10px; /* Adjust gap between squares */
+    overflow-y: scroll;
+    overflow: hidden;
+    height: 600px; /* Adjust height to allow vertical scrolling */
 }
