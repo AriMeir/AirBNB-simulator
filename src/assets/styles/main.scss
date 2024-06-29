@@ -67,6 +67,7 @@
 
 
     // radius
+    --reserv-rad:12px;
     --circle-rad: 50%;
     --picture-rad:5%;
     --filter-rad:40px;
@@ -83,5 +84,6 @@
     --fltr-hvr-shad:0 2px 4px #0000002e;
     --categ-shad:0 0 20px 22px #fff;
     --categ-hvr-shad:0 6px 16px #0000001f;
+    --reserv-shad:0 6px 16px rgba(0, 0, 0, 0.12);
 
   }
