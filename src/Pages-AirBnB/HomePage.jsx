@@ -11,13 +11,13 @@ export function HomePage() {
     return (
         <div className="wrapper">
             <Header className="header-container"/>
-                <div className='main-content'>
+                <main className='main-content'>
                     <div className='home'>
                         {!stayId && <Categories className="categories"/>}
                         {!stayId &&<StayIndex/>}
                         <Outlet />
                     </div>
-                </div>
+                </main>
             <Footer/>
         </div>
     )

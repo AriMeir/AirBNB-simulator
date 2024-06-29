@@ -9,7 +9,7 @@
 
 .wrapper {
     display: grid;
-    grid-template-rows: auto auto 1fr auto; /* header, categories, main-content, footer */
+    grid-template-rows: auto auto auto auto; /* header, categories, main-content, footer */
     height: 100vh;
 }
 
@@ -79,9 +79,9 @@ a:hover {
 .center{
     justify-content: center;
 }
-.grid {
-    display: grid;
-}
+// .grid {
+//     display: grid;
+// }
 .flex{
     display: flex;
 }
