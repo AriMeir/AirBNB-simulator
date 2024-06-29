@@ -1,12 +1,28 @@
 .main-content {
+    // height: 100%;
+    // width: 100%;
+    // margin-top: 90px;
+    // padding: 0;
+    // transition: grid-template-rows .7s ease;
+    // grid-area: main;
+    // display: grid;
+    grid-row: 3;
+    // overflow-y: auto; /* Ensure main content area scrolls if needed */
     height: 100%;
-    width: 100%;
-    margin-top: 90px;
+    margin-top: 59px;
+    margin-bottom: 30px;
     padding: 0;
-    transition: grid-template-rows .7s ease;
+    overflow-y: auto;
 }
+
+
 
 .home {
     height: 100%;
-    grid-row: 2;
+    margin-top: 59px;
+    margin-bottom: 30px;
+    padding: 0;
+    overflow-y: auto;
+    // transition: grid-template-rows .7s ease;
+    // grid-area: main;
 }

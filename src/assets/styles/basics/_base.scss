@@ -9,7 +9,17 @@
 
 .wrapper {
     display: grid;
-    grid-template-rows: auto auto auto auto; /* header, categories, main-content, footer */
+    // width: 90%;
+    // grid-template-columns: repeat(4, 1fr);
+    // grid-template-rows: repeat(4, auto);
+    // grid-auto-rows: 150px;
+    gap: 10px;
+    grid-template-rows: auto auto 1fr auto; /* header, categories, main-content, footer */
+    // grid-template-areas:
+        // "header"
+        // "categories"
+        // "main"
+        // "footer";
     height: 100vh;
 }
 

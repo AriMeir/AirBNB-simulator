@@ -5,7 +5,9 @@
 }
 
 .header-container{
+    // display: grid;
     grid-row: 1;
+    // grid-area: header;
     position: fixed;
     width: 100%;
     background: white; /* Example styling */

@@ -1,11 +1,17 @@
 .footer {
-    border: 1px solid black;
+    // border: 1px solid black;
     // grid-row: 4;
-    left: 0;
+    // grid-area: footer;
+    // left: 0;
     bottom: 0;
     position: fixed;
     width: 100%;
-    color: black;
+    // color: black;
     text-align: left;
     background-color: white;
+    // display: grid;
+    grid-row: 4;
+    border-top: 1px solid #ccc;
+
+
 }
