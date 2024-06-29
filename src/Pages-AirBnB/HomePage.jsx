@@ -7,19 +7,17 @@ import { useEffect, useState } from 'react'
 export function HomePage() {
     const {stayId} = useParams()
     const [showCategories, setShowCategories] = useState(stayId)
- 
+
     return (
-        <section>
+        <section className='main-content'>
             <Header/>
-            <div className='home'>   
+            <div className='home'>
             {!stayId && <Categories/>}
             {!stayId &&<StayIndex/>}
             <Outlet />
             <Footer/>
             </div>
-
         </section >
-        
+
     )
 }
-
