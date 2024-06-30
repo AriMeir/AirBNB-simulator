@@ -55,6 +55,7 @@
 }
 .reservation-container{
     min-height: 800px;
+    position:sticky
     
 }
 .reviews{
@@ -78,6 +79,7 @@
 
 .reservation-form {
     border: 1px solid #dedede;
+    position: sticky;
     border-radius: 12px;
     box-shadow: var(--reserv-shad);
     width: 100%;

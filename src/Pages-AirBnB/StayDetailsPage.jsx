@@ -111,7 +111,7 @@ export function StayDetailsPage() {
 
                             </div>
                             
-                            <div className='stay-calender  border-botton'>
+                            <div className='stay-calender  border-botton pad-box'>
                                 <div className='date-picker-header'>
                                     <h4>5 nights</h4>
                                     <h5>dates</h5>
