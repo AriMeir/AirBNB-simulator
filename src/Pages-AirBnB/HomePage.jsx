@@ -8,17 +8,28 @@ export function HomePage() {
     const {stayId} = useParams()
     const [showCategories, setShowCategories] = useState(stayId)
 
-    return (
+/*     return (
         <div className="wrapper">
             <Header className="header-container"/>
             <div className='main-content'>
-                {/* <div className='home'> */}
                     {!stayId && <Categories className="categories"/>}
                     {!stayId &&<StayIndex/>}
                     <Outlet />
-                {/* </div> */}
             </div>
             <Footer/>
         </div>
+    ) */
+
+    return (
+        <section className='main-content'>
+            <Header className="header-container"/>
+            <div className='home'>
+            {!stayId && <Categories className="categories"/>}
+            {!stayId &&<StayIndex/>}
+            <Outlet />
+            <Footer/>
+            </div>
+        </section >
+
     )
 }

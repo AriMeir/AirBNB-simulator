@@ -1,10 +1,9 @@
 .categories{
-    background: white; /* Example styling */
+    background: white;
     position: fixed;
     width: 100%;
-    border-bottom: 1px solid #ccc; /* Example styling */
-    z-index: 10; /* Ensure it stays on top of other content */
-    // grid-area: categories
-    // display: grid;
+    border-bottom: 1px solid #ccc;
+    z-index: 10;
     grid-row: 2;
+    margin-top: 8px;
 }
