@@ -1,10 +1,11 @@
-import { useNavigate } from 'react-router-dom';
-import { useSearchParams } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Header } from '../cmps-AirBnB/Header';
 import { ConfirmationPage } from './ConfirmationPage';
+import { useState } from 'react';
 
 export function StayDetailsPage() {
     const [searchParams, setSearchParams] = useSearchParams();
+    const [showGuestsSection, setShowGuestsSection] = useState(false)
     const navigate = useNavigate();
 
     function reserveOrder() {
@@ -16,6 +17,10 @@ export function StayDetailsPage() {
             params.set('adults', 'new');
             return params;
         });
+    }
+    
+    function toggleGuestsSection() {
+        setShowGuestsSection(prev => !prev);
     }
 
     const hasSearchParams = searchParams.has('checkInDate') && searchParams.has('checkOutDate') && searchParams.has('price') && searchParams.has('adults');
@@ -44,12 +49,9 @@ export function StayDetailsPage() {
                                         <span>2 guests • 1 bedroom • 2 beds • 1 bath</span>
                                     </div>
                                     <div className='host-detail-img border'>img</div>
-
                                 </div>
                             </div>
                             <div className='stay-highlights border-botton pad-box'>
-
-
                                 <div className='highlight flex align-left'>
                                     <div className='highlight-img'>img</div>
                                     <div className='highlight-text'>
@@ -57,8 +59,6 @@ export function StayDetailsPage() {
                                         <p>100% of recent guests gave the location a 5-star rating.</p>
                                     </div>
                                 </div>
-
-
                                 <div className='highlight flex align-left'>
                                     <div className='highlight-img'>img</div>
                                     <div className='highlight-text'>
@@ -66,7 +66,6 @@ export function StayDetailsPage() {
                                         <p>100% of recent guests gave the check-in process a 5-star rating.</p>
                                     </div>
                                 </div>
-
                                 <div className='highlight flex align-left'>
                                     <div className='highlight-img'>img</div>
                                     <div className='highlight-text'>
@@ -75,42 +74,32 @@ export function StayDetailsPage() {
                                     </div>
                                 </div>
                             </div>
-                           
-
-
                             <div className='air-cover border-botton flex-column-left align-left pad-box'>
                                 <div className='air-cover-img'>
                                     aircover
                                 </div>
                                 <p className='air-cover-txt'>
-                                Every booking includes free protection from Host cancellations, listing inaccuracies, and other issues like trouble checking in.
+                                    Every booking includes free protection from Host cancellations, listing inaccuracies, and other issues like trouble checking in.
                                 </p>
                             </div>
-                            <div className='stay-summory-spanish flex-column-left align-left border-botton pad-box'>
+                            <div className='stay-summory-spanish flex column center align-left border-botton pad-box'>
                                 <p>
-                                Welcome! Upgrades Added as of January 2018 This listing is located in the Spanish Harlem Section of Manhattan. I offer a cozy apartment that has great transportation in and out the city! The area has a lot of ethnic restaurants and a lot of local, active residents. This residence is great for a quick, inexpensive stay in New York whether its for business, travel, or personal purposes. I am glad to welcome all guests!
+                                    Welcome! Upgrades Added as of January 2018 This listing is located in the Spanish Harlem Section of Manhattan. I offer a cozy apartment that has great transportation in and out the city! The area has a lot of ethnic restaurants and a lot of local, active residents. This residence is great for a quick, inexpensive stay in New York whether its for business, travel, or personal purposes. I am glad to welcome all guests!
                                 </p>
-                                
                             </div>
-
-
-                                   
-
                             <div className='stay-amenities border-botton pad-box'>
                                 <h4>What this place offers</h4>
                                 <ul className='amenities-container'>
-                                  <li><div>img</div> <span className='amenity-name'>wifi</span></li>
-                                  <li><div>img</div> <span className='amenity-name'>wifi</span></li>
-                                  <li><div>img</div> <span className='amenity-name'>wifi</span></li>
-                                  <li><div>img</div> <span className='amenity-name'>wifi</span></li>
-                                  <li><div>img</div> <span className='amenity-name'>wifi</span></li>
-                                  <li><div>img</div> <span className='amenity-name'>wifi</span></li>
-                                  <li><div>img</div> <span className='amenity-name'>wifi</span></li>
-                                  <li><div>img</div> <span className='amenity-name'>wifi</span></li>
+                                    <li><div>img</div> <span className='amenity-name'>wifi</span></li>
+                                    <li><div>img</div> <span className='amenity-name'>wifi</span></li>
+                                    <li><div>img</div> <span className='amenity-name'>wifi</span></li>
+                                    <li><div>img</div> <span className='amenity-name'>wifi</span></li>
+                                    <li><div>img</div> <span className='amenity-name'>wifi</span></li>
+                                    <li><div>img</div> <span className='amenity-name'>wifi</span></li>
+                                    <li><div>img</div> <span className='amenity-name'>wifi</span></li>
+                                    <li><div>img</div> <span className='amenity-name'>wifi</span></li>
                                 </ul>
-
                             </div>
-                            
                             <div className='stay-calender  border-botton pad-box'>
                                 <div className='date-picker-header'>
                                     <h4>5 nights</h4>
@@ -119,15 +108,28 @@ export function StayDetailsPage() {
                                 <div className='calender-wrapper'>
                                     There will be a calender here
                                 </div>
-                                <div className='date-picker-buttons flex-row-center space-between'>
-                                    <button>Select guests</button>
+                                <div className='date-picker-buttons flex row align-center space-between'>
+                                    <button onClick={toggleGuestsSection}>Select guests</button>
                                     <button>Clear dates</button>
                                 </div>
                             </div>
-                            <div className='guest-select-list border-botton pad-box'>
-                                guest select list
-                            </div>
-
+                            {showGuestsSection && (
+                                <div className='guest-select-list border-botton pad-box'>
+                                    <button onClick={toggleGuestsSection}>X</button>
+                                    <div className='guest-select-row pad-box border-bottom flex'>
+                                        Adults
+                                    </div>
+                                    <div className='guest-select-row pad-box border-bottom flex'>
+                                        Children
+                                    </div>
+                                    <div className='guest-select-row pad-box border-bottom flex'>
+                                        Infants
+                                    </div>
+                                    <div className='guest-select-row pad-box border-bottom flex'>
+                                        Pets
+                                    </div>
+                                </div>
+                            )}
                         </div>
                         <div className='reservation-container  flex just-cont-start align-start'>
                             <div className='reservation-form-container flex'>
