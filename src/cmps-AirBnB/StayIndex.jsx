@@ -41,7 +41,7 @@ export function StayIndex() {
 
     return (
         <section className='stay-index flex-row-center center'>
-        <StayList isWish={isWish} stays={stays} onHeartClick={onUpdateStay}/>
+            <StayList isWish={isWish} stays={stays} onHeartClick={onUpdateStay}/>
         </section>
     );
 }

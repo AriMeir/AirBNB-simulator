@@ -1,21 +1,21 @@
 .stay-list {
-    border:1px solid black;
-    grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
-    aspect-ratio: 2.6 / 1;
-    gap: 8px;
-
-
-}
-
-.stay-list {
-    border:1px solid black;
     display: grid;
-    padding: 50px;
     width: 90%;
     grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     grid-auto-rows: 150px; /* Adjust height of squares */
     gap: 10px; /* Adjust gap between squares */
-    overflow-y: scroll;
-    overflow: hidden;
-    height: 600px; /* Adjust height to allow vertical scrolling */
+    // height: 100%;
 }
+
+.stay-index {
+    // overflow-y: auto;
+    // height: 100%;
+    width: 100%;
+    // overflow: auto;
+    margin-top: 60px; /* Adjust based on the height of the header */
+    // padding: 0;
+}
+
+//hi
+//try

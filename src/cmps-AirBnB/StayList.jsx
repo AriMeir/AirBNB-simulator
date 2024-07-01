@@ -15,7 +15,7 @@ export function StayList({ stays, isWish, onHeartClick}) {
 
 
     return (
-        <section className='stay-list grid'>
+        <section className='stay-list'>
             {stays.map((stay, idx) => (
                 <StayPreview
                     key={stay._id}

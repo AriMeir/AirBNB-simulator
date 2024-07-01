@@ -1,7 +1,15 @@
+
 .header{
-    border:1px solid black;
+    background: white; /* Example styling */
+    border-bottom: 1px solid #ccc; /* Example styling */
 }
 
 .header-container{
+    // display: grid;
+    grid-row: 1;
+    // grid-area: header;
+    position: fixed;
     width: 100%;
+    background: white; /* Example styling */
+    z-index: 10; /* Ensure it stays on top of other content */
 }
