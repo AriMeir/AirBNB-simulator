@@ -52,6 +52,12 @@ a:hover {
     flex-direction: row;
     align-items: center;
 }
+.flex-column-center-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
 .flex-column-center{
     display: flex;
     flex-direction: column;
@@ -84,4 +90,34 @@ a:hover {
 }
 .normal-button{
     min-width: 500px;
+}
+.flex-row {
+    flex-direction: row;
+}
+.flex-column {
+    flex-direction: row;
+}
+.just-cont-cent{
+    justify-content: center;
+}
+.just-cont-left{
+    justify-content: left;
+}
+.just-cont-start{
+    justify-content: flex-start;
+}
+.align-center{
+    align-items: center;
+}
+.align-start{
+    align-items: start;
+}
+.align-left{
+    align-items: left;
+}
+.border-botton {
+    border-bottom:1px  solid #dedede;
+}
+.pad-box{
+    padding-block: 2rem;
 }
