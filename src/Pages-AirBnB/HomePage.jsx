@@ -26,10 +26,12 @@ export function HomePage() {
             <div className='home'>
             {!stayId && <Categories className="categories"/>}
             {!stayId &&<StayIndex/>}
-            <Outlet />
-            <Footer/>
+            
+            {!stayId &&<Footer/>}
             </div>
-        </section >
+            <Outlet />
 
+        </section >
+        
     )
 }

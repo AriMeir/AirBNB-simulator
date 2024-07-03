@@ -58,7 +58,7 @@
     
 }
 .reviews{
-    border: 1px solid black;
+    
 }
 .map{
     border: 1px solid black;
@@ -118,4 +118,64 @@ h1 {
 .amenity-name{
     letter-spacing: .007em;
     padding-left: 1rem;
+}
+.guest-select-label-sub-header{
+    font-size: var(--sub-fnt);
+    color: var(--clr-sub-font);
+    font-weight: lighter;
+}
+.guest-select-label-header{
+    font-size: var(--amenity-font);
+    margin-top: 6px;
+}
+.counter-container {
+    width: 130px;
+}
+.counter-container p {
+    margin-top: 6;
+}
+.counter-container button {
+    background: var(--clr-fltr-bg);
+    border: 1px solid var(--clr-sub-borders);
+    border-radius: var(--circle-rad);
+    color: var(--clr-sub-font);
+    cursor: pointer;
+    align-items: center;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1.458rem;
+    justify-content: center;
+    outline: none;
+    width: 40px;
+}
+
+.lastOne{
+    border-bottom: none;
+}
+.review-bar{
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    margin-bottom: 30px;
+}
+.review-bar-and-score{
+    width: 50%;
+    gap:3%;
+    height: 0.5rem;
+}
+.review-bar-out-of{
+    background-color: rgb(221, 221, 221);
+    width: 75%;
+    height: 0.3rem;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+}
+.review-bar-score{
+    background-color: rgb(34, 34, 34);
+    height: 100%;
+    border-radius: inherit;
+    position: absolute;
+    left: 0px;
+    top: 0px;
 }
