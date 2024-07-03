@@ -40,7 +40,7 @@ export function StayIndex() {
 
 
     return (
-        <section className='stay-index flex-row-center center'>
+        <section className='stay-index'>
             <StayList isWish={isWish} stays={stays} onHeartClick={onUpdateStay}/>
         </section>
     );

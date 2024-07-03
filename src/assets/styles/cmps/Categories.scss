@@ -1,9 +1,9 @@
 .categories{
     background: white;
-    position: fixed;
-    width: 100%;
+    justify-content: center;
+}
+
+.categories-container{
+    background: white;
     border-bottom: 1px solid #ccc;
-    z-index: 10;
-    grid-row: 2;
-    margin-top: 8px;
 }

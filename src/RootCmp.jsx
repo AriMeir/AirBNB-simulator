@@ -11,26 +11,18 @@ import { AboutPage } from './Pages-AirBnB/AboutPage.jsx'
 import { InboxPage } from './Pages-AirBnB/InboxPage.jsx'
 
 
-
-
 export function RootCmp() {
     return (
-        <div>
-            <main>
-                <Routes>
-                    <Route path="/stay?" element={<HomePage />} >
-                        <Route path="/stay/:stayId" element={<StayDetailsPage />}/>             
-                    </Route>
-                    <Route path="/trips" element={<TripsPage />} />
-                    <Route path="/login" element={<LoginPage />} />
-                    <Route path="/wish" element={<WishListPage />} />
-                    <Route path="/inbox" element={<InboxPage />} />
-                    <Route path="/host" element={<HostPage />} />
-                    <Route path="/about" element={<AboutPage />} />
-                </Routes>
-            </main>
-        </div>
+        <Routes>
+            <Route path="/stay?" element={<HomePage />} >
+                <Route path="/stay/:stayId" element={<StayDetailsPage />}/>
+            </Route>
+            <Route path="/trips" element={<TripsPage />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/wish" element={<WishListPage />} />
+            <Route path="/inbox" element={<InboxPage />} />
+            <Route path="/host" element={<HostPage />} />
+            <Route path="/about" element={<AboutPage />} />
+        </Routes>
     );
 }
-
-

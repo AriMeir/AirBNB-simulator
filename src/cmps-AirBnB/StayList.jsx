@@ -17,7 +17,7 @@ export function StayList({ stays, isWish, onHeartClick}) {
     return (
         <section className='stay-list'>
             {stays.map((stay, idx) => (
-                <StayPreview
+                <StayPreview className='stay-item'
                     key={stay._id}
                     stay={stay}
                     onClick={() => navigate(`/stay/${idx + 1}`)} // Dynamic path for illustration

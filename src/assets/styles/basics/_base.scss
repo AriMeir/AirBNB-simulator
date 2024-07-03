@@ -7,13 +7,6 @@
     color: $clr6;
 }
 
-.wrapper {
-    display: grid;
-    gap: 10px;
-    grid-template-rows: auto auto 1fr auto; /* header, categories, main-content, footer */
-    height: 100vh;
-}
-
 html, body {
     height: 100%;
     margin: 0;
