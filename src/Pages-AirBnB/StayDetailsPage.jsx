@@ -203,13 +203,13 @@ export function StayDetailsPage() {
                         <h2> 4.73 • 2 reviews</h2>
                         <div className='review-bar grid'>
                             <div className='first-review-column'>
-                                <ReviewScoreBar header={'Cleanliness'} score={4.7}/>
+                                <ReviewScoreBar header={'Cleanliness'} score={2}/>
                                 <ReviewScoreBar header={'Communication'} score={4.85}/>
                                 <ReviewScoreBar header={'Check-in'} score={3.7}/>
                             </div>
                             <div className='second-review-column'>
                                 <ReviewScoreBar header={'Accuracy'} score={5}/>
-                                <ReviewScoreBar header={'Location'} score={4.9}/>
+                                <ReviewScoreBar header={'Location'} score={2}/>
                                 <ReviewScoreBar header={'Value'} score={4.75}/>
                             </div>
                         </div>
