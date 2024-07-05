@@ -1,14 +1,31 @@
 .stay-preview {
     width: 100%;
     display: grid;
-    grid-template-rows: 1fr auto;
-    grid-template-areas:
-        "photo"
-        "info";
+    grid-template-columns: 1fr 30px;
+    grid-template-rows: 30px 1fr 120px;
     border-radius: 5%;
     cursor: pointer;
     max-width: 300px;
     justify-content: center;
     position: relative;
-    min-height: 300px;
+    min-height: 340px;
+
+    > * {
+        // grid-column: 1;
+
+        &.full {
+            grid-column: 1 /-1;
+        }
+    }
+}
+
+.stay-preview .card {
+    grid-row: 3;
+    margin-left: 6px;
+    margin-bottom: 0;
+    // font-weight: bold;
+
+    > p {
+        margin-bottom: 0;
+    }
 }

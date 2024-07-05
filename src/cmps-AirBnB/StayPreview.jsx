@@ -9,13 +9,19 @@ export function StayPreview({ stay, onClick, onHeartClick}) {
 
     return (
         <div className='stay-preview border' onClick={onClick}>
-            <p>{stay._id}</p>
+            {stay.imgUrls[1]}
             <button onClick={(e) => {
-                e.stopPropagation(); // Prevent triggering onClick of the stay preview
-                onHeartClick();
+                e.stopPropagation()
+                onHeartClick()
             }}>
                 ♡
             </button>
+            <div className='card full'>
+                <h1>Barcelona, Spain</h1>
+                <p>5000 kilometers away</p>
+                <p>May 23 - Sep 1</p>
+                <p>$200 night</p>
+            </div>
         </div>
     )
 }

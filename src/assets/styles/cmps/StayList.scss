@@ -45,7 +45,6 @@
     display: grid;
     gap: var(--gap);
     grid-template-columns: var(--breakpoint-grid_column-template);
-    overflow-y: auto;
 }
 
 @media (min-width: 1200px) {
