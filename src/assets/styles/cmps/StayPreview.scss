@@ -42,6 +42,19 @@
     }
 }
 
+.card-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.star-reviews {
+    display: flex;
+    align-items: center;
+    color: #222222;
+    white-space: break-spaces;
+}
+
 .heart-icon {
     position: absolute;
     z-index: 10;

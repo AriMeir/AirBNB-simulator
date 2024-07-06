@@ -20,7 +20,10 @@ export function StayPreview({ stay, onClick, onHeartClick}) {
                 </div>
             </div>
             <div className='card-bottom full'>
-                <h1>Barcelona, Spain</h1>
+                <div className='card-header'>
+                    <h1>Barcelona, Spain</h1>
+                    <div className='star-reviews'>{svgIcons.starReview} 4.8</div>
+                </div>
                 <p>5000 kilometers away</p>
                 <p>May 23 - Sep 1</p>
                 <p>$200 night</p>

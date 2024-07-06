@@ -94,7 +94,8 @@ const categories_pic = [
     {
     title: "Top of the world",
     image:"https://res.cloudinary.com/dqti9icif/image/upload/v1717064149/top_of_the_world_rmvs0n.png"
-    }
+    },
+
 ];
 
 

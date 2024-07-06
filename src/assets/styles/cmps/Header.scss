@@ -1,7 +1,10 @@
 .header{
     background: white;
     display: grid;
-    grid-template-columns: 120px 1fr 200px;
+    grid-template-columns: 120px 1fr 250px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
 }
 
 .header-container{
@@ -14,6 +17,7 @@
 
 .header-logo{
     grid-column: 1;
+    padding-left: 14px;
 }
 
 .header-filter{
@@ -23,6 +27,8 @@
 
 .header-user{
     grid-column: 3;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .airbnb-icon{
@@ -32,6 +38,43 @@
 .airbnb-header{
     margin: 0 5px;
     color: #ff385c;
-    font-size: 25px;
-    letter-spacing: -2px;
+    font-size: 24px;
+    letter-spacing: -1px;
+}
+
+.switch-to-host{
+    color: #858585;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.user-menu {
+    border-radius: 50px;
+    border: 1px solid #DDDDDD;
+    cursor: pointer;
+    transition: box-shadow .3s;
+    position: relative;
+    padding: 5px 5px 5px 10px;
+    align-items: center;
+}
+
+.user-dropdown {
+    display: block;
+    fill: none;
+    height: 20px;
+    width: 20px;
+    stroke: #656565;
+    stroke-width: 3;
+    overflow: visible;
+    margin-right: 6px;
+    margin-top: 5px;
+}
+
+.user-profile-pic {
+    display: block;
+    height: 30px;
+    width: 30px;
+    fill: #656565;
+    stroke: #656565;
+
 }
