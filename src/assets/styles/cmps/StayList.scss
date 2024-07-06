@@ -77,7 +77,7 @@
     }
 }
 
-@media (max-width: 599px) and (min-width: 400px) {
+@media (max-width: 599px) and (min-width: 0px) {
     :root {
         --breakpoint-grid_columns: 1;
     }

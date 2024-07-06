@@ -1,5 +1,7 @@
 .header{
     background: white;
+    display: grid;
+    grid-template-columns: 120px 1fr 200px;
 }
 
 .header-container{
@@ -8,4 +10,28 @@
     position: sticky;
     top: 0;
     z-index: 1;
+}
+
+.header-logo{
+    grid-column: 1;
+}
+
+.header-filter{
+    grid-column: 2;
+    text-align: center;
+}
+
+.header-user{
+    grid-column: 3;
+}
+
+.airbnb-icon{
+    color: #ff385c;
+}
+
+.airbnb-header{
+    margin: 0 5px;
+    color: #ff385c;
+    font-size: 25px;
+    letter-spacing: -2px;
 }

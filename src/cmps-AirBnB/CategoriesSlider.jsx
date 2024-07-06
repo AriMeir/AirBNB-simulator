@@ -1,13 +1,10 @@
 import Slider from "react-slick";
-// Import css files
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
-// import { FullWidthBgImage } from "./ImageFullPath";
-// import { FiArrowRightCircle, FiArrowLeftCircle } from "react-icons/fi";
 // import { useResponsive } from "../useResponsive";
 import { useRef } from "react";
+import { svgIcons } from './Svgs'
 
-const FullWidthBgImage = ({
+
+const Category = ({
     image,
     text
     }) => {
@@ -38,13 +35,12 @@ export const SliderComp = ({
         <>
             <div className="categories main-content">
                     <div onClick={() => sliderRef.current.slickPrev()} className="prev">
-                        X
+                    {svgIcons.arrowLeft}
                     </div>
                     <Slider {...settings} ref={sliderRef}>
                         {data?.length > 0 && data.map((item, index) => (
                             <div key={index}>
-
-                                    <FullWidthBgImage
+                                    <Category
                                         image={item.image}
                                         text={item.title}
                                         // height={"60px"}
@@ -54,9 +50,9 @@ export const SliderComp = ({
                         ))}
                     </Slider>
                     <div onClick={() => sliderRef.current.slickNext()} className="next">
-                        X
+                        {svgIcons.arrowRight}
                     </div>
                 </div>
         </>
-    );
-};
+    )
+}

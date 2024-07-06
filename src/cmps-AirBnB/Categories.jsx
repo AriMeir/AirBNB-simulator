@@ -103,7 +103,7 @@ export function Categories() {
     <div className="categories-container full main-content">
         <SliderComp
             data={categories_pic}
-            slideNum={4}
+            slideNum={8}
         />
         </div>
     )
