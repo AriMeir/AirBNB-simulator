@@ -1,8 +1,7 @@
 export function Footer() {
     return (
-        <section className="footer flex-row-center center">
+        <section className="footer full main-content">
             <h1>Footer</h1>
         </section >
     )
 }
-

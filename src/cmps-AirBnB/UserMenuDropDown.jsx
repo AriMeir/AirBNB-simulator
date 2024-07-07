@@ -1,8 +1,10 @@
+import { svgIcons } from './Svgs'
+
 export function UserMenuDropDown() {
     return (
-        <section>
-            <h1>Drop down</h1>
+        <section className="user-menu flex">
+            <div className='user-dropdown'>{svgIcons.UserMenuDropDown}</div>
+            <div className='user-profile-pic'>{svgIcons.UserPofilePic}</div>
         </section >
     )
 }
-

@@ -41,15 +41,15 @@
       right: 0;
       bottom: 0;
     }
-  
+
     > img {
       height: 100%;
       object-fit: cover;
     }
   }
-  
+
   // Mixin for removing hover efects on iphone screen
-  @mixin hover-supported {    
+  @mixin hover-supported {
     @media not all and (pointer: coarse) {
         &:hover {
             @content;

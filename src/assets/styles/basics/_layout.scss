@@ -1,43 +1,75 @@
-// .main-content {
-//     display: grid;
-//     grid-template-columns: 20px 1fr 20px;
-//     grid-template-rows: auto auto 1fr auto;
-//     grid-template-areas:
-//         "header"
-//         "categories"
-//         "main"
-//         "footer";
+.main-content {
+    display: grid;
+    grid-template-columns: 60px 1fr 60px;
+    overflow-x: hidden;
 
-//     > * {
-//         grid-column: 2;
 
-//         &.full {
-//             grid-column: 1 /-1;
-//         }
-//     }
+    > * {
+        grid-column: 2;
 
-//     @include for-narrow-layout {
-//         grid-template-columns:
-//             minmax(20px, 1fr)
-//             minmax(auto, $mobile-breakpoint)
-//             minmax(20px, 1fr);
-//     }
-//     @include for-normal-layout {
-//         grid-template-columns:
-//             minmax(20px, 1fr)
-//             minmax(auto, $narrow-breakpoint)
-//             minmax(20px, 1fr);
-//     }
-//     @include for-wide-layout {
-//         grid-template-columns:
-//             minmax(20px, 1fr)
-//             minmax(auto, $normal-breakpoint)
-//             minmax(20px, 1fr);
-//     }
-// }
+        &.full {
+            grid-column: 1 /-1;
+        }
+    }
 
-// .card-grid {
-//     display: grid;
-//     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-//     grid-gap: 20px;
-// }
+    @media (min-width: 1801px) {
+        :root {
+            --breakpoint-grid_columns: 6;
+        }
+    }
+
+    @media (max-width: 1800px) and (min-width: 1651px) {
+        :root {
+            --breakpoint-grid_columns: 5;
+        }
+    }
+
+    @media (max-width: 1650px) and (min-width: 1024px) {
+        :root {
+            --breakpoint-grid_columns: 4;
+        }
+    }
+
+    @media (max-width: 1023px) and (min-width: 768px) {
+        :root {
+            --breakpoint-grid_columns: 3;
+        }
+    }
+
+    @media (max-width: 767px) and (min-width: 550px) {
+        :root {
+            --breakpoint-grid_columns: 2;
+        }
+    }
+
+    @media (max-width: 549px) and (min-width: 0px) {
+        :root {
+            --breakpoint-grid_columns: 1;
+        }
+    }
+
+    // @include for-narrow-layout {
+    //     grid-template-columns:
+    //         minmax(20px, 1fr)
+    //         minmax(auto, $mobile-breakpoint)
+    //         minmax(20px, 1fr);
+    // }
+    // @include for-normal-layout {
+    //     grid-template-columns:
+    //         minmax(20px, 1fr)
+    //         minmax(auto, $narrow-breakpoint)
+    //         minmax(20px, 1fr);
+    // }
+    // @include for-wide-layout {
+    //     grid-template-columns:
+    //         minmax(20px, 1fr)
+    //         minmax(auto, $normal-breakpoint)
+    //         minmax(20px, 1fr);
+    // }
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+}

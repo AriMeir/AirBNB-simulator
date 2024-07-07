@@ -1,11 +1,6 @@
 .footer {
-    bottom: 0;
-    position: fixed;
-    width: 100%;
     text-align: left;
     background-color: white;
-    grid-row: 4;
     border-top: 1px solid #ccc;
-
-
+    justify-content:start;
 }
