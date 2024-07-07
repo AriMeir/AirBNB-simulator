@@ -1,0 +1,75 @@
+.reservation-form-container {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1000;
+}
+
+.reservation-form {
+    border: 1px solid #dedede;
+    
+    border-radius: 12px;
+    box-shadow: var(--reserv-shad);
+    width: 100%;
+    gap: 24px;
+    margin-left: 50px;
+    min-height: 30%;
+    min-width: 70%;
+    padding: 20px;
+    background-color: white;
+}
+.price-stars-reviews{
+    width: 100%;
+}
+.price{
+    padding-top: 5px;
+    width: 30%;
+}
+.user-picker-container{
+    width: 100%;
+    border: 1px solid #b0b0b0;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    position: relative;
+    
+}
+.date-picker{
+    width: 100%;
+    border-bottom:1px solid #b0b0b0 ;
+}
+.check-in-picker, .check-out-picker {
+    padding:10px;
+    width: 50%;
+}
+.check-in-picker{
+    border-right:1px solid #b0b0b0 ;
+}
+.guest-picker{
+    padding:10px
+}
+.reserve-button-container{
+    width: 100%;
+    border-radius: 8px;
+    height:50px ;
+    border: 1px solid #b0b0b0;
+}
+.no-charge-yet{
+    width: 100%;
+}
+.reservation-prices{
+    width: 100%;
+    grid-template-columns: repeat(2,1fr);
+    
+    gap:10px;
+    font-size: 0.9rem;
+    border-bottom:1px solid #b0b0b0 ;
+    padding-bottom: 15px;
+}
+.reservation-prices .text-left{
+    text-align: left;
+
+}
+.total-price{
+    width: 100%;
+}

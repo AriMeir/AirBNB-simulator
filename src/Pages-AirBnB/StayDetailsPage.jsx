@@ -7,6 +7,7 @@ import { ReviewScoreBar } from '../cmps-AirBnB/ReviewScoreBar';
 import { MiniUserReview } from '../cmps-AirBnB/MiniUserReview';
 import { ReviewPopUp } from '../cmps-AirBnB/ReviewPopUp';
 import { MapComponent } from '../cmps-AirBnB/MapComponent';
+import { ReservationContainer } from '../cmps-AirBnB/ReservationContainer';
 
 export function StayDetailsPage() {
     const [showReviews, setShowReviews] = useState(false)
@@ -195,13 +196,7 @@ export function StayDetailsPage() {
                                 </div>
                             )}
                         </div>
-                        <div className='reservation-container  flex just-cont-start align-start'>
-                            <div className='reservation-form-container flex'>
-                                <div className='reservation-form flex center align-center ' onClick={reserveOrder}>
-                                    reservation
-                                </div>
-                            </div>
-                        </div>
+                       <ReservationContainer/>
 
                     </div>
 
@@ -214,7 +209,7 @@ export function StayDetailsPage() {
                         <h2> 4.73 • 2 reviews</h2>
                         <div className='review-bar grid'>
                             <div className='first-review-column'>
-                                <ReviewScoreBar header={'Cleanliness'} score={5}/>
+                                <ReviewScoreBar header={'Cleanliness'} score={3.7}/>
                                 <ReviewScoreBar header={'Communication'} score={4.85}/>
                                 <ReviewScoreBar header={'Check-in'} score={3.7}/>
                             </div>
