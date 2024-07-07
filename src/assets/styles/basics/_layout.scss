@@ -24,13 +24,13 @@
         }
     }
 
-    @media (max-width: 1650px) and (min-width: 1024px) {
+    @media (max-width: 1650px) and (min-width: 1324px) {
         :root {
             --breakpoint-grid_columns: 4;
         }
     }
 
-    @media (max-width: 1023px) and (min-width: 768px) {
+    @media (max-width: 1323px) and (min-width: 768px) {
         :root {
             --breakpoint-grid_columns: 3;
         }

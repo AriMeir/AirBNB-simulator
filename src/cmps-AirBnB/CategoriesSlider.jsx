@@ -9,7 +9,7 @@ const Category = ({
     text
     }) => {
     return (
-        <section>
+        <section className="category">
             <div className="bg-image-container"
                 style={{ backgroundImage: `url(${image})`}}>
             </div>
