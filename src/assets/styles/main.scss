@@ -30,6 +30,7 @@
 
 // Components
 @import "cmps/Header";
+@import "cmps/ReservationContainer.scss";
 @import "cmps/Footer";
 @import "cmps/Categories";
 
@@ -44,10 +45,11 @@
     
     --clr-btn:#FF385C;
     --clr-fltr-font:#222;
-    --clr-sub-font : #717171;
+    --clr-sub-font : #707070;
     --clr-fltr-border:#DDDDDD;
     --clr-fltr-bg:white;
     --clr-fltr-spliter:#ddd;
+    --clr-sub-borders:#b0b0b0;
     
     
     

@@ -13,13 +13,10 @@ export function HomePage() {
     return (
         <section className='main-content'>
             <Header className="header-container"/>
-            {/* <div className='home'> */}
             {!stayId && <Categories className="categories"/>}
             {!stayId &&<StayIndex/>}
-            <Outlet />
-            <Footer/>
-            {/* </div> */}
+            {!stayId &&<Footer/>}
         </section >
-
+        <Outlet />
     )
 }

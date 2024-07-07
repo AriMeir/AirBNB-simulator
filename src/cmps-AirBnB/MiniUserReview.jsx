@@ -1,0 +1,44 @@
+import {useEffect, useState } from "react"
+
+export function MiniUserReview({reviewerName,reviewDate, review}) {
+  
+    
+    const atLeastHundredyCharacters = review.length >= 150
+    const [reviewPreview, setReviewPreview ] = useState(atLeastHundredyCharacters? cutReview(review) : review) 
+    const [showMoreToggle, setShowMoreToggle] = useState(false)
+
+    function cutReview(review) {
+        return review.substring(0, 150) + '...';
+      }
+    function onShowMore() {
+        setShowMoreToggle(true)
+        setReviewPreview(review)
+    }
+    function onShowLess() {
+        setShowMoreToggle(false)
+        setReviewPreview(cutReview(review))
+    }
+    
+    return (
+        <div className='review-prev flex column'>
+            <div className='mini-user-details flex row align-left'>
+                <div className="mini-user-img border">img</div>
+                <div className="mini-user-name-date flex column align-left">
+                    <h6>{reviewerName}</h6>
+                    <span>{reviewDate}</span>
+                </div>
+                
+            </div>
+            <div className="review-text">
+                <p>{reviewPreview}</p>
+            </div>
+            <div className="show-more-less">
+                {!showMoreToggle && atLeastHundredyCharacters && <button className="show-more" onClick={onShowMore}>show more{' >'}</button>}
+                {showMoreToggle && atLeastHundredyCharacters && <button className="show-less" onClick={onShowLess}> {'< '}show less</button>}
+
+            </div>
+
+            </div>
+    )
+}
+

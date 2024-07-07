@@ -6,6 +6,12 @@
     background-color: $clr1;
     color: $clr6;
 }
+.text-left{
+    text-align: left;
+}
+.text-right{
+    text-align: right;
+}
 
 html, body {
     height: 100%;
@@ -124,7 +130,7 @@ a:hover {
 .align-left{
     align-items: left;
 }
-.border-botton {
+.border-bottom {
     border-bottom:1px  solid #dedede;
 }
 .pad-box{
