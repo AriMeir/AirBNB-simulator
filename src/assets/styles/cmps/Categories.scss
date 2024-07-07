@@ -9,14 +9,20 @@
     position: relative;
 }
 
-.slick-slide {
-    padding: 0 15px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+.slick-slider {
+    padding-top: 10px;
+    padding-bottom: 10px;
     display: flex;
-    width: auto !important;
-    max-width: auto !important;
+    width: 1000px !important;
+    max-width: 1000px !important;
 
+}
+.slick-list {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    // display: flex;
+    width: 1000px !important;
+    max-width: 1000px !important;
 }
 
 .slick-track {

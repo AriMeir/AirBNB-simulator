@@ -28,37 +28,37 @@
     grid-template-columns: var(--breakpoint-grid_column-template);
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1801px) {
     :root {
         --breakpoint-grid_columns: 6;
     }
 }
 
-@media (max-width: 1199px) and (min-width: 1000px) {
+@media (max-width: 1800px) and (min-width: 1651px) {
     :root {
         --breakpoint-grid_columns: 5;
     }
 }
 
-@media (max-width: 999px) and (min-width: 800px) {
+@media (max-width: 1650px) and (min-width: 1024px) {
     :root {
         --breakpoint-grid_columns: 4;
     }
 }
 
-@media (max-width: 799px) and (min-width: 700px) {
+@media (max-width: 1023px) and (min-width: 768px) {
     :root {
         --breakpoint-grid_columns: 3;
     }
 }
 
-@media (max-width: 699px) and (min-width: 600px) {
+@media (max-width: 767px) and (min-width: 550px) {
     :root {
         --breakpoint-grid_columns: 2;
     }
 }
 
-@media (max-width: 599px) and (min-width: 0px) {
+@media (max-width: 550px) and (min-width: 0px) {
     :root {
         --breakpoint-grid_columns: 1;
     }

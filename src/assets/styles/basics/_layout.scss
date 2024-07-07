@@ -1,6 +1,6 @@
 .main-content {
     display: grid;
-    grid-template-columns: 20px 1fr 20px;
+    grid-template-columns: 60px 1fr 60px;
     overflow-x: hidden;
 
 
@@ -12,24 +12,60 @@
         }
     }
 
-    @include for-narrow-layout {
-        grid-template-columns:
-            minmax(20px, 1fr)
-            minmax(auto, $mobile-breakpoint)
-            minmax(20px, 1fr);
+    @media (min-width: 1801px) {
+        :root {
+            --breakpoint-grid_columns: 6;
+        }
     }
-    @include for-normal-layout {
-        grid-template-columns:
-            minmax(20px, 1fr)
-            minmax(auto, $narrow-breakpoint)
-            minmax(20px, 1fr);
+
+    @media (max-width: 1800px) and (min-width: 1651px) {
+        :root {
+            --breakpoint-grid_columns: 5;
+        }
     }
-    @include for-wide-layout {
-        grid-template-columns:
-            minmax(20px, 1fr)
-            minmax(auto, $normal-breakpoint)
-            minmax(20px, 1fr);
+
+    @media (max-width: 1650px) and (min-width: 1024px) {
+        :root {
+            --breakpoint-grid_columns: 4;
+        }
     }
+
+    @media (max-width: 1023px) and (min-width: 768px) {
+        :root {
+            --breakpoint-grid_columns: 3;
+        }
+    }
+
+    @media (max-width: 767px) and (min-width: 550px) {
+        :root {
+            --breakpoint-grid_columns: 2;
+        }
+    }
+
+    @media (max-width: 549px) and (min-width: 0px) {
+        :root {
+            --breakpoint-grid_columns: 1;
+        }
+    }
+
+    // @include for-narrow-layout {
+    //     grid-template-columns:
+    //         minmax(20px, 1fr)
+    //         minmax(auto, $mobile-breakpoint)
+    //         minmax(20px, 1fr);
+    // }
+    // @include for-normal-layout {
+    //     grid-template-columns:
+    //         minmax(20px, 1fr)
+    //         minmax(auto, $narrow-breakpoint)
+    //         minmax(20px, 1fr);
+    // }
+    // @include for-wide-layout {
+    //     grid-template-columns:
+    //         minmax(20px, 1fr)
+    //         minmax(auto, $normal-breakpoint)
+    //         minmax(20px, 1fr);
+    // }
 }
 
 .card-grid {
