@@ -14,14 +14,12 @@ export function Header() {
                 <div className='header-filter'>
                     <Filter/>
                 </div>
-                <div className='header-user flex-row-center space-between'>
-                    <h1 className='switch-to-host'> Switch to hosting</h1>
-                    {svgIcons.languageSwitch}
+                <div className='header-user flex-row-center'>
+                    <h1 className='switch-to-host'> Switch to hosting</h1><p className='small-margin-right'></p>
+                    {svgIcons.languageSwitch}<p className='small-margin-right'></p>
                     <UserMenuDropDown/>
                 </div>
             </div>
         </section >
     )
 }
-
-// flex-row-center space-between padding

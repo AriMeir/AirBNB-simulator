@@ -40,7 +40,7 @@ export function StayIndex() {
 
 
     return (
-        <section className='stay-index'>
+        <section>
             <StayList isWish={isWish} stays={stays} onHeartClick={onUpdateStay}/>
         </section>
     );
