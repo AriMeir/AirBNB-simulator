@@ -7,15 +7,19 @@ import { stayService } from '../services-AirBnB/stay.service';
 import { svgIcons } from './Svgs'
 
 export function StayPreview({ stay, onClick, onHeartClick}) {
+    const [isHeartPressed, setIsHeartPressed] = useState(false);
+
+    const handleHeartClick = (e) => {
+        e.stopPropagation();
+        setIsHeartPressed(!isHeartPressed);
+        if (onHeartClick) onHeartClick();
+    };
 
     return (
         <div className='stay-preview' onClick={onClick}>
             <div className='card-top full'>
-                <img className='stay-img' src={stay.imgUrls[0]} alt={stay.name} style={{ width: '100%', height: '100%' }} />
-                <div className='heart-icon' onClick={(e) => {
-                    e.stopPropagation()
-                    onHeartClick()
-                }}>
+                <img className='stay-img' src={stay.imgUrls[0]} alt={stay.name} />
+                <div className={`heart-icon ${isHeartPressed ? 'pressed' : ''}`} onClick={handleHeartClick}>
                     {svgIcons.heart}
                 </div>
             </div>

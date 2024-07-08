@@ -9,7 +9,7 @@ const Category = ({
     text
     }) => {
     return (
-        <section>
+        <section className="category">
             <div className="bg-image-container"
                 style={{ backgroundImage: `url(${image})`}}>
             </div>
@@ -35,7 +35,7 @@ export const SliderComp = ({
         <>
             <div className="categories main-content">
                     <div onClick={() => sliderRef.current.slickPrev()} className="prev">
-                    {svgIcons.arrowLeft}
+                        {svgIcons.arrowLeft}
                     </div>
                     <Slider {...settings} ref={sliderRef}>
                         {data?.length > 0 && data.map((item, index) => (

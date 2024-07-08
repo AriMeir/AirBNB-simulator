@@ -12,14 +12,15 @@
     width: 100%;
     background: white;
     border-bottom: 1px solid #ccc;
-    position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
 }
 
 .header-logo{
     grid-column: 1;
-    padding-left: 14px;
+    // padding-left: 14px;
 }
 
 .header-filter{
@@ -30,15 +31,17 @@
 .header-user{
     grid-column: 3;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: right;
 }
 
 .airbnb-icon{
     color: #ff385c;
+    height: 40px;
+    width: 40px;
 }
 
 .airbnb-header{
-    margin: 0 5px;
+    margin: 7px 7px;
     color: #ff385c;
     font-size: 24px;
     letter-spacing: -1px;

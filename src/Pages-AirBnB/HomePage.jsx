@@ -16,7 +16,7 @@ export function HomePage() {
             {!stayId && <Categories className="categories"/>}
             {!stayId &&<StayIndex/>}
             {!stayId &&<Footer/>}
+            <Outlet />
         </section >
-        <Outlet />
     )
 }
