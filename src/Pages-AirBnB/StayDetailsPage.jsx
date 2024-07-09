@@ -1,15 +1,21 @@
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Header } from '../cmps-AirBnB/Header';
 import { ConfirmationPage } from './ConfirmationPage';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { GuestCounter } from '../cmps-AirBnB/GuestCounter';
 import { ReviewScoreBar } from '../cmps-AirBnB/ReviewScoreBar';
 import { MiniUserReview } from '../cmps-AirBnB/MiniUserReview';
 import { ReviewPopUp } from '../cmps-AirBnB/ReviewPopUp';
 import { MapComponent } from '../cmps-AirBnB/MapComponent';
 import { ReservationContainer } from '../cmps-AirBnB/ReservationContainer';
+import { addTrip } from '../store-AirBnB/actions/trip.actions';
 
 export function StayDetailsPage() {
+    
+    const [pickedCheckInDate, setPickedCheckInDate] = useState(false)
+    const [pickedCheckOutDate, setPickedCheckOutDate] = useState(false)
+    const [price, setPrice] = useState(15000)
+    const [fee, setFee] = useState(400)
     const [showReviews, setShowReviews] = useState(false)
     const [searchParams, setSearchParams] = useSearchParams();
     const [showGuestsSection, setShowGuestsSection] = useState(false)
@@ -17,7 +23,16 @@ export function StayDetailsPage() {
     const [childrenCounter,setChildrenCounter] = useState(0)
     const [infantCounter,setInfantCounter] = useState(0)
     const [petCounter,setPetCounter] = useState(0)
+    const [totalGuestNumber, setTotalGuestNumber] = useState(0)
     const navigate = useNavigate();
+
+
+
+    useEffect(() => {
+        setTotalGuestNumber(adultCounter + childrenCounter + infantCounter + petCounter);
+    }, [adultCounter, childrenCounter, infantCounter, petCounter]);
+
+
 
     function onShowReviews(){
         setShowReviews(true)
@@ -26,61 +41,125 @@ export function StayDetailsPage() {
         setShowReviews(false)
     }
 
+     
+
     function countUpAdultCounter() {
-        console.log("I'm here");
         setAdultCounter(prev => prev + 1);
     }
-    
+
     function countDownAdultCounter() {
         setAdultCounter(prev => prev !== 0 ? prev - 1 : prev);
     }
-    
+
     function countUpChildrenCounter() {
         setChildrenCounter(prev => prev + 1);
     }
-    
+
     function countDownChildrenCounter() {
         setChildrenCounter(prev => prev !== 0 ? prev - 1 : prev);
     }
-    
+
     function countUpInfantCounter() {
         setInfantCounter(prev => prev + 1);
     }
-    
+
     function countDownInfantCounter() {
         setInfantCounter(prev => prev !== 0 ? prev - 1 : prev);
     }
-    
+
     function countUpPetCounter() {
         setPetCounter(prev => prev + 1);
     }
-    
+
     function countDownPetCounter() {
         setPetCounter(prev => prev !== 0 ? prev - 1 : prev);
     }
     
 
-    function reserveOrder() {
-        setSearchParams((prev) => {
-            const params = new URLSearchParams(prev);
-            params.set('checkInDate', 'new');
-            params.set('checkOutDate', 'new');
-            params.set('price', 'new');
-            params.set('adults', 'new');
-            return params;
-        });
+    function onReserveOrder() {
+        if (pickedCheckInDate && pickedCheckOutDate && totalGuestNumber && price) {
+            setSearchParams((prev) => {
+                const params = new URLSearchParams(prev);
+                params.set('checkInDate', pickedCheckInDate);
+                params.set('checkOutDate', pickedCheckOutDate);
+                params.set('price', price);
+                params.set('fee', fee)
+                params.set('guests', totalGuestNumber);
+                return params;
+            });
+        }
+    }
+    async function onConfirmTrip(stayId, checkInDate, checkOutDate, guests, price, fee ) {
+                try {
+                const newTrip =
+        {
+           
+            hostId: "u102",
+            buyer: {
+            _id: "u101",
+            fullname: "Ari Meir"
+            },
+            totalPrice: parseInt(price) + parseInt(fee),
+            startDate: checkInDate,
+            endDate: checkOutDate,
+            guests: {
+            adults: guests,
+            kids: 2
+            },
+            stay: {
+            id: stayId,
+            name: "House Of Ari Meir",
+            price: 80.00
+            },
+            msgs: [],
+            status: "pending" // approved, rejected
+        }
+        await addTrip(newTrip)
+        navigate('/stay')
+        } catch(e) {
+            console.log(e)
+        }
+
+
+    }
+
+
+
+
+
+    function onPickedCheckInDate() {
+        const today = new Date();
+        const day = String(today.getDate()).padStart(2, '0');
+        const month = String(today.getMonth() + 1).padStart(2, '0');
+        const year = today.getFullYear();
+        const formattedDate = `${day}/${month}/${year}`;
+        setPickedCheckInDate(formattedDate);
+    }
+    function onPickedCheckOutDate() {
+        const today = new Date();
+        const day = String(today.getDate()).padStart(2, '0');
+        const month = String(today.getMonth() + 1).padStart(2, '0'); 
+        const year = today.getFullYear();
+        const formattedDate = `${day}/${month}/${year}`;
+        setPickedCheckOutDate(formattedDate);
     }
     
     function toggleGuestsSection() {
         setShowGuestsSection(prev => !prev);
     }
 
-    const hasSearchParams = searchParams.has('checkInDate') && searchParams.has('checkOutDate') && searchParams.has('price') && searchParams.has('adults');
+    const hasSearchParams = searchParams.has('checkInDate')
+                            && searchParams.has('checkOutDate')
+                            && searchParams.has('price')
+                            && searchParams.has('fee')
+                            && searchParams.has('guests');
 
     return (
         <>
             {hasSearchParams ? (
-                <ConfirmationPage />
+                <section className='confirmation-page flex-column-center-left'>
+                <ConfirmationPage onConfirmTrip={onConfirmTrip} />
+                </section>
             ) : (
                 <section className='stay-details flex-column-center-left'>
                     <h1 className='stay-title'>Home, Sweet, Harlem. Welcome!</h1>
@@ -196,7 +275,13 @@ export function StayDetailsPage() {
                                 </div>
                             )}
                         </div>
-                       <ReservationContainer/>
+                       <ReservationContainer 
+                        onReserveOrder= {onReserveOrder}
+                        onPickedCheckInDate={onPickedCheckInDate}
+                        onPickedCheckOutDate={onPickedCheckOutDate}
+                        pickedCheckInDate={pickedCheckInDate}
+                        pickedCheckOutDate={pickedCheckOutDate}
+                        totalGuestNumber={totalGuestNumber}  />
 
                     </div>
 

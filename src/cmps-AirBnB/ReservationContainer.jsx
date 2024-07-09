@@ -1,4 +1,4 @@
-export function ReservationContainer({reserveOrder}) {
+export function ReservationContainer({onReserveOrder, onPickedCheckInDate, onPickedCheckOutDate, pickedCheckInDate, pickedCheckOutDate, totalGuestNumber}) {
     return (
         <div className='reservation-container  flex just-cont-start align-start'>
         <div className='reservation-form-container flex'>
@@ -13,24 +13,30 @@ export function ReservationContainer({reserveOrder}) {
                 </div>
                 <div className="user-picker-container flex column ">
                     <div className="date-picker flex row">
-                        <div className="check-in-picker flex align-left column">
-                            <h4>CHECK-IN</h4>
-                            <h5>date-picked</h5>
+                        <div className="check-in-picker flex align-left column" onClick={(e) => {e.stopPropagation()
+                                                                                                onPickedCheckInDate()
+
+                        }}>
+                            <h4 >CHECK-IN</h4>
+                            <h5>{pickedCheckInDate || 'pick check-in date'}</h5>
                             
                         </div>
-                        <div className="check-out-picker flex align-left column">
+                        <div className="check-out-picker flex align-left column" onClick={(e) => {e.stopPropagation()
+                                                                                                    onPickedCheckOutDate()
+
+                        }}>
                         <h4>CHECK-OUT</h4>
-                        <h5>date-picked</h5>
+                        <h5>{pickedCheckOutDate || 'pick check-out date'}</h5>
 
                         </div>
                         
                     </div>
                     <div className="guest-picker flex align-left column">
                         <h4>GUESTS</h4>
-                        <h5>number guest</h5>
+                        <h5>{totalGuestNumber ||'number guest'}</h5>
                     </div>
                 </div>
-                <div className="reserve-button-container flex  center">
+                <div className="reserve-button-container flex  center" onClick={onReserveOrder}>
                     <h1>reserve</h1>
                 </div>
                 <div className="no-charge-yet flex center">
