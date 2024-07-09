@@ -27,6 +27,7 @@
     width: 30%;
 }
 .user-picker-container{
+    cursor: pointer;
     width: 100%;
     border: 1px solid #b0b0b0;
     border-radius: 8px;
@@ -51,6 +52,7 @@
 .reserve-button-container{
     width: 100%;
     border-radius: 8px;
+    cursor: pointer;
     height:50px ;
     border: 1px solid #b0b0b0;
 }

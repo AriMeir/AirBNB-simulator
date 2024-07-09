@@ -1,0 +1,23 @@
+.confirmation-page{
+    margin-top: 100px;
+}
+.confirmation-title{
+    gap:5px
+}
+.confirmation-page-column-one{
+    padding-left:150px;
+    padding-right:150px;
+}
+.confirmation-page-main-content{
+    grid-template-columns: 1fr 1fr;
+}
+.rare-find-box{
+    min-width: 400px;
+    border: 1px solid #dedede;
+    border-radius: 1em;
+    height: fit-content;
+    padding: 24px;
+}
+.rare-find-sub-title{
+    margin-top: 10px;
+}
