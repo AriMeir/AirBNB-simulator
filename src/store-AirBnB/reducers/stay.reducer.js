@@ -1,5 +1,5 @@
-import { stay1, stay4, stay5, stay6, stay7, stay8, stay9 } from "../../Data/stay"
-import { stay2 } from "../../Data/stay"
+import { stay1,stay3, stay4, stay5, stay6, stay7, stay8, stay9,stay10 } from "../../Data/stays"
+import { stay2 } from "../../Data/stays"
 
 export const SET_STAYS = 'SET_STAYS'
 export const SET_STAY = 'SET_STAY'

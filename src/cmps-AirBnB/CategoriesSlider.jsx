@@ -2,6 +2,7 @@ import Slider from "react-slick";
 // import { useResponsive } from "../useResponsive";
 import { useRef } from "react";
 import { svgIcons } from './Svgs'
+// import SvgIcon from './SvgIcon';
 
 
 const Category = ({
@@ -35,6 +36,7 @@ export const SliderComp = ({
         <>
             <div className="categories main-content">
                     <div onClick={() => sliderRef.current.slickPrev()} className="prev">
+                        {/* <SvgIcon iconName={'arrowLeft'}/> */}
                         {svgIcons.arrowLeft}
                     </div>
                     <Slider {...settings} ref={sliderRef}>
@@ -50,6 +52,7 @@ export const SliderComp = ({
                         ))}
                     </Slider>
                     <div onClick={() => sliderRef.current.slickNext()} className="next">
+                        {/* <SvgIcon iconName={'arrowRight'}/> */}
                         {svgIcons.arrowRight}
                     </div>
                 </div>
