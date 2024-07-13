@@ -7,8 +7,8 @@ export function Filter() {
     
     return (
         <>
-       {/* <SmallFilter/> */}
-       <BigFilter/>
+       {/* */}
+       
        </>
     )
 }
