@@ -34,7 +34,7 @@
 @import "cmps/ReservationContainer.scss";
 @import "cmps/Footer";
 @import "cmps/Categories";
-
+@import "cmps/Filter.scss";
 @import "cmps/StayList";
 @import "cmps/StayPreview";
 @import "cmps/AppFooter";
@@ -51,6 +51,7 @@
     --clr-fltr-bg:white;
     --clr-fltr-spliter:#ddd;
     --clr-sub-borders:#b0b0b0;
+    --clr-splitter:#dedede;
     
     
     

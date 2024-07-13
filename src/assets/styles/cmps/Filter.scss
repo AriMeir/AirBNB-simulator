@@ -1,0 +1,122 @@
+.filter-container{
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #dedede;
+    border-radius: 40px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .078), 0 4px 12px rgba(0, 0, 0, .051);
+    color: #212121;
+    cursor: pointer;
+    display: inline-flex;
+    min-width: 348px;
+    margin-left: px;
+    vertical-align: middle;
+    white-space: nowrap;
+    padding-inline-start: 8px;
+}
+.filter-button{
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #212121;
+    
+    cursor: pointer;
+    flex-grow: 1;
+    font-size: 14px;
+    line-break: strict;
+    margin: -1px;
+    min-width: 80px;
+    padding: 12px 16px;
+    text-align: inherit;
+}
+.filter-splitter {
+    background-color: var(--clr-splitter);
+    flex: 0 0 1px;
+    height: 24px;
+    width: 1px;
+}
+.filter-add-guests {
+    color: #707070;
+    
+}
+.mini-search-button{
+    background-color: var(--clr-btn);
+    border: transparent;
+    border-radius: var(--circle-rad);
+    color: #fff;
+    height: 32px;
+    margin: 7px;
+    min-width: 32px;
+    padding: 10px;
+}
+.filter-container-big {
+    background-color: #fff;
+    border: 1px solid #dedede;
+    border-radius: 40px;
+    cursor: pointer;
+    flex: 1 1;
+    height: 66px;
+    margin: 0 auto;
+    max-width: 850px;
+    min-width: 0;
+    pointer-events: auto;
+    position: relative;
+    text-align: left;
+}
+
+.filter-container-big .search-category {
+    position: relative;
+    border-radius: 32px;
+    letter-spacing: .04em;
+    line-height: 1rem;
+    font-family: var(--main-fnt);
+    padding: 14px 32px;
+    width: 100%;
+}
+
+.filter-container-big .search-category input {
+    background: none;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+.filter-container-big .search-category input:focus {
+    outline: none;
+}
+
+.filter-container-big .search-category:hover {
+    background-color: #dedede;
+}
+
+.filter-container-big .guests-button {
+    padding: 0;
+    min-width: 30%;
+}
+
+.filter-container-big .guests-button .guests-text {
+    padding: 0 32px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-container-big .big-search-button {
+    height: 48px;
+    margin: 7px;
+    min-width: 48px;
+    padding: 16px;
+    position: relative;
+}
+
+.dynamic-filter-component {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 1000;
+}
