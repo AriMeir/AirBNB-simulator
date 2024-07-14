@@ -9,7 +9,7 @@ const regionsList = [
   { photo: "img/SouthAmerica.webp", regionName: "South America" }
 ];
 
-export const MainLocationFilter = () => {
+export const MainLocationFilter = ({onWherePick}) => {
   return (
     <div className="main-location-filter">
       <div className='locations-filter-header'>
@@ -18,7 +18,7 @@ export const MainLocationFilter = () => {
       <div className='locations-photos grid'>
         {regionsList.map((region, index) => (
           <div className='region' key={index}>
-            <div className='region-photo-container'>
+            <div className='region-photo-container' onClick={() => onWherePick(region.regionName)} >
               <img className='region-photo' src={region.photo} alt={region.regionName} />
             </div>
             <div className='region-name'>{region.regionName}</div>

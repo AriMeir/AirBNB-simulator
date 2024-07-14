@@ -3,15 +3,15 @@ import { MainLocationFilter } from './MainLocationFilter';
 import { MainDateFilter } from './MainDateFilter';
 import { MainGuestsFilter } from './MainGuestFilter';
 
-export const DynamicFilterComponent = ({ type }) => {
+export const DynamicFilterComponent = ({ type, onWherePick, onCheckInPick, onCheckOutPick, guestCounter }) => {
   const renderFilterComponent = () => {
     switch (type) {
       case 'location':
-        return <MainLocationFilter />;
+        return <MainLocationFilter onWherePick={onWherePick} />;
       case 'date':
-        return <MainDateFilter />;
+        return <MainDateFilter onCheckInPick={onCheckInPick} onCheckOutPick={onCheckOutPick} />;
       case 'guests':
-        return <MainGuestsFilter />;
+        return <MainGuestsFilter guestCounter={guestCounter} />;
       default:
         return null;
     }

@@ -1,9 +1,10 @@
 import React from 'react';
+import { BasicRangeShortcuts } from './BasicRangeShortcuts';
 
-export const MainDateFilter = () => {
+export const MainDateFilter = ({onCheckInPick, onCheckOutPick}) => {
   return (
     <div className="main-date-filter">
-      Date Filter Component
+      <BasicRangeShortcuts onCheckInPick={onCheckInPick} onCheckOutPick={onCheckOutPick}/>
     </div>
   );
 };

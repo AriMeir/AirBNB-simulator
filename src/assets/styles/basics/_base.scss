@@ -3,8 +3,8 @@
 }
 
 ::selection {
-    background-color: $clr1;
-    color: $clr6;
+    
+    
 }
 .text-left{
     text-align: left;
@@ -152,4 +152,7 @@ a:hover {
 }
 .inline{
     display: inline;
+}
+.bold {
+    font-weight: bold;
 }
