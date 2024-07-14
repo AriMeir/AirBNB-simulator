@@ -1,17 +1,3 @@
-// export function Categories() {
-
-//     return (
-//         <section className='categories-container full main-content'>
-//             <div className='categories flex-row-center space-between padding full'>
-//                 <h1>categories</h1>
-//             </div>
-//         </section >
-//     )
-// }
-
-
-// import "./styles.css";
-
 import { SliderComp } from "./CategoriesSlider";
 
 const categories_pic = [

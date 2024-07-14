@@ -5,7 +5,6 @@ import {StayIndex} from '../cmps-AirBnB/StayIndex'
 import {Footer} from '../cmps-AirBnB/Footer'
 import { useEffect, useState } from 'react'
 
-
 export function HomePage() {
     const {stayId} = useParams()
     const [showCategories, setShowCategories] = useState(stayId)

@@ -2,7 +2,7 @@ export const stay1 = {
   _id: "s101",
   name: "Ribeira Charming Duplex",
   type: "House",
-  imgUrls: ["https://cdn.theculturetrip.com/wp-content/uploads/2019/04/venice-beach_final-768x512.jpg", "otherImg.jpg"],
+  imgUrls: ["https://cdn.theculturetrip.com/wp-content/uploads/2019/04/venice-beach_final-768x512.jpg", "https://cdn.theculturetrip.com/wp-content/uploads/2019/04/ia_0444_city-header_milan_marianna-tomaselli-768x432.jpg", "https://cdn.theculturetrip.com/wp-content/uploads/2019/04/ia_0378_hong-kong_jisu-choi_final_header-1-768x512.jpg"],
   price: 80.00,
   summary: "Fantastic duplex apartment...",
   capacity: 8,
