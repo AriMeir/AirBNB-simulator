@@ -5,7 +5,7 @@ export function DynamicHeader() {
     return (
         <>
        <Header/>
-        {<BiggerHeader/>}
+        <BiggerHeader/>
         </>
     )
 }
