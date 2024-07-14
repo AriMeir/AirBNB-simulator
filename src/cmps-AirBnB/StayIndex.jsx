@@ -29,19 +29,25 @@ export function StayIndex() {
 
     //functions
     async function onUpdateStay(stay) {
-        const stayToSave = { ...stay, likedByUsers: [...stay.likedByUsers, '101dd']}
+        const userId = '101dd'; // Replace this with the actual logged-in user ID
+        const likedByUsers = stay.likedByUsers.includes(userId)
+            ? stay.likedByUsers.filter(id => id !== userId)
+            : [...stay.likedByUsers, userId];
+
+        const stayToSave = { ...stay, likedByUsers }
         try {
             const savedStay = await updateStay(stayToSave)
-            console.log(`Stay updated, new user add to wishlist: ${savedStay.likedByUsers}`)
+            console.log(`Stay updated, user ${userId} toggled in wishlist: ${savedStay.likedByUsers} ${stay._id}`)
         } catch (err) {
-            console.log('Cannot update stay')
+            console.log('Cannot update stay', err)
         }
     }
 
+    const filteredStays = isWish ? stays.filter(stay => stay.likedByUsers.length > 0) : stays;
 
     return (
         <section>
-            <StayList isWish={isWish} stays={stays} onHeartClick={onUpdateStay}/>
+            <StayList isWish={isWish} stays={filteredStays} onHeartClick={onUpdateStay} />
         </section>
     );
 }

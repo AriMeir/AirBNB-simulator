@@ -11,12 +11,13 @@ export function StayList({ stays, isWish, onHeartClick}) {
     useEffect(() => {
         if(isWish)
         console.log("Im on the stay list, and I will take care of only the favorite locations")
-    })
+    },[isWish])
 
+    const filteredStays = isWish ? stays.filter(stay => stay.likedByUsers.length > 0) : stays;
 
     return (
         <section className='stay-list'>
-            {stays.map((stay, idx) => (
+            {filteredStays.map((stay, idx) => (
                 <StayPreview className='stay-item'
                     key={stay._id}
                     stay={stay}

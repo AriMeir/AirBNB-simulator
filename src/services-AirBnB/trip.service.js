@@ -3,7 +3,7 @@ import { storageService } from './async-storage.service'
 import { Children } from 'react'
 import { httpService } from './http.service'
 import { utilService } from './util.service'
-import { orders1, orders2 } from '../Data/stay'
+import { orders1, orders2 } from '../Data/stays'
 
 
 const STORAGE_KEY = 'trips'
@@ -23,7 +23,7 @@ async function query(filterBy /* = { check_in:'', check_out: '', booked: 0, pric
 
     let trips = await storageService.query(STORAGE_KEY);
     if (filterBy) {
-        return storageService.get(STORAGE_KEY, filterBy) 
+        return storageService.get(STORAGE_KEY, filterBy)
     } else {
         return trips
     }
@@ -65,7 +65,7 @@ function _createTrips() {
     let trips = utilService.loadFromStorage(STORAGE_KEY);
     if (!trips || !trips.length) {
         trips = [orders1, orders2]
-        
+
         utilService.saveToStorage(STORAGE_KEY, trips);
     }
 }

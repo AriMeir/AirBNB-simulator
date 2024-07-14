@@ -1,4 +1,15 @@
-import { UserMenuDropDown } from "./UserMenuDropDown";
+// import React from 'react';
+// import { svgService } from '../services-AirBnB/svgs.service';
+
+// const SvgIcon = ({ iconName}) => {
+//     const svg = svgService.getSvg(iconName)
+
+//     return (
+//         <div dangerouslySetInnerHTML={{ __html: svg }} />
+//     )
+// }
+
+// export default SvgIcon;
 
 export const svgIcons = {
     AirBnB: (
