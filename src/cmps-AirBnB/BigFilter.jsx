@@ -132,6 +132,7 @@ export function BigFilter() {
         <div className='filter-container-big flex align-center relative'>
             <Popover
                 placement='bottomLeft'
+                className="location-filter-modal"
                 content={<DynamicFilterComponent type="location" onWherePick={onWherePick} />}
                 open={showLocationFilter}
                 trigger="click"

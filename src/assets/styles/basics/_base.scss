@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    
+    
 }
 
 ::selection {
@@ -17,6 +19,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    
 }
 
 html {
@@ -38,7 +41,23 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 0 0.6em;
     line-height: 1;
 }
-
+h1 {
+    font-size: 1.625rem;
+}
+h2 {
+    font-size: 1.5rem;
+}
+h3{
+   
+    font-size: 1.375rem;
+}
+h6{
+    font-size: 1em;
+}
+.lil-info{
+    font-size: 1rem;
+    letter-spacing: .007em;
+}
 // .header {
 //     width: 100%;
 // }
@@ -54,6 +73,7 @@ img {
 p {
     margin: 0 0 1em;
     font-family: var(--main-fnt);
+    font-size: 1em;
 }
 
 a {
@@ -155,4 +175,29 @@ a:hover {
 }
 .bold {
     font-weight: bold;
+}
+.underline {
+    text-decoration: underline;
+}
+.inline-btn{
+    color: #212121;
+    font-size: .875rem;
+    background:none;
+    text-decoration: underline;
+}
+.black-btn{
+    background-color: #222;
+    border: 1px solid #222;
+    border-radius: 8px;
+    color: #fff;
+    font-family: cereal-book;
+    font-size: .875rem;
+    margin-right: 0;
+    padding: 8px 16px;
+}
+.x-btn{
+    background: white;
+    color: black;
+    padding: 0;
+    margin: 0;
 }

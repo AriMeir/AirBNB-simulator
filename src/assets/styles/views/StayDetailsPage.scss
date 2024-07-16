@@ -1,11 +1,11 @@
 .stay-details{
-    max-width: 1280px;
+    max-width: 1200px;
     margin:auto;
     margin-top: 100px;
     padding-inline: 40px;
    
 }
-.img-container {
+.stay-details .img-container {
     display: grid;
     max-height: 451.39px;
     overflow: hidden;
@@ -13,6 +13,7 @@
     padding-bottom: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
+    min-height: 508px;
     
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 50% 50%;
@@ -54,9 +55,16 @@
 .details{
     
 }
+.highlight-text h3{
+    margin-bottom: 3px;
+}
 .reservation-container{
     min-height: 800px;
     
+}
+.highlight-text{
+    padding-left: 20px;
+    padding-top: 5px;
 }
 .reviews{
     
@@ -66,6 +74,10 @@
 }
 .mid-section{
     grid-template-columns:1.45fr 1fr;;
+}
+.amenity-name{
+    color: black;
+    font-weight: lighter;
 }
 
 
@@ -86,14 +98,16 @@ h1 {
 .amenities-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px; 
+    gap: 5px; 
+    padding-left: 0;
     margin-bottom: 1.5rem;
 }
 
 .amenities-container li {
     display: flex;
     align-items: center;
-    padding: 0.5rem 1rem;
+    padding-top: 0.5rem ;
+    padding-bottom: 0.5rem ;
 }
 .amenity-name{
     letter-spacing: .007em;
@@ -105,6 +119,7 @@ h1 {
     font-weight: lighter;
 }
 .guest-select-label-header{
+    color: black;
     font-size: var(--amenity-font);
     margin-top: 6px;
 }
@@ -175,7 +190,7 @@ h1 {
 .review-text{
     width: 50%;
 }
-.show-reviews-btn, .contact-hose-btn{
+.show-reviews-btn, .contact-hose-btn, .show-amenities-btn{
     align-items: center;
     background-color: #fff;
     border: 1px solid #222;
@@ -225,5 +240,19 @@ h1 {
     height: 480px;
     width: 100%;
     border:1px solid black;
+}
+.show-more , .show-less{
+    font-weight: bold;
+    cursor: pointer;
+}
+.highlight .highlight-text p {
+    color: #717171;
+    /* font-family: cereal-Book; */
+    font-size: .875em;
+}
+.mini-user-details span {
+    color: #707070;
+    font-size: .875em;
+    
 }
 

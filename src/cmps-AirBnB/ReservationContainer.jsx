@@ -1,3 +1,5 @@
+import { ReserveButton } from "./ReserveButton"
+
 export function ReservationContainer({onReserveOrder, onPickedCheckInDate, onPickedCheckOutDate, pickedCheckInDate, pickedCheckOutDate, totalGuestNumber}) {
     return (
         <div className='reservation-container  flex just-cont-start align-start'>
@@ -36,9 +38,7 @@ export function ReservationContainer({onReserveOrder, onPickedCheckInDate, onPic
                         <h5>{totalGuestNumber ||'number guest'}</h5>
                     </div>
                 </div>
-                <div className="reserve-button-container flex  center" onClick={onReserveOrder}>
-                    <h1>reserve</h1>
-                </div>
+                <ReserveButton/>
                 <div className="no-charge-yet flex center">
                     <p> you won't be charged yet</p>
                 </div>
