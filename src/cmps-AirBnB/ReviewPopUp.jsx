@@ -3,7 +3,7 @@ export function ReviewPopUp({onClose}) {
     return (
         <div className="reviews-component flex column just-cont-start">
             <div>
-                <button className="close-button-reviews-component" onClick={onClose}>X</button>
+                <button className="close-button-reviews-component x-btn" onClick={onClose}>X</button>
             </div>
             <div className="list-reviews-component flex column just-cont-start align-left ">
                         <MiniUserReview reviewerName={'Andrey'} reviewDate={'Jan 2023'} review={'This place was perfect for my family. We had plenty of room to spread out and the service could not'} />

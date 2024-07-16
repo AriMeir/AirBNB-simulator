@@ -186,7 +186,7 @@ export function StayDetailsPage() {
             ) : (
                 <section className='stay-details flex-column-center-left'>
                     <h1 className='stay-title'>Home, Sweet, Harlem. Welcome!</h1>
-                    <div className='flex-row-center'>4.8•20 reviews• New York, NY, United States</div>
+                    
                     <div className='img-container'>
                         <div className='img border'>img</div>
                         <div className='img border'>img</div>
@@ -200,7 +200,7 @@ export function StayDetailsPage() {
                                 <div className='flex-row-center space-between'>
                                     <div className='host-details-text flex-column-left just-cont-left'>
                                         <h2>Private room hosted by Muki Host</h2>
-                                        <span>2 guests • 1 bedroom • 2 beds • 1 bath</span>
+                                        <span className='lil-info'>2 guests • 1 bedroom • 2 beds • 1 bath</span>
                                     </div>
                                     <div className='host-detail-img border'>img</div>
                                 </div>
@@ -237,12 +237,13 @@ export function StayDetailsPage() {
                                 </p>
                             </div>
                             <div className='stay-summory-spanish flex column center align-left border-bottom pad-box'>
+                                <h3>About this place</h3>
                                 <p>
                                     Welcome! Upgrades Added as of January 2018 This listing is located in the Spanish Harlem Section of Manhattan. I offer a cozy apartment that has great transportation in and out the city! The area has a lot of ethnic restaurants and a lot of local, active residents. This residence is great for a quick, inexpensive stay in New York whether its for business, travel, or personal purposes. I am glad to welcome all guests!
                                 </p>
                             </div>
                             <div className='stay-amenities border-bottom pad-box'>
-                                <h4>What this place offers</h4>
+                                <h3>What this place offers</h3>
                                 <ul className='amenities-container'>
                                     <li><div>{fetchSVG("wifi")}</div> <span className='amenity-name'>wifi</span></li>
                                     <li><div>{fetchSVG("conditioner")}</div> <span className='amenity-name'>kitchen</span></li>
@@ -260,20 +261,20 @@ export function StayDetailsPage() {
                             </div>
                             <div className='stay-calender  border-bottom pad-box'>
                                 <div className='date-picker-header'>
-                                    <h4>5 nights</h4>
-                                    <h5>dates</h5>
+                                    <h2>5 nights</h2>
+                                    
                                 </div>
                                 <div className='calender-wrapper'>
                                    <BasicRangeShortcuts/>
                                 </div>
                                 <div className='date-picker-buttons flex row align-center space-between'>
-                                    <button onClick={toggleGuestsSection}>Select guests</button>
-                                    <button>Clear dates</button>
+                                    <button className='inline-btn' onClick={toggleGuestsSection}>Select guests</button>
+                                    <button className='inline-btn'>Clear dates</button>
                                 </div>
                             </div>
                             {showGuestsSection && (
                                 <div className='guest-select-list border-bottom pad-box'>
-                                    <button onClick={toggleGuestsSection}>X</button>
+                                    <button className='x-btn' onClick={toggleGuestsSection}>X</button>
                                     <GuestCounter header={'Adults'}
                                                 subHeader={'Ages 13 or above'}
                                                 countUp={countUpAdultCounter}

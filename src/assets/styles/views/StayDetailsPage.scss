@@ -98,14 +98,16 @@ h1 {
 .amenities-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px; 
+    gap: 5px; 
+    padding-left: 0;
     margin-bottom: 1.5rem;
 }
 
 .amenities-container li {
     display: flex;
     align-items: center;
-    padding: 0.5rem 1rem;
+    padding-top: 0.5rem ;
+    padding-bottom: 0.5rem ;
 }
 .amenity-name{
     letter-spacing: .007em;
@@ -242,5 +244,15 @@ h1 {
 .show-more , .show-less{
     font-weight: bold;
     cursor: pointer;
+}
+.highlight .highlight-text p {
+    color: #717171;
+    /* font-family: cereal-Book; */
+    font-size: .875em;
+}
+.mini-user-details span {
+    color: #707070;
+    font-size: .875em;
+    
 }
 
