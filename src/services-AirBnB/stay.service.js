@@ -1,5 +1,5 @@
 
-import { stay1,stay2,stay3,stay4,stay5,stay6,stay7,stay8,stay9,stay10 } from '../Data/stays'
+import { stay1,stay2,stay3,stay4,stay5,stay6,stay7,stay8,stay9,stay10,stay11,stay12,stay13,stay14 } from '../Data/stays'
 import { storageService } from './async-storage.service'
 import { httpService } from './http.service'
 import { utilService } from './util.service'
@@ -73,7 +73,7 @@ function getEmptyStay() {
 function _createStays() {
     let stays = utilService.loadFromStorage(STORAGE_KEY);
     if (!stays || !stays.length) {
-        stays = [stay1,stay2,stay3,stay4,stay5,stay6,stay7,stay8,stay9,stay10];
+        stays = [stay1,stay2,stay3,stay4,stay5,stay6,stay7,stay8,stay9,stay10,stay11,stay12,stay13,stay14];
 
         utilService.saveToStorage(STORAGE_KEY, stays);
     }

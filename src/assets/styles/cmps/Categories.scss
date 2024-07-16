@@ -4,25 +4,19 @@
     z-index: 100;
     position: fixed;
     width: 100%;
-    // margin-top: 80px;
     background-color: white;
-
     padding-top: 107px;
     margin: auto;
     display: flex;
-    // flex-direction: column;
     height: 185px;
 }
 
 .categories {
     justify-content: center;
-    // align-items: center;
     position: relative;
     justify-items: center;
-
     width: 100%;
     display: flex;
-    // flex-direction: row;
 }
 
 .wrapper {
@@ -31,36 +25,28 @@
 }
 
 .slick-slider {
-    // padding-top: 10px;
-    // padding-bottom: 10px;
     display: flex;
-    // width: 1000px !important;
-    // max-width: 1000px !important;
+    width: 100%;
+
 }
 
 .slick-list {
-    // padding-top: 10px;
-    // padding-bottom: 10px;
-    // display: flex;
-    // width: 1000px !important;
-    // max-width: 1000px !important;
     width: -webkit-fill-available;
+    width: 100%;
+    overflow: hidden;
 }
 
 .slick-track {
     display: flex;
-    // width: 100% !important;
-    // height: 56px;
+    // transform: translate3d(0px, 0px, 0px) !important;
 }
 
 .slick-slide {
-    padding: 0 10px;
+    width: auto !important;
 }
 
-.prev, .next {
+.prev_category, .next_category {
     position: absolute;
-    // top: 50%;
-    // transform: translateY(-50%);
     z-index: 10;
     cursor: pointer;
     align-items: center;
@@ -76,19 +62,46 @@
     box-shadow: 0 0 11px 21px #fff;
 }
 
-.prev {
+.prev_category {
     bottom: 35px;
     left: 0px;
 }
 
-.next {
+.next_category {
     right: 0px;
     top: 14px;
 }
 
+.prev_pic, .next_pic {
+    position: absolute;
+    z-index: 10;
+    cursor: pointer;
+    align-items: center;
+    background-color: #fff;
+    border: 2px solid #dedede;
+    border-radius: 16px;
+    display: flex;
+    height: 29px;
+    justify-content: center;
+    padding: 5px;
+    transition: box-shadow .2s ease 0s;
+    width: 29px;
+    // box-shadow: 0 0 11px 21px #fff;
+}
+
+.prev_pic {
+    bottom: 131px;
+    left: 2px;
+}
+
+.next_pic {
+    right: 0px;
+    top: 133px;
+}
+
+
 .bg-image-container {
     position: relative;
-    // width: 100%;
     overflow: hidden;
     width: 30px;
     height: 30px;

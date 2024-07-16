@@ -36,7 +36,7 @@ export const SliderComp = ({
         <>
             <div className="categories main-content">
                 <div className="wrapper">
-                    <div onClick={() => sliderRef.current.slickPrev()} className="prev">
+                    <div onClick={() => sliderRef.current.slickPrev()} className="prev_category">
                         {svgIcons.arrowLeft}
                     </div>
                     <Slider {...settings} ref={sliderRef}>
@@ -45,13 +45,11 @@ export const SliderComp = ({
                                     <Category
                                         image={item.image}
                                         text={item.title}
-                                        height={"30px"}
-                                        width={"30px"}
                                     />
                             // </div>
                         ))}
                     </Slider>
-                    <div onClick={() => sliderRef.current.slickNext()} className="next">
+                    <div onClick={() => sliderRef.current.slickNext()} className="next_category">
                         {svgIcons.arrowRight}
                     </div>
                 </div>
