@@ -30,32 +30,30 @@ export const SliderComp = ({
         swipeToSlide: true,
         infinite: true,
         slidesToShow: slideNum,
-        slidesToScroll: 1,
+        slidesToScroll: slideNum,
     };
     return (
         <>
             <div className="categories main-content">
-                    <div onClick={() => sliderRef.current.slickPrev()} className="prev">
-                        {/* <SvgIcon iconName={'arrowLeft'}/> */}
+                <div className="wrapper">
+                    <div onClick={() => sliderRef.current.slickPrev()} className="prev_category">
                         {svgIcons.arrowLeft}
                     </div>
                     <Slider {...settings} ref={sliderRef}>
                         {data?.length > 0 && data.map((item, index) => (
-                            <div key={index}>
+                            // <div key={index}>
                                     <Category
                                         image={item.image}
                                         text={item.title}
-                                        // height={"60px"}
-                                        // width={"60px"}
                                     />
-                            </div>
+                            // </div>
                         ))}
                     </Slider>
-                    <div onClick={() => sliderRef.current.slickNext()} className="next">
-                        {/* <SvgIcon iconName={'arrowRight'}/> */}
+                    <div onClick={() => sliderRef.current.slickNext()} className="next_category">
                         {svgIcons.arrowRight}
                     </div>
                 </div>
+            </div>
         </>
     )
 }

@@ -6,7 +6,6 @@ import {Footer} from '../cmps-AirBnB/Footer'
 import { useEffect, useState } from 'react'
 import { DynamicHeader } from '../cmps-AirBnB/DynamicHeader'
 
-
 export function HomePage() {
     const {stayId} = useParams()
     const [showCategories, setShowCategories] = useState(stayId)

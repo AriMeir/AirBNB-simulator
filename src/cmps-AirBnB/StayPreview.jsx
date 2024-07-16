@@ -5,9 +5,16 @@ import { useSelector } from 'react-redux';
 import { loadStays, loadStay, addStay, updateStay, removeStay } from '../store-AirBnB/actions/stay.actions';
 import { stayService } from '../services-AirBnB/stay.service';
 import { svgIcons } from './Svgs';
-// import SvgIcon from './SvgIcon';
+import { StayGallerySlider } from "./StayGallerySlider";
 
-export function StayPreview({ stay, onClick, onHeartClick}) {
+
+export function StayPreview({ stay, onClick, onHeartClick }) {
+
+    const StayGallery = stay.imgUrls.map((url, index) => ({
+        title: `StayImg${index + 1}`,
+        image: url
+    }));
+
     const [isHeartPressed, setIsHeartPressed] = useState(false);
 
     const handleHeartClick = (e) => {
@@ -16,25 +23,37 @@ export function StayPreview({ stay, onClick, onHeartClick}) {
         if (onHeartClick) onHeartClick();
     };
 
+    function getRandomNumber(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    function getRandomDateRange() {
+        const startDate = new Date(2024, 0, 1); // January 1st, 2024
+        const endDate = new Date(2024, 11, 31); // December 31st, 2024
+        const range = Math.floor(Math.random() * 31);
+        const start = new Date(startDate.getTime() + Math.random() * (endDate.getTime() - startDate.getTime()));
+        const end = new Date(start.getTime() + range * 24 * 60 * 60 * 1000);
+        const formatDate = (date) => date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+        return `${formatDate(start)} - ${formatDate(end)}`;
+    }
+
     return (
         <div className='stay-preview' onClick={onClick}>
             <div className='card-top full'>
-                <img className='stay-img' src={stay.imgUrls[0]} alt={stay.name} />
+                <StayGallerySlider className='stay-img' data={StayGallery} slideNum={1} />
                 <div className={`heart-icon ${isHeartPressed ? 'pressed' : ''}`} onClick={handleHeartClick}>
-                    {/* <SvgIcon iconName={'heart'} /> */}
                     {svgIcons.heart}
                 </div>
             </div>
             <div className='card-bottom full'>
                 <div className='card-header'>
-                    <h1>Barcelona, Spain</h1>
-                    {/* <SvgIcon iconName={'starReview'} className='star-reviews'/><p>4.8</p> */}
+                    <h1>{stay.loc.country}, {stay.loc.city}</h1>
                     <div className='star-reviews'>{svgIcons.starReview} 4.8</div>
                 </div>
-                <p>5000 kilometers away</p>
-                <p>May 23 - Sep 1</p>
-                <p>$200 night</p>
+                <p>{getRandomNumber(80, 2000)} kilometers away</p>
+                <p>{getRandomDateRange()}</p>
+                <p>${stay.price} night</p>
             </div>
         </div>
-    )
+    );
 }
