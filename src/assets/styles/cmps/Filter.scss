@@ -48,6 +48,9 @@
     min-width: 32px;
     padding: 10px;
 }
+.mini-search-button .svg .path {
+    color: white;
+}
 .filter-container-big {
     background-color: #fff;
     border: 1px solid #dedede;
@@ -167,6 +170,9 @@
   }
   .css-grqin-MuiButtonBase-root-MuiPickersDay-root-MuiDateRangePickerDay-day.Mui-selected {
     background-color: black !important;
+}
+.ant-popover-inner{
+    border-radius: 50px !important;
 }
 
   

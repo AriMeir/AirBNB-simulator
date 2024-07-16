@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    
+    
 }
 
 ::selection {
@@ -155,4 +157,23 @@ a:hover {
 }
 .bold {
     font-weight: bold;
+}
+.underline {
+    text-decoration: underline;
+}
+.inline-btn{
+    color: #212121;
+    font-size: .875rem;
+    background:none;
+    text-decoration: underline;
+}
+.black-btn{
+    background-color: #222;
+    border: 1px solid #222;
+    border-radius: 8px;
+    color: #fff;
+    font-family: cereal-book;
+    font-size: .875rem;
+    margin-right: 0;
+    padding: 8px 16px;
 }

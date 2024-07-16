@@ -1,10 +1,4 @@
-.reservation-form-container {
-    width: 100%;
-    position: sticky;
-    top: 0;
-    background-color: white;
-    z-index: 999;
-}
+
 
 .reservation-form {
     border: 1px solid #dedede;
@@ -56,9 +50,7 @@
     height:50px ;
     border: 1px solid #b0b0b0;
 }
-.no-charge-yet{
-    width: 100%;
-}
+
 .reservation-prices{
     width: 100%;
     grid-template-columns: repeat(2,1fr);

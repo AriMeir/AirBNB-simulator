@@ -13,6 +13,7 @@ export function HomePage() {
 
     return (
         <section className='main-content'>
+            
             <DynamicHeader className="header-container"/>
             {!stayId && <Categories className="categories"/>}
             {!stayId &&<StayIndex/>}

@@ -33,8 +33,8 @@ export function MiniUserReview({reviewerName,reviewDate, review}) {
                 <p>{reviewPreview}</p>
             </div>
             <div className="show-more-less">
-                {!showMoreToggle && atLeastHundredyCharacters && <button className="show-more" onClick={onShowMore}>show more{' >'}</button>}
-                {showMoreToggle && atLeastHundredyCharacters && <button className="show-less" onClick={onShowLess}> {'< '}show less</button>}
+                {!showMoreToggle && atLeastHundredyCharacters && (<><span className="show-more underline" onClick={onShowMore}>show more</span> <span>{' >'}</span></>)}
+                {showMoreToggle && atLeastHundredyCharacters && (<><span>{'< '}</span> <span className="show-less underline" onClick={onShowLess}>show less</span></>)}
 
             </div>
 

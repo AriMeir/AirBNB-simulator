@@ -6,38 +6,16 @@ import Switch from '@mui/material/Switch';
 import Paper from '@mui/material/Paper';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
-const icon = (
-    <Paper sx={{ m: 1, width: 100, height: 100 }} elevation={4}>
-      <svg>
-        <Box
-          component="polygon"
-          points="0,100 50,00, 100,100"
-          sx={{
-            fill: (theme) => theme.palette.common.white,
-            stroke: (theme) => theme.palette.divider,
-            strokeWidth: 1,
-          }}
-        />
-      </svg>
-    </Paper>
-  );
+
 
   export function Test() {
-    const [checked, setChecked] = React.useState(false);
-  
-    const handleChange = () => {
-      setChecked((prev) => !prev);
-    };
-  
-    return (
-        <>
-        <span onClick={handleChange}>text</span>
-       
-        <Box sx={{ display: 'flex' }}>
-          <Fade in={checked}>{icon}</Fade>
-        </Box>
-        </>
-    );
+    return(
+    <main>
+    <div style={{height:"2000px", width:"300px", background:"pink"}}>
+      <div style={{height:"100px",width:"100px", background:"yellow", position:"sticky", top:"0"}}></div>
+    </div>
+    </main>
+    )
   }
 
 
