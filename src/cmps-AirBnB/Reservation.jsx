@@ -6,7 +6,7 @@ import { DatePickerReservationModal } from "./DatePickerReservationModal";
 
 
 
-export function Reservation({guestCounter,onPickedDate, pickedCheckInDate, pickedCheckOutDate, nights, price, singlePrice, fee, totalPrice, reviewNumber, clearDates}) {
+export function Reservation({onReserveOrder, guestCounter,onPickedDate, pickedCheckInDate, pickedCheckOutDate, nights, price, singlePrice, fee, totalPrice, reviewNumber, clearDates}) {
     const [showGuestCounter, setShowGuestCounter] = useState(false)
     const [showdatePickerModal, setShowdatePickerModal] = useState(false)
 
@@ -52,7 +52,8 @@ export function Reservation({guestCounter,onPickedDate, pickedCheckInDate, picke
   
         <ReserveButton totalGuestNumber={guestCounter.totalGuestNumber}      
           pickedCheckInDate={pickedCheckInDate}
-          pickedCheckOutDate={pickedCheckOutDate} />
+          pickedCheckOutDate={pickedCheckOutDate}
+          onReserveOrder={onReserveOrder} />
 
         {(guestCounter.totalGuestNumber > 0 && pickedCheckInDate && pickedCheckOutDate) && <><div className="no-charge-yet flex center">
             <p> you won't be charged yet</p>

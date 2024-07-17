@@ -363,6 +363,8 @@ export function StayDetailsPage() {
                 params.set('checkOutDate', pickedCheckOutDate);
                 params.set('price', price);
                 params.set('fee', fee)
+                params.set('nights',nights)
+                params.set('total-price', totalPrice)
                 params.set('guests', totalGuestNumber);
                 return params;
             });
@@ -581,7 +583,7 @@ export function StayDetailsPage() {
                             price={price}
                             nights={nights}
                             guestCounter={guestCounter}
-                            onReserveOrder= {onReserveOrder}
+                            onReserveOrder = {onReserveOrder}
                             onPickedDate={onPickedDate}
                             totalGuestNumber={totalGuestNumber}  />
                             
