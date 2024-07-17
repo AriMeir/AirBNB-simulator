@@ -6,7 +6,7 @@ import { DatePickerReservationModal } from "./DatePickerReservationModal";
 
 
 
-export function Reservation({guestCounter}) {
+export function Reservation({guestCounter,onPickedDate, pickedCheckInDate, pickedCheckOutDate, nights, price, singlePrice, fee, totalPrice, reviewNumber, clearDates}) {
     const [showGuestCounter, setShowGuestCounter] = useState(false)
     const [showdatePickerModal, setShowdatePickerModal] = useState(false)
 
@@ -16,22 +16,22 @@ export function Reservation({guestCounter}) {
     return (
       <section className="order-container">
         <div className="order-form-header">
-          <p><span className="cost">$150</span> / night</p>
-          <p>4.38 <span className="reviews">(4 reviews)</span></p>
+          <p><span className="cost">${singlePrice}</span> / night</p>
+          <p>4.38 <span className="reviews">({reviewNumber} reviews)</span></p>
         </div>
   
         <div className="order-data">
           <div className="date-picker" >
             <div className="date-input"  onClick={toggleShowDateModal}>
               <label>CHECK IN</label>
-              <input value="Tue Sep 07 2021"></input>
+              <input value={pickedCheckInDate? pickedCheckInDate: "Add date"}></input>
             </div>
             <div className="date-input"  onClick={toggleShowDateModal}>
               <label>CHECK OUT</label>
-              <input value="Tue Sep 07 2021"></input>
+              <input value={pickedCheckOutDate? pickedCheckOutDate : "Add date"}></input>
             </div>
             {showdatePickerModal && <div className="date-picker-modal">
-               <DatePickerReservationModal toggleShowDateModal={toggleShowDateModal}/>
+               <DatePickerReservationModal clearDates={clearDates} toggleShowDateModal={toggleShowDateModal} onPickedDate={onPickedDate} pickedCheckInDate={pickedCheckInDate} pickedCheckOutDate={pickedCheckOutDate}/>
             </div>}
            
             
@@ -50,19 +50,22 @@ export function Reservation({guestCounter}) {
           </div>
         </div>
   
-        <ReserveButton/>
-        {true && <><div className="no-charge-yet flex center">
+        <ReserveButton totalGuestNumber={guestCounter.totalGuestNumber}      
+          pickedCheckInDate={pickedCheckInDate}
+          pickedCheckOutDate={pickedCheckOutDate} />
+
+        {(guestCounter.totalGuestNumber > 0 && pickedCheckInDate && pickedCheckOutDate) && <><div className="no-charge-yet flex center">
             <p> you won't be charged yet</p>
         </div>
         <div className="reservation-prices grid">
-            <h4 className="text-left">$104 x 150 nights</h4>
-            <h4 className="text-right">$15,600</h4>
+            <h4 className="text-left">${singlePrice} x {nights} nights</h4>
+            <h4 className="text-right">${price}</h4> 
             <h4 className="text-left">Service fee</h4>
-            <h4 className="text-right">$1,680</h4>
+            <h4 className="text-right">${fee}</h4>
         </div>
         <div className="total-price flex space-between">
         <h4 className="text-left">Total</h4>
-        <h4 className="text-right">$15,600</h4>
+        <h4 className="text-right">${totalPrice}</h4>
         </div></>}
         
       </section>
