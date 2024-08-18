@@ -88,14 +88,9 @@ export function BigFilter() {
         console.log("set ", region);
     }
 
-    function onCheckInPick(checkIn) {
-        setCheckIn(checkIn);
-        console.log("set ", checkIn);
-    }
-
-    function onCheckOutPick(checkOut) {
-        setCheckOut(checkOut);
-        console.log("set ", checkOut);
+    function onPickedDate(date) {
+        setCheckIn(date[0].format('DD/MM/YYYY'));
+        setCheckOut(date[1].format('DD/MM/YYYY'));
     }
 
     const handleSearchButtonClick = (e) => {
@@ -154,7 +149,7 @@ export function BigFilter() {
 
             <Popover
                 placement='bottom'
-                content={<DynamicFilterComponent type="date" onCheckInPick={onCheckInPick} onCheckOutPick={onCheckOutPick} />}
+                content={<DynamicFilterComponent type="date" onPickedDate={onPickedDate} />}
                 open={showCheckInFilter}
                 trigger="click"
                 arrow={false}

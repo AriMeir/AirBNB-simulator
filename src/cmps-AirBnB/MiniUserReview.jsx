@@ -20,7 +20,7 @@ export function MiniUserReview({reviewerName,reviewDate, review}) {
     }
     
     return (
-        <div className='review-prev flex column'>
+        <div className='review-prev flex column '>
             <div className='mini-user-details flex row align-left'>
                 <div className="mini-user-img border">img</div>
                 <div className="mini-user-name-date flex column align-left">
