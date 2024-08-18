@@ -1,7 +1,7 @@
 .stay-details{
     max-width: 1200px;
     margin:auto;
-    margin-top: 100px;
+    margin-top: 50px;
     padding-inline: 40px;
    
 }
@@ -22,6 +22,75 @@
     border-radius: 12px;
     overflow: hidden;
 }
+
+.second-header-container{
+    background-color: var(--clr-fltr-bg);
+    height: 80px;
+    justify-content: center;
+    top: 0;
+    left:0;
+    width: 100%;
+    z-index: 1000;
+    
+}
+.second-header-container.hide {
+    display: none;
+  }
+  
+  .second-header-container.show {
+    display: block;
+  }
+
+
+.second-header{
+    height: 100%;
+    width: 100%;
+    padding: 0 15px;
+    margin: auto;
+    max-width: 1200px;
+    
+}
+.second-header .anchor-links{
+    height: 100%;
+    
+}
+.second-header .anchor-links .anchor-link {
+    color: #212121;
+    font-family: cereal-medium;
+    font-size: .875rem;
+    margin-left: 24px;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.second-header .book-it{
+    min-width: 200px;
+    gap:20px
+}
+.second-header .book-it .book-it-details{
+    min-width: 100px
+}
+.header-reserve-button-container{
+    min-width: 100px
+    
+}
+
+.second-header .anchor-links .anchor-link::before {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Adjust this value to position the border closer or further away from the text */
+    left: 0;
+    width: 0;
+    height: 2px; /* Adjust the thickness of the border */
+    background-color: black;
+    transition: width 0.3s ease;
+}
+
+.second-header .anchor-links .anchor-link:hover::before {
+    width: 100%;
+}
+
 .img-container .img:nth-child(1) {
     grid-column: 1 / 3;
     grid-row: 1 / 3;

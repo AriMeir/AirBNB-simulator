@@ -10,10 +10,10 @@ import { useState } from 'react'
 
 
 
-export function BiggerHeader({onOverlayClick}) {
+export function BiggerHeader({onOverlayClick,stayId }) {
 
     const [where, setWhere] = useState('')
-
+    const fixed = stayId? '': 'fixed'
     function onWherePick(region) {
         setWhere(region)
         console.log("Im all set in ", region)
@@ -27,7 +27,7 @@ export function BiggerHeader({onOverlayClick}) {
     return (
         <>
         <div className='screen-blur' onClick={onOverlayClick}></div>
-        <section className='header-container full main-content'>
+        <section className={`header-container ${fixed} full main-content`}>
             
             <div className='header main-content'>
                 <div className='header-logo flex big-header-margin-bottom'>

@@ -15,6 +15,7 @@ import { BasicRangeShortcuts } from '../cmps-AirBnB/BasicRangeShortcuts';
 import { Reservation } from '../cmps-AirBnB/Reservation';
 import { AmenitiesPreviewGridList } from '../cmps-AirBnB/AmenitiesPreviewGridList';
 import { ReviewsPreviewGridList } from '../cmps-AirBnB/ReviewsPreviewGridList';
+import { ActionButton } from '../cmps-AirBnB/ActionButton';
 const reviews = [
     {
       "id": "r1",
@@ -268,6 +269,8 @@ export function StayDetailsPage() {
     // format jul-12-2024
     const [pickedCheckInDateText, setPickedCheckInDateText] = useState('')
     const [pickedCheckOutDateText, setPickedCheckOutDateText] = useState('')
+
+
     const [reviewMidScore, setReviewMidScore] = useState(0)
     const [nights, setNights]= useState(0)
     const [price, setPrice] = useState(0)
@@ -281,10 +284,34 @@ export function StayDetailsPage() {
     const [infantCounter,setInfantCounter] = useState(0)
     const [petCounter,setPetCounter] = useState(0)
     const [totalGuestNumber, setTotalGuestNumber] = useState(0)
-    const navigate = useNavigate();
-   
+    const [showHeader, setShowHeader] = useState(false);
 
-   
+    const buttonText = (pickedCheckInDate && pickedCheckOutDate && totalGuestNumber && totalPrice) ? "Reserve" : "Check Availablity"
+    const navigate = useNavigate();
+    useEffect (() => {
+      console.log(buttonText)
+    },[])
+    // for the Second Header
+    useEffect(() => {
+      const targetElement = document.getElementById('targetDiv'); // Replace with your target div's ID
+      const handleScroll = () => {
+        const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+        const scrollPosition = window.scrollY;
+        
+        if (scrollPosition >= targetPosition) {
+          setShowHeader(true);
+        } else {
+          setShowHeader(false);
+        }
+      }
+  
+      window.addEventListener('scroll', handleScroll);
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      }
+    }, [])
+
+
     useEffect(() => {
         setTotalGuestNumber(adultCounter + childrenCounter + infantCounter + petCounter);
     }, [adultCounter, childrenCounter, infantCounter, petCounter]);
@@ -459,15 +486,37 @@ export function StayDetailsPage() {
                 </section>
             ) : (
                 <section className='stay-details flex-column-center-left'>
+                  <div className={`second-header-container border-bottom fixed ${showHeader ? 'show' : 'hide'}`}>
+                    <div className='second-header flex space-between'>
+                      <div className='anchor-links flex align-center'>
+                      <a className='anchor-link' href="#photos">Photos</a>
+                      <a className='anchor-link' href="#amenities">Amenities</a>
+                      <a className='anchor-link' href="#reviews">Reviews</a>
+                      <a className='anchor-link' href="#location">Location</a>
+                      </div>
+                      <div className='book-it flex '>
+                        <div className='book-it-details  flex-column-center-left  '>
+                          <h4>{stay.price}$ night</h4>
+                          <span>{fetchSVG("star")} {reviewMidScore} • {stay.reviews.length} reviews  </span>
+                        </div>
+                        <div className='header-reserve-button-container flex align-center'>
+                        <ActionButton buttonText={buttonText} action={onReserveOrder}/>
+                        </div>
+                      </div>
+                      
+                    </div>
+
+                  </div>
                     <h1 className='stay-title'>{stay.name}</h1>
                     
-                    <div className='img-container'>
+                    <div className='img-container' id="photos">
                         <div className='img'><img src={stay.imgUrls[0]}/></div>
-                        <div className='img '><img src={stay.imgUrls[1]}/></div>
-                        <div className='img '><img src={stay.imgUrls[2]}/></div>
-                        <div className='img '><img src={stay.imgUrls[3]}/></div>
-                        <div className='img '><img src={stay.imgUrls[4]}/></div>
+                        <div className='img'><img src={stay.imgUrls[1]}/></div>
+                        <div className='img'><img src={stay.imgUrls[2]}/></div>
+                        <div className='img'><img src={stay.imgUrls[3]}/></div>
+                        <div className='img'><img src={stay.imgUrls[4]}/></div>
                     </div>
+                    <div id="targetDiv"></div> {/*for the second header*/ }
                     <div className='mid-section grid border-bottom'>
                         <div className='details'>
                             <div className='host-details border-bottom pad-box'>
@@ -517,7 +566,7 @@ export function StayDetailsPage() {
                                    {stay.summary}
                                 </p>
                             </div>
-                            <div className='stay-amenities border-bottom pad-box'>
+                            <div className='stay-amenities border-bottom pad-box' id="amenities">
                                 <h3>What this place offers</h3>
                                 <AmenitiesPreviewGridList amenityList={stay.amenities}/>
                                 <div>
@@ -573,6 +622,7 @@ export function StayDetailsPage() {
                         <div className='reservation-container  flex just-cont-start align-start'>
                             <div className='reservation-form-container flex'>
                             <Reservation
+                            buttonText={buttonText}
                             clearDates={clearDates}
                             reviewNumber={stay.reviews.length}
                             pickedCheckInDate={pickedCheckInDate}
@@ -605,7 +655,7 @@ export function StayDetailsPage() {
 
 
 
-                    <div className='reviews pad-box flex column border-bottom'>
+                    <div className='reviews pad-box flex column border-bottom' id="reviews">
                         <h2><span>{fetchSVG("star")}</span> {reviewMidScore} • {stay.reviews.length} reviews</h2>
                         <div className='review-bar grid'>
                             <div className='first-review-column'>
@@ -627,7 +677,8 @@ export function StayDetailsPage() {
                     </div>
                     </div>
                     {showReviews && <ReviewPopUp onClose={onCloseReviews} reviewList={stay.reviews}/>}
-                    <MapComponent/>
+                    <div id="location"></div>
+                    <MapComponent />
                     <div className='pad-box'>
                         <button className='contact-hose-btn'>Contact host</button>
                     </div>
