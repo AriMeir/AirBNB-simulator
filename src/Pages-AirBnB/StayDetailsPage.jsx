@@ -2,6 +2,7 @@
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Header } from '../cmps-AirBnB/Header';
 import { ConfirmationPage } from './ConfirmationPage';
+
 import { useState, useEffect } from 'react';
 import { GuestCounter } from '../cmps-AirBnB/GuestCounter';
 import { ReviewScoreBar } from '../cmps-AirBnB/ReviewScoreBar';
@@ -482,7 +483,7 @@ export function StayDetailsPage() {
         <>
             {hasSearchParams ? (
                 <section className='confirmation-page flex-column-center-left'>
-                <ConfirmationPage onConfirmTrip={onConfirmTrip} />
+                <ConfirmationPage onConfirmTrip={onConfirmTrip} reviewMidScore={reviewMidScore} />
                 </section>
             ) : (
                 <section className='stay-details flex-column-center-left'>
@@ -554,7 +555,7 @@ export function StayDetailsPage() {
                             </div>
                             <div className='air-cover border-bottom flex-column-left align-left pad-box'>
                                 <div className='air-cover-img'>
-                                    <img src='img/airCover.webp'></img>
+                                    <img src='/img/air-cover.webp'></img>
                                 </div>
                                 <p className='air-cover-txt'>
                                     Every booking includes free protection from Host cancellations, listing inaccuracies, and other issues like trouble checking in.

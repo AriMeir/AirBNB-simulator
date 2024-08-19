@@ -59,6 +59,10 @@ h6{
     font-size: 1rem;
     letter-spacing: .007em;
 }
+.smaller-info{
+    font-size: 0.875rem;
+    letter-spacing: .007em;
+}
 // .header {
 //     width: 100%;
 // }
@@ -126,6 +130,9 @@ a:hover {
 }
 .normal-button{
     min-width: 500px;
+}
+.space-around{
+    justify-content: space-around;
 }
 .flex-row {
     flex-direction: row;

@@ -4,9 +4,9 @@
 .confirmation-title{
     gap:5px
 }
-.confirmation-page-column-one{
-    padding-left:150px;
-    padding-right:150px;
+.confirmation-page-column-one, .confirmation-page-column-two{
+    padding-left:130px;
+    padding-right:130px;
 }
 .confirmation-page-main-content{
     grid-template-columns: 1fr 1fr;
@@ -18,6 +18,72 @@
     height: fit-content;
     padding: 24px;
 }
+.rare-find-img{
+    width: 40px;
+    height: 40px;
+}
 .rare-find-sub-title{
     margin-top: 10px;
+}
+.confirmation-dates , .confirmation-guests, .confirmation-small-title{
+    padding-bottom: 24px;
+}
+.confirmation-title .back-button{
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+}
+.summery-card {
+    border: 1px solid #dedede;
+    border-radius: 1em;
+    height: fit-content;
+    margin-top: 20px;
+    min-height: 40%;
+    min-width: 330px;
+    padding: 24px;
+    padding-bottom: 40px !important;
+}
+.summery-card .stay-detail-card .stay-details-img {
+    padding-bottom: 24px;
+    height: 130px;
+    width: 150px;
+
+}
+.stay-desc-sum .stay-type{
+    color: #707070;
+    font-size: .75rem;
+    font-weight: inherit;
+    line-height: 1;
+    margin: 0 0 .6em;
+}
+.stay-desc-sum .stay-name{
+    font-size: .875rem;
+    font-weight: inherit;
+    line-height: 1;
+    margin: 0 0 .6em;
+}
+.stay-desc-sum{
+    width: 100%;
+}
+.summery-card .stay-detail-card .stay-details-img img{
+    border-radius: .5em;
+    height: 106px;
+    margin-bottom: 24px;
+    object-fit: cover;
+    width: 124px;
+}
+.stay-desc-reviews span {
+    margin-right: 0.1rem; /* Adjust the value as needed */
+}
+.stay-desc-reviews span:nth-child(2){
+    margin-right: 0.2rem;
+}
+
+
+.stay-desc-reviews span:last-child {
+    margin-right: 0; /* Remove margin from the last span */
+}
+.air-cover-img-card{
+    height: 20px;
+    width: 90px;
+    padding-left: 5px;
 }
