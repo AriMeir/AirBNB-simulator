@@ -3,7 +3,7 @@ import { storageService } from './async-storage.service'
 import { Children } from 'react'
 import { httpService } from './http.service'
 import { utilService } from './util.service'
-import { orders1, orders2 } from '../Data/stays'
+import { orders1, orders2 } from '../Data/orders'
 
 
 const STORAGE_KEY = 'trips'

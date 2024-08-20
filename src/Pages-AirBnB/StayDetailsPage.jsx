@@ -402,8 +402,11 @@ export function StayDetailsPage() {
                 try {
                 const newTrip =
         {
-           
-            hostId: "u102",
+            host: {
+              hostId: "u102",
+              hostName: stay.host.hostName,
+              hostImgUrl:""
+            },
             buyer: {
             _id: "u101",
             fullname: "Ari Meir"
@@ -419,6 +422,10 @@ export function StayDetailsPage() {
             id: stayId,
             name: "House Of Ari Meir",
             price: 80.00
+            },
+            loc: {
+              country: stay.loc.country,
+              city: stay.loc.city
             },
             msgs: [],
             status: "pending" // approved, rejected

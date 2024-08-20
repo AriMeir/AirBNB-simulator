@@ -8,8 +8,6 @@ import { useSelector } from "react-redux";
 export function TripIndex() {
     // consts
     const trips = useSelector(storeState => storeState.tripModule.trips)
-    
-
 
     //useEffects
     useEffect(() => {  

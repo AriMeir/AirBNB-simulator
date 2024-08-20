@@ -254,9 +254,11 @@ export function ConfirmationPage({ onConfirmTrip, reviewMidScore }) {
     const navigate = useNavigate();
 
     const checkInDate = searchParams.get('checkInDate');
+    const nights = searchParams.get('nights');
     const checkOutDate = searchParams.get('checkOutDate');
     const guests = searchParams.get('guests');
     const price = searchParams.get('price');
+    const totalPrice = searchParams.get('total-price');
     const fee = searchParams.get('fee');
 
     const [user, setUser] = useState(false)
@@ -326,12 +328,26 @@ export function ConfirmationPage({ onConfirmTrip, reviewMidScore }) {
                             </div>
                         </div>
                         {/* bottom card */}
-                        <div className="flex column left align-left pad-box">
+                        <div className="flex column left align-left pad-box border-bottom">
                             <h2>Price Details</h2>
-                            <div className="">
+                            <div className="bottom-card-details  flex column">
+                                <div className="flex row space-between align-center">
+                                    <h4 className="underline">${price} x {nights} nights</h4>
+                                    <p>$ {parseInt(price, 10) * parseInt(nights, 10)}</p>
+
+                                </div>
+                                <div className="flex row space-between align-center">
+                                    <h4 className="underline">Service fee</h4>
+                                    <p>$ {parseInt(fee, 10)}</p>
+                                </div>
 
                             </div>
                         </div>
+                        {/* summory card */}
+                        <div className="flex row space-between align-center pad-top ">
+                                    <h4 className="underline">Total (USD)</h4>
+                                    <p>$ {parseInt(fee, 10) + parseInt(price, 10) * parseInt(nights, 10)}</p>
+                                </div>
 
 
 
