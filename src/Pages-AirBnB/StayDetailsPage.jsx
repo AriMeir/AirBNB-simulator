@@ -404,7 +404,7 @@ export function StayDetailsPage() {
         {
             host: {
               hostId: "u102",
-              hostName: stay.host.hostName,
+              hostName: stay.host.fullname,
               hostImgUrl:""
             },
             buyer: {
@@ -578,7 +578,7 @@ export function StayDetailsPage() {
                                 <h3>What this place offers</h3>
                                 <AmenitiesPreviewGridList amenityList={stay.amenities}/>
                                 <div>
-                                <button className='show-amenities-btn' onClick={onShowReviews}>Show all 15 amenities</button>
+                                <button className='white-btn' onClick={onShowReviews}>Show all 15 amenities</button>
                                 </div>
                                 
                             </div>
@@ -681,14 +681,14 @@ export function StayDetailsPage() {
 
                       
                     <div>
-                    <button className='show-reviews-btn' onClick={onShowReviews}>Show all {stay.reviews.length} reviews</button>
+                    <button className='white-btn' onClick={onShowReviews}>Show all {stay.reviews.length} reviews</button>
                     </div>
                     </div>
                     {showReviews && <ReviewPopUp onClose={onCloseReviews} reviewList={stay.reviews}/>}
                     <div id="location"></div>
                     <MapComponent />
                     <div className='pad-box'>
-                        <button className='contact-hose-btn'>Contact host</button>
+                        <button className='white-btn'>Contact host</button>
                     </div>
                 </section>
 

@@ -28,6 +28,7 @@
 .trips-table td {
     padding-block: .2em;
     padding-inline: .5em;
+    font-size: 1rem;
 }
 .trips-table td:nth-child(1) {
     width: 200px;
@@ -49,7 +50,8 @@
 }
 .trips-table td:nth-child(6) {
     
-    width: 130px;
+    padding-left: 30px;
+    width: 140px;
 }
 
 .trips-table tr:nth-child(even) {
