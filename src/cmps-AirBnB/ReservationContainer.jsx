@@ -1,6 +1,6 @@
-import { ReserveButton } from "./ReserveButton"
+import { ActionButton } from "./ActionButton"
 
-export function ReservationContainer({onReserveOrder, onPickedCheckInDate, onPickedCheckOutDate, pickedCheckInDate, pickedCheckOutDate, totalGuestNumber}) {
+export function ReservationContainer({onReserveOrder, onPickedCheckInDate, onPickedCheckOutDate, pickedCheckInDate, pickedCheckOutDate, totalGuestNumber,buttonText}) {
     return (
         <div className='reservation-container  flex just-cont-start align-start'>
         <div className='reservation-form-container flex'>
@@ -38,7 +38,7 @@ export function ReservationContainer({onReserveOrder, onPickedCheckInDate, onPic
                         <h5>{totalGuestNumber ||'number guest'}</h5>
                     </div>
                 </div>
-                <ReserveButton/>
+                <ActionButton buttonText={buttonText} action={onReserveOrder}/>
                 <div className="no-charge-yet flex center">
                     <p> you won't be charged yet</p>
                 </div>

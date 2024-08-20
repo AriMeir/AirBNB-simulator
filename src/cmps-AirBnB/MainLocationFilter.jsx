@@ -1,12 +1,12 @@
 import React from 'react';
 
 const regionsList = [
-  { photo: "img/flexible.jpg", regionName: "I'm flexible" },
-  { photo: "img/MiddleEast.webp", regionName: "Middle East" },
-  { photo: "img/Italy.webp", regionName: "Italy" },
-  { photo: "img/UnitedStates.webp", regionName: "United States" },
-  { photo: "img/France.webp", regionName: "France" },
-  { photo: "img/SouthAmerica.webp", regionName: "South America" }
+  { photo: "/img/flexible.jpg", regionName: "I'm flexible" },
+  { photo: "/img/MiddleEast.webp", regionName: "Middle East" },
+  { photo: "/img/Italy.webp", regionName: "Italy" },
+  { photo: "/img/UnitedStates.webp", regionName: "United States" },
+  { photo: "/img/France.webp", regionName: "France" },
+  { photo: "/img/SouthAmerica.webp", regionName: "South America" }
 ];
 
 export const MainLocationFilter = ({onWherePick}) => {

@@ -26,6 +26,7 @@ html {
     font-family: montserrat;
     line-height: 1.6;
     color: $clr2;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -56,6 +57,10 @@ h6{
 }
 .lil-info{
     font-size: 1rem;
+    letter-spacing: .007em;
+}
+.smaller-info{
+    font-size: 0.875rem;
     letter-spacing: .007em;
 }
 // .header {
@@ -126,6 +131,9 @@ a:hover {
 .normal-button{
     min-width: 500px;
 }
+.space-around{
+    justify-content: space-around;
+}
 .flex-row {
     flex-direction: row;
 }
@@ -155,6 +163,9 @@ a:hover {
 }
 .pad-box{
     padding-block: 2rem;
+}
+.pad-top{
+    padding-top: 2rem;
 }
 .margin-box{
     margin-block: 2rem;
@@ -204,4 +215,7 @@ a:hover {
 .foggy{
     color: #717171;
     font-weight: lighter;
+}
+.fixed {
+    position: fixed;
 }

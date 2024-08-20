@@ -6,13 +6,17 @@ import { SmallFilter } from './SmallFilter'
 
 // import SvgIcon from './SvgIcon';
 import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react'
 
-export function Header({onLittleFilterClick}) {
-  
+export function Header({onLittleFilterClick,stayId}) {
+    const fixed = stayId? '': 'fixed'
     const navigate = useNavigate()
+    useEffect(() => {
+        console.log(stayId)
+    })
   
     return (
-        <section className='header-container full main-content'>
+        <section className={`header-container ${fixed} full main-content`}>
             <div className='header main-content'>
                 <div className='header-logo flex' onClick={() => navigate(`/stay`)}>
                     <div className='airbnb-icon'>{svgIcons.AirBnB}</div>

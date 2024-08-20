@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { MainGuestsFilter } from "./MainGuestFilter";
-import { ReserveButton } from "./ReserveButton";
+import { ActionButton } from "./ActionButton";
 import { BasicRangeShortcuts } from "./BasicRangeShortcuts";
 import { DatePickerReservationModal } from "./DatePickerReservationModal";
 
 
 
-export function Reservation({onReserveOrder, guestCounter,onPickedDate, pickedCheckInDate, pickedCheckOutDate, nights, price, singlePrice, fee, totalPrice, reviewNumber, clearDates}) {
+export function Reservation({onReserveOrder, guestCounter,onPickedDate, pickedCheckInDate, pickedCheckOutDate, nights, price, singlePrice, fee, totalPrice, reviewNumber, clearDates, buttonText}) {
     const [showGuestCounter, setShowGuestCounter] = useState(false)
     const [showdatePickerModal, setShowdatePickerModal] = useState(false)
 
@@ -50,10 +50,9 @@ export function Reservation({onReserveOrder, guestCounter,onPickedDate, pickedCh
           </div>
         </div>
   
-        <ReserveButton totalGuestNumber={guestCounter.totalGuestNumber}      
-          pickedCheckInDate={pickedCheckInDate}
-          pickedCheckOutDate={pickedCheckOutDate}
-          onReserveOrder={onReserveOrder} />
+        <ActionButton 
+          action={onReserveOrder}
+          buttonText={buttonText} />
 
         {(guestCounter.totalGuestNumber > 0 && pickedCheckInDate && pickedCheckOutDate) && <><div className="no-charge-yet flex center">
             <p> you won't be charged yet</p>

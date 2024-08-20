@@ -1,11 +1,9 @@
 import React, { useEffect } from 'react';
 
-export function ReserveButton(onReserveOrder, totalGuestNumber, pickedCheckInDate, pickedCheckOutDate) {
-  useEffect(() => {
-    
-  },[totalGuestNumber,pickedCheckInDate,pickedCheckOutDate])
+export function ActionButton({ action, buttonText }) {
+  
   return (
-    <div className="btn-container" onClick={onReserveOrder}>
+    <div className="btn-container" onClick={() => action()}>
       <div className="cell"></div>
       <div className="cell"></div>
       <div className="cell"></div>
@@ -120,7 +118,7 @@ export function ReserveButton(onReserveOrder, totalGuestNumber, pickedCheckInDat
       <div className="content">
       <button className="action-btn" >
         <span>
-          Reserve
+          {buttonText}
         </span>
       </button>
       </div>

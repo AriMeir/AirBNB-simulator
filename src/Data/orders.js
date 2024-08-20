@@ -2,7 +2,11 @@
 export const orders = [
   {
     _id: "o1225",
-    hostId: "u102",
+    host: {
+      hostId: "u102",
+      hostName: "Ari Meir",
+      hostImgUrl:""
+    },
     buyer: {
       _id: "u101",
       fullname: "User 1"
@@ -19,6 +23,10 @@ export const orders = [
       name: "House Of Uncle My",
       price: 80.00
     },
+    loc: {
+      country:"US",
+      city:"New York"
+    },
     msgs: [],
     status: "pending" // approved, rejected
   }
@@ -26,7 +34,11 @@ export const orders = [
 export const orders1 =
   {
     _id: "o1226",
-    hostId: "u102",
+    host: {
+      hostId: "u102",
+      hostName: "Einav sharf",
+      hostImgUrl:""
+    },
     buyer: {
       _id: "u101",
       fullname: "User 1"
@@ -43,6 +55,10 @@ export const orders1 =
       name: "House Of Uncle My",
       price: 80.00
     },
+    loc: {
+      country:"US",
+      city:"New York"
+    },
     msgs: [],
     status: "pending" // approved, rejected
   }
@@ -50,7 +66,11 @@ export const orders1 =
 export const orders2 =
   {
     _id: "o1227",
-    hostId: "u102",
+    host: {
+      hostId: "u102",
+      hostName: "Keren",
+      hostImgUrl:""
+    },
     buyer: {
       _id: "u101",
       fullname: "User 1"
@@ -66,6 +86,10 @@ export const orders2 =
       id: "h102",
       name: "House Of Uncle My",
       price: 80.00
+    },
+    loc: {
+      country:"US",
+      city:"New York"
     },
     msgs: [],
     status: "complete" // approved, rejected
