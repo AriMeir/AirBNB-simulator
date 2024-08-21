@@ -28,6 +28,7 @@ export function Header({onLittleFilterClick,stayId}) {
                 <div className='header-user flex-row-center'>
                     <h1 className='switch-to-host'> Switch to hosting</h1><p className='small-margin-right'></p>
                     {svgIcons.languageSwitch}<p className='small-margin-right'></p>
+                    
                     <UserMenuDropDown/>
                 </div>
             </div>

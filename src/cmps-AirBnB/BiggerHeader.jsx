@@ -2,6 +2,7 @@ import {Filter} from './Filter'
 import {UserMenuDropDown} from './UserMenuDropDown'
 import { unitTestReducer } from '../store-AirBnB/reducers/stay.reducer'
 import { svgIcons } from './Svgs'
+import { Popover } from 'antd'
 import { BigFilter } from './BigFilter'
 import { useState } from 'react'
 
@@ -11,7 +12,11 @@ import { useState } from 'react'
 
 
 export function BiggerHeader({onOverlayClick,stayId }) {
+    const [visible, setVisible] = useState(false);
 
+    const handleVisibleChange = (newVisible) => {
+        setVisible(newVisible);
+    };
     const [where, setWhere] = useState('')
     const fixed = stayId? '': 'fixed'
     function onWherePick(region) {
@@ -47,7 +52,33 @@ export function BiggerHeader({onOverlayClick,stayId }) {
                 <div className='header-user flex-row-center big-header-margin-bottom'>
                     <h1 className='switch-to-host'> Switch to hosting</h1><p className='small-margin-right'></p>
                     {svgIcons.languageSwitch}<p className='small-margin-right'></p>
-                    <UserMenuDropDown/>
+
+
+                    <Popover
+                        placement='bottomLeft'
+                        className="location-filter-modal"
+                        content={<div>hello</div>}
+                        open={visible}
+                        trigger="click"
+                        arrow={false}
+                        onOpenChange={handleVisibleChange}
+                    >
+                        <UserMenuDropDown />
+                    </Popover>
+                    
+
+                    
+
+
+
+
+
+
+
+
+
+
+                    
                 </div>
             </div>
         </section >
