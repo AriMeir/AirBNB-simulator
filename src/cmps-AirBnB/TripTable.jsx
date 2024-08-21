@@ -14,13 +14,13 @@ export function TripTable({ tripList }) {
         let color = "";
         switch (status.toLowerCase()) {
             case "pending":
-                color = "yellow";
+                color = "rgb(255, 196, 0)";
                 break;
             case "complete":
-                color = "#32CD32";
+                color = "rgb(0, 255, 0)";
                 break;
             case "canceled":
-                color = "red";
+                color = "rgb(255, 0, 0)";
                 break;
             default:
                 color = "gray";

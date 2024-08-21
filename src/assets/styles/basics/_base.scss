@@ -3,10 +3,7 @@
     
     
 }
-@font-face {
-    font-family: AirbnbCereal;
-    src: url(../../fonts/AirbnbCerealVF_W_Wght.2d9d32865ef1262644c455b3ead871e9.woff2);
-}
+
 
 
 ::selection {
@@ -28,7 +25,7 @@ html, body {
 }
 
 html {
-    font-family: montserrat;
+    font-family: AirbnbCereal;
     line-height: 1.6;
     color: $clr2;
     scroll-behavior: smooth;
@@ -43,7 +40,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: var(--main-fnt);
+    font-family: AirbnbCereal;
     margin: 0 0 0.6em;
     line-height: 1;
 }
@@ -206,7 +203,7 @@ a:hover {
     border: 1px solid #222;
     border-radius: 8px;
     color: #fff;
-    font-family: cereal-book;
+    
     font-size: .875rem;
     margin-right: 0;
     padding: 8px 16px;
@@ -218,7 +215,6 @@ a:hover {
     border-radius: 8px;
     color: #222;
     display: flex;
-    font-family: cereal-Medium;
     font-size: 1rem;
     gap: 8px;
     justify-content: center;
