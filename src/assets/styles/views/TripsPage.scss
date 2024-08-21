@@ -16,7 +16,7 @@
 }
 
 .trips-table th {
-    background: #ebebeb;
+    background-color: #e7f5f9;
     color: #707070;
     font-family: cereal-Bold;
     font-size: 12px;
@@ -41,12 +41,18 @@
     width: 130px;
 }
 .trips-table td:nth-child(4) {
+    font-weight: 500;
     width: 140px;
+    
+    
+    
+    
 }
 .trips-table td:nth-child(5) {
     color: #707070;
-    font-family: cereal-medium;
+    
     width: 130px;
+    font-size: 1.2rem;
 }
 .trips-table td:nth-child(6) {
     
@@ -55,7 +61,7 @@
 }
 
 .trips-table tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: #e7f5f9;
 }
 
 

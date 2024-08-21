@@ -332,8 +332,8 @@ export function ConfirmationPage({ onConfirmTrip, reviewMidScore }) {
                             <h2>Price Details</h2>
                             <div className="bottom-card-details  flex column">
                                 <div className="flex row space-between align-center">
-                                    <h4 className="underline">${price} x {nights} nights</h4>
-                                    <p>$ {parseInt(price, 10) * parseInt(nights, 10)}</p>
+                                    <h4 className="underline">${parseInt(price, 10)/parseInt(nights, 10)} x {nights} nights</h4>
+                                    <p>$ {parseInt(price, 10)}</p>
 
                                 </div>
                                 <div className="flex row space-between align-center">
@@ -346,7 +346,7 @@ export function ConfirmationPage({ onConfirmTrip, reviewMidScore }) {
                         {/* summory card */}
                         <div className="flex row space-between align-center pad-top ">
                                     <h4 className="underline">Total (USD)</h4>
-                                    <p>$ {parseInt(fee, 10) + parseInt(price, 10) * parseInt(nights, 10)}</p>
+                                    <p>$ {parseInt(fee, 10) + parseInt(price, 10)}</p>
                                 </div>
 
 
