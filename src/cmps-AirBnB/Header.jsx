@@ -8,9 +8,9 @@ import { SmallFilter } from './SmallFilter'
 import { useNavigate } from 'react-router-dom';
 
 export function Header({onLittleFilterClick}) {
-  
+
     const navigate = useNavigate()
-  
+
     return (
         <section className='header-container full main-content'>
             <div className='header main-content'>
@@ -19,7 +19,7 @@ export function Header({onLittleFilterClick}) {
                     <h1 className='airbnb-header'>airbnb</h1>
                 </div>
                 <div className='header-filter'>
-                    <SmallFilter onLittleFilterClick={onLittleFilterClick}/> 
+                    <SmallFilter onLittleFilterClick={onLittleFilterClick}/>
                 </div>
                 <div className='header-user flex-row-center'>
                     <h1 className='switch-to-host'> Switch to hosting</h1><p className='small-margin-right'></p>

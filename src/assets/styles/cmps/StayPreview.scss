@@ -2,17 +2,15 @@
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 30px;
-    grid-template-rows: 1fr 100px;
+    grid-template-rows: 1fr 144px;
     border-radius: 5%;
     cursor: pointer;
-    max-width: 300px;
     justify-content: center;
     position: relative;
-    min-height: 340px;
     padding-bottom: 20px;
 
     > * {
-        // grid-column: 1;
+        grid-column: 1;
 
         &.full {
             grid-column: 1 /-1;
@@ -32,7 +30,6 @@
 
 .stay-preview .card-bottom {
     grid-row: 2;
-    margin-left: 6px;
     margin-bottom: 0;
     margin-top: 10px;
 
@@ -56,10 +53,10 @@
 }
 
 .stay-img {
-    object-fit: cover;
     border-radius: 5%;
-    width: 300px;
-    height: 286px;
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    background-size: cover;
 }
 
 
@@ -68,7 +65,7 @@
     z-index: 10;
     top: 0;
     right: 0;
-    margin: 8px;
+    margin: 15px;
     fill: rgba(0, 0, 0, 0.5);
 }
 

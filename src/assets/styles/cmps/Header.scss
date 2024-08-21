@@ -38,6 +38,7 @@
     color: #ff385c;
     height: 40px;
     width: 40px;
+    cursor: pointer;
 }
 
 .airbnb-header{
@@ -45,12 +46,14 @@
     color: #ff385c;
     font-size: 24px;
     letter-spacing: -1px;
+    cursor: pointer;
 }
 
 .switch-to-host{
     color: #858585;
     font-size: 14px;
     margin-top: 8px;
+    cursor: pointer;
 }
 
 .user-menu {
@@ -61,6 +64,10 @@
     position: relative;
     padding: 5px 5px 5px 10px;
     align-items: center;
+}
+
+.user-menu:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .user-dropdown {
@@ -99,11 +106,10 @@
     left: 0;
     width: 100%;
     height: 100%;
-    
-    background: rgba(0,0,0, 0.25); 
-    z-index:1000; 
+
+    background: rgba(0,0,0, 0.25);
+    z-index:1000;
 }
 .big-header-margin-bottom{
     padding-bottom: 84px;
 }
-

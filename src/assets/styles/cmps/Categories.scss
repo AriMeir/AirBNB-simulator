@@ -25,7 +25,6 @@
 }
 
 .slick-slider {
-    display: flex;
     width: 100%;
 
 }
@@ -38,11 +37,10 @@
 
 .slick-track {
     display: flex;
-    // transform: translate3d(0px, 0px, 0px) !important;
 }
 
 .slick-slide {
-    width: auto !important;
+    // width: auto !important;
 }
 
 .prev_category, .next_category {
@@ -64,17 +62,24 @@
 
 .prev_category {
     bottom: 35px;
-    left: 0px;
+    left: 3px;
 }
 
 .next_category {
-    right: 0px;
+    right: 3px;
     top: 14px;
 }
 
 .prev_pic, .next_pic {
     position: absolute;
     z-index: 10;
+    opacity: 0;
+}
+
+.prev_pic:hover, .next_pic:hover {
+    position: absolute;
+    z-index: 10;
+    opacity: 1;
     cursor: pointer;
     align-items: center;
     background-color: #fff;
@@ -86,19 +91,55 @@
     padding: 5px;
     transition: box-shadow .2s ease 0s;
     width: 29px;
-    // box-shadow: 0 0 11px 21px #fff;
 }
 
 .prev_pic {
-    bottom: 131px;
-    left: 2px;
+    bottom: 50%;
+    left: 12px;
 }
 
 .next_pic {
-    right: 0px;
-    top: 133px;
+    right: 12px;
+    bottom: 50%;
 }
 
+.slick-dots li button {
+    font-size: 0;
+    opacity: 0;
+}
+
+.slick-dots {
+    display: flex !important;
+    position: absolute;
+    top: 70%;
+    cursor: pointer;
+    fill: white;
+    font-size: 30px;
+    justify-content: center;
+    width: -webkit-fill-available;
+    margin-left: 20px;
+}
+
+.slick-dots li.slick-active{
+    color: white;
+    opacity: 1 !important;
+}
+
+.slick-dots li {
+    color: #fff;
+    opacity: 0.7;
+}
+
+// .category {
+//     margin-right: 10px;
+//     margin-left: 10px;
+// }
+
+.category:hover {
+    cursor: pointer;
+    color: black;
+    opacity: 1;
+}
 
 .bg-image-container {
     position: relative;
@@ -119,25 +160,39 @@
 .text-container {
     width: 92px;
     font-size: 12px;
-    color: #000;
+    color: #838383;
     text-align: center;
     font-family: var(--main-fnt);
     margin-top: 12px;
+    font-weight: bold;
+}
+
+.text-container:hover {
+    color: black;
+}
+
+.category {
+    display: grid;
+    width: 92px;
+}
+
+.category::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 88px;
+    background-color: #ffffff;
+    bottom: -8px;
+    top: 69px;
+    margin-left: 1.5px;
+}
+
+.category:hover::after {
+    background-color: #c6c4c4;
 }
 
 .categories-container.scrolling:after {
     left: 0;
     right: 0;
     transition: box-shadow .2s ease;
-}
-
-.categories-container:after {
-    bottom: 0;
-    box-shadow: 0 3px 2px -2px rgba(0, 0, 0, .16);
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    transition: box-shadow .2s ease;
-    z-index: -1;
 }

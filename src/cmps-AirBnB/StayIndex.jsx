@@ -1,38 +1,56 @@
-import { StayList } from './StayList';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { loadStays, updateStay } from '../store-AirBnB/actions/stay.actions';
-
+import { Categories } from './Categories';
+import StayList from './StayList';
 
 export function StayIndex() {
-    //consts
     const location = useLocation();
+    const navigate = useNavigate();
+    const [selectedCategory, setSelectedCategory] = useState('');
     const [isWish, setIsWish] = useState(false);
 
-    const stays = useSelector(storeState => storeState.stayModule.stays)
+    const stays = useSelector(storeState => storeState.stayModule.stays);
 
-    //useEffects
     useEffect(() => {
-        loadStays()
-        console.log({stays})
-    }, [])
+        loadStays();
+    }, []);
+
+    useEffect(() => {
+        const params = new URLSearchParams(location.search);
+        const category = params.get('category') || '';
+        setSelectedCategory(category);
+    }, [location.search]);
 
     useEffect(() => {
         if (location.pathname === '/wish') {
-            console.log('You are on the wish page');
             setIsWish(true);
         } else {
             setIsWish(false);
         }
     }, [location.pathname]);
 
-    //functions
+    useEffect(() => {
+        const params = new URLSearchParams();
+        if (selectedCategory) {
+            params.set('category', selectedCategory);
+        }
+        navigate(`?${params.toString()}`, { replace: true });
+    }, [selectedCategory, navigate]);
+
+
+    const filteredStays = stays
+        .filter(stay =>
+            (stay.labels.includes(selectedCategory) || !selectedCategory) &&
+            (!isWish || stay.likedByUsers.length > 0)
+        );
+
     async function onUpdateStay(stay) {
-        const userId = '101dd'; // Replace this with the actual logged-in user ID
+        const userId = '101dd'
         const likedByUsers = stay.likedByUsers.includes(userId)
             ? stay.likedByUsers.filter(id => id !== userId)
-            : [...stay.likedByUsers, userId];
+            : [...stay.likedByUsers, userId]
 
         const stayToSave = { ...stay, likedByUsers }
         try {
@@ -43,11 +61,16 @@ export function StayIndex() {
         }
     }
 
-    const filteredStays = isWish ? stays.filter(stay => stay.likedByUsers.length > 0) : stays;
+    const handleCategoryClick = (category) => {
+        setSelectedCategory(category)
+    }
 
     return (
-        <section>
-            <StayList isWish={isWish} stays={filteredStays} onHeartClick={onUpdateStay} />
-        </section>
-    );
+        <div>
+            <Categories onCategoryClick={handleCategoryClick} />
+            <section>
+                <StayList isWish={isWish} stays={filteredStays} onHeartClick={onUpdateStay} />
+            </section>
+        </div>
+    )
 }

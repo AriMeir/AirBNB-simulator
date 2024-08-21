@@ -15,7 +15,9 @@ export function StayPreview({ stay, onClick, onHeartClick }) {
         image: url
     }));
 
-    const [isHeartPressed, setIsHeartPressed] = useState(false);
+    const [isHeartPressed, setIsHeartPressed] = useState(false)
+    const [randomNumber, setRandomNumber] = useState(null)
+    const [dateRange, setDateRange] = useState('')
 
     const handleHeartClick = (e) => {
         e.stopPropagation();
@@ -47,7 +49,7 @@ export function StayPreview({ stay, onClick, onHeartClick }) {
             </div>
             <div className='card-bottom full'>
                 <div className='card-header'>
-                    <h1>{stay.loc.country}, {stay.loc.city}</h1>
+                    <h3>{stay.loc.country}, {stay.loc.city}</h3>
                     <div className='star-reviews'>{svgIcons.starReview} 4.8</div>
                 </div>
                 <p>{getRandomNumber(80, 2000)} kilometers away</p>

@@ -1,4 +1,5 @@
 import { SliderComp } from "./CategoriesSlider";
+import { useNavigate } from 'react-router-dom';
 
 const categories_pic = [
     {
@@ -26,6 +27,10 @@ const categories_pic = [
     image:"https://res.cloudinary.com/dqti9icif/image/upload/v1717064168/treehouses_u9cnaf.png"
     },
     {
+        title: "Amazing views",
+        image:"	https://res.cloudinary.com/dqti9icif/image/upload/v1717063768/amazing_views_vhyqc9.png"
+    },
+    {
     title: "Farms",
     image:"https://res.cloudinary.com/dqti9icif/image/upload/v1717063953/farms_kwoc0s.png"
     },
@@ -36,14 +41,6 @@ const categories_pic = [
     {
     title: "Amazing pools",
     image:"	https://res.cloudinary.com/dqti9icif/image/upload/v1717063507/amazing_pools_dpylvq.png"
-    },
-    {
-    title: "Earth homes",
-    image:"	https://res.cloudinary.com/dqti9icif/image/upload/v1717063931/earth_homes_ln2zty.png"
-    },
-    {
-    title: "Amazing views",
-    image:"	https://res.cloudinary.com/dqti9icif/image/upload/v1717063768/amazing_views_vhyqc9.png"
     },
     {
     title: "Desert",
@@ -60,6 +57,10 @@ const categories_pic = [
     {
     title: "Tropical",
     image:"https://res.cloudinary.com/dqti9icif/image/upload/v1717064186/tropical_x6amqu.png"
+    },
+    {
+        title: "Earth homes",
+        image:"	https://res.cloudinary.com/dqti9icif/image/upload/v1717063931/earth_homes_ln2zty.png"
     },
     {
     title: "Camping",
@@ -82,16 +83,22 @@ const categories_pic = [
     image:"https://res.cloudinary.com/dqti9icif/image/upload/v1717064149/top_of_the_world_rmvs0n.png"
     },
 
-];
+]
 
 
 export function Categories() {
+    const navigate = useNavigate();
+
+    const handleCategoryClick = (category) => {
+        navigate(`/stay?category=${category}`);
+    };
+
     return (
-    <div className="categories-container full main-content">
-        <SliderComp
-            slideNum={15}
-            data={categories_pic}
-        />
-    </div>
+        <div className="categories-container full main-content">
+            <SliderComp
+                data={categories_pic}
+                onCategoryClick={handleCategoryClick}
+            />
+        </div>
     )
 }
