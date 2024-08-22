@@ -12,6 +12,7 @@ export function HomePage() {
 
     return (
         <section className='main-content'>
+            <DynamicHeader className="header-container"/>
             <DynamicHeader className="header-container" stayId={stayId} showFilter={true}/>
             {!stayId && <Categories className="categories"/>}
             {!stayId &&<StayIndex/>}

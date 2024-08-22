@@ -38,6 +38,7 @@
     color: #ff385c;
     height: 40px;
     width: 40px;
+    cursor: pointer;
 }
 
 .airbnb-header{
@@ -45,6 +46,7 @@
     color: #ff385c;
     font-size: 24px;
     letter-spacing: -1px;
+    cursor: pointer;
 }
 
 .switch-to-host{
@@ -52,6 +54,7 @@
     font-size: 14px;
     cursor: pointer;
     margin-top: 8px;
+    cursor: pointer;
 }
 
 .user-menu {
@@ -69,6 +72,10 @@
 /* Shadow effect on hover */
 .user-menu:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adjust the values for desired effect */
+}
+
+.user-menu:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .user-dropdown {
@@ -107,13 +114,14 @@
     left: 0;
     width: 100%;
     height: 100%;
-    
-    background: rgba(0,0,0, 0.25); 
-    z-index:1000; 
+
+    background: rgba(0,0,0, 0.25);
+    z-index:1000;
 }
 .big-header-margin-bottom{
     padding-bottom: 84px;
 }
+
 .header-filter .host-span {
     font-weight: bold; /* Makes the text bolder */
     position: relative; /* Necessary for the underline effect */

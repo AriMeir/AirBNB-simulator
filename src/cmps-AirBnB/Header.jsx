@@ -21,12 +21,19 @@ export function Header({ onLittleFilterClick, stayId, hostMode, showFilter }) {
         console.log(stayId);
     }, [stayId]);
 
+export function Header({onLittleFilterClick}) {
+
+    const navigate = useNavigate()
+
     return (
         <section className={`header-container ${fixed} full main-content`}>
             <div className='header main-content'>
                 <div className='header-logo flex' onClick={() => navigate(`/stay`)}>
                     <div className='airbnb-icon'>{svgIcons.AirBnB}</div>
                     <h1 className='airbnb-header'>airbnb</h1>
+                </div>
+                <div className='header-filter'>
+                    <SmallFilter onLittleFilterClick={onLittleFilterClick}/>
                 </div>
                {(!hostMode && showFilter)  &&  <div className='header-filter'>
                     <SmallFilter onLittleFilterClick={onLittleFilterClick} />
