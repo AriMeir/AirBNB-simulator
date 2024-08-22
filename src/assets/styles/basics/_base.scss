@@ -25,9 +25,9 @@ html, body {
 }
 
 html {
-    font-family: AirbnbCereal;
+    font-family: AirbnbCereal var(--main-fnt);
     line-height: 1.6;
-    color: $clr2;
+    
     scroll-behavior: smooth;
 }
 
@@ -40,7 +40,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: AirbnbCereal;
+    
     margin: 0 0 0.6em;
     line-height: 1;
 }
@@ -79,7 +79,7 @@ img {
 
 p {
     margin: 0 0 1em;
-    font-family: var(--main-fnt);
+    
     font-size: 1em;
 }
 
@@ -239,4 +239,7 @@ a:hover {
 }
 .fixed {
     position: fixed;
+}
+.--ag-charts-active-color {
+    background-color: var(--clr-btn) !important
 }

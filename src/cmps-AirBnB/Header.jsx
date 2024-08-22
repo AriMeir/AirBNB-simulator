@@ -7,6 +7,7 @@ import { SmallFilter } from './SmallFilter';
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
+
 export function Header({ onLittleFilterClick, stayId, hostMode, showFilter }) {
     const [visible, setVisible] = useState(false);
 
@@ -32,8 +33,8 @@ export function Header({ onLittleFilterClick, stayId, hostMode, showFilter }) {
                     <SmallFilter onLittleFilterClick={onLittleFilterClick} />
                 </div>}
                {hostMode &&  <div className='header-filter'>
-                    <span className='host-span'>Orders</span>
-                    <span className='host-span'>DashBoard</span>
+                    <span className='host-span first' onClick={() => navigate('/host/order')}>Orders</span>
+                    <span className='host-span' onClick={() => navigate('/host/dashboard')} >DashBoard</span>
                 </div>}
                 <div className='header-user flex-row-center'>
                     <h1 className='switch-to-host'>Switch to hosting</h1>

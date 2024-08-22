@@ -1,0 +1,83 @@
+.dashboard-container {
+    padding: 0 150px;
+    
+    width: 100%;
+}
+
+.dashboard-title {
+    padding-left: 30px;
+    font-size: 2rem;
+}
+
+.dashboard-border{
+    border: 1px solid #dedede;
+    border-radius: 12px;
+}
+
+.dashboard-display {
+    margin-top: 30px;
+    padding: 20px 20px;
+    width: 100%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    min-height: 1000px;
+    grid-template-areas:
+        "item1 item2 item3 item4"
+        "item5 item5 item6 item6"
+        "item7 item7 item8 item8";
+}
+
+.dashboard-display > div {
+    
+    border-radius: 8px;
+    padding: 10px;
+    min-height: 300px;
+}
+
+.dashboard-display > .item1 { grid-area: item1; }
+.dashboard-display > .item2 { grid-area: item2; }
+.dashboard-display > .item3 { grid-area: item3; }
+.dashboard-display > .item4 { grid-area: item4; }
+.dashboard-display > .item5 { grid-area: item5; }
+.dashboard-display > .item6 { grid-area: item6; }
+.dashboard-display > .item7 { grid-area: item7; }
+.dashboard-display > .item8 { grid-area: item8; }
+
+@media (max-width: 1200px) {
+    .dashboard-display {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+            "item1 item2"
+            "item3 item4"
+            "item5 item5"
+            "item6 item6"
+            "item7 item7"
+            "item8 item8";
+    }
+}
+
+@media (max-width: 800px) {
+    .dashboard-display {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 
+            "item1"
+            "item2"
+            "item3"
+            "item4"
+            "item5"
+            "item6"
+            "item7"
+            "item8";
+    }
+}
+
+@media (max-width: 500px) {
+    .dashboard-container {
+        padding: 0 20px;
+    }
+    
+    .dashboard-display {
+        grid-gap: 10px;
+    }
+}
