@@ -1,0 +1,50 @@
+.host-card {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    max-width: 350px;
+    margin: 10px 0;
+}
+
+.host-img-container {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.host-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.host-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+
+.host-info h5 {
+    margin: 0;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #222;
+}
+
+.host-info .host-label {
+    
+    margin: 0; /* Remove default margin */
+    font-size: 0.9em;
+    color: #555;
+    font-weight: 400;
+    padding-top: 4px; /* Add padding to match the alignment */
+}

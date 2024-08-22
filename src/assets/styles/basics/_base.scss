@@ -4,6 +4,8 @@
     
 }
 
+
+
 ::selection {
     
     
@@ -23,9 +25,10 @@ html, body {
 }
 
 html {
-    font-family: montserrat;
+    font-family: AirbnbCereal;
     line-height: 1.6;
     color: $clr2;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -37,7 +40,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: var(--main-fnt);
+    font-family: AirbnbCereal;
     margin: 0 0 0.6em;
     line-height: 1;
 }
@@ -56,6 +59,10 @@ h6{
 }
 .lil-info{
     font-size: 1rem;
+    letter-spacing: .007em;
+}
+.smaller-info{
+    font-size: 0.875rem;
     letter-spacing: .007em;
 }
 // .header {
@@ -126,6 +133,9 @@ a:hover {
 .normal-button{
     min-width: 500px;
 }
+.space-around{
+    justify-content: space-around;
+}
 .flex-row {
     flex-direction: row;
 }
@@ -155,6 +165,9 @@ a:hover {
 }
 .pad-box{
     padding-block: 2rem;
+}
+.pad-top{
+    padding-top: 2rem;
 }
 .margin-box{
     margin-block: 2rem;
@@ -190,10 +203,29 @@ a:hover {
     border: 1px solid #222;
     border-radius: 8px;
     color: #fff;
-    font-family: cereal-book;
+    
     font-size: .875rem;
     margin-right: 0;
     padding: 8px 16px;
+}
+.white-btn{
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #222;
+    border-radius: 8px;
+    color: #222;
+    display: flex;
+    font-size: 1rem;
+    gap: 8px;
+    justify-content: center;
+    line-height: 20px;
+    padding: 13px 23px;
+    text-align: center;
+}
+.white-btn:hover{
+    
+    background-color: #f0e7e7;
+    
 }
 .x-btn{
     background: white;
@@ -204,4 +236,7 @@ a:hover {
 .foggy{
     color: #717171;
     font-weight: lighter;
+}
+.fixed {
+    position: fixed;
 }

@@ -14,12 +14,12 @@
     border-bottom: 1px solid #ccc;
     top: 0;
     z-index: 1000;
-    position: fixed;
     width: 100%;
 }
 
 .header-logo{
     grid-column: 1;
+    cursor: pointer;
     // padding-left: 14px;
 }
 
@@ -52,6 +52,7 @@
 .switch-to-host{
     color: #858585;
     font-size: 14px;
+    cursor: pointer;
     margin-top: 8px;
     cursor: pointer;
 }
@@ -64,6 +65,13 @@
     position: relative;
     padding: 5px 5px 5px 10px;
     align-items: center;
+    transition: box-shadow 0.3s ease;
+}
+
+
+/* Shadow effect on hover */
+.user-menu:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adjust the values for desired effect */
 }
 
 .user-menu:hover {
@@ -112,4 +120,29 @@
 }
 .big-header-margin-bottom{
     padding-bottom: 84px;
+}
+
+.header-filter .host-span {
+    font-weight: bold; /* Makes the text bolder */
+    position: relative; /* Necessary for the underline effect */
+    padding-bottom: 5px; /* Adds some space below the text */
+    margin-right: 30px;
+    font-size: 1rem;
+    cursor: pointer; /* Changes the cursor to a pointer */
+    transition: color 0.3s ease; /* Optional: Smooth color transition */
+}
+
+.header-filter .host-span::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: black; /* Color of the underline */
+    transition: width 0.3s ease;
+}
+
+.header-filter .host-span:hover::after {
+    width: 100%; /* Expands the underline on hover */
 }

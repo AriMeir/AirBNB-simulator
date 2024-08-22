@@ -1,7 +1,11 @@
+import { DynamicHeader } from "../cmps-AirBnB/DynamicHeader";
+
 export function HostPage() {
     return (
         <section>
-            <h1>Home sweet Home</h1>
+            <DynamicHeader className="header-container" hostMode={true} stayId={1}/>
+            
+            
         </section >
     )
 }

@@ -1,0 +1,46 @@
+.trip-card {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    max-width: 350px;
+    margin: 10px 0;
+}
+
+.trip-img-container {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.trip-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.trip-dest-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.trip-dest-info h5 {
+    margin: 0;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #222;
+}
+
+.trip-dest-info .place-name {
+    margin-top: 3px;
+    font-size: 0.9em;
+    color: #555;
+    font-weight: 400;
+}
