@@ -19,12 +19,12 @@ const categories_pic = [
     image:"https://res.cloudinary.com/dqti9icif/image/upload/v1717064069/mansions_wjeeml.png"
     },
     {
-    title: "Lake",
-    image:"https://res.cloudinary.com/dqti9icif/image/upload/v1717063997/lake_adozli.png"
+        title: "Treehouses",
+        image:"https://res.cloudinary.com/dqti9icif/image/upload/v1717064168/treehouses_u9cnaf.png"
     },
     {
-    title: "Treehouses",
-    image:"https://res.cloudinary.com/dqti9icif/image/upload/v1717064168/treehouses_u9cnaf.png"
+    title: "Lake",
+    image:"https://res.cloudinary.com/dqti9icif/image/upload/v1717063997/lake_adozli.png"
     },
     {
         title: "Amazing views",

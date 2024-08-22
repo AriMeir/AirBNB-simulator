@@ -158,7 +158,7 @@
 }
 
 .text-container {
-    width: 92px;
+    width: 100px;
     font-size: 12px;
     color: #838383;
     text-align: center;
@@ -173,18 +173,16 @@
 
 .category {
     display: grid;
-    width: 92px;
+    width: 100px;
 }
 
 .category::after {
     content: "";
-    position: absolute;
     height: 2px;
-    width: 88px;
+    width: 54px;
     background-color: #ffffff;
-    bottom: -8px;
-    top: 69px;
-    margin-left: 1.5px;
+    margin-left: 23px;
+    margin-top: 7px;
 }
 
 .category:hover::after {

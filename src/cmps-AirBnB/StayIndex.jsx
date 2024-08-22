@@ -3,41 +3,41 @@ import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { loadStays, updateStay } from '../store-AirBnB/actions/stay.actions';
 import { Categories } from './Categories';
-import StayList from './StayList';
+import {StayList} from './StayList';
 
 export function StayIndex() {
-    const location = useLocation();
-    const navigate = useNavigate();
-    const [selectedCategory, setSelectedCategory] = useState('');
-    const [isWish, setIsWish] = useState(false);
+    const location = useLocation()
+    const navigate = useNavigate()
+    const [selectedCategory, setSelectedCategory] = useState('')
+    const [isWish, setIsWish] = useState(false)
 
-    const stays = useSelector(storeState => storeState.stayModule.stays);
-
-    useEffect(() => {
-        loadStays();
-    }, []);
+    const stays = useSelector(storeState => storeState.stayModule.stays)
 
     useEffect(() => {
-        const params = new URLSearchParams(location.search);
-        const category = params.get('category') || '';
-        setSelectedCategory(category);
-    }, [location.search]);
+        loadStays()
+    }, [])
+
+    useEffect(() => {
+        const params = new URLSearchParams(location.search)
+        const category = params.get('category') || ''
+        setSelectedCategory(category)
+    }, [location.search])
 
     useEffect(() => {
         if (location.pathname === '/wish') {
-            setIsWish(true);
+            setIsWish(true)
         } else {
-            setIsWish(false);
+            setIsWish(false)
         }
-    }, [location.pathname]);
+    }, [location.pathname])
 
     useEffect(() => {
-        const params = new URLSearchParams();
+        const params = new URLSearchParams()
         if (selectedCategory) {
-            params.set('category', selectedCategory);
+            params.set('category', selectedCategory)
         }
-        navigate(`?${params.toString()}`, { replace: true });
-    }, [selectedCategory, navigate]);
+        navigate(`?${params.toString()}`, { replace: true })
+    }, [selectedCategory, navigate])
 
 
     const filteredStays = stays
@@ -54,8 +54,8 @@ export function StayIndex() {
 
         const stayToSave = { ...stay, likedByUsers }
         try {
-            const savedStay = await updateStay(stayToSave)
-            console.log(`Stay updated, user ${userId} toggled in wishlist: ${savedStay.likedByUsers} ${stay._id}`)
+            const savedStay = await updateStay(stayToSave);
+            console.log(`Stay updated, user ${userId} toggled in wishlist: ${savedStay.likedByUsers} ${stay._id}`);
         } catch (err) {
             console.log('Cannot update stay', err)
         }
@@ -67,7 +67,7 @@ export function StayIndex() {
 
     return (
         <div>
-            <Categories onCategoryClick={handleCategoryClick} />
+            {/* <Categories onCategoryClick={handleCategoryClick} /> */}
             <section>
                 <StayList isWish={isWish} stays={filteredStays} onHeartClick={onUpdateStay} />
             </section>

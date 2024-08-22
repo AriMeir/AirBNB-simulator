@@ -264,7 +264,7 @@ export const stay2 = {
   loc: {
     country: "United States",
     countryCode: "PT",
-    city: "Los Angeles",
+    city: "LA",
     address: "17 Kombo st",
     lat: -8.61308,
     lng: 41.1413
@@ -669,9 +669,9 @@ export const stay13 = {
     imgUrls: ["https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg", "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436827/znh7gqzbwb4wm6bdziy7.jpg","https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436281/doubvhbpwjfx81yfzpxq.jpg"],
   },
   loc: {
-    country: "United Arab Emirates",
+    country: "Holand",
     countryCode: "PT",
-    city: "Dubai",
+    city: "Amsterdam",
     address: "17 Kombo st",
     lat: -8.61308,
     lng: 41.1413

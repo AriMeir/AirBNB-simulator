@@ -54,8 +54,9 @@
 
 .stay-img {
     border-radius: 5%;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1.05 / 1;
     width: 100%;
+    max-width: 314px;
     background-size: cover;
 }
 

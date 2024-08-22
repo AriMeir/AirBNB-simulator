@@ -8,7 +8,7 @@ const Stay = ({ image }) => (
     </section>
 );
 
-export const StayGallerySlider = ({ data, slideNum }) => {
+export const StayGallerySlider = ({ data }) => {
     const sliderRef = useRef(null);
 
     useEffect(() => {
@@ -36,9 +36,7 @@ export const StayGallerySlider = ({ data, slideNum }) => {
 
     const handleNextClick = event => {
         event.stopPropagation()
-        console.log('Next button clicked')
         if (sliderRef.current) {
-            console.log('Calling slickNext')
             sliderRef.current.slickNext()
         } else {
             console.log('sliderRef.current is null')

@@ -10,49 +10,67 @@ import { StayGallerySlider } from "./StayGallerySlider";
 
 export function StayPreview({ stay, onClick, onHeartClick }) {
 
-    const StayGallery = stay.imgUrls.map((url, index) => ({
-        title: `StayImg${index + 1}`,
-        image: url
-    }));
+    // const StayGallery = stay.imgUrls.map((url, index) => ({
+    //     title: `StayImg${index + 1}`,
+    //     image: url
+    // }))
 
     const [isHeartPressed, setIsHeartPressed] = useState(false)
     const [randomNumber, setRandomNumber] = useState(null)
     const [dateRange, setDateRange] = useState('')
 
     const handleHeartClick = (e) => {
-        e.stopPropagation();
-        setIsHeartPressed(!isHeartPressed);
-        if (onHeartClick) onHeartClick();
+        e.stopPropagation()
+        setIsHeartPressed(!isHeartPressed)
+        if (onHeartClick) onHeartClick()
     };
 
     function getRandomNumber(min, max) {
-        return Math.floor(Math.random() * (max - min + 1)) + min;
+        return Math.random() * (max - min + 1) + min;
     }
 
     function getRandomDateRange() {
-        const startDate = new Date(2024, 0, 1); // January 1st, 2024
-        const endDate = new Date(2024, 11, 31); // December 31st, 2024
-        const range = Math.floor(Math.random() * 31);
-        const start = new Date(startDate.getTime() + Math.random() * (endDate.getTime() - startDate.getTime()));
-        const end = new Date(start.getTime() + range * 24 * 60 * 60 * 1000);
-        const formatDate = (date) => date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-        return `${formatDate(start)} - ${formatDate(end)}`;
+        const startDate = new Date(2024, 0, 1) // January 1st, 2024
+        const endDate = new Date(2024, 11, 31) // December 31st, 2024
+        const range = Math.floor(Math.random() * 31)
+        const start = new Date(startDate.getTime() + Math.random() * (endDate.getTime() - startDate.getTime()))
+        const end = new Date(start.getTime() + range * 24 * 60 * 60 * 1000)
+        const formatDate = (date) => date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
+        return `${formatDate(start)} - ${formatDate(end)}`
     }
+
+    const shuffleArray = (array) => {
+        let currentIndex = array.length, randomIndex
+        while (currentIndex !== 0) {
+            randomIndex = Math.floor(Math.random() * currentIndex)
+            currentIndex--
+            [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+        }
+        return array
+    }
+
+    const StayGallery = shuffleArray(stay.imgUrls.map((url, index) => ({
+        title: `StayImg${index + 1}`,
+        image: url
+    })))
+
 
     return (
         <div className='stay-preview' onClick={onClick}>
             <div className='card-top full'>
-                <StayGallerySlider className='stay-img' data={StayGallery} slideNum={1} />
+                <StayGallerySlider className='stay-img' data={StayGallery} />
                 <div className={`heart-icon ${isHeartPressed ? 'pressed' : ''}`} onClick={handleHeartClick}>
                     {svgIcons.heart}
                 </div>
             </div>
             <div className='card-bottom full'>
                 <div className='card-header'>
-                    <h3>{stay.loc.country}, {stay.loc.city}</h3>
-                    <div className='star-reviews'>{svgIcons.starReview} 4.8</div>
+                    <h4>{stay.loc.country}, {stay.loc.city}</h4>
+                    <div className='star-reviews'>{svgIcons.starReview}
+                        <p>{(getRandomNumber(3, 4)).toFixed(1)}</p>
+                    </div>
                 </div>
-                <p>{getRandomNumber(80, 2000)} kilometers away</p>
+                <p>{Math.floor(getRandomNumber(80, 2000))} kilometers away</p>
                 <p>{getRandomDateRange()}</p>
                 <p>${stay.price} night</p>
             </div>
