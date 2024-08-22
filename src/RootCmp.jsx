@@ -5,6 +5,8 @@ import { ConfirmationPage } from './Pages-AirBnB/ConfirmationPage.jsx'
 import { LoginPage } from './Pages-AirBnB/LoginPage.jsx'
 import { TripsPage } from './Pages-AirBnB/TripsPage.jsx'
 import { HostPage } from './Pages-AirBnB/HostPage.jsx'
+import { OrderIndex } from './cmps-AirBnB/OrderIndex.jsx'
+import { DashBoard } from './cmps-AirBnB/Dashboard.jsx'
 import { WishListPage } from './Pages-AirBnB/WishListPage.jsx'
 import { HomePage } from './Pages-AirBnB/HomePage.jsx'
 import { AboutPage } from './Pages-AirBnB/AboutPage.jsx'
@@ -22,7 +24,10 @@ export function RootCmp() {
             <Route path="/login" element={<LoginPage />} />
             <Route path="/wish" element={<WishListPage />} />
             <Route path="/inbox" element={<InboxPage />} />
-            <Route path="/host" element={<HostPage />} />
+            <Route path="/host" element={<HostPage />} >
+                <Route path="/host/order" element={<OrderIndex />} />
+                <Route path="/host/dashboard" element={<DashBoard />} />
+            </Route>
             <Route path="/about" element={<AboutPage />} />
             <Route path="/test" element={<Test/>} />
         </Routes>

@@ -126,10 +126,13 @@
     font-weight: bold; /* Makes the text bolder */
     position: relative; /* Necessary for the underline effect */
     padding-bottom: 5px; /* Adds some space below the text */
-    margin-right: 30px;
+   
     font-size: 1rem;
     cursor: pointer; /* Changes the cursor to a pointer */
     transition: color 0.3s ease; /* Optional: Smooth color transition */
+}
+.header-filter .first{
+    margin-right: 30px;
 }
 
 .header-filter .host-span::after {

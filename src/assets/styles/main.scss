@@ -16,6 +16,7 @@
 
 
 // Views
+@import "views/HostPage.scss";
 @import "views/AboutUs";
 @import "views/HomePage";
 @import "views/StayDetailsPage";
@@ -30,6 +31,8 @@
 @import "views/TaskDetails";
 
 // Components
+@import "cmps/DashboardCard.scss";
+@import "cmps/DashBoard.scss";
 @import "cmps/HostCard.scss";
 @import "cmps/MenuBar.scss";
 @import "cmps/LoginDisplay.scss";
