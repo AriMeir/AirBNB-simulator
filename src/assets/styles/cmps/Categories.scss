@@ -107,18 +107,20 @@
 .slick-dots li button {
     font-size: 0;
     opacity: 0;
+    padding: 0px !important;
+    // margin: 0px !important   ;
 }
 
 .slick-dots {
     display: flex !important;
     position: absolute;
-    top: 70%;
+    top: 79%;
     cursor: pointer;
     fill: white;
-    font-size: 30px;
+    font-size: 20px;
     justify-content: center;
     width: -webkit-fill-available;
-    margin-left: 20px;
+    // margin-left: 20px;
 }
 
 .slick-dots li.slick-active{
@@ -163,9 +165,9 @@
     font-size: 12px;
     color: #838383;
     text-align: center;
-    font-family: var(--main-fnt);
+    font-family: AirbnbCereal;
     margin-top: 12px;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 .text-container:hover {

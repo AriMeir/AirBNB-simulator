@@ -201,14 +201,16 @@ const reviews = [
   }
 ]
 
+const imgUrls = ["https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg", "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436827/znh7gqzbwb4wm6bdziy7.jpg","https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436281/doubvhbpwjfx81yfzpxq.jpg","	https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436453/ndl8odasqgnyquvsbalp.jpg","https://res.cloudinary.com/dmtlr2viw/image/upload/v1663437040/oarfkdxx7gyyvcynvwko.jpg"]
+imgUrls
 export const stay1 = {
   _id: "s101",
   name: "Luxury Urban Loft",
   type: "House",
-  imgUrls: ["https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg", "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436827/znh7gqzbwb4wm6bdziy7.jpg","https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436281/doubvhbpwjfx81yfzpxq.jpg"],
+  imgUrls: imgUrls,
   price: 325,
   summary: "Luxury Urban Loft - This chic loft in a trendy neighborhood boasts high ceilings, industrial decor, and a rooftop terrace with cityscape views.",
-  capacity: 8,
+  capacity: 4,
   amenities: [
     "TV",
     "Wifi",
@@ -226,6 +228,7 @@ export const stay1 = {
     imgUrl: "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small",
   },
   loc: {
+    region: null,
     country: "Portugal",
     countryCode: "PT",
     city: "Lisbon",
@@ -241,10 +244,10 @@ export const stay2 = {
   _id: "s102",
   name: "Cozy Downtown Apartment",
   type: "Apartment",
-  imgUrls: ["https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg", "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436827/znh7gqzbwb4wm6bdziy7.jpg","https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436281/doubvhbpwjfx81yfzpxq.jpg"],
+  imgUrls: imgUrls,
   price: 203,
   summary: "Cozy Downtown Apartment - Located in the heart of the city, this modern apartment offers stunning skyline views, a fully equipped kitchen, and easy access to local attractions.",
-  capacity: 8,
+  capacity: 2,
   amenities: [
     "TV",
     "Wifi",
@@ -262,6 +265,7 @@ export const stay2 = {
     imgUrl: "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small",
   },
   loc: {
+    region: "United States",
     country: "United States",
     countryCode: "PT",
     city: "LA",
@@ -278,10 +282,10 @@ export const stay3 = {
   _id: "s103",
   name: "Beachfront Bungalow",
   type: "House",
-  imgUrls: ["https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg", "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436827/znh7gqzbwb4wm6bdziy7.jpg","https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436281/doubvhbpwjfx81yfzpxq.jpg"],
+  imgUrls: imgUrls,
   price: 194,
   summary: "Beachfront Bungalow - Enjoy the serene sound of waves in this charming bungalow right on the beach. Perfect for a romantic getaway or a relaxing vacation.",
-  capacity: 8,
+  capacity: 3,
   amenities: [
     "TV",
     "Wifi",
@@ -299,6 +303,7 @@ export const stay3 = {
     imgUrl: "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small",
   },
   loc: {
+    region: "United States",
     country: "United States",
     countryCode: "PT",
     city: "New York",
@@ -315,10 +320,10 @@ export const stay4 = {
   _id: "s104",
   name: "Mountain Cabin Retreat",
   type: "Apartment",
-  imgUrls: ["https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg", "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436827/znh7gqzbwb4wm6bdziy7.jpg","https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436281/doubvhbpwjfx81yfzpxq.jpg"],
+  imgUrls: imgUrls,
   price: 387,
   summary: "Mountain Cabin Retreat - Nestled in the mountains, this rustic cabin features a wood-burning fireplace, hiking trails, and breathtaking views of the valley below.",
-  capacity: 8,
+  capacity: 7,
   amenities: [
     "TV",
     "Wifi",
@@ -336,6 +341,7 @@ export const stay4 = {
     imgUrl: "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small",
   },
   loc: {
+    region: null,
     country: "Canada",
     countryCode: "PT",
     city: "Toronto",
@@ -352,10 +358,10 @@ export const stay5 = {
   _id: "s105",
   name: "Historic Victorian Home",
   type: "Villa",
-  imgUrls: ["https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg", "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436827/znh7gqzbwb4wm6bdziy7.jpg","https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436281/doubvhbpwjfx81yfzpxq.jpg"],
+  imgUrls: imgUrls,
   price: 444,
   summary: "Historic Victorian Home - Experience a piece of history in this beautifully restored Victorian house, complete with antique furnishings and a lush garden.",
-  capacity: 8,
+  capacity: 12,
   amenities: [
     "TV",
     "Wifi",
@@ -373,6 +379,7 @@ export const stay5 = {
     imgUrl: "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small",
   },
   loc: {
+    region: "South America",
     country: "Brazil",
     countryCode: "PT",
     city: "São Paulo",
@@ -389,10 +396,10 @@ export const stay6 = {
   _id: "s106",
   name: "Countryside Cottage",
   type: "House",
-  imgUrls: ["https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg", "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436827/znh7gqzbwb4wm6bdziy7.jpg","https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436281/doubvhbpwjfx81yfzpxq.jpg"],
+  imgUrls: imgUrls,
   price: 98,
   summary: "Countryside Cottage - Escape to the peaceful countryside in this quaint cottage surrounded by rolling hills and picturesque farmland.",
-  capacity: 8,
+  capacity: 6,
   amenities: [
     "TV",
     "Wifi",
@@ -410,6 +417,7 @@ export const stay6 = {
     imgUrl: "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small",
   },
   loc: {
+    region: "South America",
     country: "Argentina",
     countryCode: "PT",
     city: "Buenos Aires",
@@ -426,10 +434,10 @@ export const stay7 = {
   _id: "s107",
   name: "Modern Studio Apartment",
   type: "Apartment",
-  imgUrls: ["https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg", "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436827/znh7gqzbwb4wm6bdziy7.jpg","https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436281/doubvhbpwjfx81yfzpxq.jpg"],
+  imgUrls: imgUrls,
   price: 153,
   summary: "Modern Studio Apartment - Ideal for solo travelers or couples, this sleek studio offers all the modern amenities, including a smart TV and high-speed Wi-Fi.",
-  capacity: 8,
+  capacity: 2,
   amenities: [
     "TV",
     "Wifi",
@@ -447,6 +455,7 @@ export const stay7 = {
     imgUrl: "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small",
   },
   loc: {
+    region: "France",
     country: "France",
     countryCode: "PT",
     city: "Paris",
@@ -463,7 +472,7 @@ export const stay8 = {
   _id: "s108",
   name: "Tropical Villa with Pool",
   type: "Villa",
-  imgUrls: ["https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg", "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436827/znh7gqzbwb4wm6bdziy7.jpg","https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436281/doubvhbpwjfx81yfzpxq.jpg"],
+  imgUrls: imgUrls,
   price: 100,
   summary: "Tropical Villa with Pool - Luxurious villa in a tropical paradise, featuring a private pool, lush gardens, and close proximity to sandy beaches.",
   capacity: 8,
@@ -484,6 +493,7 @@ export const stay8 = {
     imgUrl: "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small",
   },
   loc: {
+    region: null,
     country: "Germany",
     countryCode: "PT",
     city: "Berlin",
@@ -500,10 +510,10 @@ export const stay9 = {
   _id: "s109",
   name: "Family-Friendly Suburban House",
   type: "House",
-  imgUrls: ["https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg", "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436827/znh7gqzbwb4wm6bdziy7.jpg","https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436281/doubvhbpwjfx81yfzpxq.jpg"],
+  imgUrls: imgUrls,
   price: 300,
   summary: "Family-Friendly Suburban House - Spacious home in a quiet suburb, perfect for families with children. Features a large backyard, play area, and nearby parks.",
-  capacity: 8,
+  capacity: 6,
   amenities: [
     "TV",
     "Wifi",
@@ -521,6 +531,7 @@ export const stay9 = {
     imgUrl: "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small",
   },
   loc: {
+    region: "Italy",
     country: "Italy",
     countryCode: "PT",
     city: "Rome",
@@ -537,10 +548,10 @@ export const stay10 = {
   _id: "s1010",
   name: "Elegant Downtown Condo",
   type: "Apartment",
-  imgUrls: ["https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg", "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436827/znh7gqzbwb4wm6bdziy7.jpg","https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436281/doubvhbpwjfx81yfzpxq.jpg"],
+  imgUrls: imgUrls,
   price: 230,
   summary: "Elegant Downtown Condo - Stylish condo in the city center, with access to a pool, gym, and concierge services. Close to shopping and dining options.",
-  capacity: 8,
+  capacity: 4,
   amenities: [
     "TV",
     "Wifi",
@@ -558,6 +569,7 @@ export const stay10 = {
     imgUrl: "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small",
   },
   loc: {
+    region: null,
     country: "Spain",
     countryCode: "PT",
     city: "Madrid",
@@ -574,10 +586,10 @@ export const stay11 = {
   _id: "s1011",
   name: "Spacious Downtown Penthouse",
   type: "Villa",
-  imgUrls: ["https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg", "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436827/znh7gqzbwb4wm6bdziy7.jpg","https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436281/doubvhbpwjfx81yfzpxq.jpg"],
+  imgUrls: imgUrls,
   price: 425,
   summary: "Spacious Downtown Penthouse - This expansive penthouse offers panoramic city views, a gourmet kitchen, and stylish decor, perfect for an upscale urban experience.",
-  capacity: 8,
+  capacity: 10,
   amenities: [
     "TV",
     "Wifi",
@@ -595,6 +607,7 @@ export const stay11 = {
     imgUrl: "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small",
   },
   loc: {
+    region: null,
     country: "Thailand",
     countryCode: "PT",
     city: "Bangkok",
@@ -611,10 +624,10 @@ export const stay12 = {
   _id: "s1012",
   name: "Eco-Friendly Tiny House",
   type: "House",
-  imgUrls: ["https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg", "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436827/znh7gqzbwb4wm6bdziy7.jpg","https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436281/doubvhbpwjfx81yfzpxq.jpg"],
+  imgUrls: imgUrls,
   price: 322,
   summary: "Eco-Friendly Tiny House - Stay green in this eco-friendly tiny house made from sustainable materials, with solar power and a minimalist design.",
-  capacity: 8,
+  capacity: 3,
   amenities: [
     "TV",
     "Wifi",
@@ -632,6 +645,7 @@ export const stay12 = {
     imgUrl: "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small",
   },
   loc: {
+    region: "Middle East",
     country: "Israel",
     countryCode: "PT",
     city: "Tel Aviv",
@@ -648,10 +662,10 @@ export const stay13 = {
   _id: "s1013",
   name: "Lakefront Log Cabin",
   type: "House",
-  imgUrls: ["https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg", "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436827/znh7gqzbwb4wm6bdziy7.jpg","https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436281/doubvhbpwjfx81yfzpxq.jpg"],
+  imgUrls: imgUrls,
   price: 260,
   summary: "Lakefront Log Cabin - Unwind in this cozy log cabin right on the lake, with opportunities for fishing, kayaking, and enjoying the great outdoors.",
-  capacity: 8,
+  capacity: 2,
   amenities: [
     "TV",
     "Wifi",
@@ -666,9 +680,10 @@ export const stay13 = {
   host: {
     id: "u101",
     fullname: "Olivia Young",
-    imgUrls: ["https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg", "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436827/znh7gqzbwb4wm6bdziy7.jpg","https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436281/doubvhbpwjfx81yfzpxq.jpg"],
+    imgUrls: imgUrls,
   },
   loc: {
+    region: null,
     country: "Holand",
     countryCode: "PT",
     city: "Amsterdam",
@@ -685,7 +700,7 @@ export const stay14 = {
   _id: "s1014",
   name: "Tropical Villa with Pool",
   type: "Villa",
-  imgUrls: ["https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg", "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436827/znh7gqzbwb4wm6bdziy7.jpg","https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436281/doubvhbpwjfx81yfzpxq.jpg"],
+  imgUrls: imgUrls,
   price: 200,
   summary: "Tropical Villa with Pool - Luxurious villa in a tropical paradise, featuring a private pool, lush gardens, and close proximity to sandy beaches.",
   capacity: 8,
@@ -706,6 +721,7 @@ export const stay14 = {
     imgUrl: "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small",
   },
   loc: {
+    region: null,
     country: "Japan",
     countryCode: "PT",
     city: "Tokyo",

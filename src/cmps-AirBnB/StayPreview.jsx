@@ -65,14 +65,14 @@ export function StayPreview({ stay, onClick, onHeartClick }) {
             </div>
             <div className='card-bottom full'>
                 <div className='card-header'>
-                    <h4>{stay.loc.country}, {stay.loc.city}</h4>
+                    <div>{stay.loc.country}, {stay.loc.city}</div>
                     <div className='star-reviews'>{svgIcons.starReview}
                         <p>{(getRandomNumber(3, 4)).toFixed(1)}</p>
                     </div>
                 </div>
                 <p>{Math.floor(getRandomNumber(80, 2000))} kilometers away</p>
                 <p>{getRandomDateRange()}</p>
-                <p>${stay.price} night</p>
+                <p><strong>${stay.price}</strong> night</p>
             </div>
         </div>
     );

@@ -103,6 +103,8 @@
     color: #212121;
     padding: 10px 16px;
     background: transparent;
+    font-family: 'AirbnbCereal';
+    font-size: 16px;
 }
 .filter-nav-container{
     gap:20px
@@ -126,7 +128,7 @@
     font-weight: bold; /* Makes the text bolder */
     position: relative; /* Necessary for the underline effect */
     padding-bottom: 5px; /* Adds some space below the text */
-   
+
     font-size: 1rem;
     cursor: pointer; /* Changes the cursor to a pointer */
     transition: color 0.3s ease; /* Optional: Smooth color transition */

@@ -2,12 +2,11 @@
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 30px;
-    grid-template-rows: 1fr 144px;
+    grid-template-rows: 1fr 105px;
     border-radius: 5%;
     cursor: pointer;
     justify-content: center;
     position: relative;
-    padding-bottom: 20px;
 
     > * {
         grid-column: 1;
@@ -31,7 +30,7 @@
 .stay-preview .card-bottom {
     grid-row: 2;
     margin-bottom: 0;
-    margin-top: 10px;
+    margin-top: 5px;
 
     > p {
         margin-bottom: 0;
@@ -42,21 +41,24 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-weight: 550;
+    color: rgb(34, 34, 34);
+    font-size: 15px;
+    font-family: AirbnbCereal;
 }
 
 .star-reviews {
     display: flex;
-    align-items: center;
     color: #222222;
     white-space: break-spaces;
-    margin-bottom: auto !important;
+    margin-bottom: -13px;
 }
 
 .stay-img {
     border-radius: 5%;
     aspect-ratio: 1.05 / 1;
     width: 100%;
-    max-width: 314px;
+    // max-width: 314px;
     background-size: cover;
 }
 
@@ -68,6 +70,7 @@
     right: 0;
     margin: 15px;
     fill: rgba(0, 0, 0, 0.5);
+    stroke-width: 2px;
 }
 
 .heart-icon svg {
@@ -75,7 +78,7 @@
     height: 26px;
     width: 26px;
     stroke: white;
-    stroke-width: 3px;
+    stroke-width: 2px;
     overflow: visible;
 }
 
