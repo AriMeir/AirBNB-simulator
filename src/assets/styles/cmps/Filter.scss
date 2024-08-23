@@ -76,8 +76,8 @@
     border-radius: 32px;
     letter-spacing: .04em;
     line-height: 1rem;
-    font-family: var(--main-fnt);
-    padding: 14px 32px;
+    
+    padding: 17px 32px;
     width: 100%;
 }
 
@@ -116,9 +116,28 @@
 .filter-container-big .big-search-button {
     height: 48px;
     margin: 7px;
-    min-width: 48px;
+    min-width: 100px;
     padding: 16px;
+    gap: 3%;
+    border-radius: 30px;
     position: relative;
+    display: flex; /* Add this line to align children in a row */
+    align-items: center; /* Aligns the SVG and h5 vertically center */
+}
+
+.filter-container-big .big-search-button h5 {
+    margin-top: 5px; /* Reset any margin to avoid extra space */
+    margin-left: 10px; /* Adjust this to control the gap between the SVG and h5 */
+
+}
+
+.big-search-button .svg {
+    display: flex; /* Ensures the SVG and h5 stay in a row */
+}
+
+.big-search-button .svg .path {
+    color: white;
+    padding-bottom: 10px;
 }
 
 .dynamic-filter-component {
@@ -156,12 +175,12 @@
     overflow: hidden;
     border-radius: 10px;
     cursor: pointer;
-    border: 0.5px solid black;
+    
   }
 
-//   .region-photo-container:hover{
-//     border: 0.5px solid black;
-//   }
+   .region-photo-container:hover{
+        border: 0.5px solid black;
+   }
 
   .region-photo {
     width: 100%;
@@ -172,7 +191,8 @@
   .region-name {
     margin-top: 10px;
     text-align: left;
-    font-size: 1.2em;
+    line-height: 1.125rem;
+    font-size: 0.875em;
   }
 .css-1juxbee-MuiButtonBase-root-MuiPickersDay-root-MuiDateRangePickerDay-day.Mui-selected{
 background-color: rgb(34, 34, 34) !important;
