@@ -431,7 +431,7 @@ export function StayDetailsPage() {
             status: "pending" // approved, rejected
         }
         await addTrip(newTrip)
-        navigate('/stay')
+        
         } catch(e) {
             console.log(e)
         }

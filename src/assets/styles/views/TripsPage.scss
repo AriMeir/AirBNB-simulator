@@ -1,63 +1,69 @@
-.trips {
-    padding: 0 200px;
-    margin-top: 200px;
-    color:black
-}
 .trips-table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate; /* Use 'separate' to enable spacing between cells */
+    border-spacing: 4px; /* Adjust the gap between cells */
     margin-top: 20px;
+    padding: 50px 0;
 }
 
 .trips-table th, .trips-table td {
-    border: 1px solid #ddd;
+    border: none;
     padding: 8px;
     text-align: left;
 }
 
 .trips-table th {
-    background-color: #e7f5f9;
-    color: #707070;
-    font-family: cereal-Bold;
+    background-color: #f8f9fa; /* Match the even rows' background color */
+    color: grey; /* Change text color if needed */
+    font-family: 'Cereal-Bold', sans-serif;
     font-size: 12px;
-    padding-block: .8em;
-    padding-inline: .5em;
+    padding-block: 0.8em;
+    padding-inline: 0.5em;
     text-align: start;
     text-transform: uppercase;
 }
+
 .trips-table td {
-    padding-block: .2em;
-    padding-inline: .5em;
+    padding-block: 0.2em;
+    padding-inline: 0.5em;
     font-size: 1rem;
+    color: #333; /* Dark gray for text */
 }
+
 .trips-table td:nth-child(1) {
-    width: 200px;
+    width: 250px;
     height: 100px;
 }
+
 .trips-table td:nth-child(2) {
-    width: 200px;
+    width: 250px;
 }
+
 .trips-table td:nth-child(3) {
     width: 130px;
 }
+
 .trips-table td:nth-child(4) {
     font-weight: 500;
-    width: 140px;
+    width: 120px;
 }
+
 .trips-table td:nth-child(5) {
-    color: #707070;
-    
+    color: #555; /* Medium gray for subtle text */
     width: 130px;
     font-size: 1.2rem;
 }
+
 .trips-table td:nth-child(6) {
-    
     padding-left: 30px;
     width: 140px;
 }
 
 .trips-table tr:nth-child(even) {
-    background-color: #e7f5f9;
+    background-color: #f8f9fa; /* Light gray background for alternating rows */
 }
 
-
+/* Hover effect for rows */
+.trips-table tr:hover {
+    background-color: #e9ecef; /* Slightly darker gray on hover */
+}

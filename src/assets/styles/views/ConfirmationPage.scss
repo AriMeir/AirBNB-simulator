@@ -1,8 +1,19 @@
 .confirmation-page{
     margin-top: 100px;
 }
+.back-button {
+    cursor: pointer;
+}
 .confirmation-title{
+    padding-left: 130px;
+    font-size: 2rem;
     gap:5px
+}
+.success-img-container{
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+    margin-right: 10px;
 }
 .confirmation-page-column-one, .confirmation-page-column-two{
     padding-left:130px;

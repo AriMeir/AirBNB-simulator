@@ -1,4 +1,4 @@
-export function TripCard({country, city, name}) {
+export function StayCard({country, city, name}) {
     return (
         <div className="trip-card flex row left align-center">
             <div className="trip-img-container">
