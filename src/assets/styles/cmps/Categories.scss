@@ -71,39 +71,6 @@
     top: 14px;
 }
 
-// .prev_pic, .next_pic {
-//     position: absolute;
-//     z-index: 10;
-//     opacity: 0;
-// }
-
-// .prev_pic:hover, .next_pic:hover {
-//     position: absolute;
-//     z-index: 10;
-//     opacity: 1;
-//     cursor: pointer;
-//     align-items: center;
-//     background-color: #fff;
-//     border: 2px solid #dedede;
-//     border-radius: 16px;
-//     display: flex;
-//     height: 29px;
-//     justify-content: center;
-//     padding: 5px;
-//     transition: box-shadow .2s ease 0s;
-//     width: 29px;
-// }
-
-// .prev_pic {
-//     bottom: 50%;
-//     left: 12px;
-// }
-
-// .next_pic {
-//     right: 12px;
-//     bottom: 50%;
-// }
-
 .slick-dots li button {
     font-size: 0;
     opacity: 0;
@@ -131,8 +98,16 @@
     opacity: 0.7;
 }
 
-.category:hover {
+.category {
+    display: grid;
+    width: 100px;
+    position: relative;
     cursor: pointer;
+    transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.category:hover .bg-image-container,
+.category:hover .text-container {
     color: black;
     opacity: 1;
 }
@@ -140,17 +115,14 @@
 .bg-image-container {
     position: relative;
     overflow: hidden;
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
     background-size: cover;
     background-repeat: no-repeat;
     margin-left: auto;
     margin-right: auto;
     opacity: 0.6;
-}
-
-.bg-image-container:hover {
-    opacity: 1;
+    transition: opacity 0.3s ease;
 }
 
 .text-container {
@@ -161,15 +133,15 @@
     font-family: AirbnbCereal;
     margin-top: 12px;
     font-weight: 500;
+    transition: color 0.3s ease;
 }
 
-.text-container:hover {
+.category:hover .bg-image-container {
+    opacity: 1;
+}
+
+.category:hover .text-container {
     color: black;
-}
-
-.category {
-    display: grid;
-    width: 100px;
 }
 
 .category::after {
@@ -184,13 +156,6 @@
 .category:hover::after {
     background-color: #c6c4c4;
 }
-
-.categories-container.scrolling:after {
-    left: 0;
-    right: 0;
-    transition: box-shadow .2s ease;
-}
-
 
 .slider-container {
     position: relative;

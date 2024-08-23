@@ -10,11 +10,6 @@ import { StayGallerySlider } from "./StayGallerySlider";
 
 export function StayPreview({ stay, onClick, onHeartClick }) {
 
-    // const StayGallery = stay.imgUrls.map((url, index) => ({
-    //     title: `StayImg${index + 1}`,
-    //     image: url
-    // }))
-
     const [isHeartPressed, setIsHeartPressed] = useState(false)
     const [randomNumber, setRandomNumber] = useState(null)
     const [dateRange, setDateRange] = useState('')
