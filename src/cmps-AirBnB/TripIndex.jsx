@@ -1,5 +1,6 @@
-import { loadTrips } from "../store-AirBnB/actions/trip.actions";
+
 import { TripTable } from "./TripTable";
+import { loadTrips } from "../store-AirBnB/actions/trip.actions";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
 

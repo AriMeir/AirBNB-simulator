@@ -243,3 +243,37 @@ a:hover {
 .--ag-charts-active-color {
     background-color: var(--clr-btn) !important
 }
+.secondary-layout{
+    padding: 0 150px;
+    margin-top: 50px;
+    color:black
+}
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 10px;
+    padding-bottom: 30px;
+    overflow: hidden;
+}
+.green-btn {
+    
+    border: 1px solid #28a745;
+    color:#28a745;
+    font-weight: 600;
+}
+.red-btn {
+    border: 1px solid #dc3545;
+    color: #dc3545;
+    font-weight: 600;
+}
+.green-btn:hover {
+    
+    border: 1px solid #28a745;
+    background-color: #28a745;
+    color:white;
+}
+.red-btn:hover {
+    border: 1px solid #dc3545;
+    background-color: #dc3545;
+    color: white;
+}

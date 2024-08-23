@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import { TripCard } from "./TripCard";
-import { HostCard } from "./HostCard";
+import { StayCard } from "./StayCard";
+import { UserCard } from "./UserCard";
 
 export function TripTable({ tripList }) {
    
@@ -36,7 +36,7 @@ export function TripTable({ tripList }) {
     };
 
     return (
-        <section className="trips">
+        <section className="secondary-layout">
             <h1>Welcome to your trips</h1>
             <h3>Number of trips: {tripList.length}</h3>
             <table className="trips-table">
@@ -53,8 +53,8 @@ export function TripTable({ tripList }) {
                 <tbody>
                     {tripList.map((trip, index) => (
                         <tr key={index}>
-                            <td><TripCard country={trip.loc.country} city={trip.loc.city} name={trip.stay.name}/></td>
-                            <td><HostCard name={trip.host.hostName}/></td>
+                            <td><StayCard country={trip.loc.country} city={trip.loc.city} name={trip.stay.name}/></td>
+                            <td><UserCard name={trip.host.hostName}/></td>
                             <td>{trip.startDate + " - " + trip.endDate}</td>
                             <td>${trip.totalPrice}.00</td>
                             <td>{getStatusDot(trip.status)}</td>

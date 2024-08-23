@@ -1,4 +1,4 @@
-export function HostCard({ name }) {
+export function UserCard({ name, type }) {
     return (
         <div className="host-card flex row left align-center">
             <div className="host-img-container">
@@ -6,7 +6,7 @@ export function HostCard({ name }) {
             </div>
             <div className="host-info flex column center align-center">
                 <h5>{name}</h5>
-                <span className="host-label">Host</span>
+                <span className="host-label">{type}</span>
             </div>
         </div>
     )

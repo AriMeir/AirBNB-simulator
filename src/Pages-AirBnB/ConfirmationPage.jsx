@@ -3,7 +3,6 @@ import { IoIosArrowBack } from "react-icons/io";
 import { LoginDisplay } from "../cmps-AirBnB/LoginDisplay"
 import { fetchSVG } from '../store-AirBnB/svg/SvgStore';
 
-
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { useState } from "react";
 import { ActionButton } from "../cmps-AirBnB/ActionButton";
@@ -262,13 +261,32 @@ export function ConfirmationPage({ onConfirmTrip, reviewMidScore }) {
     const fee = searchParams.get('fee');
 
     const [user, setUser] = useState(false)
+    const [confirmed, setConfirmed] = useState(false)
+
+    async function confirmTrip() {
+      try {
+         await onConfirmTrip(stayId, checkInDate, checkOutDate, guests, price, fee)
+         setConfirmed(true)
+
+      }catch(e){
+        console.log("Error has occured: ", e)
+      }
+
+    }
 
     return (
         <section>
-            <div className="confirmation-title flex row gap left align-center">
+            {!confirmed && <div className="confirmation-title flex row gap left align-center">
                 <div className="back-button" onClick={() => { navigate(`/stay/${stayId}`) }}><IoIosArrowBack /></div>
                 <h1> Request to book </h1>
-            </div>
+            </div>}
+            {confirmed && <div className="confirmation-title flex row gap left align-center">
+                <div className="back-button" onClick={() => { navigate(`/stay/${stayId}`) }}><IoIosArrowBack /></div>
+                <div className="success-img-container">
+                <img className="success-img" src="/img/success.svg"/>
+                </div>
+                <h1> Reservation success! </h1>
+            </div>}
 
             <div className="confirmation-page-main-content grid">
                 <div className="confirmation-page-column-one">
@@ -296,7 +314,12 @@ export function ConfirmationPage({ onConfirmTrip, reviewMidScore }) {
                             <h4>Guests</h4>
                             <h4>{guests ? guests + " Guests" : 'No guests selected'}</h4>
                         </div>
-                        {user && <ActionButton buttonText={"Confirm"}  action={() => onConfirmTrip(stayId, checkInDate, checkOutDate, guests, price, fee  )}/>}
+                        {(user && !confirmed) &&  <ActionButton buttonText={"Confirm"}  action={confirmTrip}/>}
+                        {(user && confirmed) && 
+                        <>
+                        <h3>We are looking forward to hosting you!</h3>
+                        <ActionButton buttonText={"Move to trips"}  action={() => navigate("/trips")}/>
+                        </>}
                     </div>
                     {!user && <LoginDisplay/>}
                 </div>
