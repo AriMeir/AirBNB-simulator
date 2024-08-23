@@ -13,6 +13,10 @@
     white-space: nowrap;
     padding-inline-start: 8px;
 }
+.filter-container:hover{
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
 .filter-button{
     background: transparent;
     border: 1px solid transparent;
