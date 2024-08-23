@@ -32,6 +32,11 @@
 .date-picker{
     width: 100%;
     border-bottom:1px solid #b0b0b0 ;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.date-picker p {
+    margin-bottom: 0;
 }
 .check-in-picker, .check-out-picker {
     padding:10px;
@@ -43,6 +48,13 @@
 .guest-picker{
     padding:10px
 }
+.guest-picker{
+    padding:10px
+}
+.guest-input p {
+    margin-bottom:0;
+    font-size: 0.875rem;
+}
 .reserve-button-container{
     width: 100%;
     border-radius: 8px;
@@ -50,7 +62,9 @@
     height:50px ;
     border: 1px solid #b0b0b0;
 }
-
+.guests-counter-in-reserveation p {
+    margin-bottom: 1em;
+}
 .reservation-prices{
     width: 100%;
     grid-template-columns: repeat(2,1fr);

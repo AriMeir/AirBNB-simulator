@@ -184,7 +184,11 @@ export function BigFilter() {
                         <div>{totalGuestNumber + " Guests" || "Add guests"}</div>
                     </div>
                     <button className="mini-search-button big-search-button" onClick={handleSearchButtonClick}>
+                        <div className='flex row center align-center'>
                         <IoSearch />
+                        <h5>Search</h5>
+
+                        </div>
                     </button>
                 </div>
             </Popover>

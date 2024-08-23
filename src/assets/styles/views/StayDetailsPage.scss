@@ -129,6 +129,7 @@
     grid-template-columns: 1.45fr 1fr;
     margin-top: 30px;
 }
+
 .details{
     
 }
@@ -168,6 +169,9 @@ h1 {
     border-radius: 50%;
     width: 35px;
     height: 35px;
+}
+.host-detail-img img{
+    border-radius: 50%;
 }
 .air-cover-img{
     margin-bottom: 30px;
@@ -215,8 +219,8 @@ h1 {
     cursor: pointer;
     align-items: center;
     font-family: inherit;
-    font-weight: bold;
-    font-size: 1.458rem;
+    font-weight: lighter;
+    font-size: 1rem;
     justify-content: center;
     outline: none;
     width: 40px;
@@ -239,7 +243,7 @@ h1 {
 .review-bar-out-of{
     background-color: rgb(221, 221, 221);
     width: 75%;
-    min-height: 5px;
+    min-height: 7px;
     height: 0.3rem;
     border-radius: 12px;
     position: relative;
