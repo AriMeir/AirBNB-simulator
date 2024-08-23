@@ -44,7 +44,7 @@
   .date-input {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    
 
     padding: 7px 8px;
     color: black;
@@ -59,7 +59,7 @@
     display: flex;
     cursor: pointer;
     flex-direction: column;
-    gap: 5px;
+
     border-top: 1px solid #00000050;
     padding: 7px 12px;
     color: gray;
@@ -225,17 +225,21 @@
 .date-picker-in-date-picker-modal{
     display: flex;
     justify-content: space-between;
-    max-width: 300px;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 .order-data-in-date-picker-modal{
     border: 2px solid black;
     border-radius: 13px;
+    width: 320px;
+    
     color: black;
     margin-bottom: 15px;
     max-width: 350px;
     position: absolute;
     top: 20px;
-    right: 30px;
+    right: 25px;
 }
 .reservation-form-container .date-picker-modal .order-modal-btns{
     display: flex;

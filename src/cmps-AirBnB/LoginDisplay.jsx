@@ -48,10 +48,10 @@ export function LoginDisplay() {
                 </Formik>
                 <div className="demo-login-buttons flex row space-between">
                     <div className="demo-login-button">
-                        <ActionButton buttonText={"Log In as Ari Guest"} />
+                        <ActionButton buttonText={"Log In as Einav Guest"} />
                     </div>
                     <div className="demo-login-button">
-                        <ActionButton buttonText={"Log In As Einav Host "} />
+                        <ActionButton buttonText={"Log In As Ari Host "} />
                     </div>
                 </div>
             </div>

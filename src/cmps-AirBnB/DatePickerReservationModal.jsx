@@ -12,11 +12,11 @@ export function DatePickerReservationModal({toggleShowDateModal,onPickedDate ,pi
           <div className="date-picker-in-date-picker-modal" >
             <div className="date-input" >
               <label>CHECK IN</label>
-              <input value={pickedCheckInDate? pickedCheckInDate: "Add date"}></input>
+              <p>{pickedCheckInDate? pickedCheckInDate: "Add date"}</p>
             </div>
             <div className="date-input">
               <label>CHECK OUT</label>
-              <input value={pickedCheckOutDate? pickedCheckOutDate : "Add date"}></input>
+              <p>{pickedCheckOutDate? pickedCheckOutDate : "Add date"}</p>
             </div>
           </div>    
         </div>
