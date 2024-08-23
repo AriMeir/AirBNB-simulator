@@ -1,9 +1,9 @@
 .header{
     background: white;
     display: grid;
-    grid-template-columns: 120px 1fr 250px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    grid-template-columns: 250px 1fr 250px;
+    padding-top: 14px;
+    padding-bottom: 14px;
     align-items: center;
 }
 
@@ -52,10 +52,39 @@
 .switch-to-host{
     color: #858585;
     font-size: 14px;
-    cursor: pointer;
+    width: 130px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10%;
+    background-color: transparent;
     margin-top: 8px;
     cursor: pointer;
 }
+
+.switch-to-host:hover{
+    background-color: rgb(235, 233, 233);
+
+}
+
+.language-icon {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: transparent;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.language-icon:hover {
+    background-color: rgb(235, 233, 233);
+}
+
+
 
 .user-menu {
     border-radius: 50px;
@@ -66,12 +95,7 @@
     padding: 5px 5px 5px 10px;
     align-items: center;
     transition: box-shadow 0.3s ease;
-}
-
-
-/* Shadow effect on hover */
-.user-menu:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adjust the values for desired effect */
+    margin-left: 10px;
 }
 
 .user-menu:hover {
@@ -103,6 +127,8 @@
     color: #212121;
     padding: 10px 16px;
     background: transparent;
+    font-family: 'AirbnbCereal';
+    font-size: 16px;
 }
 .filter-nav-container{
     gap:20px
@@ -126,7 +152,7 @@
     font-weight: bold; /* Makes the text bolder */
     position: relative; /* Necessary for the underline effect */
     padding-bottom: 5px; /* Adds some space below the text */
-   
+
     font-size: 1rem;
     cursor: pointer; /* Changes the cursor to a pointer */
     transition: color 0.3s ease; /* Optional: Smooth color transition */

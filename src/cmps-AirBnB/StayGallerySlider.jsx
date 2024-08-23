@@ -11,9 +11,6 @@ const Stay = ({ image }) => (
 export const StayGallerySlider = ({ data }) => {
     const sliderRef = useRef(null);
 
-    useEffect(() => {
-    }, []);
-
     const settings = {
         arrows: false,
         swipeToSlide: true,
@@ -24,28 +21,22 @@ export const StayGallerySlider = ({ data }) => {
     }
 
     const handlePrevClick = event => {
-        event.stopPropagation()
-        console.log('Prev button clicked')
+        event.stopPropagation();
         if (sliderRef.current) {
-            console.log('Calling slickPrev')
-            sliderRef.current.slickPrev()
-        } else {
-            console.log('sliderRef.current is null')
+            sliderRef.current.slickPrev();
         }
     };
 
     const handleNextClick = event => {
-        event.stopPropagation()
+        event.stopPropagation();
         if (sliderRef.current) {
-            sliderRef.current.slickNext()
-        } else {
-            console.log('sliderRef.current is null')
+            sliderRef.current.slickNext();
         }
     };
 
     return (
-        <div>
-            <div onClick={handlePrevClick} className="prev_pic" style={{ cursor: 'pointer' }}>
+        <div className="slider-container">
+            <div onClick={handlePrevClick} className="prev_pic">
                 {svgIcons.arrowLeft}
             </div>
             <Slider {...settings} ref={sliderRef}>
@@ -55,9 +46,9 @@ export const StayGallerySlider = ({ data }) => {
                     </div>
                 ))}
             </Slider>
-            <div onClick={handleNextClick} className="next_pic" style={{ cursor: 'pointer' }}>
+            <div onClick={handleNextClick} className="next_pic">
                 {svgIcons.arrowRight}
             </div>
         </div>
-    )
+    );
 }

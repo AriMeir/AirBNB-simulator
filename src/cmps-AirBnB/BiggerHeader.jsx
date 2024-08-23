@@ -42,9 +42,7 @@ export function BiggerHeader({ onOverlayClick, stayId }) {
                     </div>
                     <div className='header-user flex-row-center big-header-margin-bottom'>
                         <h1 className='switch-to-host'>Switch to hosting</h1>
-                        <p className='small-margin-right'></p>
-                        {svgIcons.languageSwitch}
-                        <p className='small-margin-right'></p>
+                        <div className='language-icon'>{svgIcons.languageSwitch}</div>
 
                         <Popover
                             placement='bottomLeft'

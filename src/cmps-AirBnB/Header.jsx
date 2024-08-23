@@ -38,9 +38,7 @@ export function Header({ onLittleFilterClick, stayId, hostMode, showFilter }) {
                 </div>}
                 <div className='header-user flex-row-center'>
                     <h1 className='switch-to-host'>Switch to hosting</h1>
-                    <p className='small-margin-right'></p>
-                    {svgIcons.languageSwitch}
-                    <p className='small-margin-right'></p>
+                    <div className='language-icon'>{svgIcons.languageSwitch}</div>
 
                     <Popover
                         placement='bottomRight'

@@ -20,7 +20,7 @@ export function BigFilter() {
     const [searchParams, setSearchParams] = useSearchParams();
 
     useEffect(() => {
-        setTotalGuestNumber(adultCounter + childrenCounter + infantCounter + petCounter);
+        setTotalGuestNumber(adultCounter + childrenCounter + infantCounter);
     }, [adultCounter, childrenCounter, infantCounter, petCounter]);
 
     const handleLocationChange = (e) => {

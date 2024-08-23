@@ -8,7 +8,6 @@
     padding-top: 107px;
     margin: auto;
     display: flex;
-    height: 185px;
 }
 
 .categories {
@@ -34,6 +33,7 @@
     width: -webkit-fill-available;
     width: 100%;
     overflow: hidden;
+    border-radius: 5%;
 }
 
 .slick-track {
@@ -71,54 +71,21 @@
     top: 14px;
 }
 
-.prev_pic, .next_pic {
-    position: absolute;
-    z-index: 10;
-    opacity: 0;
-}
-
-.prev_pic:hover, .next_pic:hover {
-    position: absolute;
-    z-index: 10;
-    opacity: 1;
-    cursor: pointer;
-    align-items: center;
-    background-color: #fff;
-    border: 2px solid #dedede;
-    border-radius: 16px;
-    display: flex;
-    height: 29px;
-    justify-content: center;
-    padding: 5px;
-    transition: box-shadow .2s ease 0s;
-    width: 29px;
-}
-
-.prev_pic {
-    bottom: 50%;
-    left: 12px;
-}
-
-.next_pic {
-    right: 12px;
-    bottom: 50%;
-}
-
 .slick-dots li button {
     font-size: 0;
     opacity: 0;
+    padding: 0px !important;
 }
 
 .slick-dots {
     display: flex !important;
     position: absolute;
-    top: 70%;
+    top: 79%;
     cursor: pointer;
     fill: white;
-    font-size: 30px;
+    font-size: 20px;
     justify-content: center;
     width: -webkit-fill-available;
-    margin-left: 20px;
 }
 
 .slick-dots li.slick-active{
@@ -131,13 +98,16 @@
     opacity: 0.7;
 }
 
-// .category {
-//     margin-right: 10px;
-//     margin-left: 10px;
-// }
-
-.category:hover {
+.category {
+    display: grid;
+    width: 100px;
+    position: relative;
     cursor: pointer;
+    transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.category:hover .bg-image-container,
+.category:hover .text-container {
     color: black;
     opacity: 1;
 }
@@ -145,17 +115,14 @@
 .bg-image-container {
     position: relative;
     overflow: hidden;
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
     background-size: cover;
     background-repeat: no-repeat;
     margin-left: auto;
     margin-right: auto;
     opacity: 0.6;
-}
-
-.bg-image-container:hover {
-    opacity: 1;
+    transition: opacity 0.3s ease;
 }
 
 .text-container {
@@ -163,18 +130,18 @@
     font-size: 12px;
     color: #838383;
     text-align: center;
-    font-family: var(--main-fnt);
+    font-family: AirbnbCereal;
     margin-top: 12px;
-    font-weight: bold;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
-.text-container:hover {
+.category:hover .bg-image-container {
+    opacity: 1;
+}
+
+.category:hover .text-container {
     color: black;
-}
-
-.category {
-    display: grid;
-    width: 100px;
 }
 
 .category::after {
@@ -190,8 +157,42 @@
     background-color: #c6c4c4;
 }
 
-.categories-container.scrolling:after {
-    left: 0;
-    right: 0;
-    transition: box-shadow .2s ease;
+.slider-container {
+    position: relative;
+}
+
+.prev_pic, .next_pic {
+    position: absolute;
+    z-index: 10;
+    cursor: pointer;
+    background-color: #fff;
+    border: 2px solid #dedede;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 29px;
+    width: 29px;
+    transition: opacity .3s ease;
+}
+
+.prev_pic {
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.next_pic {
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.slider-container:hover .prev_pic,
+.slider-container:hover .next_pic {
+    opacity: 1;
+}
+
+.prev_pic, .next_pic {
+    opacity: 0;
 }

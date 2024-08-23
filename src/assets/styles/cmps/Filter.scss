@@ -13,12 +13,16 @@
     white-space: nowrap;
     padding-inline-start: 8px;
 }
+.filter-container:hover{
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
 .filter-button{
     background: transparent;
     border: 1px solid transparent;
     border-radius: 4px;
     color: #212121;
-    
+
     cursor: pointer;
     flex-grow: 1;
     font-size: 14px;
@@ -36,7 +40,7 @@
 }
 .filter-add-guests {
     color: #707070;
-    
+
 }
 .mini-search-button{
     background-color: var(--clr-btn);
@@ -52,11 +56,11 @@
     color: white;
 }
 .filter-container-big {
-    background-color: #fff;
+    background-color: #EBEBEB;
     border: 1px solid #dedede;
     border-radius: 40px;
     cursor: pointer;
-    
+
     flex: 1 1;
     height: 66px;
     margin: 0 auto;
@@ -90,7 +94,11 @@
 }
 
 .filter-container-big .search-category:hover {
-    background-color: #dedede;
+    background-color: #DDDDDD;
+}
+
+.filter-container-big .search-category:focus {
+    background-color: #e41010;
 }
 
 .filter-container-big .guests-button {
@@ -116,8 +124,6 @@
 .dynamic-filter-component {
     width: 100%;
     background-color: white;
-    
-    padding: 20px;
     border-radius: 8px;
 }
 .check-in-out{
@@ -133,33 +139,36 @@
 .main-location-filter {
     padding: 20px;
   }
-  
+
   .locations-filter-header {
     font-size: 1.0rem;
     margin-bottom: 10px;
-  } 
-  
+    font-weight: bold;
+  }
+
   .region {
     text-align: center;
   }
-  
+
   .region-photo-container {
     width: 100%;
     height: 100px;
     overflow: hidden;
     border-radius: 10px;
     cursor: pointer;
-  }
-  .region-photo-container:hover{
     border: 0.5px solid black;
   }
-  
+
+//   .region-photo-container:hover{
+//     border: 0.5px solid black;
+//   }
+
   .region-photo {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-  
+
   .region-name {
     margin-top: 10px;
     text-align: left;
@@ -178,19 +187,19 @@ background-color: rgb(34, 34, 34) !important;
     background-color: rgb(34, 34, 34) !important;
 }
 .css-1ny3jyh-MuiDateRangePickerDay-root {
-    
+
     color: #fff;
      background-color: rgb(247, 247, 247) !important;
 }
 .css-f8wito-MuiDateRangePickerDay-root {
     color: #fff;
     background-color: rgb(247, 247, 247) !important;
-    
+
 }
 .css-1jt0kfk-MuiDateRangePickerDay-root {
     background-color: rgb(247, 247, 247) !important;
     color: #fff;
-  
+
 }
 .css-jef1b6-MuiDateRangeCalendar-container:not(:last-of-type) {
     border-right: none !important;
@@ -198,5 +207,3 @@ background-color: rgb(34, 34, 34) !important;
 .css-gqp4xl-MuiPickersLayout-root .MuiPickersLayout-toolbar{
     display: none !important;
 }
-  
- 
