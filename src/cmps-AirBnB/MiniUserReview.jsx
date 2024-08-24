@@ -1,6 +1,6 @@
 import {useEffect, useState } from "react"
 
-export function MiniUserReview({reviewerName,reviewDate, review}) {
+export function MiniUserReview({reviewerName,reviewDate, review, imgUrl}) {
   
     
     const atLeastHundredyCharacters = review.length >= 150
@@ -22,7 +22,7 @@ export function MiniUserReview({reviewerName,reviewDate, review}) {
     return (
         <div className='review-prev flex column '>
             <div className='mini-user-details flex row align-left'>
-                <div className="mini-user-img border">img</div>
+                <div className="mini-user-img"><img src={imgUrl}/></div>
                 <div className="mini-user-name-date flex column align-left">
                     <h6>{reviewerName}</h6>
                     <span>{reviewDate}</span>

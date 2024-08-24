@@ -243,8 +243,8 @@ h1 {
 .review-bar-out-of{
     background-color: rgb(221, 221, 221);
     width: 75%;
-    min-height: 7px;
-    height: 0.3rem;
+    min-height: 5px;
+    height: 0.4rem;
     border-radius: 12px;
     position: relative;
     overflow: hidden;
@@ -264,6 +264,10 @@ h1 {
 }
 .mini-user-details{
     width: 100%;
+}
+.mini-user-details img {
+    width: 100%;
+    border-radius: 50%;
 }
 .mini-user-name-date{
     margin-left: 10px;
