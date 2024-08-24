@@ -1,5 +1,5 @@
 import { fetchSVG } from "../store-AirBnB/svg/SvgStore";
-import { MiniUserReview } from "./MiniUserReview";
+import { MiniUserReview } from "./MiniUserReview"
 
 export function ReviewsPreviewGridList({ reviewList }) {
   return (
@@ -7,6 +7,7 @@ export function ReviewsPreviewGridList({ reviewList }) {
       {reviewList.slice(0,8).map((review) => (
         <MiniUserReview
           key={review.id}
+          imgUrl={review.by.imgUrl}
           reviewerName={review.by.fullname}
           reviewDate={'Jan 2023'}
           review={review.txt}

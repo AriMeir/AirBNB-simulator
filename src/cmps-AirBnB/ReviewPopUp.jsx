@@ -11,6 +11,7 @@ export function ReviewPopUp({ onClose, reviewList }) {
           <MiniUserReview
             key={review.id}
             reviewerName={review.by.fullname}
+            imgUrl={review.by.imgUrl}
             reviewDate={'Jan 2023'} 
             review={review.txt}
           />

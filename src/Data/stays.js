@@ -1,204 +1,205 @@
 const reviews = [
   {
     "id": "r1",
-    "txt": "Amazing place! Super clean and great location.",
+    "txt": "Amazing place! Super clean and great location. The host was very accommodating and provided us with all the necessary information for our stay. The neighborhood is quiet and safe, with easy access to public transportation. Highly recommended for anyone looking for a comfortable and hassle-free stay.",
     "rate": 5,
     "by": {
       "id": "u101",
-      "fullname": "user1",
-      "imgUrl": "/img/img1.jpg"
+      "fullname": "Klodet",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/female/10.jpg"
     }
   },
   {
     "id": "r2",
-    "txt": "The hosts were very welcoming. Would definitely stay again.",
+    "txt": "The hosts were very welcoming. They provided us with a map of the area and recommended some great local restaurants. The place itself was exactly as described, clean and cozy. Would definitely stay again if we're in the area.",
     "rate": 4,
     "by": {
       "id": "u102",
-      "fullname": "user2",
-      "imgUrl": "/img/img2.jpg"
+      "fullname": "Chris",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/68.jpg"
     }
   },
   {
     "id": "r3",
-    "txt": "Good value for money. Close to public transport.",
+    "txt": "Good value for money. The apartment is close to public transport, making it easy to get around the city. The host was very responsive and answered all our questions quickly. The only downside was the slightly small bathroom, but it wasn't a major issue.",
     "rate": 4,
     "by": {
       "id": "u103",
-      "fullname": "user3",
-      "imgUrl": "/img/img3.jpg"
+      "fullname": "Yoav",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/45.jpg"
     }
   },
   {
     "id": "r4",
-    "txt": "The apartment was a bit small but very cozy.",
+    "txt": "The apartment was a bit small but very cozy. It had everything we needed for a short stay, including a fully equipped kitchen. The location is fantastic, with several shops and cafes within walking distance. The host was also very friendly and made sure we had everything we needed.",
     "rate": 3,
     "by": {
       "id": "u104",
-      "fullname": "user4",
-      "imgUrl": "/img/img4.jpg"
+      "fullname": "Kim",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/female/64.jpg"
     }
   },
   {
     "id": "r5",
-    "txt": "Fantastic view from the balcony. Highly recommend!",
+    "txt": "Fantastic view from the balcony. The apartment is well-decorated and has a very homey feel. We spent a lot of time just relaxing and enjoying the view. The bed was comfortable, and the place was spotless. Highly recommend this place to anyone looking for a relaxing getaway.",
     "rate": 5,
     "by": {
       "id": "u105",
-      "fullname": "user5",
-      "imgUrl": "/img/img5.jpg"
+      "fullname": "Binh",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/44.jpg"
     }
   },
   {
     "id": "r6",
-    "txt": "Nice place, but a bit noisy at night.",
+    "txt": "Nice place, but a bit noisy at night. The apartment is located in a busy area, so there was some street noise, especially on the weekends. However, the apartment itself was very comfortable and clean. The host was helpful and provided earplugs, which was a nice touch.",
     "rate": 3,
     "by": {
       "id": "u106",
-      "fullname": "user6",
-      "imgUrl": "/img/img6.jpg"
+      "fullname": "Duyan",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/32.jpg"
     }
   },
   {
     "id": "r7",
-    "txt": "The kitchen was fully equipped and very clean.",
+    "txt": "The kitchen was fully equipped and very clean. We were able to cook our meals without any issues. The location is great, with several grocery stores and markets nearby. The apartment was also very quiet, which was a big plus.",
     "rate": 4,
     "by": {
       "id": "u107",
-      "fullname": "user7",
-      "imgUrl": "/img/img7.jpg"
+      "fullname": "Kimber",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/4.jpg"
     }
   },
   {
     "id": "r8",
-    "txt": "Beautiful decor and very comfortable bed.",
+    "txt": "Beautiful decor and very comfortable bed. The apartment felt like a home away from home. The host was very thoughtful and even left us a bottle of wine to welcome us. We had a great time staying here and would definitely come back.",
     "rate": 5,
     "by": {
       "id": "u108",
-      "fullname": "user8",
-      "imgUrl": "/img/img8.jpg"
+      "fullname": "Jess",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/female/23.jpg"
     }
   },
   {
     "id": "r9",
-    "txt": "The wifi was a bit slow, but everything else was great.",
+    "txt": "The wifi was a bit slow, but everything else was great. The apartment was clean, well-furnished, and in a convenient location. The host was very responsive and did their best to address the wifi issue during our stay.",
     "rate": 4,
     "by": {
       "id": "u109",
-      "fullname": "user9",
-      "imgUrl": "/img/img9.jpg"
+      "fullname": "Irena",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/female/35.jpg"
     }
   },
   {
     "id": "r10",
-    "txt": "Perfect location, right in the city center.",
+    "txt": "Perfect location, right in the city center. We could walk to all the major attractions. The apartment was clean and well-maintained. The host provided us with all the necessary information for our stay and was very friendly.",
     "rate": 5,
     "by": {
       "id": "u110",
-      "fullname": "user10",
-      "imgUrl": "/img/img10.jpg"
+      "fullname": "Quantin",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/28.jpg"
     }
   },
   {
     "id": "r11",
-    "txt": "Hosts were very responsive and helpful.",
+    "txt": "Hosts were very responsive and helpful. They provided us with detailed information about the apartment and the surrounding area. The place itself was very comfortable and clean. We had a great stay and would definitely recommend it.",
     "rate": 5,
     "by": {
       "id": "u111",
-      "fullname": "user11",
-      "imgUrl": "/img/img11.jpg"
+      "fullname": "Matthew",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/41.jpg"
     }
   },
   {
     "id": "r12",
-    "txt": "Great place for a weekend getaway.",
+    "txt": "Great place for a weekend getaway. The apartment is cozy and well-furnished, with a lovely balcony where we could enjoy our morning coffee. The host was very accommodating and even allowed us to check out late. Highly recommend!",
     "rate": 4,
     "by": {
       "id": "u112",
-      "fullname": "user12",
-      "imgUrl": "/img/img12.jpg"
+      "fullname": "Yossi",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/11.jpg"
     }
   },
   {
     "id": "r13",
-    "txt": "The place was exactly as described. Very pleased.",
+    "txt": "The place was exactly as described. We were very pleased with our stay. The apartment was clean, comfortable, and in a great location. The host was very helpful and provided us with all the information we needed. We would definitely stay here again.",
     "rate": 5,
     "by": {
       "id": "u113",
-      "fullname": "user13",
-      "imgUrl": "/img/img13.jpg"
+      "fullname": "Tal",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/12.jpg"
     }
   },
   {
     "id": "r14",
-    "txt": "Comfortable stay, but could use better lighting.",
+    "txt": "Comfortable stay, but could use better lighting. The apartment was a bit dim, especially in the evenings. Other than that, everything was great. The host was friendly and provided us with extra blankets when we requested them.",
     "rate": 3,
     "by": {
       "id": "u114",
-      "fullname": "user14",
-      "imgUrl": "/img/img14.jpg"
+      "fullname": "Meir",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/13.jpg"
     }
   },
   {
     "id": "r15",
-    "txt": "Wonderful experience! The hosts were amazing.",
+    "txt": "Wonderful experience! The hosts were amazing. They went out of their way to make sure we were comfortable and had everything we needed. The apartment was clean, stylish, and in a great location. We would definitely stay here again.",
     "rate": 5,
     "by": {
       "id": "u115",
-      "fullname": "user15",
-      "imgUrl": "/img/img15.jpg"
+      "fullname": "James",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/14.jpg"
     }
   },
   {
     "id": "r16",
-    "txt": "Good place, but a bit far from main attractions.",
+    "txt": "Good place, but a bit far from main attractions. We had to take public transport to get to the city center, which was a bit inconvenient. However, the apartment itself was very nice and well-maintained. The host was also very friendly.",
     "rate": 3,
     "by": {
       "id": "u116",
-      "fullname": "user16",
-      "imgUrl": "/img/img16.jpg"
+      "fullname": "Jean",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/15.jpg"
     }
   },
   {
     "id": "r17",
-    "txt": "Spotlessly clean and very stylish.",
+    "txt": "Spotlessly clean and very stylish. The apartment was beautifully decorated and had everything we needed for a comfortable stay. The host was very accommodating and even provided us with a list of local restaurants and cafes. We had a wonderful time here.",
     "rate": 5,
     "by": {
       "id": "u117",
-      "fullname": "user17",
-      "imgUrl": "/img/img17.jpg"
+      "fullname": "Klodet",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/female/11.jpg"
     }
   },
   {
     "id": "r18",
-    "txt": "Good for the price, but could be better maintained.",
+    "txt": "Good for the price, but could be better maintained. The apartment was a bit dated and could use some upgrades. However, it was clean and comfortable, and the host was very responsive. We enjoyed our stay overall.",
     "rate": 3,
     "by": {
       "id": "u118",
-      "fullname": "user18",
-      "imgUrl": "/img/img18.jpg"
+      "fullname": "Kim",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/female/12.jpg"
     }
   },
   {
     "id": "r19",
-    "txt": "The host provided great local recommendations.",
+    "txt": "The host provided great local recommendations. We tried several of the restaurants they suggested and were not disappointed. The apartment was comfortable and well-located. We had a great time exploring the area.",
     "rate": 4,
     "by": {
       "id": "u119",
-      "fullname": "user19",
-      "imgUrl": "/img/img19.jpg"
+      "fullname": "Hadar",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/female/13.jpg"
     }
   },
   {
     "id": "r20",
-    "txt": "Lovely place with a beautiful garden.",
+    "txt": "Lovely place with a beautiful garden. We spent a lot of time outside enjoying the peaceful surroundings. The apartment was clean, comfortable, and well-equipped. The host was very welcoming and made us feel right at home.",
     "rate": 5,
     "by": {
       "id": "u120",
-      "fullname": "user20",
-      "imgUrl": "/img/img20.jpg"
+      "fullname": "Kaodia",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/female/14.jpg"
     }
   }
+  
 ]
 
 const imgUrls = ["https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg", "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436827/znh7gqzbwb4wm6bdziy7.jpg","https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436281/doubvhbpwjfx81yfzpxq.jpg","	https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436453/ndl8odasqgnyquvsbalp.jpg","https://res.cloudinary.com/dmtlr2viw/image/upload/v1663437040/oarfkdxx7gyyvcynvwko.jpg"]

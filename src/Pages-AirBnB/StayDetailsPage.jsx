@@ -24,8 +24,8 @@ const reviews = [
     "rate": 5,
     "by": {
       "id": "u101",
-      "fullname": "user1",
-      "imgUrl": "/img/img1.jpg"
+      "fullname": "Klodet",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/female/10.jpg"
     }
   },
   {
@@ -34,8 +34,8 @@ const reviews = [
     "rate": 4,
     "by": {
       "id": "u102",
-      "fullname": "user2",
-      "imgUrl": "/img/img2.jpg"
+      "fullname": "Chris",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/68.jpg"
     }
   },
   {
@@ -44,8 +44,8 @@ const reviews = [
     "rate": 4,
     "by": {
       "id": "u103",
-      "fullname": "user3",
-      "imgUrl": "/img/img3.jpg"
+      "fullname": "Yoav",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/45.jpg"
     }
   },
   {
@@ -54,8 +54,8 @@ const reviews = [
     "rate": 3,
     "by": {
       "id": "u104",
-      "fullname": "user4",
-      "imgUrl": "/img/img4.jpg"
+      "fullname": "Kim",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/female/64.jpg"
     }
   },
   {
@@ -64,8 +64,8 @@ const reviews = [
     "rate": 5,
     "by": {
       "id": "u105",
-      "fullname": "user5",
-      "imgUrl": "/img/img5.jpg"
+      "fullname": "Binh",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/44.jpg"
     }
   },
   {
@@ -74,8 +74,8 @@ const reviews = [
     "rate": 3,
     "by": {
       "id": "u106",
-      "fullname": "user6",
-      "imgUrl": "/img/img6.jpg"
+      "fullname": "Duyan",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/32.jpg"
     }
   },
   {
@@ -84,8 +84,8 @@ const reviews = [
     "rate": 4,
     "by": {
       "id": "u107",
-      "fullname": "user7",
-      "imgUrl": "/img/img7.jpg"
+      "fullname": "Kimber",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/4.jpg"
     }
   },
   {
@@ -94,8 +94,8 @@ const reviews = [
     "rate": 5,
     "by": {
       "id": "u108",
-      "fullname": "user8",
-      "imgUrl": "/img/img8.jpg"
+      "fullname": "Jess",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/female/23.jpg"
     }
   },
   {
@@ -104,8 +104,8 @@ const reviews = [
     "rate": 4,
     "by": {
       "id": "u109",
-      "fullname": "user9",
-      "imgUrl": "/img/img9.jpg"
+      "fullname": "Irena",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/female/35.jpg"
     }
   },
   {
@@ -114,8 +114,8 @@ const reviews = [
     "rate": 5,
     "by": {
       "id": "u110",
-      "fullname": "user10",
-      "imgUrl": "/img/img10.jpg"
+      "fullname": "Quantin",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/28.jpg"
     }
   },
   {
@@ -124,8 +124,8 @@ const reviews = [
     "rate": 5,
     "by": {
       "id": "u111",
-      "fullname": "user11",
-      "imgUrl": "/img/img11.jpg"
+      "fullname": "Matthew",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/41.jpg"
     }
   },
   {
@@ -134,8 +134,8 @@ const reviews = [
     "rate": 4,
     "by": {
       "id": "u112",
-      "fullname": "user12",
-      "imgUrl": "/img/img12.jpg"
+      "fullname": "Yossi",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/11.jpg"
     }
   },
   {
@@ -144,8 +144,8 @@ const reviews = [
     "rate": 5,
     "by": {
       "id": "u113",
-      "fullname": "user13",
-      "imgUrl": "/img/img13.jpg"
+      "fullname": "Tal",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/12.jpg"
     }
   },
   {
@@ -154,8 +154,8 @@ const reviews = [
     "rate": 3,
     "by": {
       "id": "u114",
-      "fullname": "user14",
-      "imgUrl": "/img/img14.jpg"
+      "fullname": "Meir",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/13.jpg"
     }
   },
   {
@@ -164,8 +164,8 @@ const reviews = [
     "rate": 5,
     "by": {
       "id": "u115",
-      "fullname": "user15",
-      "imgUrl": "/img/img15.jpg"
+      "fullname": "James",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/14.jpg"
     }
   },
   {
@@ -174,8 +174,8 @@ const reviews = [
     "rate": 3,
     "by": {
       "id": "u116",
-      "fullname": "user16",
-      "imgUrl": "/img/img16.jpg"
+      "fullname": "Jean",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/15.jpg"
     }
   },
   {
@@ -184,8 +184,8 @@ const reviews = [
     "rate": 5,
     "by": {
       "id": "u117",
-      "fullname": "user17",
-      "imgUrl": "/img/img17.jpg"
+      "fullname": "Klodet",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/female/11.jpg"
     }
   },
   {
@@ -194,8 +194,8 @@ const reviews = [
     "rate": 3,
     "by": {
       "id": "u118",
-      "fullname": "user18",
-      "imgUrl": "/img/img18.jpg"
+      "fullname": "Kim",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/female/12.jpg"
     }
   },
   {
@@ -204,8 +204,8 @@ const reviews = [
     "rate": 4,
     "by": {
       "id": "u119",
-      "fullname": "user19",
-      "imgUrl": "/img/img19.jpg"
+      "fullname": "Hadar",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/female/13.jpg"
     }
   },
   {
@@ -214,310 +214,11 @@ const reviews = [
     "rate": 5,
     "by": {
       "id": "u120",
-      "fullname": "user20",
-      "imgUrl": "/img/img20.jpg"
-    }
-  },
-  {
-    "id": "r21",
-    "txt": "Very clean and comfortable.",
-    "rate": 5,
-    "by": {
-      "id": "u121",
-      "fullname": "user21",
-      "imgUrl": "/img/img21.jpg"
-    }
-  },
-  {
-    "id": "r22",
-    "txt": "Great location, close to everything.",
-    "rate": 4,
-    "by": {
-      "id": "u122",
-      "fullname": "user22",
-      "imgUrl": "/img/img22.jpg"
-    }
-  },
-  {
-    "id": "r23",
-    "txt": "Comfortable bed, good amenities.",
-    "rate": 4,
-    "by": {
-      "id": "u123",
-      "fullname": "user23",
-      "imgUrl": "/img/img23.jpg"
-    }
-  },
-  {
-    "id": "r24",
-    "txt": "Nice place, but a bit noisy.",
-    "rate": 3,
-    "by": {
-      "id": "u124",
-      "fullname": "user24",
-      "imgUrl": "/img/img24.jpg"
-    }
-  },
-  {
-    "id": "r25",
-    "txt": "Perfect for a short stay.",
-    "rate": 4,
-    "by": {
-      "id": "u125",
-      "fullname": "user25",
-      "imgUrl": "/img/img25.jpg"
-    }
-  },
-  {
-    "id": "r26",
-    "txt": "Hosts were very helpful.",
-    "rate": 5,
-    "by": {
-      "id": "u126",
-      "fullname": "user26",
-      "imgUrl": "/img/img26.jpg"
-    }
-  },
-  {
-    "id": "r27",
-    "txt": "Lovely apartment, great decor.",
-    "rate": 5,
-    "by": {
-      "id": "u127",
-      "fullname": "user27",
-      "imgUrl": "/img/img27.jpg"
-    }
-  },
-  {
-    "id": "r28",
-    "txt": "Good location, but small bathroom.",
-    "rate": 3,
-    "by": {
-      "id": "u128",
-      "fullname": "user28",
-      "imgUrl": "/img/img28.jpg"
-    }
-  },
-  {
-    "id": "r29",
-    "txt": "Very cozy and comfortable.",
-    "rate": 4,
-    "by": {
-      "id": "u129",
-      "fullname": "user29",
-      "imgUrl": "/img/img29.jpg"
-    }
-  },
-  {
-    "id": "r30",
-    "txt": "Clean, but a bit far from attractions.",
-    "rate": 3,
-    "by": {
-      "id": "u130",
-      "fullname": "user30",
-      "imgUrl": "/img/img30.jpg"
-    }
-  },
-  {
-    "id": "r31",
-    "txt": "Nice view, well-furnished.",
-    "rate": 4,
-    "by": {
-      "id": "u131",
-      "fullname": "user31",
-      "imgUrl": "/img/img31.jpg"
-    }
-  },
-  {
-    "id": "r32",
-    "txt": "Very quiet and peaceful.",
-    "rate": 5,
-    "by": {
-      "id": "u132",
-      "fullname": "user32",
-      "imgUrl": "/img/img32.jpg"
-    }
-  },
-  {
-    "id": "r33",
-    "txt": "Good for a weekend stay.",
-    "rate": 4,
-    "by": {
-      "id": "u133",
-      "fullname": "user33",
-      "imgUrl": "/img/img33.jpg"
-    }
-  },
-  {
-    "id": "r34",
-    "txt": "Comfortable bed, clean bathroom.",
-    "rate": 5,
-    "by": {
-      "id": "u134",
-      "fullname": "user34",
-      "imgUrl": "/img/img34.jpg"
-    }
-  },
-  {
-    "id": "r35",
-    "txt": "Good place, but a bit outdated.",
-    "rate": 3,
-    "by": {
-      "id": "u135",
-      "fullname": "user35",
-      "imgUrl": "/img/img35.jpg"
-    }
-  },
-  {
-    "id": "r36",
-    "txt": "Great host, very responsive.",
-    "rate": 5,
-    "by": {
-      "id": "u136",
-      "fullname": "user36",
-      "imgUrl": "/img/img36.jpg"
-    }
-  },
-  {
-    "id": "r37",
-    "txt": "Nice place, good value for money.",
-    "rate": 4,
-    "by": {
-      "id": "u137",
-      "fullname": "user37",
-      "imgUrl": "/img/img37.jpg"
-    }
-  },
-  {
-    "id": "r38",
-    "txt": "Clean and well-maintained.",
-    "rate": 4,
-    "by": {
-      "id": "u138",
-      "fullname": "user38",
-      "imgUrl": "/img/img38.jpg"
-    }
-  },
-  {
-    "id": "r39",
-    "txt": "Good place for a short stay.",
-    "rate": 4,
-    "by": {
-      "id": "u139",
-      "fullname": "user39",
-      "imgUrl": "/img/img39.jpg"
-    }
-  },
-  {
-    "id": "r40",
-    "txt": "Lovely garden, very peaceful.",
-    "rate": 5,
-    "by": {
-      "id": "u140",
-      "fullname": "user40",
-      "imgUrl": "/img/img40.jpg"
-    }
-  },
-  {
-    "id": "r41",
-    "txt": "Comfortable and well-equipped.",
-    "rate": 5,
-    "by": {
-      "id": "u141",
-      "fullname": "user41",
-      "imgUrl": "/img/img41.jpg"
-    }
-  },
-  {
-    "id": "r42",
-    "txt": "Nice decor, clean rooms.",
-    "rate": 5,
-    "by": {
-      "id": "u142",
-      "fullname": "user42",
-      "imgUrl": "/img/img42.jpg"
-    }
-  },
-  {
-    "id": "r43",
-    "txt": "Good location, helpful host.",
-    "rate": 4,
-    "by": {
-      "id": "u143",
-      "fullname": "user43",
-      "imgUrl": "/img/img43.jpg"
-    }
-  },
-  {
-    "id": "r44",
-    "txt": "Great value, would stay again.",
-    "rate": 5,
-    "by": {
-      "id": "u144",
-      "fullname": "user44",
-      "imgUrl": "/img/img44.jpg"
-    }
-  },
-  {
-    "id": "r45",
-    "txt": "Clean, comfortable, great location.",
-    "rate": 5,
-    "by": {
-      "id": "u145",
-      "fullname": "user45",
-      "imgUrl": "/img/img45.jpg"
-    }
-  },
-  {
-    "id": "r46",
-    "txt": "Nice place, very cozy.",
-    "rate": 4,
-    "by": {
-      "id": "u146",
-      "fullname": "user46",
-      "imgUrl": "/img/img46.jpg"
-    }
-  },
-  {
-    "id": "r47",
-    "txt": "Lovely host, great stay.",
-    "rate": 5,
-    "by": {
-      "id": "u147",
-      "fullname": "user47",
-      "imgUrl": "/img/img47.jpg"
-    }
-  },
-  {
-    "id": "r48",
-    "txt": "Very clean, good amenities.",
-    "rate": 4,
-    "by": {
-      "id": "u148",
-      "fullname": "user48",
-      "imgUrl": "/img/img48.jpg"
-    }
-  },
-  {
-    "id": "r49",
-    "txt": "Great location, very clean.",
-    "rate": 5,
-    "by": {
-      "id": "u149",
-      "fullname": "user49",
-      "imgUrl": "/img/img49.jpg"
-    }
-  },
-  {
-    "id": "r50",
-    "txt": "Comfortable bed, great location.",
-    "rate": 5,
-    "by": {
-      "id": "u150",
-      "fullname": "user50",
-      "imgUrl": "/img/img50.jpg"
+      "fullname": "Kaodia",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/female/14.jpg"
     }
   }
+  
 ]
 
 export const stay = {
@@ -618,12 +319,12 @@ export function StayDetailsPage() {
         setTotalGuestNumber(adultCounter + childrenCounter + infantCounter + petCounter);
     }, [adultCounter, childrenCounter, infantCounter, petCounter]);
     useEffect(() => {
-        const calculateAverageRating = (reviews) => {
-            const totalRates = reviews.reduce((sum, review) => sum + review.rate, 0);
-            return totalRates / reviews.length;
-        }
-        setReviewMidScore(calculateAverageRating(stay.reviews))
-    },[stay.reviews])
+      const calculateAverageRating = (reviews) => {
+          const totalRates = reviews.reduce((sum, review) => sum + review.rate, 0);
+          return (totalRates / reviews.length).toFixed(1); // Format to 1 decimal place
+      }
+      setReviewMidScore(calculateAverageRating(stay.reviews));
+  }, [stay.reviews]);
 
 
 
