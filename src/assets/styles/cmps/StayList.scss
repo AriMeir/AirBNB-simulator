@@ -6,14 +6,14 @@
 
 .stay-list {
     margin: auto;
-    // padding-top: 20px;
-    padding-bottom: 20px;
     width: 100%;
     display: grid;
     gap: 32px;
     grid-template-columns: var(--breakpoint-grid_column-template);
     justify-items: center;
     margin-top: 190px;
+    margin-bottom: 65px;
+
 }
 
 @media (min-width: 1801px) {

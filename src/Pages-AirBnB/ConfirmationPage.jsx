@@ -315,7 +315,7 @@ export function ConfirmationPage({ onConfirmTrip, reviewMidScore }) {
                             <h4>{guests ? guests + " Guests" : 'No guests selected'}</h4>
                         </div>
                         {(user && !confirmed) &&  <ActionButton buttonText={"Confirm"}  action={confirmTrip}/>}
-                        {(user && confirmed) && 
+                        {(user && confirmed) &&
                         <>
                         <h3>We are looking forward to hosting you!</h3>
                         <ActionButton buttonText={"Move to trips"}  action={() => navigate("/trips")}/>
@@ -337,7 +337,7 @@ export function ConfirmationPage({ onConfirmTrip, reviewMidScore }) {
                                 <h4 className="stay-name">{stay.name}</h4>
                                 </div>
                                 <div className="stay-desc-reviews">
-                                    <span className="stay-desc-reviews-element-star" >{fetchSVG("star")}</span> 
+                                    <span className="stay-desc-reviews-element-star" >{fetchSVG("star")}</span>
                                     <span className="stay-desc-reviews-element-score">{reviewMidScore}</span> • {" "}
                                     <span className="stay-desc-reviews-element-reviews">({stay.reviews.length + " reviews"})</span>
                                 </div>
@@ -345,7 +345,7 @@ export function ConfirmationPage({ onConfirmTrip, reviewMidScore }) {
                         </div>
                         {/* middle card */}
                         <div className="air-cover-middle-card border-bottom pad-box flex row">
-                            <span className="lil-info">Your booking is protected by {""}</span> 
+                            <span className="lil-info">Your booking is protected by {""}</span>
                             <div className='air-cover-img-card'>
                                 <img src='/img/air-cover.webp'></img>
                             </div>
@@ -366,7 +366,7 @@ export function ConfirmationPage({ onConfirmTrip, reviewMidScore }) {
 
                             </div>
                         </div>
-                        {/* summory card */}
+                        {/* summary card */}
                         <div className="flex row space-between align-center pad-top ">
                                     <h4 className="underline">Total (USD)</h4>
                                     <p>$ {parseInt(fee, 10) + parseInt(price, 10)}</p>
