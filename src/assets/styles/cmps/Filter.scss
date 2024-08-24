@@ -22,7 +22,6 @@
     border: 1px solid transparent;
     border-radius: 4px;
     color: #212121;
-
     cursor: pointer;
     flex-grow: 1;
     font-size: 14px;
@@ -31,6 +30,7 @@
     min-width: 80px;
     padding: 12px 16px;
     text-align: inherit;
+    font-weight: bold;
 }
 .filter-splitter {
     background-color: var(--clr-splitter);
@@ -76,7 +76,7 @@
     border-radius: 32px;
     letter-spacing: .04em;
     line-height: 1rem;
-    
+
     padding: 17px 32px;
     width: 100%;
 }
@@ -175,7 +175,7 @@
     overflow: hidden;
     border-radius: 10px;
     cursor: pointer;
-    
+
   }
 
    .region-photo-container:hover{
