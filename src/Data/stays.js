@@ -199,16 +199,45 @@ const reviews = [
       "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/female/14.jpg"
     }
   }
-  
+
 ]
 
-const imgUrls = ["https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg", "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436827/znh7gqzbwb4wm6bdziy7.jpg","https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436281/doubvhbpwjfx81yfzpxq.jpg","	https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436453/ndl8odasqgnyquvsbalp.jpg","https://res.cloudinary.com/dmtlr2viw/image/upload/v1663437040/oarfkdxx7gyyvcynvwko.jpg"]
+const imgUrl1 = "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg"
+const imgUrl2 = "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436827/znh7gqzbwb4wm6bdziy7.jpg"
+const imgUrl3 = "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436281/doubvhbpwjfx81yfzpxq.jpg"
+const imgUrl4 = "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436453/ndl8odasqgnyquvsbalp.jpg"
+const imgUrl5 = "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663437040/oarfkdxx7gyyvcynvwko.jpg"
+const imgUrl6 = "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436993/yzxnnw83e9qyas022au4.jpg"
+const imgUrl7 = "	https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436390/om97cgufeacwlric2r5w.jpg"
+const imgUrl8 = "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436948/vgfxpvmcpd2q40qxtuv3.jpg"
+const imgUrl9 = "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436821/b4ejulqdhsvyseyfnfr0.jpg"
+const imgUrl10 = "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436571/fvqbazrysqpymjlhhdqu.jpg"
+const imgUrl11 = "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436937/mkbcjfockxezgrvimska.jpg"
+const imgUrl12 = "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663437308/p80ndulkcghpcfsnvjdo.jpg"
+const imgUrl13 = "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663437330/mmhkmfvg8o3freucyekc.jpg"
+const imgUrl14 = "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663437330/mmhkmfvg8o3freucyekc.jpg"
+const imgUrl15 = "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436797/hzfu8ihyoecadrermn14.jpg"
+const imgUrl16 = "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436385/sorbz7rdtxacu1ds9vel.jpg"
+const imgUrl17 = "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436993/yzxnnw83e9qyas022au4.jpg"
+const imgUrl18 = "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663437327/epcnh2tzpafwmvi3srcp.jpg"
+const imgUrl19 = "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436588/cxkvvaext8m0kjuaxcrk.jpg"
+const imgUrl20 = "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436359/abuiyexl2xyemq8uon4s.jpg"
+const imgUrl21 = "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436496/ihozxprafjzuhil9qhh4.jpg"
+const imgUrl22 = "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436600/rt3ldgx1xfqct3961yjz.jpg"
+const imgUrl23 = "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436204/wzbrvr4mcsuub6gvwbry.jpg"
+const imgUrl24 = "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436523/ptcgbydjsamgf67a0npw.jpg"
+const imgUrl25 = "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663437358/cy8kzj8jeofwkev6tlq9.jpg"
+const imgUrl26 = "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436952/aef9ajipinpjhkley1e3.jpg"
+const imgUrl27 = "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663437282/qy0p7yyaukasripzwc7w.jpg"
+const imgUrl28 = "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436867/yocip4igdbruuh2grzpf.jpg"
+const imgUrl29 = "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436509/rii32aibnhkoeejsohie.jpg"
+const imgUrl30 = "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436983/pivldxmrxssnhyzixhes.jpg"
 
 export const stay1 = {
   _id: "s101",
   name: "Luxury Urban Loft",
   type: "House",
-  imgUrls: imgUrls,
+  imgUrls: [imgUrl6,imgUrl7,imgUrl8,imgUrl9,imgUrl10],
   price: 325,
   summary: "Luxury Urban Loft - This chic loft in a trendy neighborhood boasts high ceilings, industrial decor, and a rooftop terrace with cityscape views.",
   capacity: 4,
@@ -245,7 +274,7 @@ export const stay2 = {
   _id: "s102",
   name: "Cozy Downtown Apartment",
   type: "Apartment",
-  imgUrls: imgUrls,
+  imgUrls: [imgUrl1,imgUrl2,imgUrl3,imgUrl4,imgUrl5],
   price: 203,
   summary: "Cozy Downtown Apartment - Located in the heart of the city, this modern apartment offers stunning skyline views, a fully equipped kitchen, and easy access to local attractions.",
   capacity: 2,
@@ -283,7 +312,7 @@ export const stay3 = {
   _id: "s103",
   name: "Beachfront Bungalow",
   type: "House",
-  imgUrls: imgUrls,
+  imgUrls: [imgUrl11,imgUrl12,imgUrl13,imgUrl14,imgUrl15],
   price: 194,
   summary: "Beachfront Bungalow - Enjoy the serene sound of waves in this charming bungalow right on the beach. Perfect for a romantic getaway or a relaxing vacation.",
   capacity: 3,
@@ -321,7 +350,7 @@ export const stay4 = {
   _id: "s104",
   name: "Mountain Cabin Retreat",
   type: "Apartment",
-  imgUrls: imgUrls,
+  imgUrls: [imgUrl16,imgUrl17,imgUrl18,imgUrl19,imgUrl20],
   price: 387,
   summary: "Mountain Cabin Retreat - Nestled in the mountains, this rustic cabin features a wood-burning fireplace, hiking trails, and breathtaking views of the valley below.",
   capacity: 7,
@@ -359,7 +388,7 @@ export const stay5 = {
   _id: "s105",
   name: "Historic Victorian Home",
   type: "Villa",
-  imgUrls: imgUrls,
+  imgUrls: [imgUrl21,imgUrl22,imgUrl23,imgUrl24,imgUrl25],
   price: 444,
   summary: "Historic Victorian Home - Experience a piece of history in this beautifully restored Victorian house, complete with antique furnishings and a lush garden.",
   capacity: 12,
@@ -397,7 +426,7 @@ export const stay6 = {
   _id: "s106",
   name: "Countryside Cottage",
   type: "House",
-  imgUrls: imgUrls,
+  imgUrls: [imgUrl26,imgUrl27,imgUrl28,imgUrl29,imgUrl30],
   price: 98,
   summary: "Countryside Cottage - Escape to the peaceful countryside in this quaint cottage surrounded by rolling hills and picturesque farmland.",
   capacity: 6,
@@ -435,7 +464,7 @@ export const stay7 = {
   _id: "s107",
   name: "Modern Studio Apartment",
   type: "Apartment",
-  imgUrls: imgUrls,
+  imgUrls: [imgUrl1,imgUrl6,imgUrl11,imgUrl16,imgUrl21],
   price: 153,
   summary: "Modern Studio Apartment - Ideal for solo travelers or couples, this sleek studio offers all the modern amenities, including a smart TV and high-speed Wi-Fi.",
   capacity: 2,
@@ -473,7 +502,7 @@ export const stay8 = {
   _id: "s108",
   name: "Tropical Villa with Pool",
   type: "Villa",
-  imgUrls: imgUrls,
+  imgUrls: [imgUrl2,imgUrl7,imgUrl12,imgUrl17,imgUrl22],
   price: 100,
   summary: "Tropical Villa with Pool - Luxurious villa in a tropical paradise, featuring a private pool, lush gardens, and close proximity to sandy beaches.",
   capacity: 8,
@@ -511,7 +540,7 @@ export const stay9 = {
   _id: "s109",
   name: "Family-Friendly Suburban House",
   type: "House",
-  imgUrls: imgUrls,
+  imgUrls: [imgUrl3,imgUrl8,imgUrl13,imgUrl18,imgUrl23],
   price: 300,
   summary: "Family-Friendly Suburban House - Spacious home in a quiet suburb, perfect for families with children. Features a large backyard, play area, and nearby parks.",
   capacity: 6,
@@ -549,7 +578,7 @@ export const stay10 = {
   _id: "s1010",
   name: "Elegant Downtown Condo",
   type: "Apartment",
-  imgUrls: imgUrls,
+  imgUrls: [imgUrl4,imgUrl9,imgUrl14,imgUrl19,imgUrl24],
   price: 230,
   summary: "Elegant Downtown Condo - Stylish condo in the city center, with access to a pool, gym, and concierge services. Close to shopping and dining options.",
   capacity: 4,
@@ -587,7 +616,7 @@ export const stay11 = {
   _id: "s1011",
   name: "Spacious Downtown Penthouse",
   type: "Villa",
-  imgUrls: imgUrls,
+  imgUrls: [imgUrl5,imgUrl10,imgUrl15,imgUrl20,imgUrl25],
   price: 425,
   summary: "Spacious Downtown Penthouse - This expansive penthouse offers panoramic city views, a gourmet kitchen, and stylish decor, perfect for an upscale urban experience.",
   capacity: 10,
@@ -625,7 +654,7 @@ export const stay12 = {
   _id: "s1012",
   name: "Eco-Friendly Tiny House",
   type: "House",
-  imgUrls: imgUrls,
+  imgUrls: [imgUrl1,imgUrl10,imgUrl20,imgUrl30,imgUrl26],
   price: 322,
   summary: "Eco-Friendly Tiny House - Stay green in this eco-friendly tiny house made from sustainable materials, with solar power and a minimalist design.",
   capacity: 3,
@@ -663,7 +692,7 @@ export const stay13 = {
   _id: "s1013",
   name: "Lakefront Log Cabin",
   type: "House",
-  imgUrls: imgUrls,
+  imgUrls: [imgUrl2,imgUrl11,imgUrl21,imgUrl27,imgUrl28],
   price: 260,
   summary: "Lakefront Log Cabin - Unwind in this cozy log cabin right on the lake, with opportunities for fishing, kayaking, and enjoying the great outdoors.",
   capacity: 2,
@@ -681,7 +710,7 @@ export const stay13 = {
   host: {
     id: "u101",
     fullname: "Olivia Young",
-    imgUrls: imgUrls,
+    imgUrls: [imgUrl3,imgUrl13,imgUrl23,imgUrl29,imgUrl30],
   },
   loc: {
     region: null,
@@ -701,7 +730,7 @@ export const stay14 = {
   _id: "s1014",
   name: "Tropical Villa with Pool",
   type: "Villa",
-  imgUrls: imgUrls,
+  imgUrls: [imgUrl4,imgUrl14,imgUrl24,imgUrl26,imgUrl15],
   price: 200,
   summary: "Tropical Villa with Pool - Luxurious villa in a tropical paradise, featuring a private pool, lush gardens, and close proximity to sandy beaches.",
   capacity: 8,
