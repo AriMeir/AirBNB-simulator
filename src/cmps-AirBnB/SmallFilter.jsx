@@ -7,7 +7,8 @@ export function SmallFilter({onLittleFilterClick}) {
             <button className="filter-button" onClick={onLittleFilterClick}>Any week</button>
             <span className="filter-splitter"></span>
             <button className="filter-button filter-add-guests" onClick={onLittleFilterClick}>Add guests</button>
-            <button className="mini-search-button"><IoSearch /></button>
+            <button className="mini-search-button"><IoSearch />
+            </button>
         </div>
     )
 }

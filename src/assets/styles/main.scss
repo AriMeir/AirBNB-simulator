@@ -49,11 +49,12 @@
 @import "cmps/StayPreview";
 @import "cmps/AppFooter";
 @import "cmps/UserMsg";
+@import "cmps/WishList";
 
 
 :root {
     // colors
-    
+
     --clr-btn:#FF385C;
     --clr-fltr-font:#222;
     --clr-sub-font : #707070;
@@ -62,16 +63,16 @@
     --clr-fltr-spliter:#ddd;
     --clr-sub-borders:#b0b0b0;
     --clr-splitter:#dedede;
-    
-    
-    
+
+
+
 
     // fonts
     --main-fnt:cereal, sans-serif;
     --host-fnt :cereal-medium;
     --sub-fnt :cereal-light;
-    
-    
+
+
 
     //font-sizes
     --bold-fnt:600;
@@ -86,13 +87,13 @@
     --picture-rad:5%;
     --filter-rad:40px;
 
-    
+
 
     //border
     --fltr-user-border:1px solid #DDDDDD;
 
 
-    //shadow 
+    //shadow
     --user-hvr-shad:0 2px 4px #0000002e;
     --fltr-shad:0 1px 2px #00000014,0 4px 12px #0000000d;
     --fltr-hvr-shad:0 2px 4px #0000002e;
