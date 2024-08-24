@@ -270,3 +270,12 @@ table {
     background-color: #dc3545;
     color: white;
 }
+.MuiDateRangeCalendar-root >:first-child{
+    display: none;
+}
+.ant-popover-inner{
+    padding: 30px !important;
+}
+.css-138poq7-MuiPickersSlideTransition-root-MuiDayCalendar-slideTransition{
+    min-height: 230px !important;
+}

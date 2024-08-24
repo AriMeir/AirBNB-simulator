@@ -23,6 +23,7 @@ export function BigFilter() {
         setTotalGuestNumber(adultCounter + childrenCounter + infantCounter);
     }, [adultCounter, childrenCounter, infantCounter, petCounter]);
 
+   
     const handleLocationChange = (e) => {
         setInputLocation(e.target.value);
     };
@@ -85,12 +86,16 @@ export function BigFilter() {
 
     function onWherePick(region) {
         setLocation(region);
-        console.log("set ", region);
+        setShowLocationFilter(false);
+        setShowCheckInFilter(true);
+        
     }
 
     function onPickedDate(date) {
         setCheckIn(date[0].format('DD/MM/YYYY'));
         setCheckOut(date[1].format('DD/MM/YYYY'));
+        setShowCheckInFilter(false);
+        setShowGuestsFilter(true);
     }
 
     const handleSearchButtonClick = (e) => {
@@ -123,6 +128,24 @@ export function BigFilter() {
         countDownPetCounter
     };
 
+    function handleImFlexibleClick() {
+        const date1 = new Date()
+        const date2 = new Date()
+        date2.setDate(date2.getDate() + 7) 
+
+        const formatDate = (date) => {
+        const day = String(date.getDate()).padStart(2, '0')
+        const month = String(date.getMonth() + 1).padStart(2, '0') 
+        const year = date.getFullYear()
+        return `${day}/${month}/${year}`
+        };
+        setCheckIn(formatDate(date1))
+        setCheckOut(formatDate(date2));
+
+        setShowCheckInFilter(false);
+        setShowGuestsFilter(true);
+
+    }
     return (
         <div className='filter-container-big flex align-center relative'>
             <Popover
@@ -149,7 +172,7 @@ export function BigFilter() {
 
             <Popover
                 placement='bottom'
-                content={<DynamicFilterComponent type="date" onPickedDate={onPickedDate} />}
+                content={<DynamicFilterComponent type="date" onPickedDate={onPickedDate} handleImFlexibleClick={handleImFlexibleClick} />}
                 open={showCheckInFilter}
                 trigger="click"
                 arrow={false}
