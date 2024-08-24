@@ -15,6 +15,7 @@
     "@mui/material": "^5.16.1",
     "@mui/x-date-pickers": "^7.10.0",
     "@mui/x-date-pickers-pro": "^7.10.0",
+    "@mui/x-license": "^7.14.0",
     "@redux-devtools/extension": "^3.3.0",
     "ag-charts-react": "^10.1.0",
     "antd": "^5.19.1",

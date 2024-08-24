@@ -4,6 +4,7 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { StaticDateRangePicker } from '@mui/x-date-pickers-pro/StaticDateRangePicker';
 import { useEffect } from 'react';
 
+
 export function BasicRangeShortcuts({onPickedDate,onCheckInPick, onCheckOutPick}) {
   const [value, setValue] = React.useState([null, null]);
 
@@ -34,6 +35,7 @@ export function BasicRangeShortcuts({onPickedDate,onCheckInPick, onCheckOutPick}
   useEffect(() => {
   if (value[0] && value[1]) {
     onPickedDate(value)
+    console.log(value[0], value[1])
   }
 }, [value]);
 
