@@ -12,7 +12,7 @@ export function LoginDisplay() {
 
     return (
         <div className="login-container">
-            
+
             <div className="form-wrapper">
                 <div className="login-form-title border-bottom">
                 <h1 className="form-title">Log in or Sign up</h1>
@@ -28,17 +28,17 @@ export function LoginDisplay() {
                     {({ isSubmitting, values }) => (
                         <Form className="login-form">
                             <div className="form-group">
-                                
+
                                 <Field type="text" name="username" className="form-control" placeholder="Username"  />
                                 <ErrorMessage name="username" component="div" className="error-message" />
                             </div>
                             <div className="form-group">
-                                
+
                                 <Field type="password" name="password" className="form-control" placeholder="Password"  />
                                 <ErrorMessage name="password" component="div" className="error-message" />
                             </div>
                             <div className="form-group">
-                                <ActionButton 
+                                <ActionButton
                                     buttonText={"Log In"}
                                     action={() => console.log('Username:', values.username, 'Password:', values.password)}
                                 />
