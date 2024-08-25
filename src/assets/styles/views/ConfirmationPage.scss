@@ -1,100 +1,165 @@
-.confirmation-page{
+.confirmation-page {
     margin-top: 60px;
 }
+
 .back-button {
     cursor: pointer;
 }
-.confirmation-title{
-    padding-left: 130px;
+
+.confirmation-title {
+    padding-left: 6%;
     font-size: 2rem;
-    gap:5px
+    gap: 5px;
 }
-.success-img-container{
+
+.success-img-container {
     width: 40px;
     height: 40px;
     margin-bottom: 10px;
     margin-right: 10px;
 }
-.confirmation-page-column-one, .confirmation-page-column-two{
-    padding-left:130px;
-    padding-right:130px;
+
+.confirmation-page-column-one {
+    padding-left: 8%;
+    padding-right: 2%;
+    width: 50%;
 }
-.confirmation-page-main-content{
-    grid-template-columns: 1fr 1fr;
+
+.confirmation-page-column-two {
+    padding-left: 2%;
+    padding-right: 10%;
+    width: 50%;
+    margin-bottom: 80px;
 }
-.rare-find-box{
-    min-width: 400px;
+
+.confirmation-page-main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2%;
+}
+
+.rare-find-box {
+    min-width: 300px;
     border: 1px solid #dedede;
     border-radius: 1em;
     height: fit-content;
     padding: 24px;
 }
-.rare-find-img{
+
+.rare-find-img {
     width: 40px;
     height: 40px;
 }
-.rare-find-sub-title{
+
+.rare-find-sub-title {
     margin-top: 10px;
 }
-.confirmation-dates , .confirmation-guests, .confirmation-small-title{
+
+.confirmation-dates,
+.confirmation-guests,
+.confirmation-small-title {
     padding-bottom: 24px;
 }
-.confirmation-title .back-button{
+
+.confirmation-title .back-button {
     font-size: 1.5rem;
     padding-bottom: 10px;
 }
+
 .summery-card {
     border: 1px solid #dedede;
     border-radius: 1em;
     height: fit-content;
-    margin-top: 20px;
+    margin-top: 33px;
     min-height: 40%;
     min-width: 330px;
     padding: 24px;
     padding-bottom: 40px !important;
 }
+
 .summery-card .stay-detail-card .stay-details-img {
     padding-bottom: 24px;
     height: 130px;
     width: 150px;
-
 }
-.stay-desc-sum .stay-type{
+
+.stay-desc-sum .stay-type {
     color: #707070;
     font-size: .75rem;
     font-weight: inherit;
     line-height: 1;
     margin: 0 0 .6em;
 }
-.stay-desc-sum .stay-name{
+
+.stay-desc-sum .stay-name {
     font-size: .875rem;
     font-weight: inherit;
     line-height: 1;
     margin: 0 0 .6em;
 }
-.stay-desc-sum{
+
+.stay-desc-sum {
     width: 100%;
 }
-.summery-card .stay-detail-card .stay-details-img img{
+
+.summery-card .stay-detail-card .stay-details-img img {
     border-radius: .5em;
     height: 106px;
     margin-bottom: 24px;
     object-fit: cover;
     width: 124px;
 }
+
 .stay-desc-reviews span {
-    margin-right: 0.1rem; /* Adjust the value as needed */
+    margin-right: 0.1rem;
 }
-.stay-desc-reviews span:nth-child(2){
+
+.stay-desc-reviews span:nth-child(2) {
     margin-right: 0.2rem;
 }
 
-
 .stay-desc-reviews span:last-child {
-    margin-right: 0; /* Remove margin from the last span */
+    margin-right: 0;
 }
-.air-cover-img-card{
+
+.air-cover-img-card {
     height: 20px;
     width: 90px;
     padding-left: 5px;
+}
+
+
+/* Responsive */
+@media screen and (max-width: 1200px) {
+    .confirmation-page-column-one,
+    .confirmation-page-column-two {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .confirmation-page-column-one,
+    .confirmation-page-column-two {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .confirmation-page-main-content {
+        flex-direction: column-reverse;
+    }
+
+    .confirmation-page-column-one {
+        order: 0;
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .confirmation-page-column-two {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }

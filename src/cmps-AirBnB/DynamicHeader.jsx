@@ -7,11 +7,11 @@ export function DynamicHeader({stayId, hostMode, showFilter}) {
 
   function onLittleFilterClick() {
     setShowBiggerHeader(true);
-    
+
   }
   function onOverlayClick() {
     setShowBiggerHeader(false);
-    
+
   }
 
   return (
