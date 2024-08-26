@@ -251,8 +251,8 @@ export const stay = {
       countryCode: "PT",
       city: "Lisbon",
       address: "17 Kombo st",
-      lat: -8.61308,
-      lng: 41.1413
+      lat: 38.736946,
+      lng: -9.142685
     },
     reviews: reviews,
     likedByUsers: ['mini-user']
@@ -693,7 +693,7 @@ export function StayDetailsPage() {
                     {showReviews && <ReviewPopUp onClose={onCloseReviews} reviewList={stay.reviews}/>}
                     {showAmenities && <AmenitiesPopup onClose={onCloseAmenities} amenityList={stay.amenities}/>}
                     <div id="location"></div>
-                    <MapComponent country={stay.loc.country} city={stay.loc.city} />
+                    <MapComponent country={stay.loc.country} city={stay.loc.city} lat={stay.loc.lat} lng={stay.loc.lng} />
                     <div className='pad-box'>
                         <button className='white-btn'>Contact host</button>
                     </div>
