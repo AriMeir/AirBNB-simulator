@@ -2,10 +2,7 @@
     display: flex;
     align-items: center;
     padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    
     max-width: 250px;
     margin: 10px 0;
 }
@@ -44,4 +41,9 @@
     font-size: 0.9em;
     color: #555;
     font-weight: 400;
+}
+.trip-dest-info h5, .trip-dest-info .place-name {
+    white-space: nowrap; /* Prevent the text from wrapping to the next line */
+    overflow: hidden;    /* Hide the overflowed content */
+    text-overflow: ellipsis; /* Add ellipsis (...) at the end of the text */
 }

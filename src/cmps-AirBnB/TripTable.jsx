@@ -1,12 +1,20 @@
 import { useEffect } from "react";
 import { StayCard } from "./StayCard";
 import { UserCard } from "./UserCard";
+import { utilService } from "../services-AirBnB/util.service";
+import { OrderTheader } from "./OrderTheader";
 
-export function TripTable({ tripList }) {
+
+
+
+
+
+
+
+
+export function TripTable({ tripList, onOrderByPriceDown, onOrderByPriceUp, onOrderByStatusUp ,onOrderByStatusDown ,onOrderByDateUp ,onOrderByDateDown, onCancelOrder }) {
    
-    useEffect(() => {
-        console.log(tripList, "triplist in TripTable");
-    }, [tripList]);
+    
 
     if (tripList.length === 0) return <p>No trips available</p>;
 
@@ -44,9 +52,9 @@ export function TripTable({ tripList }) {
                     <tr>
                         <th>Stay</th>
                         <th>Host</th>
-                        <th>Dates</th>
-                        <th>Total Price</th>
-                        <th>Status</th>
+                        <th><OrderTheader title={"Dates"} up={onOrderByDateUp} down={onOrderByDateDown}/></th>
+                        <th><OrderTheader title={"Total Price"} up={onOrderByPriceUp} down={onOrderByPriceDown}/></th>
+                        <th><OrderTheader title={"Status"} up={onOrderByStatusUp} down={onOrderByStatusDown}/></th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -54,11 +62,11 @@ export function TripTable({ tripList }) {
                     {tripList.map((trip, index) => (
                         <tr key={index}>
                             <td><StayCard country={trip.loc.country} city={trip.loc.city} name={trip.stay.name}/></td>
-                            <td><UserCard name={trip.host.hostName}/></td>
-                            <td>{trip.startDate + " - " + trip.endDate}</td>
+                            <td><UserCard name={trip.host.hostName} type={"Host"} imgUrl={trip.host.imgUrl}/></td>
+                            <td>{utilService.convertDateFormat(trip.startDate) + " - " + utilService.convertDateFormat(trip.endDate)}</td>
                             <td>${trip.totalPrice}.00</td>
                             <td>{getStatusDot(trip.status)}</td>
-                            <td><button className="white-btn">Cancel</button></td>
+                            <td><div className="buttons-order-div flex row center align-center"><button className="white-btn" onClick={()=> {onCancelOrder(trip._id)}}>Cancel</button></div></td>
                         </tr>
                     ))}
                 </tbody>

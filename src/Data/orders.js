@@ -36,16 +36,16 @@ export const orders1 =
     _id: "o1226",
     host: {
       hostId: "u102",
-      hostName: "Einav sharf",
-      hostImgUrl:""
+      hostName: "Ari Meir",
+      imgUrl: "/img/ariprof.jpg",
     },
     buyer: {
       _id: "u101",
       fullname: "User 1"
     },
     totalPrice: 160,
-    startDate: "2025/10/16",
-    endDate: "2025/10/17",
+    startDate: "13/10/2025",
+    endDate: "17/10/2025",
     guests: {
       adults: 1,
       kids: 2
@@ -60,7 +60,7 @@ export const orders1 =
       city:"New York"
     },
     msgs: [],
-    status: "pending" // approved, rejected
+    status: "pending" // approved, rejected, canceled
   }
 
 export const orders2 =
@@ -68,16 +68,16 @@ export const orders2 =
     _id: "o1227",
     host: {
       hostId: "u102",
-      hostName: "Keren",
-      hostImgUrl:""
+      hostName: "Ari Meir",
+      imgUrl: "/img/ariprof.jpg",
     },
     buyer: {
       _id: "u101",
       fullname: "User 1"
     },
-    totalPrice: 160,
-    startDate: "2024/10/15",
-    endDate: "2024/10/17",
+    totalPrice: 200,
+    startDate: "13/10/2024",
+    endDate: "17/10/2024",
     guests: {
       adults: 1,
       kids: 2
@@ -92,5 +92,5 @@ export const orders2 =
       city:"New York"
     },
     msgs: [],
-    status: "complete" // approved, rejected
+    status: "approved" // approved, rejected, canceled
   }

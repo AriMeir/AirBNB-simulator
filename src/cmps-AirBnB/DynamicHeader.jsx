@@ -2,7 +2,7 @@ import { useState } from "react";
 import { BiggerHeader } from "./BiggerHeader";
 import { Header } from "./Header";
 
-export function DynamicHeader({stayId, hostMode, showFilter}) {
+export function DynamicHeader({stayId, hostMode, showFilter, shrinked}) {
   const [showBiggerHeader, setShowBiggerHeader] = useState(false);
 
   function onLittleFilterClick() {
@@ -16,8 +16,8 @@ export function DynamicHeader({stayId, hostMode, showFilter}) {
 
   return (
     <>
-      <Header onLittleFilterClick={onLittleFilterClick} stayId={stayId} hostMode={hostMode} showFilter={showFilter} />
-      {showBiggerHeader && <BiggerHeader onOverlayClick={onOverlayClick} stayId={stayId} />}
+      <Header onLittleFilterClick={onLittleFilterClick} stayId={stayId} hostMode={hostMode} showFilter={showFilter} shrinked={shrinked} />
+      {showBiggerHeader && <BiggerHeader onOverlayClick={onOverlayClick} stayId={stayId} shrinked={shrinked} />}
     </>
   );
 }

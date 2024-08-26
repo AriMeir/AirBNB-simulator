@@ -6,7 +6,8 @@ export const utilService = {
     randomPastTime,
     saveToStorage,
     loadFromStorage,
-    getRandomAmenities
+    getRandomAmenities,
+    convertDateFormat
 }
 
 function makeId(length = 6) {
@@ -77,3 +78,15 @@ function getRandomAmenities() {
     }
     return list
 }
+function convertDateFormat(dateStr) {
+    const months = [
+      "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+      "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+    ];
+  
+    const [day, month] = dateStr.split('/');
+  
+    const monthName = months[parseInt(month) - 1]; 
+  
+    return `${monthName} ${parseInt(day)}`;
+  }

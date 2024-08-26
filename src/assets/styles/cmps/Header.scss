@@ -177,3 +177,10 @@
 .header-filter .host-span:hover::after {
     width: 100%; /* Expands the underline on hover */
 }
+
+.shrinked {
+    max-width: 1200px;
+    min-width: 1200px;
+    margin: auto;
+    padding-inline: 35px;
+}
