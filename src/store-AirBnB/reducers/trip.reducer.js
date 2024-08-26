@@ -6,6 +6,8 @@ export const UPDATE_TRIP = 'UPDATE_TRIP'
 export const ADD_TRIP_MSG = 'ADD_TRIP_MSG'
 export const UPDATE_TASK = 'UPDATE_TASK'
 export const CANCEL_TRIP = 'CANCEL_TRIP'
+export const APPROVE_TRIP = 'APPROVE_TRIP'
+export const REJECT_TRIP = 'REJECT_TRIP'
 
 const initialState = {
     trip: null,
@@ -32,6 +34,18 @@ export function tripReducer(state = initialState, action) {
         case CANCEL_TRIP:
             trips = state.trips.map(trip => 
                 trip._id === action.tripId ? { ...trip, status: 'canceled' } : trip
+            );
+            newState = { ...state, trips };
+            break;      
+        case APPROVE_TRIP:
+            trips = state.trips.map(trip => 
+                trip._id === action.tripId ? { ...trip, status: 'approved' } : trip
+            );
+            newState = { ...state, trips };
+            break;      
+        case REJECT_TRIP:
+            trips = state.trips.map(trip => 
+                trip._id === action.tripId ? { ...trip, status: 'rejected' } : trip
             );
             newState = { ...state, trips };
             break;      
