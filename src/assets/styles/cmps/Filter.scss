@@ -30,7 +30,7 @@
     min-width: 80px;
     padding: 12px 16px;
     text-align: inherit;
-    
+
 }
 .filter-splitter {
     background-color: var(--clr-splitter);
@@ -140,6 +140,34 @@
     padding-bottom: 10px;
 }
 
+.filter-container-big .search-category.active {
+    background-color: #fff;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, .2);
+}
+
+.filter-container-big .search-category.location.active,
+.filter-container-big .search-category.guests-button.active {
+    background-color: #fff;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, .2);
+}
+
+.filter-container-big .search-category.check-in.active-check-in {
+    background-color: #ffffff;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, .2);
+}
+
+.filter-container-big .search-category.check-out.active-check-out {
+    background-color: #ffffff;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, .2);
+}
+
+.filter-container-big .big-search-button.active {
+    background-color: #fff;
+    border: 1px solid #000;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, .2);
+}
+
+
 .dynamic-filter-component {
     width: 100%;
     background-color: white;
@@ -200,9 +228,7 @@ background-color: rgb(34, 34, 34) !important;
 .css-grqin-MuiButtonBase-root-MuiPickersDay-root-MuiDateRangePickerDay-day.Mui-selected{
 background-color: rgb(34, 34, 34) !important;
 }
-.ant-popover-inner{
-    border-radius: 50px !important;
-}
+
 .css-tbuks1-MuiButtonBase-root-MuiPickersDay-root-MuiDateRangePickerDay-day.Mui-selected{
     background-color: rgb(34, 34, 34) !important;
 }

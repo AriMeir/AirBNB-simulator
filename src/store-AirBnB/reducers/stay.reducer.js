@@ -36,20 +36,6 @@ export function stayReducer(state = initialState, action) {
             stays = state.stays.map(stay => (stay._id === action.stay._id) ? action.stay : stay)
             newState = { ...state, stays }
             break
-/*         case ADD_STAY_MSG:
-            newState = { ...state, stay: {...state.stay, msgs: [...state.stay.msgs || [], action.msg]} }
-            break */
-/*         case UPDATE_TASK:
-            const stay = {...state.stay}
-            stay.groups = state.stay.groups.map(g => {
-                if (g.id !== action.groupId) return g
-                const group = {...g}
-                group.tasks = group.tasks.map(t => (t.id !== action.task.id)? t : action.task)
-                return group
-            })
-            stay.activities = [...stay.activities, action.activity]
-            newState = { ...state, stay }
-            break */
 
         default:
     }
