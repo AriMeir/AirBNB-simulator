@@ -6,6 +6,7 @@ import { fetchSVG } from '../store-AirBnB/svg/SvgStore';
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { useState } from "react";
 import { ActionButton } from "../cmps-AirBnB/ActionButton";
+import { authService } from "../services-AirBnB/auth.service";
 const reviews = [
     {
       "id": "r1",
@@ -260,7 +261,7 @@ export function ConfirmationPage({ onConfirmTrip, reviewMidScore }) {
     const totalPrice = searchParams.get('total-price');
     const fee = searchParams.get('fee');
 
-    const [user, setUser] = useState(false)
+    const [user, setUser] = useState(authService.getCurrentUser())
     const [confirmed, setConfirmed] = useState(false)
 
     async function confirmTrip() {
