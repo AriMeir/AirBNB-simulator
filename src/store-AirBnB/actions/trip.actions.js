@@ -1,11 +1,11 @@
 import { tripService } from '../../services-AirBnB/trip.service'
 import { store } from '../../store-AirBnB/store'
-import { ADD_TRIP, REMOVE_TRIP, SET_TRIPS, SET_TRIP, UPDATE_TRIP, /* ADD_TRIP_MSG */ } from '../reducers/trip.reducer'
+import { ADD_TRIP, REMOVE_TRIP, SET_TRIPS, SET_TRIP, UPDATE_TRIP, CANCEL_TRIP, APPROVE_TRIP, REJECT_TRIP /* ADD_TRIP_MSG */ } from '../reducers/trip.reducer'
 
-export async function loadTrips() {
+export async function loadTrips(filterBy) {
     try {
-        const trips = await tripService.query()
-        console.log('Trips from DB:', trips)
+        const trips = await tripService.query(filterBy)
+        
         store.dispatch(getCmdSetTrips(trips))
     } catch (err) {
         console.log('Cannot load trips', err)
@@ -30,6 +30,33 @@ export async function removeTrip(tripId) {
         store.dispatch(getCmdRemoveTrip(tripId))
     } catch (err) {
         console.log('Cannot remove trip', err)
+        throw err
+    }
+}
+export async function cancelTrip(tripId) {
+    try {
+        await tripService.cancelTrip(tripId)
+        store.dispatch(getCmdCancelTrip(tripId))
+    } catch (err) {
+        console.log('Cannot cancel trip', err)
+        throw err
+    }
+}
+export async function approveTrip(tripId) {
+    try {
+        await tripService.approveTrip(tripId)
+        store.dispatch(getCmdApproveTrip(tripId))
+    } catch (err) {
+        console.log('Cannot approve trip', err)
+        throw err
+    }
+}
+export async function rejectTrip(tripId) {
+    try {
+        await tripService.rejectTrip(tripId)
+        store.dispatch(getCmdRejectTrip(tripId))
+    } catch (err) {
+        console.log('Cannot approve trip', err)
         throw err
     }
 }
@@ -87,6 +114,24 @@ function getCmdSetTrip(trip) {
 function getCmdRemoveTrip(tripId) {
     return {
         type: REMOVE_TRIP,
+        tripId
+    }
+}
+function getCmdCancelTrip(tripId) {
+    return {
+        type: CANCEL_TRIP,
+        tripId
+    }
+}
+function getCmdApproveTrip(tripId) {
+    return {
+        type: APPROVE_TRIP,
+        tripId
+    }
+}
+function getCmdRejectTrip(tripId) {
+    return {
+        type: REJECT_TRIP,
         tripId
     }
 }

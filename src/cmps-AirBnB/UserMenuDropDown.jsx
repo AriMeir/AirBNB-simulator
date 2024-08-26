@@ -1,13 +1,32 @@
-// import { svgIcons } from './Svgs'
 import { svgIcons } from './Svgs';
+import { authService } from '../services-AirBnB/auth.service';
+import { useState, useEffect } from 'react';
 
 export function UserMenuDropDown() {
-    return (
-        <section className="user-menu flex">
-            {/* <SvgIcon iconName={'UserMenuDropDown'} className='user-dropdown'/>
-            <SvgIcon iconName={'UserPofilePic'} className='user-profile-pic'/> */}
-            <div className='user-dropdown'>{svgIcons.UserMenuDropDown}</div>
-            <div className='user-profile-pic'>{svgIcons.UserPofilePic}</div>
-        </section >
-    )
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const updateUser = async () => {
+      const currentUser = await authService.getCurrentUser();
+      setUser(currentUser);
+    };
+    updateUser();
+    const handleStorageChange = (event) => {
+      if (event.key === 'user') {
+        updateUser();
+      }
+    };
+    window.addEventListener('storage', handleStorageChange);
+    return () => {
+      window.removeEventListener('storage', handleStorageChange);
+    };
+  }, []);
+  console.log(user)
+  return (
+    <section className="user-menu flex">
+      <div className='user-dropdown'>{svgIcons.UserMenuDropDown}</div>
+      {!user && <div className='user-profile-pic'>{svgIcons.UserPofilePic}</div>}
+      {user && <div className='user-profile-pic '><img className='circle' src={user.imgUrl}></img></div>}
+    </section>
+  );
 }

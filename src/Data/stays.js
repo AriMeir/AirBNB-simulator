@@ -255,7 +255,7 @@ export const stay1 = {
   host: {
     id: "u101",
     fullname: "Laura Martinez",
-    imgUrl: "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small",
+    imgUrl: "/img/ariprof.jpg",
   },
   loc: {
     region: null,
@@ -292,7 +292,7 @@ export const stay2 = {
   host: {
     _id: "u101",
     fullname: "Emily Johnson",
-    imgUrl: "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small",
+    imgUrl: "/img/ariprof.jpg"
   },
   loc: {
     region: "United States",

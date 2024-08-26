@@ -3,23 +3,23 @@
     border-collapse: separate; /* Use 'separate' to enable spacing between cells */
     border-spacing: 4px; /* Adjust the gap between cells */
     margin-top: 20px;
+   
     padding: 50px 0;
 }
 
 .trips-table th, .trips-table td {
     border: none;
     padding: 8px;
-    text-align: left;
+    text-align: center;
 }
 
 .trips-table th {
     background-color: #f8f9fa; /* Match the even rows' background color */
     color: grey; /* Change text color if needed */
-    font-family: 'Cereal-Bold', sans-serif;
     font-size: 12px;
     padding-block: 0.8em;
     padding-inline: 0.5em;
-    text-align: start;
+    text-align: center;
     text-transform: uppercase;
 }
 
@@ -31,27 +31,33 @@
 }
 
 .trips-table td:nth-child(1) {
-    width: 250px;
-    height: 100px;
+    width: 200px; /* Set a fixed width for the first column */
 }
 
 .trips-table td:nth-child(2) {
-    width: 250px;
+    width: 200px;
+    
+}
+.theader-container{
+    gap:10px
 }
 
 .trips-table td:nth-child(3) {
     width: 130px;
+    
 }
 
 .trips-table td:nth-child(4) {
-    font-weight: 500;
+    font-weight: 600;
     width: 120px;
+    
 }
 
 .trips-table td:nth-child(5) {
     color: #555; /* Medium gray for subtle text */
     width: 130px;
     font-size: 1.2rem;
+    
 }
 
 .trips-table td:nth-child(6) {

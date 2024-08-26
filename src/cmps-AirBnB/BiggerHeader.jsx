@@ -6,11 +6,14 @@ import { svgIcons } from './Svgs';
 import { Popover } from 'antd';
 import { BigFilter } from './BigFilter';
 import { useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 
-export function BiggerHeader({ onOverlayClick, stayId }) {
+export function BiggerHeader({ onOverlayClick, stayId, shrinked}) {
     const [visible, setVisible] = useState(false);
     const [where, setWhere] = useState('');
     const fixed = stayId ? '' : 'fixed';
+    const [searchParams] = useSearchParams();
+    const nights = searchParams.get('nights');
 
     const handleVisibleChange = (newVisible) => {
         setVisible(newVisible);
@@ -20,12 +23,22 @@ export function BiggerHeader({ onOverlayClick, stayId }) {
         setWhere(region);
         console.log("I'm all set in", region);
     }
+    function shrink() {
+        if (shrinked){
+            if (stayId && stayId !==1 && !nights){
+                return 'shrinked'
+            }
+        }
+        return ''
+        
+    }
+    const toShrink = shrink()
 
     return (
         <>
             <div className='screen-blur' onClick={onOverlayClick}></div>
             <section className={`header-container ${fixed} full main-content`}>
-                <div className='header main-content'>
+                <div className={`header main-content `}>
                     <div className='header-logo flex big-header-margin-bottom'>
                         <div className='airbnb-icon'>{svgIcons.AirBnB}</div>
                         <h1 className='airbnb-header'>airbnb</h1>

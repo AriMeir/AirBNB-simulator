@@ -25,7 +25,7 @@ html, body {
 }
 
 html {
-    font-family: AirbnbCereal var(--main-fnt);
+    font-family: AirbnbCereal Arial, Helvetica, sans-serif;
     line-height: 1.6;
 
     scroll-behavior: smooth;
@@ -40,7 +40,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: AirbnbCereal;
+    
     margin: 0 0 0.6em;
     line-height: 1;
 }
@@ -79,7 +79,7 @@ img {
 
 p {
     margin: 0 0 1em;
-    font-family: AirbnbCereal;
+    
     font-size: 1em;
 }
 
@@ -166,6 +166,9 @@ a:hover {
 .pad-box{
     padding-block: 2rem;
 }
+.little-pad-box{
+    padding-block: 1rem;
+}
 .pad-top{
     padding-top: 2rem;
 }
@@ -237,7 +240,7 @@ a:hover {
     background-color: var(--clr-btn) !important
 }
 .secondary-layout{
-    padding: 0 150px;
+    padding: 0 180px;
     margin-top: 50px;
     color:black
 }
@@ -278,4 +281,13 @@ table {
 // }
 .css-138poq7-MuiPickersSlideTransition-root-MuiDayCalendar-slideTransition{
     min-height: 230px !important;
+}
+.pointer {
+    cursor: pointer;
+}
+.hover:hover{
+    color: #ada9a9;
+}
+.circle{
+    border-radius: 50%;
 }

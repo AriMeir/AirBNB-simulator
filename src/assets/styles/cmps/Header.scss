@@ -129,7 +129,7 @@
     color: #212121;
     padding: 10px 16px;
     background: transparent;
-    font-family: 'AirbnbCereal';
+   
     font-size: 16px;
 }
 .filter-nav-container{
@@ -176,4 +176,11 @@
 
 .header-filter .host-span:hover::after {
     width: 100%; /* Expands the underline on hover */
+}
+
+.shrinked {
+    max-width: 1200px;
+    min-width: 1200px;
+    margin: auto;
+    padding-inline: 35px;
 }

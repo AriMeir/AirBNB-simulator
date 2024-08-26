@@ -6,7 +6,7 @@ import { RatingChart } from "./RatingChart"
 export function DashBoard() {
     return (
         <section className="dashboard-container grid">
-            <h1 className="dashboard-title">DashBoard</h1>
+            <h1 className="dashboard-title">Dashboard</h1>
             <div className="dashboard-display grid ">
                 <div className="item1"><DashboardCard title={"Income"} number={3643} subtitle={"15 % since last month"}/></div>
                 <div className="item2"><DashboardCard title={"Orders"} number={16} subtitle={"10 % since last month"}/></div>

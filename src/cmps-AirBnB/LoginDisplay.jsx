@@ -2,8 +2,9 @@ import { Header } from "../cmps-AirBnB/Header";
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { ActionButton } from '../cmps-AirBnB/ActionButton';
 import * as Yup from 'yup';
+import { authService } from "../services-AirBnB/auth.service";
 
-export function LoginDisplay() {
+export function LoginDisplay({hostLogin, guestLogin}) {
 
     const validationSchema = Yup.object({
         username: Yup.string().required('Username is required'),
@@ -48,10 +49,10 @@ export function LoginDisplay() {
                 </Formik>
                 <div className="demo-login-buttons flex row space-between">
                     <div className="demo-login-button">
-                        <ActionButton buttonText={"Log In as Einav Guest"} />
+                        <ActionButton buttonText={"Log In as Einav Guest"} action={guestLogin}/>
                     </div>
                     <div className="demo-login-button">
-                        <ActionButton buttonText={"Log In As Ari Host "} />
+                        <ActionButton buttonText={"Log In As Ari Host "} action={hostLogin} />
                     </div>
                 </div>
             </div>
