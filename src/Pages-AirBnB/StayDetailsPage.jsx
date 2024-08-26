@@ -637,6 +637,7 @@ export function StayDetailsPage() {
                             <div className='reservation-form-container flex'>
                             <Reservation
                             buttonText={buttonText}
+                            reviewMidScore={reviewMidScore}
                             clearDates={clearDates}
                             reviewNumber={stay.reviews.length}
                             pickedCheckInDate={pickedCheckInDate}

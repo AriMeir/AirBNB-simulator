@@ -3,10 +3,11 @@ import { MainGuestsFilter } from "./MainGuestFilter";
 import { ActionButton } from "./ActionButton";
 import { BasicRangeShortcuts } from "./BasicRangeShortcuts";
 import { DatePickerReservationModal } from "./DatePickerReservationModal";
+import { fetchSVG } from "../store-AirBnB/svg/SvgStore";
 
 
 
-export function Reservation({onReserveOrder, guestCounter,onPickedDate, pickedCheckInDate, pickedCheckOutDate, nights, price, singlePrice, fee, totalPrice, reviewNumber, clearDates, buttonText}) {
+export function Reservation({reviewMidScore,onReserveOrder, guestCounter,onPickedDate, pickedCheckInDate, pickedCheckOutDate, nights, price, singlePrice, fee, totalPrice, reviewNumber, clearDates, buttonText}) {
     const [showGuestCounter, setShowGuestCounter] = useState(false)
     const [showdatePickerModal, setShowdatePickerModal] = useState(false)
 
@@ -17,7 +18,7 @@ export function Reservation({onReserveOrder, guestCounter,onPickedDate, pickedCh
       <section className="order-container">
         <div className="order-form-header">
           <p><span className="cost">${singlePrice}</span> / night</p>
-          <p>4.38 <span className="reviews">({reviewNumber} reviews)</span></p>
+          <p>{fetchSVG("star")}{reviewMidScore} <span className="reviews">({reviewNumber} reviews)</span></p>
         </div>
   
         <div className="order-data">
