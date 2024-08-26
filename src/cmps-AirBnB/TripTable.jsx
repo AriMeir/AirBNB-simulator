@@ -16,7 +16,8 @@ export function TripTable({ tripList, onOrderByPriceDown, onOrderByPriceUp, onOr
    
     
 
-    if (tripList.length === 0) return <p>No trips available</p>;
+    if (tripList.length === 0) return <p>No trips available</p>
+    
 
     const getStatusDot = (status) => {
         let color = "";

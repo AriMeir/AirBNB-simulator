@@ -1,3 +1,5 @@
+import { useEffect } from "react"
+
 export function UserCard({ name, type, imgUrl }) {
     return (
         <div className="host-card flex row left align-center">

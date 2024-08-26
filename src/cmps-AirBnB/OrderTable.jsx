@@ -57,7 +57,7 @@ export function OrderTable({ orders, onOrderByPriceDown, onOrderByPriceUp, onOrd
                 <tbody>
                     {orders.map((order, index) => (
                         <tr key={index}>
-                            <td><UserCard name={order.buyer.fullname} type={"Guest"} /></td>
+                            <td><UserCard name={order.buyer.fullname} type={"Guest"} imgUrl={order.buyer.imgUrl}/></td>
                             <td>{utilService.convertDateFormat(order.startDate) + " - " + utilService.convertDateFormat(order.endDate)}</td>
                             <td><StayCard country={order.loc.country} city={order.loc.city} name={order.stay.name}/></td>
                             <td>${order.totalPrice}.00</td>

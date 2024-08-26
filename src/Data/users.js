@@ -1,15 +1,15 @@
 export const users = [
   {
     _id: "u101",
-    fullname: "User 1",
-    imgUrl: "/img/img1.jpg",
-    username: "user1",
+    fullname: "Einav Sharf",
+    imgUrl: "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/female/10.jpg",
+    username: "einavsharf",
     password: "secret"
   },
   {
     _id: "u102",
-    fullname: "User 2",
-    imgUrl: "/img/img2.jpg",
+    fullname: "Ari Meir",
+    imgUrl: "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/68.jpg",
     username: "user2",
     password: "secret",
   }

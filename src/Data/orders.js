@@ -37,11 +37,12 @@ export const orders1 =
     host: {
       hostId: "u102",
       hostName: "Ari Meir",
-      imgUrl: "/img/ariprof.jpg",
+      imgUrl: "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/68.jpg",
     },
     buyer: {
       _id: "u101",
-      fullname: "User 1"
+      fullname: "Einav Sharf",
+      imgUrl: "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/female/10.jpg"
     },
     totalPrice: 160,
     startDate: "13/10/2025",
@@ -69,11 +70,12 @@ export const orders2 =
     host: {
       hostId: "u102",
       hostName: "Ari Meir",
-      imgUrl: "/img/ariprof.jpg",
+      imgUrl: "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/68.jpg",
     },
     buyer: {
       _id: "u101",
-      fullname: "User 1"
+      fullname: "Einav Sharf",
+      imgUrl:"https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/female/10.jpg"
     },
     totalPrice: 200,
     startDate: "13/10/2024",

@@ -4,8 +4,9 @@ import { LoginDisplay } from "../cmps-AirBnB/LoginDisplay"
 import { fetchSVG } from '../store-AirBnB/svg/SvgStore';
 
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ActionButton } from "../cmps-AirBnB/ActionButton";
+import { authService } from "../services-AirBnB/auth.service";
 const reviews = [
     {
       "id": "r1",
@@ -260,8 +261,20 @@ export function ConfirmationPage({ onConfirmTrip, reviewMidScore }) {
     const totalPrice = searchParams.get('total-price');
     const fee = searchParams.get('fee');
 
-    const [user, setUser] = useState(false)
+    const [user, setUser] = useState(authService.getCurrentUser())
     const [confirmed, setConfirmed] = useState(false)
+
+
+
+
+
+    useEffect(()=> {
+
+    },[user])
+
+
+
+
 
     async function confirmTrip() {
       try {
@@ -273,6 +286,25 @@ export function ConfirmationPage({ onConfirmTrip, reviewMidScore }) {
       }
 
     }
+    
+    async function hostLogin() {
+      try {
+          await authService.login('ari')
+          setUser(authService.getCurrentUser())
+      } catch(e) {
+          throw new Error ('There has been a problem logging in as Ari Host')
+      }
+
+  }
+  async function guestLogin() {
+      try {
+          await authService.login('einav')
+          setUser(authService.getCurrentUser())
+      } catch(e) {
+          throw new Error ('There has been a problem logging in as Einav Guest')
+      }
+
+  }
 
     return (
         <section>
@@ -321,7 +353,7 @@ export function ConfirmationPage({ onConfirmTrip, reviewMidScore }) {
                         <ActionButton buttonText={"Move to trips"}  action={() => navigate("/trips")}/>
                         </>}
                     </div>
-                    {!user && <LoginDisplay/>}
+                    {!user && <LoginDisplay hostLogin={hostLogin} guestLogin={guestLogin}/>}
                 </div>
 
                 <div className="confirmation-page-column-two">

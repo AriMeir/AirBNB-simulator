@@ -14,6 +14,7 @@ import { Reservation } from '../cmps-AirBnB/Reservation';
 import { AmenitiesPreviewGridList } from '../cmps-AirBnB/AmenitiesPreviewGridList';
 import { ReviewsPreviewGridList } from '../cmps-AirBnB/ReviewsPreviewGridList';
 import { ActionButton } from '../cmps-AirBnB/ActionButton';
+import { authService } from '../services-AirBnB/auth.service';
 const reviews = [
   {
     "id": "r1",
@@ -244,7 +245,7 @@ export const stay = {
     host: {
       id: "u101",
       fullname: "Ari Meir",
-      imgUrl: "/img/ariprof.jpg",
+      imgUrl: "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/68.jpg",
     },
     loc: {
       country: "Portugal",
@@ -270,7 +271,7 @@ export function StayDetailsPage() {
     const [pickedCheckInDateText, setPickedCheckInDateText] = useState('')
     const [pickedCheckOutDateText, setPickedCheckOutDateText] = useState('')
 
-
+    
     const [reviewMidScore, setReviewMidScore] = useState(0)
     const [nights, setNights]= useState(0)
     const [price, setPrice] = useState(0)
@@ -305,6 +306,8 @@ export function StayDetailsPage() {
           setShowHeader(false);
         }
       }
+
+      
   
       window.addEventListener('scroll', handleScroll);
       return () => {
@@ -312,7 +315,7 @@ export function StayDetailsPage() {
       }
     }, [])
 
-
+    
     useEffect(() => {
         setTotalGuestNumber(adultCounter + childrenCounter + infantCounter + petCounter);
     }, [adultCounter, childrenCounter, infantCounter, petCounter]);
@@ -405,7 +408,9 @@ export function StayDetailsPage() {
         }
     }
     async function onConfirmTrip(stayId, checkInDate, checkOutDate, guests, price, fee ) {
+      
                 try {
+                const user = await authService.getCurrentUser()
                 const newTrip =
         {
             host: {
@@ -414,8 +419,9 @@ export function StayDetailsPage() {
               ImgUrl:stay.host.imgUrl
             },
             buyer: {
-            _id: "u101",
-            fullname: "Einav Sharf"
+            _id: user._id,
+            fullname: user.fullname,
+            ImgUrl: user.imgUrl
             },
             totalPrice: parseInt(price) + parseInt(fee),
             startDate: checkInDate,
@@ -427,7 +433,7 @@ export function StayDetailsPage() {
             stay: {
             id: stayId,
             name: stay.name,
-            price: 80.00
+            price: price
             },
             loc: {
               country: stay.loc.country,
@@ -437,6 +443,7 @@ export function StayDetailsPage() {
             status: "pending" // approved, rejected
         }
         await addTrip(newTrip)
+        
         
         } catch(e) {
             console.log(e)
@@ -637,6 +644,7 @@ export function StayDetailsPage() {
                             <div className='reservation-form-container flex'>
                             <Reservation
                             buttonText={buttonText}
+                            reviewMidScore={reviewMidScore}
                             clearDates={clearDates}
                             reviewNumber={stay.reviews.length}
                             pickedCheckInDate={pickedCheckInDate}
