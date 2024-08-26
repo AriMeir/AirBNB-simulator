@@ -14,7 +14,9 @@ export const tripService = {
     save,
     remove,
     getEmptyTrip,
-    cancelTrip
+    cancelTrip,
+    approveTrip,
+    rejectTrip
 }
 window.cs = tripService
 
@@ -87,6 +89,32 @@ async function save(trip) {
         return storageService.get(STORAGE_KEY,tripId).then(trip => {
             if (trip) {
                 trip.status = 'canceled'
+                return storageService.put(STORAGE_KEY,trip)
+            } else {
+                throw new Error('Trip not found')
+            }
+        })
+    } 
+    async function approveTrip(tripId) {
+        return storageService.get(STORAGE_KEY,tripId).then(trip => {
+            if (trip) {
+                if (trip.status === 'canceled') {
+                    throw new Error('Trip is already canceled')
+                }
+                trip.status = 'approved'
+                return storageService.put(STORAGE_KEY,trip)
+            } else {
+                throw new Error('Trip not found')
+            }
+        })
+    } 
+    async function rejectTrip(tripId) {
+        return storageService.get(STORAGE_KEY,tripId).then(trip => {
+            if (trip) {
+                if (trip.status === 'canceled') {
+                    throw new Error('Trip is already canceled')
+                }
+                trip.status = 'rejected'
                 return storageService.put(STORAGE_KEY,trip)
             } else {
                 throw new Error('Trip not found')

@@ -24,10 +24,13 @@ export function TripTable({ tripList, onOrderByPriceDown, onOrderByPriceUp, onOr
             case "pending":
                 color = "rgb(255, 196, 0)";
                 break;
-            case "complete":
+            case "approved":
                 color = "rgb(0, 255, 0)";
                 break;
             case "canceled":
+                color = "rgb(255, 0, 0)";
+                break;
+            case "rejected":
                 color = "rgb(255, 0, 0)";
                 break;
             default:
@@ -35,7 +38,7 @@ export function TripTable({ tripList, onOrderByPriceDown, onOrderByPriceUp, onOr
         }
         return (
             <span>
-                <span style={{ color, marginRight: "8px", fontSize: "1.2em"}}>
+                <span style={{ color, marginRight: "8px", fontSize: "1.2em" }}>
                     &#9679;
                 </span> 
                 {status}

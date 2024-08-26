@@ -35,9 +35,7 @@ export function Header({ onLittleFilterClick, stayId, hostMode, showFilter, shri
     const confirmationPage = ((stayId && stayId !== 1)&&nights)
     const navigate = useNavigate();
 
-    useEffect(() => {
-        console.log(stayId);
-    }, [stayId]);
+    
 
     return (
         <section className={`header-container ${fixed}   full main-content `}>
