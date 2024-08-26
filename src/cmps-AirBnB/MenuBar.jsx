@@ -6,12 +6,12 @@ export function MenuBar() {
     const navigate = useNavigate();
     return (
         <div className="menu-bar">
-            <div className="menu-item border-bottom" onClick={() => navigate('/login')}>Log in</div>
-            <div className="menu-item border-bottom" onClick={() => navigate('/stay')}>Home</div>
-            <div className="menu-item border-bottom" onClick={() => navigate('/trips')}>Trips</div>
-            <div className="menu-item border-bottom" onClick={() => navigate('/wish')}>Wishlist</div>
+            <div className="menu-item bold" onClick={() => navigate('/login')}>Log in</div>
+            <div className="menu-item bold" onClick={() => navigate('/stay')}>Home</div>
+            <div className="menu-item bold" onClick={() => navigate('/trips')}>Trips</div>
+            <div className="menu-item bold border-bottom" onClick={() => navigate('/wish')}>Wishlist</div>
             <div className="menu-item border-bottom" onClick={() => navigate('/host')}>host page</div>
-            <div className="menu-item border-bottom" onClick={() => {authService.logout();
+            <div className="menu-item" onClick={() => {authService.logout();
                                                                         navigate('/stay')}}>Log out</div>
         </div>
     );

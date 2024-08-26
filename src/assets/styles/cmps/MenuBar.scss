@@ -1,23 +1,26 @@
 .menu-bar {
-    display: flex;
-    width: 150px;
+    margin-top: -12px;
+    width: 100%;
     flex-direction: column;
-    gap: 20px;
+    border-radius: 9px !important;
+    background: #fff;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, .12) !important;
+    display: block;
+    min-width: 234px;
+    padding: 8px 0 !important;
+    position: absolute;
+    right: 0;
 }
 
 .menu-item {
+    padding: 11px 17px;
+    font-size: 14px;
+    font-family: 'AirbnbCereal';
     cursor: pointer;
-    font-size: 18px;
-    color: #555;
-    display: grid;
-    place-content: center;
-    padding: 10px 0 ;
-    border-radius: 50px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 .menu-item:hover {
-    color: #000;
-    border-radius: 10px;
     background-color: #f0f0f0;
+    color: #000;
 }

@@ -6,7 +6,6 @@ import { StayList } from './StayList';
 
 export function StayIndex() {
     const location = useLocation()
-    const navigate = useNavigate()
     const [selectedCategory, setSelectedCategory] = useState('')
     const [isWish, setIsWish] = useState(false)
 
