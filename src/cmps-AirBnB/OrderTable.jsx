@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { UserCard } from "./UserCard";
 import { StayCard } from "./StayCard";
+import { utilService } from "../services-AirBnB/util.service";
 
 
 export function OrderTable({ orders }) {
@@ -55,7 +56,7 @@ export function OrderTable({ orders }) {
                     {orders.map((order, index) => (
                         <tr key={index}>
                             <td><UserCard name={order.buyer.fullname} type={"Guest"} /></td>
-                            <td>{order.startDate + " - " + order.endDate}</td>
+                            <td>{utilService.convertDateFormat(order.startDate) + " - " + utilService.convertDateFormat(order.endDate)}</td>
                             <td><StayCard country={order.loc.country} city={order.loc.city} name={order.stay.name}/></td>
                             <td>${order.totalPrice}.00</td>
                             <td>{getStatusDot(order.status)}</td>

@@ -166,6 +166,9 @@ a:hover {
 .pad-box{
     padding-block: 2rem;
 }
+.little-pad-box{
+    padding-block: 1rem;
+}
 .pad-top{
     padding-top: 2rem;
 }
@@ -237,7 +240,7 @@ a:hover {
     background-color: var(--clr-btn) !important
 }
 .secondary-layout{
-    padding: 0 150px;
+    padding: 0 180px;
     margin-top: 50px;
     color:black
 }
@@ -278,4 +281,10 @@ table {
 }
 .css-138poq7-MuiPickersSlideTransition-root-MuiDayCalendar-slideTransition{
     min-height: 230px !important;
+}
+.pointer {
+    cursor: pointer;
+}
+.hover:hover{
+    color: #ada9a9;
 }

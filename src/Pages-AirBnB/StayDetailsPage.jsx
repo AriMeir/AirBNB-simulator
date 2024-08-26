@@ -1,15 +1,12 @@
 
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import { Header } from '../cmps-AirBnB/Header';
 import { ConfirmationPage } from './ConfirmationPage';
-
+import { AmenitiesPopup } from '../cmps-AirBnB/AmenitiesPopup';
 import { useState, useEffect } from 'react';
 import { GuestCounter } from '../cmps-AirBnB/GuestCounter';
 import { ReviewScoreBar } from '../cmps-AirBnB/ReviewScoreBar';
-import { MiniUserReview } from '../cmps-AirBnB/MiniUserReview';
 import { ReviewPopUp } from '../cmps-AirBnB/ReviewPopUp';
 import { MapComponent } from '../cmps-AirBnB/MapComponent';
-import { ReservationContainer } from '../cmps-AirBnB/ReservationContainer';
 import { addTrip } from '../store-AirBnB/actions/trip.actions';
 import { fetchSVG } from '../store-AirBnB/svg/SvgStore';
 import { BasicRangeShortcuts } from '../cmps-AirBnB/BasicRangeShortcuts';
@@ -280,6 +277,7 @@ export function StayDetailsPage() {
     const [fee, setFee] = useState(0)
     const [totalPrice, setTotalPrice] = useState(0)
     const [showReviews, setShowReviews] = useState(false)
+    const [showAmenities, setShowAmenities] = useState(false)
     const [searchParams, setSearchParams] = useSearchParams();
     const [showGuestsSection, setShowGuestsSection] = useState(false)
     const [adultCounter,setAdultCounter] = useState(0)
@@ -333,6 +331,12 @@ export function StayDetailsPage() {
     }
     function onCloseReviews(){
         setShowReviews(false)
+    }
+    function onShowAmenities(){
+        setShowAmenities(true)
+    }
+    function onCloseAmenities(){
+      setShowAmenities(false)
     }
 
      
@@ -407,11 +411,11 @@ export function StayDetailsPage() {
             host: {
               hostId: "u102",
               hostName: stay.host.fullname,
-              hostImgUrl:""
+              ImgUrl:stay.host.imgUrl
             },
             buyer: {
             _id: "u101",
-            fullname: "Ari Meir"
+            fullname: "Einav Sharf"
             },
             totalPrice: parseInt(price) + parseInt(fee),
             startDate: checkInDate,
@@ -422,7 +426,7 @@ export function StayDetailsPage() {
             },
             stay: {
             id: stayId,
-            name: "House Of Ari Meir",
+            name: stay.name,
             price: 80.00
             },
             loc: {
@@ -580,7 +584,7 @@ export function StayDetailsPage() {
                                 <h3>What this place offers</h3>
                                 <AmenitiesPreviewGridList amenityList={stay.amenities}/>
                                 <div>
-                                <button className='white-btn' onClick={onShowReviews}>Show all 15 amenities</button>
+                                <button className='white-btn' onClick={onShowAmenities}>Show all {stay.amenities.length} amenities</button>
                                 </div>
                                 
                             </div>
@@ -687,8 +691,9 @@ export function StayDetailsPage() {
                     </div>
                     </div>
                     {showReviews && <ReviewPopUp onClose={onCloseReviews} reviewList={stay.reviews}/>}
+                    {showAmenities && <AmenitiesPopup onClose={onCloseAmenities} amenityList={stay.amenities}/>}
                     <div id="location"></div>
-                    <MapComponent />
+                    <MapComponent country={stay.loc.country} city={stay.loc.city} />
                     <div className='pad-box'>
                         <button className='white-btn'>Contact host</button>
                     </div>

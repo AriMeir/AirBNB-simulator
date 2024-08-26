@@ -6,6 +6,7 @@ export function ReviewPopUp({ onClose, reviewList }) {
       <div>
         <button className="close-button-reviews-component x-btn" onClick={onClose}>X</button>
       </div>
+      <h1>Reviews</h1>
       <div className="list-reviews-component flex column just-cont-start align-left">
         {reviewList.map(review => (
           <MiniUserReview
