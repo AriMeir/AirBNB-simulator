@@ -4,7 +4,7 @@ export function Footer() {
     return (
     <section className="footer full main-content">
         <div className="app-footer-left">
-            <div className="app-footer-copyright">© 2024 airbnb, Inc.</div>
+            <div className="app-footer-copyright">© 2024 arebnb, Inc.</div>
             <div className="app-footer-links">
                 <div className="dot-left">·</div>
                 <a href="#" className="footer-link">Terms</a>

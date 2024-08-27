@@ -268,8 +268,8 @@ export const stay1 = {
     countryCode: "PT",
     city: "Lisbon",
     address: "17 Kombo st",
-    lat: -8.61308,
-    lng: 41.1413
+    lat: 39.399872,
+    lng: -8.224454
   },
   reviews: reviews,
   likedByUsers: ['mini-user']
@@ -298,8 +298,8 @@ export const stay2 = {
     countryCode: "PT",
     city: "LA",
     address: "17 Kombo st",
-    lat: -8.61308,
-    lng: 41.1413
+    lat: 118.243683,
+    lng: -34.052235
   },
   reviews: reviews,
 
@@ -329,8 +329,8 @@ export const stay3 = {
     countryCode: "PT",
     city: "New York",
     address: "17 Kombo st",
-    lat: -8.61308,
-    lng: 41.1413
+    lat: 40.712776,
+    lng: -74.005974
   },
   reviews: reviews,
 
@@ -360,8 +360,8 @@ export const stay4 = {
     countryCode: "PT",
     city: "Toronto",
     address: "17 Kombo st",
-    lat: -8.61308,
-    lng: 41.1413
+    lat: 43.653225,
+    lng: -79.383186
   },
   reviews: reviews,
 
@@ -391,8 +391,8 @@ export const stay5 = {
     countryCode: "PT",
     city: "São Paulo",
     address: "17 Kombo st",
-    lat: -8.61308,
-    lng: 41.1413
+    lat: -23.5506507,
+    lng: -46.6333824
   },
   reviews: reviews,
 
@@ -422,8 +422,8 @@ export const stay6 = {
     countryCode: "PT",
     city: "Buenos Aires",
     address: "17 Kombo st",
-    lat: -8.61308,
-    lng: 41.1413
+    lat: -34.6073387,
+    lng: -58.4432852
   },
   reviews: reviews,
 
@@ -453,8 +453,8 @@ export const stay7 = {
     countryCode: "PT",
     city: "Paris",
     address: "17 Kombo st",
-    lat: -8.61308,
-    lng: 41.1413
+    lat: 48.8534951,
+    lng: 2.3483915
   },
   reviews: reviews,
 
@@ -484,8 +484,8 @@ export const stay8 = {
     countryCode: "PT",
     city: "Berlin",
     address: "17 Kombo st",
-    lat: -8.61308,
-    lng: 41.1413
+    lat: 52.510885,
+    lng: 13.3989367
   },
   reviews: reviews,
 
@@ -515,8 +515,8 @@ export const stay9 = {
     countryCode: "PT",
     city: "Rome",
     address: "17 Kombo st",
-    lat: -8.61308,
-    lng: 41.1413
+    lat: 41.8933203,
+    lng: 12.4829321
   },
   reviews: reviews,
 
@@ -546,8 +546,8 @@ export const stay10 = {
     countryCode: "PT",
     city: "Madrid",
     address: "17 Kombo st",
-    lat: -8.61308,
-    lng: 41.1413
+    lat: 40.4167047,
+    lng: -3.7035825
   },
   reviews: reviews,
 
@@ -577,8 +577,8 @@ export const stay11 = {
     countryCode: "PT",
     city: "Bangkok",
     address: "17 Kombo st",
-    lat: -8.61308,
-    lng: 41.1413
+    lat: 13.7524938,
+    lng: 100.4935089
   },
   reviews: reviews,
 
@@ -608,8 +608,8 @@ export const stay12 = {
     countryCode: "PT",
     city: "Tel Aviv",
     address: "17 Kombo st",
-    lat: -8.61308,
-    lng: 41.1413
+    lat: 32.0852997,
+    lng: 34.7818064
   },
   reviews: reviews,
 
@@ -639,8 +639,8 @@ export const stay13 = {
     countryCode: "PT",
     city: "Amsterdam",
     address: "17 Kombo st",
-    lat: -8.61308,
-    lng: 41.1413
+    lat: 52.3730796,
+    lng: 4.8924534
   },
   reviews: reviews,
 
@@ -670,8 +670,8 @@ export const stay14 = {
     countryCode: "PT",
     city: "Tokyo",
     address: "17 Kombo st",
-    lat: -8.61308,
-    lng: 41.1413
+    lat: 35.6821936,
+    lng: 139.762221
   },
   reviews: reviews,
 
@@ -707,92 +707,92 @@ export const stay14 = {
   //  loggeinUser.isOwner = userStays.length > 0
 
 
-export const orders = [
-  {
-    _id: "o1225",
-    hostId: "u102",
-    buyer: {
-      _id: "u101",
-      fullname: "User 1"
-    },
-    totalPrice: 160,
-    startDate: "2025/10/15",
-    endDate: "2025/10/17",
-    guests: {
-      adults: 1,
-      kids: 2
-    },
-    stay: {
-      id: "h102",
-      name: "House Of Uncle My",
-      price: 80.00
-    },
-    msgs: [],
-    status: "pending" // approved, rejected
-  }
-]
-export const orders1 =
-  {
-    _id: "o1226",
-    hostId: "u102",
-    buyer: {
-      _id: "u101",
-      fullname: "User 1"
-    },
-    totalPrice: 160,
-    startDate: "2025/10/16",
-    endDate: "2025/10/17",
-    guests: {
-      adults: 1,
-      kids: 2
-    },
-    stay: {
-      id: "h102",
-      name: "House Of Uncle My",
-      price: 80.00
-    },
-    msgs: [],
-    status: "pending" // approved, rejected
-  }
+// export const orders = [
+//   {
+//     _id: "o1225",
+//     hostId: "u102",
+//     buyer: {
+//       _id: "u101",
+//       fullname: "User 1"
+//     },
+//     totalPrice: 160,
+//     startDate: "2025/10/15",
+//     endDate: "2025/10/17",
+//     guests: {
+//       adults: 1,
+//       kids: 2
+//     },
+//     stay: {
+//       id: "h102",
+//       name: "House Of Uncle My",
+//       price: 80.00
+//     },
+//     msgs: [],
+//     status: "pending" // approved, rejected
+//   }
+// ]
+// export const orders1 =
+//   {
+//     _id: "o1226",
+//     hostId: "u102",
+//     buyer: {
+//       _id: "u101",
+//       fullname: "User 1"
+//     },
+//     totalPrice: 160,
+//     startDate: "2025/10/16",
+//     endDate: "2025/10/17",
+//     guests: {
+//       adults: 1,
+//       kids: 2
+//     },
+//     stay: {
+//       id: "h102",
+//       name: "House Of Uncle My",
+//       price: 80.00
+//     },
+//     msgs: [],
+//     status: "pending" // approved, rejected
+//   }
 
-export const orders2 =
-  {
-    _id: "o1227",
-    hostId: "u102",
-    buyer: {
-      _id: "u101",
-      fullname: "User 1"
-    },
-    totalPrice: 160,
-    startDate: "2024/10/15",
-    endDate: "2024/10/17",
-    guests: {
-      adults: 1,
-      kids: 2
-    },
-    stay: {
-      id: "h102",
-      name: "House Of Uncle My",
-      price: 80.00
-    },
-    msgs: [],
-    status: "complete" // approved, rejected
-  }
+// export const orders2 =
+//   {
+//     _id: "o1227",
+//     hostId: "u102",
+//     buyer: {
+//       _id: "u101",
+//       fullname: "User 1"
+//     },
+//     totalPrice: 160,
+//     startDate: "2024/10/15",
+//     endDate: "2024/10/17",
+//     guests: {
+//       adults: 1,
+//       kids: 2
+//     },
+//     stay: {
+//       id: "h102",
+//       name: "House Of Uncle My",
+//       price: 80.00
+//     },
+//     msgs: [],
+//     status: "complete" // approved, rejected
+//   }
 
 
-  export const users = [
-    {
-      _id: "u101",
-      fullname: "User 1",
-      imgUrl: "/img/img1.jpg",
-      username: "user1",
-      password: "secret"
-    },
-    {
-      _id: "u102",
-      fullname: "User 2",
-      imgUrl: "/img/img2.jpg",
-      username: "user2",
-      password: "secret",
-    }
-  ]
+//   export const users = [
+//     {
+//       _id: "u101",
+//       fullname: "User 1",
+//       imgUrl: "/img/img1.jpg",
+//       username: "user1",
+//       password: "secret"
+//     },
+//     {
+//       _id: "u102",
+//       fullname: "User 2",
+//       imgUrl: "/img/img2.jpg",
+//       username: "user2",
+//       password: "secret",
+//     }
+//   ]

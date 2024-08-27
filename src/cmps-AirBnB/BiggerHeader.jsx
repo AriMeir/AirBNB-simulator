@@ -30,7 +30,7 @@ export function BiggerHeader({ onOverlayClick, stayId, shrinked}) {
             }
         }
         return ''
-        
+
     }
     const toShrink = shrink()
 
@@ -41,7 +41,7 @@ export function BiggerHeader({ onOverlayClick, stayId, shrinked}) {
                 <div className={`header main-content `}>
                     <div className='header-logo flex big-header-margin-bottom'>
                         <div className='airbnb-icon'>{svgIcons.AirBnB}</div>
-                        <h1 className='airbnb-header'>airbnb</h1>
+                        <h1 className='airbnb-header'>arebnb</h1>
                     </div>
                     <div className='filter-nav-container flex column center align-center'>
                         <div className='nav-bar flex row space-between'>
