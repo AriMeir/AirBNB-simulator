@@ -1,3 +1,15 @@
+const amenities = [
+  "Shampoo",
+  "Wifi",
+  "Kitchen",
+  "Bathtub",
+  "Conditioner",
+  "Hangers",
+  "Iron",
+  "Refrigerator",
+  "Microwave",
+  "Mini fridge"
+]
 const reviews = [
   {
     "id": "r1",
@@ -241,21 +253,14 @@ export const stay1 = {
   price: 325,
   summary: "Luxury Urban Loft - This chic loft in a trendy neighborhood boasts high ceilings, industrial decor, and a rooftop terrace with cityscape views.",
   capacity: 4,
-  amenities: [
-    "TV",
-    "Wifi",
-    "Kitchen",
-    "Smoking allowed",
-    "Pets allowed",
-    "Cooking basics"
-  ],
+  amenities: amenities,
   labels: [
     "Bed & breakfasts","Luxe","Top of the world"
   ],
   host: {
-    id: "u101",
-    fullname: "Laura Martinez",
-    imgUrl: "/img/ariprof.jpg",
+    id: "u102",
+    fullname: "Ari Meir",
+    imgUrl: "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/68.jpg",
   },
   loc: {
     region: null,
@@ -278,21 +283,14 @@ export const stay2 = {
   price: 203,
   summary: "Cozy Downtown Apartment - Located in the heart of the city, this modern apartment offers stunning skyline views, a fully equipped kitchen, and easy access to local attractions.",
   capacity: 2,
-  amenities: [
-    "TV",
-    "Wifi",
-    "Kitchen",
-    "Smoking allowed",
-    "Pets allowed",
-    "Cooking basics"
-  ],
+  amenities: amenities,
   labels: [
     "Farms","Skiing","Amazing pools"
   ],
   host: {
-    _id: "u101",
-    fullname: "Emily Johnson",
-    imgUrl: "/img/ariprof.jpg"
+    _id: "u102",
+    fullname: "Ari Meir",
+    imgUrl: "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/68.jpg",
   },
   loc: {
     region: "United States",
@@ -316,21 +314,14 @@ export const stay3 = {
   price: 194,
   summary: "Beachfront Bungalow - Enjoy the serene sound of waves in this charming bungalow right on the beach. Perfect for a romantic getaway or a relaxing vacation.",
   capacity: 3,
-  amenities: [
-    "TV",
-    "Wifi",
-    "Kitchen",
-    "Smoking allowed",
-    "Pets allowed",
-    "Cooking basics"
-  ],
+  amenities:amenities,
   labels: [
     "Lakefront","Islands","Tropical"
   ],
   host: {
-    id: "u101",
-    fullname: "Michael Brown",
-    imgUrl: "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small",
+    id: "u102",
+    fullname: "Ari Meir",
+    imgUrl: "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/68.jpg",
   },
   loc: {
     region: "United States",
@@ -354,21 +345,14 @@ export const stay4 = {
   price: 387,
   summary: "Mountain Cabin Retreat - Nestled in the mountains, this rustic cabin features a wood-burning fireplace, hiking trails, and breathtaking views of the valley below.",
   capacity: 7,
-  amenities: [
-    "TV",
-    "Wifi",
-    "Kitchen",
-    "Smoking allowed",
-    "Pets allowed",
-    "Cooking basics"
-  ],
+  amenities: amenities,
   labels: [
     "Vineyards","Mansions","Lake"
   ],
   host: {
-    id: "u101",
-    fullname: "Sarah Davis",
-    imgUrl: "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small",
+    id: "u102",
+    fullname: "Ari Meir",
+    imgUrl: "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/68.jpg",
   },
   loc: {
     region: null,
@@ -392,21 +376,14 @@ export const stay5 = {
   price: 444,
   summary: "Historic Victorian Home - Experience a piece of history in this beautifully restored Victorian house, complete with antique furnishings and a lush garden.",
   capacity: 12,
-  amenities: [
-    "TV",
-    "Wifi",
-    "Kitchen",
-    "Smoking allowed",
-    "Pets allowed",
-    "Cooking basics"
-  ],
+  amenities:amenities,
   labels: [
     "Beach","Beachfront","Vineyards","Mansions"
   ],
   host: {
-    id: "u101",
-    fullname: "David Wilson",
-    imgUrl: "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small",
+    id: "u102",
+    fullname: "Ari Meir",
+    imgUrl: "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/68.jpg",
   },
   loc: {
     region: "South America",
@@ -430,21 +407,14 @@ export const stay6 = {
   price: 98,
   summary: "Countryside Cottage - Escape to the peaceful countryside in this quaint cottage surrounded by rolling hills and picturesque farmland.",
   capacity: 6,
-  amenities: [
-    "TV",
-    "Wifi",
-    "Kitchen",
-    "Smoking allowed",
-    "Pets allowed",
-    "Cooking basics"
-  ],
+  amenities: amenities,
   labels: [
     "Surfing","Bed & breakfasts","Luxe"
   ],
   host: {
-    id: "u101",
-    fullname: "James Anderson",
-    imgUrl: "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small",
+    id: "u102",
+    fullname: "Ari Meir",
+    imgUrl: "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/68.jpg",
   },
   loc: {
     region: "South America",
@@ -468,21 +438,14 @@ export const stay7 = {
   price: 153,
   summary: "Modern Studio Apartment - Ideal for solo travelers or couples, this sleek studio offers all the modern amenities, including a smart TV and high-speed Wi-Fi.",
   capacity: 2,
-  amenities: [
-    "TV",
-    "Wifi",
-    "Kitchen",
-    "Smoking allowed",
-    "Pets allowed",
-    "Cooking basics"
-  ],
+  amenities: amenities,
   labels: [
     "Earth homes","Amazing views","Desert"
   ],
   host: {
-    id: "u101",
-    fullname: "Davit Pok",
-    imgUrl: "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small",
+    id: "u102",
+    fullname: "Ari Meir",
+    imgUrl: "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/68.jpg",
   },
   loc: {
     region: "France",
@@ -506,21 +469,14 @@ export const stay8 = {
   price: 100,
   summary: "Tropical Villa with Pool - Luxurious villa in a tropical paradise, featuring a private pool, lush gardens, and close proximity to sandy beaches.",
   capacity: 8,
-  amenities: [
-    "TV",
-    "Wifi",
-    "Kitchen",
-    "Smoking allowed",
-    "Pets allowed",
-    "Cooking basics"
-  ],
+  amenities: amenities,
   labels: [
     "Skiing","Amazing pools","Earth homes"
   ],
   host: {
-    id: "u101",
-    fullname: "James Anderson",
-    imgUrl: "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small",
+    id: "u102",
+    fullname: "Ari Meir",
+    imgUrl: "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/68.jpg",
   },
   loc: {
     region: null,
@@ -544,21 +500,14 @@ export const stay9 = {
   price: 300,
   summary: "Family-Friendly Suburban House - Spacious home in a quiet suburb, perfect for families with children. Features a large backyard, play area, and nearby parks.",
   capacity: 6,
-  amenities: [
-    "TV",
-    "Wifi",
-    "Kitchen",
-    "Smoking allowed",
-    "Pets allowed",
-    "Cooking basics"
-  ],
+  amenities:amenities,
   labels: [
     "Lake","Treehouses","Farms"
   ],
   host: {
-    id: "u101",
-    fullname: "Sarah Davis",
-    imgUrl: "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small",
+    id: "u102",
+    fullname: "Ari Meir",
+    imgUrl: "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/68.jpg",
   },
   loc: {
     region: "Italy",
@@ -582,21 +531,14 @@ export const stay10 = {
   price: 230,
   summary: "Elegant Downtown Condo - Stylish condo in the city center, with access to a pool, gym, and concierge services. Close to shopping and dining options.",
   capacity: 4,
-  amenities: [
-    "TV",
-    "Wifi",
-    "Kitchen",
-    "Smoking allowed",
-    "Pets allowed",
-    "Cooking basics"
-  ],
+  amenities: amenities,
   labels: [
     "Earth homes","Amazing views","Desert"
   ],
   host: {
-    id: "u101",
-    fullname: "Laura Martinez",
-    imgUrl: "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small",
+    id: "u102",
+    fullname: "Ari Meir",
+    imgUrl: "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/68.jpg",
   },
   loc: {
     region: null,
@@ -620,21 +562,14 @@ export const stay11 = {
   price: 425,
   summary: "Spacious Downtown Penthouse - This expansive penthouse offers panoramic city views, a gourmet kitchen, and stylish decor, perfect for an upscale urban experience.",
   capacity: 10,
-  amenities: [
-    "TV",
-    "Wifi",
-    "Kitchen",
-    "Smoking allowed",
-    "Pets allowed",
-    "Cooking basics"
-  ],
+  amenities:amenities,
   labels: [
     "Earth homes","Amazing views","Desert"
   ],
   host: {
-    id: "u101",
-    fullname: "Michael Brown",
-    imgUrl: "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small",
+    id: "u102",
+    fullname: "Ari Meir",
+    imgUrl: "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/68.jpg",
   },
   loc: {
     region: null,
@@ -658,21 +593,14 @@ export const stay12 = {
   price: 322,
   summary: "Eco-Friendly Tiny House - Stay green in this eco-friendly tiny house made from sustainable materials, with solar power and a minimalist design.",
   capacity: 3,
-  amenities: [
-    "TV",
-    "Wifi",
-    "Kitchen",
-    "Smoking allowed",
-    "Pets allowed",
-    "Cooking basics"
-  ],
+  amenities:amenities,
   labels: [
     "Islands","Tropical","Camping"
   ],
   host: {
-    id: "u101",
-    fullname: "Olivia Young",
-    imgUrl: "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small",
+    id: "u102",
+    fullname: "Ari Meir",
+    imgUrl: "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/68.jpg",
   },
   loc: {
     region: "Middle East",
@@ -696,21 +624,14 @@ export const stay13 = {
   price: 260,
   summary: "Lakefront Log Cabin - Unwind in this cozy log cabin right on the lake, with opportunities for fishing, kayaking, and enjoying the great outdoors.",
   capacity: 2,
-  amenities: [
-    "TV",
-    "Wifi",
-    "Kitchen",
-    "Smoking allowed",
-    "Pets allowed",
-    "Cooking basics"
-  ],
+  amenities:amenities,
   labels: [
     "Surfing","Bed & breakfasts","Luxe","Top of the world"
   ],
   host: {
-    id: "u101",
-    fullname: "Olivia Young",
-    imgUrls: [imgUrl3,imgUrl13,imgUrl23,imgUrl29,imgUrl30],
+    id: "u102",
+    fullname: "Ari Meir",
+    imgUrl: "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/68.jpg",
   },
   loc: {
     region: null,
@@ -734,21 +655,14 @@ export const stay14 = {
   price: 200,
   summary: "Tropical Villa with Pool - Luxurious villa in a tropical paradise, featuring a private pool, lush gardens, and close proximity to sandy beaches.",
   capacity: 8,
-  amenities: [
-    "TV",
-    "Wifi",
-    "Kitchen",
-    "Smoking allowed",
-    "Pets allowed",
-    "Cooking basics"
-  ],
+  amenities: amenities,
   labels: [
     "Surfing","Bed & breakfasts","Luxe","Top of the world"
   ],
   host: {
-    id: "u101",
-    fullname: "Davit Pok",
-    imgUrl: "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small",
+    id: "u102",
+    fullname: "Ari Meir",
+    imgUrl: "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/68.jpg",
   },
   loc: {
     region: null,

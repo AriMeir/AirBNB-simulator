@@ -576,7 +576,7 @@ export function StayDetailsPage() {
                                 <div className='highlight flex align-left'>
                                     <div className='highlight-img'>{fetchSVG("self_check_in")}</div>
                                     <div className='highlight-text'>
-                                        <h3>Great check-in experiance</h3>
+                                        <h3>Great check-in experience</h3>
                                         <p>Check yourself in with the smartlock</p>
                                     </div>
                                 </div>
