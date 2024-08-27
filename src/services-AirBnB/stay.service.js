@@ -29,11 +29,11 @@ async function query(filterBy /* = { location:'', dates: '', Adults: 0, Children
 }
 
 function getById(stayId) {
-    return storageService.get(stayId)
+    return storageService.get(STORAGE_KEY,stayId)
 }
 
 async function remove(stayId) {
-    return storageService.delete(stayId)
+    return storageService.delete(STORAGE_KEY,stayId)
 }
 
 async function save(stay) {

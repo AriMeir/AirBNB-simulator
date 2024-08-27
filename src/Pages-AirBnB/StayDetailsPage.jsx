@@ -1,8 +1,10 @@
 
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { ConfirmationPage } from './ConfirmationPage';
 import { AmenitiesPopup } from '../cmps-AirBnB/AmenitiesPopup';
 import { useState, useEffect } from 'react';
+import { loadStay } from '../store-AirBnB/actions/stay.actions';
+import { useSelector } from 'react-redux';
 import { GuestCounter } from '../cmps-AirBnB/GuestCounter';
 import { ReviewScoreBar } from '../cmps-AirBnB/ReviewScoreBar';
 import { ReviewPopUp } from '../cmps-AirBnB/ReviewPopUp';
@@ -264,8 +266,12 @@ export const stay = {
 
 export function StayDetailsPage() {
     // format 13/2/2024
+    const {stayId} = useParams()
+    const stay = useSelector(storeState => storeState.stayModule.stays)
+    
     const [pickedCheckInDate, setPickedCheckInDate] = useState('')
     const [pickedCheckOutDate, setPickedCheckOutDate] = useState('')
+    
 
     // format jul-12-2024
     const [pickedCheckInDateText, setPickedCheckInDateText] = useState('')
@@ -287,12 +293,11 @@ export function StayDetailsPage() {
     const [petCounter,setPetCounter] = useState(0)
     const [totalGuestNumber, setTotalGuestNumber] = useState(0)
     const [showHeader, setShowHeader] = useState(false);
+    
 
     const buttonText = (pickedCheckInDate && pickedCheckOutDate && totalGuestNumber && totalPrice) ? "Reserve" : "Check Availablity"
     const navigate = useNavigate();
-    useEffect (() => {
-      console.log(buttonText)
-    },[])
+    
     // for the Second Header
     useEffect(() => {
       const targetElement = document.getElementById('targetDiv'); // Replace with your target div's ID
@@ -306,14 +311,20 @@ export function StayDetailsPage() {
           setShowHeader(false);
         }
       }
-
-      
-  
       window.addEventListener('scroll', handleScroll);
       return () => {
         window.removeEventListener('scroll', handleScroll);
       }
     }, [])
+
+
+    async function loadCurrentStay(stayId){
+      await loadStay(stayId)
+    }
+    
+    useEffect(() => {
+      loadCurrentStay(stayId)
+    })
 
     
     useEffect(() => {

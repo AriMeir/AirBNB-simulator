@@ -21,7 +21,7 @@ export function UserMenuDropDown() {
       window.removeEventListener('storage', handleStorageChange);
     };
   }, []);
-  console.log(user)
+  
   return (
     <section className="user-menu flex">
       <div className='user-dropdown'>{svgIcons.UserMenuDropDown}</div>

@@ -266,7 +266,7 @@ export const stay1 = {
     lat: -8.61308,
     lng: 41.1413
   },
-  reviews: [reviews],
+  reviews: reviews,
   likedByUsers: ['mini-user']
 }
 
@@ -303,7 +303,7 @@ export const stay2 = {
     lat: -8.61308,
     lng: 41.1413
   },
-  reviews: [reviews],
+  reviews: reviews,
 
   likedByUsers: ['mini-user']
 }
@@ -341,7 +341,7 @@ export const stay3 = {
     lat: -8.61308,
     lng: 41.1413
   },
-  reviews: [reviews],
+  reviews: reviews,
 
   likedByUsers: []
 }
@@ -379,7 +379,7 @@ export const stay4 = {
     lat: -8.61308,
     lng: 41.1413
   },
-  reviews: [reviews],
+  reviews: reviews,
 
   likedByUsers: []
 }
@@ -417,7 +417,7 @@ export const stay5 = {
     lat: -8.61308,
     lng: 41.1413
   },
-  reviews: [reviews],
+  reviews: reviews,
 
   likedByUsers: []
 }
@@ -455,7 +455,7 @@ export const stay6 = {
     lat: -8.61308,
     lng: 41.1413
   },
-  reviews: [reviews],
+  reviews: reviews,
 
   likedByUsers: []
 }
@@ -493,7 +493,7 @@ export const stay7 = {
     lat: -8.61308,
     lng: 41.1413
   },
-  reviews: [reviews],
+  reviews: reviews,
 
   likedByUsers: []
 }
@@ -531,7 +531,7 @@ export const stay8 = {
     lat: -8.61308,
     lng: 41.1413
   },
-  reviews: [reviews],
+  reviews: reviews,
 
   likedByUsers: []
 }
@@ -569,7 +569,7 @@ export const stay9 = {
     lat: -8.61308,
     lng: 41.1413
   },
-  reviews: [reviews],
+  reviews: reviews,
 
   likedByUsers: []
 }
@@ -607,7 +607,7 @@ export const stay10 = {
     lat: -8.61308,
     lng: 41.1413
   },
-  reviews: [reviews],
+  reviews: reviews,
 
   likedByUsers: []
 }
@@ -645,7 +645,7 @@ export const stay11 = {
     lat: -8.61308,
     lng: 41.1413
   },
-  reviews: [reviews],
+  reviews: reviews,
 
   likedByUsers: []
 }
@@ -683,7 +683,7 @@ export const stay12 = {
     lat: -8.61308,
     lng: 41.1413
   },
-  reviews: [reviews],
+  reviews: reviews,
 
   likedByUsers: []
 }
@@ -721,7 +721,7 @@ export const stay13 = {
     lat: -8.61308,
     lng: 41.1413
   },
-  reviews: [reviews],
+  reviews: reviews,
 
   likedByUsers: []
 }
@@ -759,7 +759,7 @@ export const stay14 = {
     lat: -8.61308,
     lng: 41.1413
   },
-  reviews: [reviews],
+  reviews: reviews,
 
   likedByUsers: []
 }

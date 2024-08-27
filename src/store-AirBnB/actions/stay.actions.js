@@ -16,7 +16,6 @@ export async function loadStays() {
 export async function loadStay(stayId) {
     try {
         const stay = await stayService.getById(stayId)
-        console.log('Stay from DB:', stay)
         store.dispatch(getCmdSetStay(stay))
     } catch (err) {
         console.log('Cannot load stay', err)
