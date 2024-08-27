@@ -1,9 +1,9 @@
 .stay-details{
     max-width: 1200px;
     margin:auto;
-    margin-top: 50px;
+    margin-top: 12px;
     padding-inline: 40px;
-   
+
 }
 .stay-details .img-container {
     display: grid;
@@ -14,7 +14,7 @@
     margin-top: 10px;
     margin-bottom: 10px;
     min-height: 508px;
-    
+
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 50% 50%;
     aspect-ratio: 2.6 / 1;
@@ -31,12 +31,12 @@
     left:0;
     width: 100%;
     z-index: 1000;
-    
+
 }
 .second-header-container.hide {
     display: none;
   }
-  
+
   .second-header-container.show {
     display: block;
   }
@@ -48,15 +48,15 @@
     padding: 0 15px;
     margin: auto;
     max-width: 1200px;
-    
+
 }
 .second-header .anchor-links{
     height: 100%;
-    
+
 }
 .second-header .anchor-links .anchor-link {
     color: #212121;
-    
+
     font-size: .875rem;
     margin-left: 24px;
     cursor: pointer;
@@ -73,7 +73,7 @@
 }
 .header-reserve-button-container{
     min-width: 100px
-    
+
 }
 
 .second-header .anchor-links .anchor-link::before {
@@ -106,7 +106,7 @@
 }
 .img-container .img:nth-child(3){
     border-top-right-radius: var(--picture-rad) ;
-    
+
 }
 .img-container .img:nth-child(3) img {
     border-top-right-radius: var(--picture-rad) ;
@@ -118,7 +118,7 @@
 .img-container .img {
     object-fit: cover;
     width: 100%;
-    
+
     height: 100%;
 }
 .img-container:first-child {
@@ -131,24 +131,24 @@
 }
 
 .details{
-    
+
 }
 .highlight-text h3{
     margin-bottom: 3px;
 }
 .reservation-container{
     min-height: 800px;
-    
+
 }
 .highlight-text{
     padding-left: 20px;
     padding-top: 5px;
 }
 .reviews{
-    
+
 }
 .map{
-    
+
 }
 .mid-section{
     grid-template-columns:1.45fr 1fr;;
@@ -179,7 +179,7 @@ h1 {
 .amenities-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 5px; 
+    gap: 5px;
     padding-left: 0;
     margin-bottom: 1.5rem;
 }
@@ -282,7 +282,7 @@ h1 {
     background-color: #fefefe;
     max-height: 93%;
     border: 1px solid #888;
-    
+
     border-radius: 12px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, .5);
     left: 50%;
@@ -316,10 +316,10 @@ h1 {
 .map-preview{
     height: 480px;
     width: 100%;
-    
+
 }
 .show-more , .show-less{
-    
+
     cursor: pointer;
     font-weight: 700;
 }
@@ -331,6 +331,5 @@ h1 {
 .mini-user-details span {
     color: #707070;
     font-size: .875em;
-    
-}
 
+}

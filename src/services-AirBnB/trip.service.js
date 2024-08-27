@@ -3,7 +3,7 @@ import { storageService } from './async-storage.service'
 import { Children } from 'react'
 import { httpService } from './http.service'
 import { utilService } from './util.service'
-import { orders1, orders2 } from '../Data/orders'
+import { orders1, orders2, orders3, orders4 } from '../Data/orders'
 
 
 const STORAGE_KEY = 'trips'
@@ -94,7 +94,7 @@ async function save(trip) {
                 throw new Error('Trip not found')
             }
         })
-    } 
+    }
     async function approveTrip(tripId) {
         return storageService.get(STORAGE_KEY,tripId).then(trip => {
             if (trip) {
@@ -107,7 +107,7 @@ async function save(trip) {
                 throw new Error('Trip not found')
             }
         })
-    } 
+    }
     async function rejectTrip(tripId) {
         return storageService.get(STORAGE_KEY,tripId).then(trip => {
             if (trip) {
@@ -120,7 +120,7 @@ async function save(trip) {
                 throw new Error('Trip not found')
             }
         })
-    } 
+    }
 
 function getEmptyTrip() {
     return {
@@ -133,7 +133,7 @@ function getEmptyTrip() {
 function _createTrips() {
     let trips = utilService.loadFromStorage(STORAGE_KEY);
     if (!trips || !trips.length) {
-        trips = [orders1, orders2]
+        trips = [orders1, orders2, orders3, orders4]
 
         utilService.saveToStorage(STORAGE_KEY, trips);
     }

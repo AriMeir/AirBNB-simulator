@@ -27,14 +27,14 @@ export function Header({ onLittleFilterClick, stayId, hostMode, showFilter, shri
             }
         }
         return ''
-        
+
     }
     const toShrink = shrink()
     const fixed = stayId ? '' : 'fixed';
     const confirmationPage = ((stayId && stayId !== 1)&&nights)
     const navigate = useNavigate();
 
-    
+
     function onClose() {
         setVisible(false)
     }
@@ -50,7 +50,7 @@ export function Header({ onLittleFilterClick, stayId, hostMode, showFilter, shri
             <div className={`header main-content ${toShrink} `}>
                 <div className='header-logo flex' onClick={() => navigate(`/stay`)}>
                     <div className='airbnb-icon'>{svgIcons.AirBnB}</div>
-                    <h1 className='airbnb-header'>airbnb</h1>
+                    <h1 className='airbnb-header'>arebnb</h1>
                 </div>
                 {(!hostMode && showFilter && !confirmationPage)  &&  <div className='header-filter'>
                     <SmallFilter onLittleFilterClick={onLittleFilterClick} />
