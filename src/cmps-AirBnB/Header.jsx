@@ -6,11 +6,14 @@ import { svgIcons } from './Svgs';
 import { SmallFilter } from './SmallFilter';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 
 
 export function Header({ onLittleFilterClick, stayId, hostMode, showFilter, shrinked }) {
     const [visible, setVisible] = useState(false);
+    const user = useSelector(storeState => storeState.userModule.user)
     const [searchParams] = useSearchParams();
+    const [menuBarUser, setMenuBarUser] = useState(user)
     const nights = searchParams.get('nights');
     const handleVisibleChange = (newVisible) => {
         setVisible(newVisible);
@@ -27,15 +30,20 @@ export function Header({ onLittleFilterClick, stayId, hostMode, showFilter, shri
         
     }
     const toShrink = shrink()
-
-    
-    
-
     const fixed = stayId ? '' : 'fixed';
     const confirmationPage = ((stayId && stayId !== 1)&&nights)
     const navigate = useNavigate();
 
     
+    function onClose() {
+        setVisible(false)
+    }
+    useEffect(() => {
+        if (visible) {
+            setMenuBarUser(user)
+        }
+    },[visible])
+
 
     return (
         <section className={`header-container ${fixed}   full main-content `}>
@@ -58,7 +66,7 @@ export function Header({ onLittleFilterClick, stayId, hostMode, showFilter, shri
                     <Popover
                         placement='bottomRight'
                         className="location-filter-modal"
-                        content={<MenuBar/>}
+                        content={<MenuBar onClose={onClose} user={menuBarUser} />}
                         open={visible}
                         trigger="click"
                         arrow={false}

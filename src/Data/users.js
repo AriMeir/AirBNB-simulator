@@ -4,6 +4,7 @@ export const users = [
     fullname: "Einav Sharf",
     imgUrl: "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/female/10.jpg",
     username: "einavsharf",
+    type: 'guest',
     password: "secret"
   },
   {
@@ -11,6 +12,7 @@ export const users = [
     fullname: "Ari Meir",
     imgUrl: "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/68.jpg",
     username: "user2",
+    type: 'host',
     password: "secret",
   }
 ]
