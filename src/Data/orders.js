@@ -54,7 +54,8 @@ export const orders1 =
     stay: {
       id: "h102",
       name: "House Of Uncle My",
-      price: 80.00
+      price: 80.00,
+      imgUrl:"https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg"
     },
     loc: {
       country:"US",
@@ -87,7 +88,8 @@ export const orders2 =
     stay: {
       id: "h102",
       name: "House Of Uncle My",
-      price: 80.00
+      price: 80.00,
+      imgUrl:"https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436827/znh7gqzbwb4wm6bdziy7.jpg"
     },
     loc: {
       country:"US",

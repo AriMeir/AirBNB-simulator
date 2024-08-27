@@ -65,7 +65,7 @@ export function TripTable({ tripList, onOrderByPriceDown, onOrderByPriceUp, onOr
                 <tbody>
                     {tripList.map((trip, index) => (
                         <tr key={index}>
-                            <td><StayCard country={trip.loc.country} city={trip.loc.city} name={trip.stay.name}/></td>
+                            <td><StayCard country={trip.loc.country} city={trip.loc.city} name={trip.stay.name} imgUrl={trip.stay.imgUrl}/></td>
                             <td><UserCard name={trip.host.hostName} type={"Host"} imgUrl={trip.host.imgUrl}/></td>
                             <td>{utilService.convertDateFormat(trip.startDate) + " - " + utilService.convertDateFormat(trip.endDate)}</td>
                             <td>${trip.totalPrice}.00</td>

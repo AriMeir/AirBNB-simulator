@@ -59,7 +59,7 @@ export function OrderTable({ orders, onOrderByPriceDown, onOrderByPriceUp, onOrd
                         <tr key={index}>
                             <td><UserCard name={order.buyer.fullname} type={"Guest"} imgUrl={order.buyer.imgUrl}/></td>
                             <td>{utilService.convertDateFormat(order.startDate) + " - " + utilService.convertDateFormat(order.endDate)}</td>
-                            <td><StayCard country={order.loc.country} city={order.loc.city} name={order.stay.name}/></td>
+                            <td><StayCard country={order.loc.country} city={order.loc.city} name={order.stay.name} imgUrl={order.stay.imgUrl}/></td>
                             <td>${order.totalPrice}.00</td>
                             <td>{getStatusDot(order.status)}</td>
                             <td><div className="buttons-order-div flex row space-between align-center"><button className="white-btn green-btn" onClick={() => onApproveOrder(order._id)}>Accept</button>

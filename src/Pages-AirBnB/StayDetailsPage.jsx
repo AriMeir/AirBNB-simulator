@@ -446,7 +446,8 @@ export function StayDetailsPage() {
             stay: {
             id: stayId,
             name: stay.name,
-            price: price
+            price: price,
+            imgUrl: stay.imgUrls[0]
             },
             loc: {
               country: stay.loc.country,
@@ -518,7 +519,7 @@ export function StayDetailsPage() {
         <>
             {hasSearchParams ? (
                 <section className='confirmation-page flex-column-center-left'>
-                <ConfirmationPage onConfirmTrip={onConfirmTrip} reviewMidScore={reviewMidScore} />
+                <ConfirmationPage onConfirmTrip={onConfirmTrip} reviewMidScore={reviewMidScore} stay={stay} />
                 </section>
             ) : (
                 <section className='stay-details flex-column-center-left'>
