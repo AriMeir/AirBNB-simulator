@@ -277,7 +277,7 @@ export function StayDetailsPage() {
     const [pickedCheckInDateText, setPickedCheckInDateText] = useState('')
     const [pickedCheckOutDateText, setPickedCheckOutDateText] = useState('')
 
-    
+    const user = useSelector(storeState => storeState.userModule.user)
     const [reviewMidScore, setReviewMidScore] = useState(0)
     const [nights, setNights]= useState(0)
     const [price, setPrice] = useState(0)
@@ -424,7 +424,6 @@ export function StayDetailsPage() {
     async function onConfirmTrip(stayId, checkInDate, checkOutDate, guests, price, fee ) {
       
                 try {
-                const user = await authService.getCurrentUser()
                 const newTrip =
         {
             host: {

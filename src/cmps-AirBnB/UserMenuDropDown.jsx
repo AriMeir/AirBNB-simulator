@@ -1,26 +1,15 @@
+
+import { useSelector } from 'react-redux';
 import { svgIcons } from './Svgs';
-import { authService } from '../services-AirBnB/auth.service';
-import { useState, useEffect } from 'react';
+
+
 
 export function UserMenuDropDown() {
-  const [user, setUser] = useState(null);
+    const user = useSelector(storeState => storeState.userModule.user)
+    console.log("We are here", user)
+    
 
-  useEffect(() => {
-    const updateUser = async () => {
-      const currentUser = await authService.getCurrentUser();
-      setUser(currentUser);
-    };
-    updateUser();
-    const handleStorageChange = (event) => {
-      if (event.key === 'user') {
-        updateUser();
-      }
-    };
-    window.addEventListener('storage', handleStorageChange);
-    return () => {
-      window.removeEventListener('storage', handleStorageChange);
-    };
-  }, []);
+  
   
   return (
     <section className="user-menu flex">

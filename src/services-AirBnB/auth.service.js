@@ -10,17 +10,18 @@ export const authService = {
 
 async function login(name = '') {
   if (name === 'einav') {
-    sessionStorage.setItem(SESSION_KEY, JSON.stringify(users[0]));
+      sessionStorage.setItem(SESSION_KEY, JSON.stringify(users[0]));
   } else if (name === 'ari') {
     sessionStorage.setItem(SESSION_KEY, JSON.stringify(users[1]));
   }
+  return getCurrentUser()
 }
 
 async function logout() {
   sessionStorage.removeItem(SESSION_KEY);
 }
 
-async function getCurrentUser() {
+ function getCurrentUser() {
   const user = sessionStorage.getItem(SESSION_KEY);
   return user ? JSON.parse(user) : null;
 }

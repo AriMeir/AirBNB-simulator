@@ -2,11 +2,12 @@ import { Header } from "../cmps-AirBnB/Header";
 import { IoIosArrowBack } from "react-icons/io";
 import { LoginDisplay } from "../cmps-AirBnB/LoginDisplay"
 import { fetchSVG } from '../store-AirBnB/svg/SvgStore';
-
+import { login } from "../store-AirBnB/actions/user.actions";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { ActionButton } from "../cmps-AirBnB/ActionButton";
 import { authService } from "../services-AirBnB/auth.service";
+import { useSelector } from "react-redux";
 const reviews = [
     {
       "id": "r1",
@@ -261,16 +262,9 @@ export function ConfirmationPage({ onConfirmTrip, reviewMidScore }) {
     const totalPrice = searchParams.get('total-price');
     const fee = searchParams.get('fee');
 
-    const [user, setUser] = useState(authService.getCurrentUser())
+    const user = useSelector(storeState => storeState.userModule.user)
     const [confirmed, setConfirmed] = useState(false)
 
-
-
-
-
-    useEffect(()=> {
-
-    },[user])
 
 
 
@@ -289,8 +283,8 @@ export function ConfirmationPage({ onConfirmTrip, reviewMidScore }) {
     
     async function hostLogin() {
       try {
-          await authService.login('ari')
-          setUser(authService.getCurrentUser())
+          await login('ari')
+          
       } catch(e) {
           throw new Error ('There has been a problem logging in as Ari Host')
       }
@@ -298,8 +292,7 @@ export function ConfirmationPage({ onConfirmTrip, reviewMidScore }) {
   }
   async function guestLogin() {
       try {
-          await authService.login('einav')
-          setUser(authService.getCurrentUser())
+          await login('einav')
       } catch(e) {
           throw new Error ('There has been a problem logging in as Einav Guest')
       }
