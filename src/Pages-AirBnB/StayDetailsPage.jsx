@@ -221,7 +221,7 @@ const reviews = [
   
 ]
 
-export const stay = {
+export const oldStay = {
     _id: "s101",
     name: "Luxury Urban Loft",
     type: "House",
@@ -267,7 +267,7 @@ export const stay = {
 export function StayDetailsPage() {
     // format 13/2/2024
     const {stayId} = useParams()
-    const stay = useSelector(storeState => storeState.stayModule.stays)
+    const stay = useSelector(storeState => storeState.stayModule.stay)
     
     const [pickedCheckInDate, setPickedCheckInDate] = useState('')
     const [pickedCheckOutDate, setPickedCheckOutDate] = useState('')
@@ -335,8 +335,11 @@ export function StayDetailsPage() {
           const totalRates = reviews.reduce((sum, review) => sum + review.rate, 0);
           return (totalRates / reviews.length).toFixed(1); // Format to 1 decimal place
       }
-      setReviewMidScore(calculateAverageRating(stay.reviews));
-  }, [stay.reviews]);
+      if (stay) {
+        setReviewMidScore(calculateAverageRating(stay.reviews));
+      }
+      
+  }, [stay?.reviews]);
 
 
 
@@ -510,6 +513,8 @@ export function StayDetailsPage() {
                             && searchParams.has('fee')
                             && searchParams.has('guests');
 
+
+    if (!stay) return <div className="loading">Loading...</div>
     return (
         <>
             {hasSearchParams ? (
