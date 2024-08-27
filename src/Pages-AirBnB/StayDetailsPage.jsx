@@ -416,12 +416,12 @@ export function StayDetailsPage() {
             host: {
               hostId: "u102",
               hostName: stay.host.fullname,
-              ImgUrl:stay.host.imgUrl
+              imgUrl:stay.host.imgUrl
             },
             buyer: {
             _id: user._id,
             fullname: user.fullname,
-            ImgUrl: user.imgUrl
+            imgUrl: user.imgUrl
             },
             totalPrice: parseInt(price) + parseInt(fee),
             startDate: checkInDate,
