@@ -2,7 +2,7 @@ import { DynamicHeader } from "../cmps-AirBnB/DynamicHeader"
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { LoginDisplay } from "../cmps-AirBnB/LoginDisplay";
 import { ActionButton } from '../cmps-AirBnB/ActionButton'
-import { authService } from "../services-AirBnB/auth.service";
+import { login } from "../store-AirBnB/actions/user.actions";
 import { useNavigate } from "react-router";
 import * as Yup from 'yup';
 export function LoginPage() {
@@ -13,7 +13,7 @@ export function LoginPage() {
 
     async function hostLogin() {
         try {
-            await authService.login('ari')
+            await login('ari')
             navigate('/stay')
         } catch(e) {
             throw new Error ('There has been a problem logging in as Ari Host')
@@ -22,7 +22,7 @@ export function LoginPage() {
     }
     async function guestLogin() {
         try {
-            await authService.login('einav')
+            await login('einav')
             navigate('/stay')
         } catch(e) {
             throw new Error ('There has been a problem logging in as Einav Guest')

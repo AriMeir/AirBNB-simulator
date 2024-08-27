@@ -1,8 +1,10 @@
 
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { ConfirmationPage } from './ConfirmationPage';
 import { AmenitiesPopup } from '../cmps-AirBnB/AmenitiesPopup';
 import { useState, useEffect } from 'react';
+import { loadStay } from '../store-AirBnB/actions/stay.actions';
+import { useSelector } from 'react-redux';
 import { GuestCounter } from '../cmps-AirBnB/GuestCounter';
 import { ReviewScoreBar } from '../cmps-AirBnB/ReviewScoreBar';
 import { ReviewPopUp } from '../cmps-AirBnB/ReviewPopUp';
@@ -219,7 +221,7 @@ const reviews = [
   
 ]
 
-export const stay = {
+export const oldStay = {
     _id: "s101",
     name: "Luxury Urban Loft",
     type: "House",
@@ -264,14 +266,18 @@ export const stay = {
 
 export function StayDetailsPage() {
     // format 13/2/2024
+    const {stayId} = useParams()
+    const stay = useSelector(storeState => storeState.stayModule.stay)
+    
     const [pickedCheckInDate, setPickedCheckInDate] = useState('')
     const [pickedCheckOutDate, setPickedCheckOutDate] = useState('')
+    
 
     // format jul-12-2024
     const [pickedCheckInDateText, setPickedCheckInDateText] = useState('')
     const [pickedCheckOutDateText, setPickedCheckOutDateText] = useState('')
 
-    
+    const user = useSelector(storeState => storeState.userModule.user)
     const [reviewMidScore, setReviewMidScore] = useState(0)
     const [nights, setNights]= useState(0)
     const [price, setPrice] = useState(0)
@@ -287,12 +293,11 @@ export function StayDetailsPage() {
     const [petCounter,setPetCounter] = useState(0)
     const [totalGuestNumber, setTotalGuestNumber] = useState(0)
     const [showHeader, setShowHeader] = useState(false);
+    
 
     const buttonText = (pickedCheckInDate && pickedCheckOutDate && totalGuestNumber && totalPrice) ? "Reserve" : "Check Availablity"
     const navigate = useNavigate();
-    useEffect (() => {
-      console.log(buttonText)
-    },[])
+    
     // for the Second Header
     useEffect(() => {
       const targetElement = document.getElementById('targetDiv'); // Replace with your target div's ID
@@ -306,14 +311,20 @@ export function StayDetailsPage() {
           setShowHeader(false);
         }
       }
-
-      
-  
       window.addEventListener('scroll', handleScroll);
       return () => {
         window.removeEventListener('scroll', handleScroll);
       }
     }, [])
+
+
+    async function loadCurrentStay(stayId){
+      await loadStay(stayId)
+    }
+    
+    useEffect(() => {
+      loadCurrentStay(stayId)
+    })
 
     
     useEffect(() => {
@@ -324,8 +335,11 @@ export function StayDetailsPage() {
           const totalRates = reviews.reduce((sum, review) => sum + review.rate, 0);
           return (totalRates / reviews.length).toFixed(1); // Format to 1 decimal place
       }
-      setReviewMidScore(calculateAverageRating(stay.reviews));
-  }, [stay.reviews]);
+      if (stay) {
+        setReviewMidScore(calculateAverageRating(stay.reviews));
+      }
+      
+  }, [stay?.reviews]);
 
 
 
@@ -410,7 +424,6 @@ export function StayDetailsPage() {
     async function onConfirmTrip(stayId, checkInDate, checkOutDate, guests, price, fee ) {
       
                 try {
-                const user = await authService.getCurrentUser()
                 const newTrip =
         {
             host: {
@@ -433,7 +446,8 @@ export function StayDetailsPage() {
             stay: {
             id: stayId,
             name: stay.name,
-            price: price
+            price: price,
+            imgUrl: stay.imgUrls[0]
             },
             loc: {
               country: stay.loc.country,
@@ -499,11 +513,13 @@ export function StayDetailsPage() {
                             && searchParams.has('fee')
                             && searchParams.has('guests');
 
+
+    if (!stay) return <div className="loading">Loading...</div>
     return (
         <>
             {hasSearchParams ? (
                 <section className='confirmation-page flex-column-center-left'>
-                <ConfirmationPage onConfirmTrip={onConfirmTrip} reviewMidScore={reviewMidScore} />
+                <ConfirmationPage onConfirmTrip={onConfirmTrip} reviewMidScore={reviewMidScore} stay={stay} />
                 </section>
             ) : (
                 <section className='stay-details flex-column-center-left'>
@@ -561,7 +577,7 @@ export function StayDetailsPage() {
                                 <div className='highlight flex align-left'>
                                     <div className='highlight-img'>{fetchSVG("self_check_in")}</div>
                                     <div className='highlight-text'>
-                                        <h3>Great check-in experiance</h3>
+                                        <h3>Great check-in experience</h3>
                                         <p>Check yourself in with the smartlock</p>
                                     </div>
                                 </div>
