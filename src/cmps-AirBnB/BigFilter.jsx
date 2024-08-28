@@ -4,7 +4,7 @@ import { DynamicFilterComponent } from './DynamicFilterComponent'
 import { Popover } from 'antd'
 import { useSearchParams } from 'react-router-dom'
 
-export function BigFilter() {
+export function BigFilter({openSmallHeader}) {
     const [inputLocation, setInputLocation] = useState('')
     const [location, setLocation] = useState('')
     const [checkIn, setCheckIn] = useState('')
@@ -128,6 +128,7 @@ export function BigFilter() {
         }
         setSearchParams(params)
         handleFilterClick('') // Reset active filter state
+        openSmallHeader()
     }
 
     const guestCounter = {

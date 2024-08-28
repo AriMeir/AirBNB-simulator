@@ -8,7 +8,7 @@ import { BigFilter } from './BigFilter';
 import { useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
-export function BiggerHeader({ onOverlayClick, stayId, shrinked}) {
+export function BiggerHeader({ openSmallHeader, stayId, shrinked}) {
     const [visible, setVisible] = useState(false);
     const [where, setWhere] = useState('');
     const fixed = stayId ? '' : 'fixed';
@@ -36,7 +36,7 @@ export function BiggerHeader({ onOverlayClick, stayId, shrinked}) {
 
     return (
         <>
-            <div className='screen-blur' onClick={onOverlayClick}></div>
+            <div className='screen-blur' onClick={openSmallHeader}></div>
             <section className={`header-container ${fixed} full main-content`}>
                 <div className={`header main-content `}>
                     <div className='header-logo flex big-header-margin-bottom'>
@@ -50,7 +50,7 @@ export function BiggerHeader({ onOverlayClick, stayId, shrinked}) {
                             <button className='nav-button'><span>Online Experiences</span></button>
                         </div>
                         <div className='header-filter'>
-                            <BigFilter onWherePick={onWherePick} />
+                            <BigFilter onWherePick={onWherePick} openSmallHeader={openSmallHeader} />
                         </div>
                     </div>
                     <div className='header-user flex-row-center big-header-margin-bottom'>

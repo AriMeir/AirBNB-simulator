@@ -9,15 +9,14 @@ export function DynamicHeader({stayId, hostMode, showFilter, shrinked}) {
     setShowBiggerHeader(true);
 
   }
-  function onOverlayClick() {
+  function openSmallHeader() {
     setShowBiggerHeader(false);
-
   }
 
   return (
     <>
       <Header onLittleFilterClick={onLittleFilterClick} stayId={stayId} hostMode={hostMode} showFilter={showFilter} shrinked={shrinked} />
-      {showBiggerHeader && <BiggerHeader onOverlayClick={onOverlayClick} stayId={stayId} shrinked={shrinked} />}
+      {showBiggerHeader && <BiggerHeader openSmallHeader={openSmallHeader} stayId={stayId} shrinked={shrinked} />}
     </>
   );
 }

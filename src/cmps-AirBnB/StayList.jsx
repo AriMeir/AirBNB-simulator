@@ -1,10 +1,11 @@
 import { useEffect } from 'react';
 import { StayPreview } from './StayPreview';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 
 export function StayList({ stays, isWish, onHeartClick }) {
-
+    
     const navigate = useNavigate();
+    const [searchParams] = useSearchParams();
 
     useEffect(() => {
         if (isWish) {
@@ -14,6 +15,21 @@ export function StayList({ stays, isWish, onHeartClick }) {
 
     const filteredStays = isWish ? stays.filter(stay => stay.likedByUsers.length > 0) : stays;
 
+    const handleStayClick = (stayId) => {
+        const location = searchParams.get('location');
+        const checkIn = searchParams.get('checkIn');
+        const checkOut = searchParams.get('checkOut');
+        const totalGuests = searchParams.get('totalGuests');
+
+        const params = new URLSearchParams();
+        if (location) params.append('location', location);
+        if (checkIn) params.append('checkIn', checkIn);
+        if (checkOut) params.append('checkOut', checkOut);
+        if (totalGuests) params.append('totalGuests', totalGuests);
+
+        navigate(`/stay/${stayId}?${params.toString()}`);
+    };
+
     return (
         <section className='stay-list'>
             {filteredStays.map((stay) => (
@@ -21,7 +37,7 @@ export function StayList({ stays, isWish, onHeartClick }) {
                     className='stay-item'
                     key={stay._id}
                     stay={stay}
-                    onClick={() => navigate(`/stay/${stay._id}`)}
+                    onClick={() => handleStayClick(stay._id)}
                     onHeartClick={() => onHeartClick(stay)}
                 />
             ))}

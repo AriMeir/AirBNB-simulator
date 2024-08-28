@@ -79,6 +79,9 @@ function getRandomAmenities() {
     return list
 }
 function convertDateFormat(dateStr) {
+    if (!dateStr){
+        return ''
+    }
     const months = [
       "Jan", "Feb", "Mar", "Apr", "May", "Jun",
       "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
