@@ -329,7 +329,7 @@ export function StayDetailsPage() {
   
           setNights(nightCounter);
   
-          const calculatedPrice = Math.round(nightCounter * stay.price);
+          const calculatedPrice = Math.round(nightCounter * stay?.price);
           setPrice(calculatedPrice);
   
           const calculatedFee = Math.round(calculatedPrice * 0.03);
