@@ -15,6 +15,11 @@ export function Header({ onLittleFilterClick, stayId, hostMode, showFilter, shri
     const [searchParams] = useSearchParams();
     const [menuBarUser, setMenuBarUser] = useState(user)
     const nights = searchParams.get('nights');
+    const location = searchParams.get('location');
+    const checkIn = searchParams.get('checkIn');
+    const checkOut = searchParams.get('checkOut');
+    const guests = searchParams.get('totalGuests');
+   
     const handleVisibleChange = (newVisible) => {
         setVisible(newVisible);
     };
@@ -53,7 +58,7 @@ export function Header({ onLittleFilterClick, stayId, hostMode, showFilter, shri
                     <h1 className='airbnb-header'>arebnb</h1>
                 </div>
                 {(!hostMode && showFilter && !confirmationPage)  &&  <div className='header-filter'>
-                    <SmallFilter onLittleFilterClick={onLittleFilterClick} />
+                    <SmallFilter onLittleFilterClick={onLittleFilterClick} location={location} checkIn={checkIn} checkOut={checkOut} guests={guests} />
                 </div>}
                 {hostMode &&  <div className='header-filter'>
                     <span className='host-span first' onClick={() => navigate('/host/order')}>Orders</span>

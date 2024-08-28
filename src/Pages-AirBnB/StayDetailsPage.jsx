@@ -268,9 +268,9 @@ export function StayDetailsPage() {
     // format 13/2/2024
     const {stayId} = useParams()
     const stay = useSelector(storeState => storeState.stayModule.stay)
-    
-    const [pickedCheckInDate, setPickedCheckInDate] = useState('')
-    const [pickedCheckOutDate, setPickedCheckOutDate] = useState('')
+    const [searchParams, setSearchParams] = useSearchParams();
+    const [pickedCheckInDate, setPickedCheckInDate] = useState(searchParams.get('checkIn')|| '')
+    const [pickedCheckOutDate, setPickedCheckOutDate] = useState(searchParams.get('checkOut')|| '')
     
 
     // format jul-12-2024
@@ -285,9 +285,9 @@ export function StayDetailsPage() {
     const [totalPrice, setTotalPrice] = useState(0)
     const [showReviews, setShowReviews] = useState(false)
     const [showAmenities, setShowAmenities] = useState(false)
-    const [searchParams, setSearchParams] = useSearchParams();
+ 
     const [showGuestsSection, setShowGuestsSection] = useState(false)
-    const [adultCounter,setAdultCounter] = useState(0)
+    const [adultCounter,setAdultCounter] = useState(1)
     const [childrenCounter,setChildrenCounter] = useState(0)
     const [infantCounter,setInfantCounter] = useState(0)
     const [petCounter,setPetCounter] = useState(0)
@@ -317,11 +317,35 @@ export function StayDetailsPage() {
       }
     }, [])
 
+    useEffect(() => {
+      if (pickedCheckInDate && pickedCheckOutDate && totalGuestNumber > 0) {
+          const [checkInDay, checkInMonth, checkInYear] = pickedCheckInDate.split('/');
+          const [checkOutDay, checkOutMonth, checkOutYear] = pickedCheckOutDate.split('/');
+  
+          const checkInDate = new Date(`${checkInMonth}/${checkInDay}/${checkInYear}`);
+          const checkOutDate = new Date(`${checkOutMonth}/${checkOutDay}/${checkOutYear}`);
+  
+          const nightCounter = Math.ceil((checkOutDate - checkInDate) / (1000 * 60 * 60 * 24));
+  
+          setNights(nightCounter);
+  
+          const calculatedPrice = Math.round(nightCounter * stay.price);
+          setPrice(calculatedPrice);
+  
+          const calculatedFee = Math.round(calculatedPrice * 0.03);
+          setFee(calculatedFee);
+  
+          setTotalPrice(calculatedPrice + calculatedFee);
+      } else {
+          setNights(0);
+          setPrice(0);
+          setFee(0);
+          setTotalPrice(0);
+      }
+  }, [pickedCheckInDate, pickedCheckOutDate, totalGuestNumber]);
 
-    async function loadCurrentStay(stayId){
-      await loadStay(stayId)
-    }
-    
+
+
     useEffect(() => {
       loadCurrentStay(stayId)
     })
@@ -340,6 +364,13 @@ export function StayDetailsPage() {
       }
       
   }, [stay?.reviews]);
+
+
+    async function loadCurrentStay(stayId){
+      await loadStay(stayId)
+    }
+    
+    
 
 
 
