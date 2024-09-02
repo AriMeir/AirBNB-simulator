@@ -13,19 +13,30 @@ export const stayService = {
     save,
     remove,
     getEmptyStay
-    // addStayMsg
 }
 window.cs = stayService
 _createStays()
 
-async function query(filterBy /* = { location:'', dates: '', Adults: 0, Children:0, Infants:0, Pets: 0 } */) {
-    let stays = await storageService.query(STORAGE_KEY);
-    if (filterBy) {
-        return storageService.get(STORAGE_KEY, filterBy)
-    } else {
-        return stays
-    }
 
+async function query(filterBy) {
+    let stays = await storageService.query(STORAGE_KEY)
+
+    if (filterBy) {
+        if (filterBy.category) {
+            stays = stays.filter(stay => stay.labels.includes(filterBy.category))
+        }
+        if (filterBy.location && filterBy.location !== "I'm Flexible") {
+            stays = stays.filter(stay => stay.loc.region &&
+                stay.loc.region.toLowerCase().includes(filterBy.location.toLowerCase()))
+        }
+        if (filterBy.totalGuests) {
+            stays = stays.filter(stay => stay.capacity >= filterBy.totalGuests)
+        }
+        if (filterBy.isWish) {
+            stays = stays.filter(stay => stay.likedByUsers.length > 0)
+        }
+    }
+    return stays
 }
 
 function getById(stayId) {
@@ -46,12 +57,6 @@ async function save(stay) {
     }
     return savedStay
 }
-
-// async function addStayMsg(stayId, txt) {
-//     const savedMsg = await httpService.post(`stay/${stayId}/msg`, {txt})
-//     return savedMsg
-// }
-
 
 function getEmptyStay() {
     return {
