@@ -2,9 +2,9 @@ import { stayService } from '../../services-AirBnB/stay.service'
 import { store } from '../../store-AirBnB/store'
 import { ADD_STAY, REMOVE_STAY, SET_STAYS, SET_STAY, UPDATE_STAY, ADD_STAY_MSG } from '../reducers/stay.reducer'
 
-export async function loadStays() {
+export async function loadStays(filterBy) {
     try {
-        const stays = await stayService.query()
+        const stays = await stayService.query(filterBy)
         console.log('Stays from DB:', stays)
         store.dispatch(getCmdSetStays(stays))
     } catch (err) {

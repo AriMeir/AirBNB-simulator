@@ -1,63 +1,53 @@
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useSearchParams, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { loadStays, updateStay } from '../store-AirBnB/actions/stay.actions';
 import { StayList } from './StayList';
 
 export function StayIndex() {
-    const location = useLocation()
-    const [selectedCategory, setSelectedCategory] = useState('')
+    const [searchParams, setSearchParams] = useSearchParams()
     const [isWish, setIsWish] = useState(false)
 
     const [filters, setFilters] = useState({
+        category: '',
         location: '',
         checkIn: '',
         checkOut: '',
         totalGuests: 0,
-    });
+    })
 
     const stays = useSelector(storeState => storeState.stayModule.stays)
 
-    useEffect(() => {
-        loadStays()
-    }, []);
 
     useEffect(() => {
-        const params = new URLSearchParams(location.search)
-        const category = params.get('category') || ''
-        const locationFilter = params.get('location') || ''
-        const checkInFilter = params.get('checkIn') || ''
-        const checkOutFilter = params.get('checkOut') || ''
-        const totalGuests = params.get('totalGuests') || 0
-
-        setSelectedCategory(category)
-
-        setFilters({
-            location: locationFilter,
-            checkIn: checkInFilter,
-            checkOut: checkOutFilter,
-            totalGuests: Number(totalGuests),
-        });
-    }, [location.search]);
+        const category = searchParams.get('category') || ''
+        const location = searchParams.get('location') || ''
+        const checkIn = searchParams.get('checkIn') || ''
+        const checkOut = searchParams.get('checkOut') || ''
+        const totalGuests = searchParams.get('totalGuests') || 0
+        setFilters({category,location,checkIn,checkOut,totalGuests: Number(totalGuests)})
+    }, [searchParams])
 
     useEffect(() => {
-        if (location.pathname === '/wish') {
-            setIsWish(true)
-        } else {
-            setIsWish(false)
+        const filterBy = {
+            category: filters.category,
+            location: filters.location,
+            checkIn: filters.checkIn,
+            checkOut: filters.checkOut,
+            totalGuests: filters.totalGuests
         }
+        loadStays(filterBy)
+    }, [filters])
+
+    useEffect(() => {
+        setIsWish(location.pathname === '/wish')
     }, [location.pathname])
 
-    const filteredStays = stays
-        .filter(stay => {
-            const categoryMatch = stay.labels.includes(selectedCategory) || !selectedCategory
-            const locationMatch = filters.location === "I'm Flexible" ||
-            (stay.loc.region && stay.loc.region.toLowerCase().includes(filters.location.toLowerCase())) ||
-            !filters.location;
-            const guestMatch = (stay.capacity >= (filters.totalGuests ));
 
-            return categoryMatch && locationMatch && guestMatch && (!isWish || stay.likedByUsers.length > 0);
-        })
+    function onFilterStays() {
+        const newParams = new URLSearchParams(filters)
+        setSearchParams(newParams)
+    }
 
     async function onUpdateStay(stay) {
         const userId = '101dd'
@@ -67,18 +57,19 @@ export function StayIndex() {
 
         const stayToSave = { ...stay, likedByUsers }
         try {
-            const savedStay = await updateStay(stayToSave);
+            const savedStay = await updateStay(stayToSave)
             console.log(`Stay updated, user ${userId} toggled in wishlist: ${savedStay.likedByUsers} ${stay._id}`)
         } catch (err) {
             console.log('Cannot update stay', err)
         }
     }
 
+
     return (
         <div>
             <section>
-                <StayList isWish={isWish} stays={filteredStays} onHeartClick={onUpdateStay} />
+                <StayList isWish={isWish} stays={stays} onFilterStays={onFilterStays} onHeartClick={onUpdateStay} />
             </section>
         </div>
-    );
+    )
 }
