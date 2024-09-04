@@ -90,7 +90,7 @@ export function Categories() {
     const navigate = useNavigate();
 
     const handleCategoryClick = (category) => {
-        navigate(`/stay?category=${category}`);
+        navigate(`/stay?category=${category}`)
     };
 
     return (

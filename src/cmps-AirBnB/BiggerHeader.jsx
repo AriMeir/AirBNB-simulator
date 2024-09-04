@@ -6,7 +6,7 @@ import { svgIcons } from './Svgs';
 import { Popover } from 'antd';
 import { BigFilter } from './BigFilter';
 import { useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 
 export function BiggerHeader({ openSmallHeader, stayId, shrinked}) {
     const [visible, setVisible] = useState(false);
@@ -33,19 +33,20 @@ export function BiggerHeader({ openSmallHeader, stayId, shrinked}) {
 
     }
     const toShrink = shrink()
+    const navigate = useNavigate();
 
     return (
         <>
             <div className='screen-blur' onClick={openSmallHeader}></div>
             <section className={`header-container ${fixed} full main-content`}>
                 <div className={`header main-content `}>
-                    <div className='header-logo flex big-header-margin-bottom'>
+                    <div className='header-logo flex big-header-margin-bottom' onClick={() => navigate(`/stay`)}>
                         <div className='airbnb-icon'>{svgIcons.AirBnB}</div>
                         <h1 className='airbnb-header'>arebnb</h1>
                     </div>
                     <div className='filter-nav-container flex column center align-center'>
                         <div className='nav-bar flex row space-between'>
-                            <button className='nav-button'><span>Stays</span></button>
+                            <button className='nav-button bold'><span>Stays</span></button>
                             <button className='nav-button'><span>Experiences</span></button>
                             <button className='nav-button'><span>Online Experiences</span></button>
                         </div>

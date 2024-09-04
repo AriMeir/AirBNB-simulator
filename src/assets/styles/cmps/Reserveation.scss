@@ -12,7 +12,7 @@
 .order-container {
     border: 1px solid #00000030;
     border-radius: 13px;
-
+    margin-top: 30px;
     padding: 20px;
     width: 83%;
     box-shadow: 0 0 5px 5px #00000015;
@@ -44,7 +44,7 @@
   .date-input {
     display: flex;
     flex-direction: column;
-    
+
 
     padding: 7px 8px;
     color: black;
@@ -171,7 +171,7 @@
     font-size: 16px;
     line-height: 20px;
     font-weight: 600;
-    
+
   }
 
   p.footer {
@@ -225,7 +225,7 @@
 .date-picker-in-date-picker-modal{
     display: flex;
     justify-content: space-between;
-    
+
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -233,7 +233,7 @@
     border: 2px solid black;
     border-radius: 13px;
     width: 320px;
-    
+
     color: black;
     margin-bottom: 15px;
     max-width: 350px;

@@ -51,25 +51,25 @@
     cursor: pointer;
     align-items: center;
     background-color: #fff;
-    border: 2px solid #dedede;
+    border: 1px solid #B2B2B2;
     border-radius: 16px;
     display: flex;
-    height: 29px;
+    height: 33px;
     justify-content: center;
     padding: 5px;
     transition: box-shadow .2s ease 0s;
-    width: 29px;
+    width: 33px;
     box-shadow: 0 0 11px 21px #fff;
 }
 
 .prev_category {
-    bottom: 25px;
+    bottom: 23px;
     left: -4px;
 }
 
 .next_category {
     right: -4px;
-    top: 11px;
+    top: 8px;
 }
 
 .slick-dots li button {
@@ -131,7 +131,7 @@
     font-size: 12px;
     color: #838383;
     text-align: center;
-   
+
     margin-top: 12px;
     font-weight: 500;
     transition: color 0.3s ease;
@@ -167,13 +167,13 @@
     z-index: 10;
     cursor: pointer;
     background-color: #fff;
-    border: 2px solid #dedede;
+    border: 1px solid #dedede;
     border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 29px;
-    width: 29px;
+    height: 31px;
+    width: 31px;
     transition: opacity .3s ease;
 }
 

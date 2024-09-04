@@ -19,7 +19,7 @@ export function Header({ onLittleFilterClick, stayId, hostMode, showFilter, shri
     const checkIn = searchParams.get('checkIn');
     const checkOut = searchParams.get('checkOut');
     const guests = searchParams.get('totalGuests');
-   
+
     const handleVisibleChange = (newVisible) => {
         setVisible(newVisible);
     };
