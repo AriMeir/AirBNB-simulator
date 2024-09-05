@@ -1,7 +1,7 @@
 .header{
     background: white;
     display: grid;
-    grid-template-columns: 264px 1fr 264px;
+    grid-template-columns: 300px 1fr 300px;
     padding-top: 14px;
     padding-bottom: 14px;
     align-items: center;
@@ -52,12 +52,12 @@
 .switch-to-host{
     color: #404040;
     font-size: 14px;
-    width: 130px;
-    height: 40px;
+    line-height: 14px;
+    padding: 14px;
+    border-radius: 19px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 10%;
     background-color: transparent;
     margin-top: 8px;
     cursor: pointer;
@@ -65,25 +65,24 @@
 }
 
 .switch-to-host:hover{
-    background-color: rgb(235, 233, 233);
+    background-color: rgb(245 244 244);
 
 }
 
 .language-icon {
-    width: 36px;
-    height: 36px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
+    border-radius: 56px;
     background-color: transparent;
-    margin-left: 12px;
     cursor: pointer;
     color: #404040;
+    line-height: 14px;
+    padding: 14px;
 }
 
 .language-icon:hover {
-    background-color: rgb(235, 233, 233);
+    background-color: rgb(245 244 244);
 }
 
 .user-menu {
@@ -92,7 +91,7 @@
     cursor: pointer;
     transition: box-shadow .3s;
     position: relative;
-    padding: 5px 8px 5px 16px;
+    padding: 8px 8px 8px 18px;
     align-items: center;
     transition: box-shadow 0.3s ease;
     margin-left: 10px;
@@ -110,7 +109,7 @@
     stroke: #656565;
     stroke-width: 3;
     overflow: visible;
-    margin-right: 6px;
+    margin-right: 11px;
     margin-top: 5px;
 }
 
