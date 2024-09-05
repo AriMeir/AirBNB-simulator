@@ -5,6 +5,7 @@ button {
     padding: 5px 10px;
     margin: 5px;
     cursor: pointer;
+    font-family: inherit;
 }
 form > * {
     display: block;
@@ -22,5 +23,3 @@ form > * {
     background-color: $clr1;
     transform: scale(1.1);
 }
-
-

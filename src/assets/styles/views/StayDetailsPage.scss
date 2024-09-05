@@ -127,14 +127,15 @@
 }
 .mid-section {
     grid-template-columns: 1.45fr 1fr;
-    margin-top: 30px;
+    // margin-top: 30px;
 }
 
 .details{
 
 }
 .highlight-text h3{
-    margin-bottom: 3px;
+    margin-bottom: 5px;
+    font-size: 18px;
 }
 .reservation-container{
     min-height: 800px;
@@ -143,6 +144,7 @@
 .highlight-text{
     padding-left: 20px;
     padding-top: 5px;
+    font-size: large;
 }
 .reviews{
 
@@ -162,6 +164,7 @@
 h1 {
     .stay-details & {
         margin-top: 20px;
+        font-weight: 600;
     }
 }
 
@@ -175,6 +178,10 @@ h1 {
 }
 .air-cover-img{
     margin-bottom: 30px;
+}
+.air-cover-txt{
+    font-size: 16px;
+    font-family: 'AirbnbCereal', sans-serif;
 }
 .amenities-container {
     display: grid;
@@ -244,7 +251,7 @@ h1 {
     background-color: rgb(221, 221, 221);
     width: 75%;
     min-height: 5px;
-    height: 0.4rem;
+    height: 0.3rem;
     border-radius: 12px;
     position: relative;
     overflow: hidden;
@@ -316,7 +323,8 @@ h1 {
 .map-preview{
     height: 480px;
     width: 100%;
-
+    margin-top: 15px;
+    margin-bottom: 36px;
 }
 .show-more , .show-less{
 

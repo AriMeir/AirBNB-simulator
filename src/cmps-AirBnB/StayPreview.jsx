@@ -66,7 +66,7 @@ export function StayPreview({ stay, onClick, onHeartClick }) {
                 </div>
                 <p>{Math.floor(getRandomNumber(80, 2000))} kilometers away</p>
                 <p>{getRandomDateRange()}</p>
-                <p><strong>${stay.price}</strong> night</p>
+                <p className='card-price'><strong>${stay.price}</strong> night</p>
             </div>
         </div>
     );

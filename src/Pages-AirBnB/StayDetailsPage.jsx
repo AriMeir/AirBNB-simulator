@@ -218,7 +218,7 @@ const reviews = [
       "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/female/14.jpg"
     }
   }
-  
+
 ]
 
 export const oldStay = {
@@ -271,7 +271,7 @@ export function StayDetailsPage() {
     const [searchParams, setSearchParams] = useSearchParams();
     const [pickedCheckInDate, setPickedCheckInDate] = useState(searchParams.get('checkIn')|| '')
     const [pickedCheckOutDate, setPickedCheckOutDate] = useState(searchParams.get('checkOut')|| '')
-    
+
 
     // format jul-12-2024
     const [pickedCheckInDateText, setPickedCheckInDateText] = useState('')
@@ -285,7 +285,7 @@ export function StayDetailsPage() {
     const [totalPrice, setTotalPrice] = useState(0)
     const [showReviews, setShowReviews] = useState(false)
     const [showAmenities, setShowAmenities] = useState(false)
- 
+
     const [showGuestsSection, setShowGuestsSection] = useState(false)
     const [adultCounter,setAdultCounter] = useState(1)
     const [childrenCounter,setChildrenCounter] = useState(0)
@@ -293,18 +293,18 @@ export function StayDetailsPage() {
     const [petCounter,setPetCounter] = useState(0)
     const [totalGuestNumber, setTotalGuestNumber] = useState(0)
     const [showHeader, setShowHeader] = useState(false);
-    
+
 
     const buttonText = (pickedCheckInDate && pickedCheckOutDate && totalGuestNumber && totalPrice) ? "Reserve" : "Check Availablity"
     const navigate = useNavigate();
-    
+
     // for the Second Header
     useEffect(() => {
       const targetElement = document.getElementById('targetDiv'); // Replace with your target div's ID
       const handleScroll = () => {
         const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
         const scrollPosition = window.scrollY;
-        
+
         if (scrollPosition >= targetPosition) {
           setShowHeader(true);
         } else {
@@ -321,20 +321,20 @@ export function StayDetailsPage() {
       if (pickedCheckInDate && pickedCheckOutDate && totalGuestNumber > 0) {
           const [checkInDay, checkInMonth, checkInYear] = pickedCheckInDate.split('/');
           const [checkOutDay, checkOutMonth, checkOutYear] = pickedCheckOutDate.split('/');
-  
+
           const checkInDate = new Date(`${checkInMonth}/${checkInDay}/${checkInYear}`);
           const checkOutDate = new Date(`${checkOutMonth}/${checkOutDay}/${checkOutYear}`);
-  
+
           const nightCounter = Math.ceil((checkOutDate - checkInDate) / (1000 * 60 * 60 * 24));
-  
+
           setNights(nightCounter);
-  
+
           const calculatedPrice = Math.round(nightCounter * stay?.price);
           setPrice(calculatedPrice);
-  
+
           const calculatedFee = Math.round(calculatedPrice * 0.03);
           setFee(calculatedFee);
-  
+
           setTotalPrice(calculatedPrice + calculatedFee);
       } else {
           setNights(0);
@@ -350,7 +350,7 @@ export function StayDetailsPage() {
       loadCurrentStay(stayId)
     })
 
-    
+
     useEffect(() => {
         setTotalGuestNumber(adultCounter + childrenCounter + infantCounter + petCounter);
     }, [adultCounter, childrenCounter, infantCounter, petCounter]);
@@ -362,15 +362,15 @@ export function StayDetailsPage() {
       if (stay) {
         setReviewMidScore(calculateAverageRating(stay.reviews));
       }
-      
+
   }, [stay?.reviews]);
 
 
     async function loadCurrentStay(stayId){
       await loadStay(stayId)
     }
-    
-    
+
+
 
 
 
@@ -387,7 +387,7 @@ export function StayDetailsPage() {
       setShowAmenities(false)
     }
 
-     
+
 
     function countUpAdultCounter() {
         setAdultCounter(prev => prev + 1);
@@ -435,7 +435,7 @@ export function StayDetailsPage() {
         countUpPetCounter,
         countDownPetCounter
     };
-    
+
 
     function onReserveOrder() {
         if (pickedCheckInDate && pickedCheckOutDate && totalGuestNumber && price) {
@@ -453,7 +453,7 @@ export function StayDetailsPage() {
         }
     }
     async function onConfirmTrip(stayId, checkInDate, checkOutDate, guests, price, fee ) {
-      
+
                 try {
                 const newTrip =
         {
@@ -488,8 +488,8 @@ export function StayDetailsPage() {
             status: "pending" // approved, rejected
         }
         await addTrip(newTrip)
-        
-        
+
+
         } catch(e) {
             console.log(e)
         }
@@ -508,7 +508,7 @@ export function StayDetailsPage() {
         const checkOutDate = new Date(date[1]);
         setPickedCheckInDateText(formatDate(checkInDate));
         setPickedCheckOutDateText(formatDate(checkOutDate));
-      
+
         setPickedCheckInDate(date[0].format('DD/MM/YYYY'));
         setPickedCheckOutDate(date[1].format('DD/MM/YYYY'));
         // nights
@@ -531,9 +531,9 @@ export function StayDetailsPage() {
         setFee(0)
         setTotalPrice(0)
     }
-    
-    
-    
+
+
+
     function toggleGuestsSection() {
         setShowGuestsSection(prev => !prev);
     }
@@ -571,12 +571,12 @@ export function StayDetailsPage() {
                         <ActionButton buttonText={buttonText} action={onReserveOrder}/>
                         </div>
                       </div>
-                      
+
                     </div>
 
                   </div>
                     <h1 className='stay-title'>{stay.name}</h1>
-                    
+
                     <div className='img-container' id="photos">
                         <div className='img'><img src={stay.imgUrls[0]}/></div>
                         <div className='img'><img src={stay.imgUrls[1]}/></div>
@@ -630,7 +630,7 @@ export function StayDetailsPage() {
                             </div>
                             <div className='stay-summory-spanish flex column center align-left border-bottom pad-box'>
                                 <h3>About this place</h3>
-                                <p>
+                                <p className='air-cover-txt'>
                                    {stay.summary}
                                 </p>
                             </div>
@@ -640,13 +640,13 @@ export function StayDetailsPage() {
                                 <div>
                                 <button className='white-btn' onClick={onShowAmenities}>Show all {stay.amenities.length} amenities</button>
                                 </div>
-                                
+
                             </div>
                             <div className='stay-calender  border-bottom pad-box'>
                                 <div className='date-picker-header'>
                                     <h2>{!pickedCheckInDate? `Pick your dates` : `${nights} nights` } </h2>
                                     {pickedCheckInDateText && pickedCheckOutDateText && (<h6 className='foggy'>{`${pickedCheckInDateText} - ${pickedCheckOutDateText}`}</h6>)}
-                                    
+
                                 </div>
                                 <div className='calender-wrapper'>
                                    <BasicRangeShortcuts onPickedDate={onPickedDate}  />
@@ -671,19 +671,19 @@ export function StayDetailsPage() {
                                                 countDown={countDownChildrenCounter}
                                                 counter={childrenCounter}
                                                 lastOne={false}/>
-                                    <GuestCounter header={'Infants'} 
+                                    <GuestCounter header={'Infants'}
                                                 subHeader={'Under 2'}
                                                 countUp={countUpInfantCounter}
                                                 countDown={countDownInfantCounter}
                                                 counter={infantCounter}
                                                 lastOne={false}/>
-                                    <GuestCounter header={'Pets'} 
+                                    <GuestCounter header={'Pets'}
                                                 subHeader={'Bringing a Service Animal?'}
                                                 countUp={countUpPetCounter}
                                                 countDown={countDownPetCounter}
                                                 counter={petCounter}
                                                 lastOne={true}/>
-                                                
+
                                 </div>
                             )}
                         </div>
@@ -705,11 +705,11 @@ export function StayDetailsPage() {
                             onReserveOrder = {onReserveOrder}
                             onPickedDate={onPickedDate}
                             totalGuestNumber={totalGuestNumber}  />
-                            
-                            
+
+
                             </div>
                         </div>
-                       {/* {<ReservationContainer 
+                       {/* {<ReservationContainer
                         onReserveOrder= {onReserveOrder}
                         onPickedCheckInDate={onPickedCheckInDate}
                         onPickedCheckOutDate={onPickedCheckOutDate}
@@ -740,7 +740,7 @@ export function StayDetailsPage() {
                         </div>
                         <ReviewsPreviewGridList reviewList={stay.reviews}/>
 
-                      
+
                     <div>
                     <button className='white-btn' onClick={onShowReviews}>Show all {stay.reviews.length} reviews</button>
                     </div>

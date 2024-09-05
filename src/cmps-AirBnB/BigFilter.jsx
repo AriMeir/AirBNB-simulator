@@ -176,7 +176,7 @@ export function BigFilter({openSmallHeader}) {
                 onOpenChange={onSearchLocationClick}
             >
                 <div className={`search-category location flex column align-left just-cont-left ${activeFilter === 'location' ? 'active' : ''}`}>
-                    <div className='bold'>Where</div>
+                    <div className='filter-header'>Where</div>
                     <input
                         type="text"
                         value={inputLocation}
@@ -215,7 +215,7 @@ export function BigFilter({openSmallHeader}) {
                         className={`search-category check-in flex column align-left just-cont-left ${activeFilter === 'check-in' ? 'active-check-in' : ''}`}
                         onClick={() => handleFilterClick('check-in')}
                     >
-                        <div className='bold'>Check in</div>
+                        <div className='filter-header'>Check in</div>
                         <div>{checkIn || `Add dates`}</div>
                     </div>
                     <span className="filter-splitter"></span>
@@ -223,7 +223,7 @@ export function BigFilter({openSmallHeader}) {
                         className={`search-category check-out flex column align-left just-cont-left ${activeFilter === 'check-out' ? 'active-check-out' : ''}`}
                         onClick={() => handleFilterClick('check-out')}
                     >
-                        <div className='bold'>Check out</div>
+                        <div className='filter-header'>Check out</div>
                         <div>{checkOut || `Add dates`}</div>
                     </div>
                 </div>
@@ -241,12 +241,12 @@ export function BigFilter({openSmallHeader}) {
             >
                 <div className={`search-category guests-button flex row align-center space-between ${activeFilter === 'guests' ? 'active' : ''}`}>
                     <div className='guests-text flex column align-left just-cont-left'>
-                        <div className='bold'>Guests</div>
+                        <div className='filter-header'>Guests</div>
                         <div>{totalGuestNumber + " Guests" || "Add guests"}</div>
                     </div>
                     <button className={`mini-search-button big-search-button`} onClick={handleSearchButtonClick}>
                         <div className='flex row center align-center'>
-                            <IoSearch />
+                            <IoSearch className='search-button-filter'/>
                             <h5>Search</h5>
                         </div>
                     </button>
