@@ -1,7 +1,7 @@
 .login-page{
     margin-top: 100px;
 }
-/* .login-container{ 
+/* .login-container{
     width: 70%;
     height: 500px;
     margin: auto;
@@ -13,5 +13,20 @@
 }
 .demo-signup-buttons{
     width: 100%;
-    
+}
+
+.login-or-divider{
+    background-color: #ffffff;
+    font-size: 14px;
+    text-align: justify;
+    z-index: 100;
+    width: 31px;
+    position: relative;
+    left: 48%;
+    padding-left: 8px;
+}
+
+.login-or-line{
+    margin-top: -18px;
+    margin-bottom: 24px;
 }

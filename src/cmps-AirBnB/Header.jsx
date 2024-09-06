@@ -65,7 +65,7 @@ export function Header({ onLittleFilterClick, stayId, hostMode, showFilter, shri
                     <span className='host-span' onClick={() => navigate('/host/dashboard')} >Dashboard</span>
                 </div>}
                 {!confirmationPage && <div className='header-user flex-row-center'>
-                    <h1 className='switch-to-host'>Switch to hosting</h1>
+                    <h1 className='switch-to-host' onClick={() => navigate('/host')}>Switch to hosting</h1>
                     <div className='language-icon'>{svgIcons.languageSwitch}</div>
 
                     <Popover

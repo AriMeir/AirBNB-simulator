@@ -55,7 +55,7 @@ export function BiggerHeader({ openSmallHeader, stayId, shrinked}) {
                         </div>
                     </div>
                     <div className='header-user flex-row-center big-header-margin-bottom'>
-                        <h1 className='switch-to-host'>Switch to hosting</h1>
+                        <h1 className='switch-to-host' onClick={() => navigate('/host')}>Switch to hosting</h1>
                         <div className='language-icon'>{svgIcons.languageSwitch}</div>
 
                         <Popover

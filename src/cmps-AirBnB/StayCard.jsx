@@ -4,7 +4,7 @@ export function StayCard({country, city, name, imgUrl}) {
             <div className="trip-img-container">
                 <img src={imgUrl}></img>
             </div>
-            <div className="trip-dest-info flex column center align-center">
+            <div className="trip-dest-info flex column center">
                 <h5>{country} - {city}</h5>
                 <span className="place-name">{name}</span>
             </div>

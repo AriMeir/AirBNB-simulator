@@ -13,11 +13,11 @@ import { OrderTheader } from "./OrderTheader";
 
 
 export function TripTable({ tripList, onOrderByPriceDown, onOrderByPriceUp, onOrderByStatusUp ,onOrderByStatusDown ,onOrderByDateUp ,onOrderByDateDown, onCancelOrder }) {
-   
-    
+
+
 
     if (tripList.length === 0) return <p>No trips available</p>
-    
+
 
     const getStatusDot = (status) => {
         let color = "";
@@ -41,7 +41,7 @@ export function TripTable({ tripList, onOrderByPriceDown, onOrderByPriceUp, onOr
             <span>
                 <span style={{ color, marginRight: "8px", fontSize: "1.2em" }}>
                     &#9679;
-                </span> 
+                </span>
                 {status}
             </span>
         );
@@ -49,8 +49,8 @@ export function TripTable({ tripList, onOrderByPriceDown, onOrderByPriceUp, onOr
 
     return (
         <section className="secondary-layout">
-            <h1>Welcome to your trips</h1>
-            <h3>Number of trips: {tripList.length}</h3>
+            <h1 className="table-page-header">Trips</h1>
+            <h3 className="table-page-sec-header">Number of trips: {tripList.length}</h3>
             <table className="trips-table">
                 <thead>
                     <tr>
@@ -70,7 +70,7 @@ export function TripTable({ tripList, onOrderByPriceDown, onOrderByPriceUp, onOr
                             <td>{utilService.convertDateFormat(trip.startDate) + " - " + utilService.convertDateFormat(trip.endDate)}</td>
                             <td>${trip.totalPrice}.00</td>
                             <td>{getStatusDot(trip.status)}</td>
-                            <td><div className="buttons-order-div flex row center align-center"><button className="white-btn" onClick={()=> {onCancelOrder(trip._id)}}>Cancel</button></div></td>
+                            <td><div className="buttons-order-div flex row align-center"><button className="white-btn" onClick={()=> {onCancelOrder(trip._id)}}>Cancel</button></div></td>
                         </tr>
                     ))}
                 </tbody>

@@ -6,9 +6,9 @@ export function UserCard({ name, type, imgUrl }) {
             <div className="host-img-container">
                 <img src={imgUrl}></img>
             </div>
-            <div className="host-info flex column center align-center">
+            <div className="host-info flex column center">
                 <h5>{name}</h5>
-                <span className="host-label">{type}</span>
+                {/* <span className="host-label">{type}</span> */}
             </div>
         </div>
     )
