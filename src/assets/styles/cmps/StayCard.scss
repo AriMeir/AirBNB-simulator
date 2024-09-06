@@ -1,15 +1,14 @@
 .trip-card {
     display: flex;
     align-items: center;
-    padding: 12px;
-    
     max-width: 250px;
     margin: 10px 0;
+    min-width: 340px;
 }
 
 .trip-img-container {
     width: 60px;
-    
+
     height: 60px;
     overflow: hidden;
     border-radius: 8px;

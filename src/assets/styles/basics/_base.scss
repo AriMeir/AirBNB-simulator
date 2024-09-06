@@ -214,14 +214,14 @@ a:hover {
     font-size: 1rem;
     gap: 8px;
     justify-content: center;
-    line-height: 20px;
+    line-height: 10px;
     padding: 13px 23px;
     text-align: center;
+    margin-left: 0;
 }
 .white-btn:hover{
-
-    background-color: #f0e7e7;
-
+    background-color: #a9a8a8;
+    color: white;
 }
 .x-btn{
     background: white;
@@ -240,8 +240,9 @@ a:hover {
     background-color: var(--clr-btn) !important
 }
 .secondary-layout{
-    padding: 0 180px;
-    margin-top: 50px;
+    padding: 0 73px;
+    margin-top: 35px;
+    margin-bottom: 150px !important;
     color:black
 }
 table {
@@ -249,28 +250,30 @@ table {
     border-spacing: 0;
     border-radius: 10px;
     padding-bottom: 30px;
+    margin-bottom: 200px;
+
     overflow: hidden;
 }
 .green-btn {
-
-    border: 1px solid #28a745;
-    color:#28a745;
-    font-weight: 600;
+    border: 1px solid #67c23a;
+    color: #67c23a;
+    background-color: #f1fcec;
 }
 .red-btn {
-    border: 1px solid #dc3545;
-    color: #dc3545;
-    font-weight: 600;
+    border: 1px solid #f56c6c;
+    color: #f56c6c;
+    background-color: #ffeded;
 }
 .green-btn:hover {
-
-    border: 1px solid #28a745;
-    background-color: #28a745;
+    background-color: #67c23a;
     color:white;
 }
 .red-btn:hover {
-    border: 1px solid #dc3545;
-    background-color: #dc3545;
+    background-color: #f56c6c;
+    color: white;
+}
+.host-btn {
+    background-color: #ff627e;
     color: white;
 }
 .MuiDateRangeCalendar-root >:first-child{
@@ -284,6 +287,7 @@ table {
 }
 .pointer {
     cursor: pointer;
+    height: 10px;
 }
 .hover:hover{
     color: #ada9a9;

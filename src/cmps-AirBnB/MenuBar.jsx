@@ -4,13 +4,13 @@ import { logout } from '../store-AirBnB/actions/user.actions';
 
 export function MenuBar({onClose, user}) {
 
-    
-    
+
+
     const navigate = useNavigate();
 
     function onLogout(){
         onClose()
-        logout() 
+        logout()
     }
     return (
         <div className="menu-bar">
@@ -18,7 +18,7 @@ export function MenuBar({onClose, user}) {
             {user && <><div className="menu-item bold" onClick={() => navigate('/stay')}>Home</div>
             <div className="menu-item bold" onClick={() => navigate('/trips')}>Trips</div>
             <div className="menu-item bold border-bottom" onClick={() => navigate('/wish')}>Wishlist</div></>}
-            {user?.type === 'host' && <div className="menu-item border-bottom" onClick={() => navigate('/host')}>host page</div>}
+            {user?.type === 'host' && <div className="menu-item border-bottom" onClick={() => navigate('/host')}>Host page</div>}
             {user && <div className="menu-item" onClick={onLogout}>Log out</div>}
         </div>
     );

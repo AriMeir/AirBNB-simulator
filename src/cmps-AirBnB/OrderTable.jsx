@@ -7,7 +7,7 @@ import { OrderTheader } from "./OrderTheader";
 
 export function OrderTable({ orders, onOrderByPriceDown, onOrderByPriceUp, onOrderByStatusUp ,onOrderByStatusDown ,onOrderByDateUp ,onOrderByDateDown, onApproveOrder,onRejectOrder }) {
 
-   
+
 
     if (orders.length === 0) return <p>loading...</p>;
 
@@ -33,7 +33,7 @@ export function OrderTable({ orders, onOrderByPriceDown, onOrderByPriceUp, onOrd
             <span>
                 <span style={{ color, marginRight: "8px", fontSize: "1.2em" }}>
                     &#9679;
-                </span> 
+                </span>
                 {status}
             </span>
         );
@@ -41,8 +41,8 @@ export function OrderTable({ orders, onOrderByPriceDown, onOrderByPriceUp, onOrd
 
     return (
         <section className="orders-table">
-            <h1>Welcome to your orders</h1>
-            <h3>Number of orders: {orders.length}</h3>
+            <h1 className="table-page-header">Orders</h1>
+            <h3 className="table-page-sec-header">Number of orders: {orders.length}</h3>
             <table className="trips-table">
                 <thead>
                     <tr>

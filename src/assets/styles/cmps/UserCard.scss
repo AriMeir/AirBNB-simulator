@@ -1,9 +1,6 @@
 .host-card {
     display: flex;
     align-items: center;
-    padding: 12px;
-    
-    
     max-width: 180px;
     margin: 10px 0;
 }
@@ -34,12 +31,12 @@
 .host-info h5 {
     margin: 0;
     font-size: 1.1em;
-    font-weight: 600;
+    font-weight: 400;
     color: #222;
 }
 
 .host-info .host-label {
-    
+
     margin: 0; /* Remove default margin */
     font-size: 0.9em;
     color: #555;

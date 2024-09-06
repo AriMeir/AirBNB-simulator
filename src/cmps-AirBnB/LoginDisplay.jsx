@@ -1,6 +1,7 @@
 import { Header } from "../cmps-AirBnB/Header";
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { ActionButton } from '../cmps-AirBnB/ActionButton';
+import { ActionButtonWhite } from '../cmps-AirBnB/ActionButtonWhite';
 import * as Yup from 'yup';
 import { authService } from "../services-AirBnB/auth.service";
 
@@ -16,7 +17,7 @@ export function LoginDisplay({hostLogin, guestLogin}) {
 
             <div className="form-wrapper">
                 <div className="login-form-title border-bottom">
-                <h1 className="form-title">Log in or Sign up</h1>
+                <h1 className="form-title">Log in</h1>
                 </div>
                 <Formik
                     initialValues={{ username: '', password: '' }}
@@ -47,12 +48,16 @@ export function LoginDisplay({hostLogin, guestLogin}) {
                         </Form>
                     )}
                 </Formik>
-                <div className="demo-login-buttons flex row space-between">
-                    <div className="demo-login-button">
-                        <ActionButton buttonText={"Log In as Einav Guest"} action={guestLogin}/>
+                <div>
+                    <div className="login-or-divider">or</div>
+                    <div class="login-or-line"><hr></hr></div>
+                </div>
+                <div className="flex row space-between">
+                    <div>
+                        <ActionButtonWhite buttonText={"Log In as Einav Guest"} action={guestLogin}/>
                     </div>
-                    <div className="demo-login-button">
-                        <ActionButton buttonText={"Log In As Ari Host "} action={hostLogin} />
+                    <div>
+                        <ActionButtonWhite buttonText={"Log In As Ari Host "} action={hostLogin} />
                     </div>
                 </div>
             </div>
