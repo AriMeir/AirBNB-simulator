@@ -27,7 +27,6 @@
 
 .slick-slider {
     width: 100%;
-
 }
 
 .slick-list {
@@ -39,6 +38,7 @@
 
 .slick-track {
     display: flex;
+    //
 }
 
 .slick-slide {
@@ -81,10 +81,10 @@
 .slick-dots {
     display: flex !important;
     position: absolute;
-    top: 79%;
+    top: 81%;
     cursor: pointer;
     fill: white;
-    font-size: 20px;
+    font-size: 18px;
     justify-content: center;
     width: -webkit-fill-available;
 }
@@ -105,6 +105,7 @@
     position: relative;
     cursor: pointer;
     transition: color 0.3s ease, opacity 0.3s ease;
+    margin-left: -32px;
 }
 
 .category:hover .bg-image-container,
@@ -112,6 +113,17 @@
     color: black;
     opacity: 1;
 }
+
+.category.selected .bg-image-container,
+.category.selected .text-container {
+    color: black;
+    opacity: 1;
+}
+
+.category.selected::after {
+    background-color: black;
+}
+
 
 .bg-image-container {
     position: relative;

@@ -54,7 +54,7 @@ export function LoginDisplay({hostLogin, guestLogin}) {
                 </div>
                 <div className="flex row space-between">
                     <div>
-                        <ActionButtonWhite buttonText={"Log In as Einav Guest"} action={guestLogin}/>
+                        <ActionButtonWhite buttonText={"Log In As Einav Guest"} action={guestLogin}/>
                     </div>
                     <div>
                         <ActionButtonWhite buttonText={"Log In As Ari Host "} action={hostLogin} />

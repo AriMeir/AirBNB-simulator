@@ -3,15 +3,13 @@ import { useNavigate } from 'react-router';
 import { logout } from '../store-AirBnB/actions/user.actions';
 
 export function MenuBar({onClose, user}) {
-
-
-
     const navigate = useNavigate();
 
     function onLogout(){
         onClose()
         logout()
     }
+
     return (
         <div className="menu-bar">
             {!user && <div className="menu-item bold" onClick={() => navigate('/login')}>Log in</div>}
