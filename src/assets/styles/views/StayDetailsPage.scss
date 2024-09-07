@@ -14,7 +14,6 @@
     margin-top: 10px;
     margin-bottom: 10px;
     min-height: 508px;
-
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 50% 50%;
     aspect-ratio: 2.6 / 1;
@@ -47,8 +46,7 @@
     width: 100%;
     padding: 0 15px;
     margin: auto;
-    max-width: 1200px;
-
+    max-width: 1154px;
 }
 .second-header .anchor-links{
     height: 100%;
@@ -56,13 +54,13 @@
 }
 .second-header .anchor-links .anchor-link {
     color: #212121;
-
-    font-size: .875rem;
+    font-size: 14px;
     margin-left: 24px;
     cursor: pointer;
     position: relative;
     text-decoration: none;
     transition: color 0.3s ease;
+    font-weight: bold;
 }
 .second-header .book-it{
     min-width: 200px;
@@ -72,8 +70,7 @@
     min-width: 100px
 }
 .header-reserve-button-container{
-    min-width: 100px
-
+    // max-width: 234px;
 }
 
 .second-header .anchor-links .anchor-link::before {
@@ -135,7 +132,8 @@
 }
 .highlight-text h3{
     margin-bottom: 5px;
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 500;
 }
 .reservation-container{
     min-height: 800px;
@@ -164,7 +162,13 @@
 h1 {
     .stay-details & {
         margin-top: 20px;
-        font-weight: 600;
+        font-weight: 500;
+    }
+}
+
+h2 {
+    .stay-details & {
+        font-weight: 500;
     }
 }
 

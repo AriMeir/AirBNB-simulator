@@ -7,6 +7,7 @@ import * as serviceWorkerRegistration from './serviceWorkerRegistration'
 import { store } from './store-AirBnB/store'
 import { RootCmp } from './RootCmp'
 import './assets/styles/main.scss'
+import './assets/fonts/AirbnbCerealVF_W_Wght.2d9d32865ef1262644c455b3ead871e9.woff2'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(

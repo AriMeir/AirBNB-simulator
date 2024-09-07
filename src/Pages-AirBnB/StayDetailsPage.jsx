@@ -17,6 +17,7 @@ import { AmenitiesPreviewGridList } from '../cmps-AirBnB/AmenitiesPreviewGridLis
 import { ReviewsPreviewGridList } from '../cmps-AirBnB/ReviewsPreviewGridList';
 import { ActionButton } from '../cmps-AirBnB/ActionButton';
 import { authService } from '../services-AirBnB/auth.service';
+import { ActionButtonWhite } from '../cmps-AirBnB/ActionButtonWhite';
 const reviews = [
   {
     "id": "r1",
@@ -485,7 +486,7 @@ export function StayDetailsPage() {
               city: stay.loc.city
             },
             msgs: [],
-            status: "pending" // approved, rejected
+            status: "Pending" // Approved, Rejected
         }
         await addTrip(newTrip)
 
@@ -568,7 +569,7 @@ export function StayDetailsPage() {
                           <span>{fetchSVG("star")} {reviewMidScore} • {stay.reviews.length} reviews  </span>
                         </div>
                         <div className='header-reserve-button-container flex align-center'>
-                        <ActionButton buttonText={buttonText} action={onReserveOrder}/>
+                        <ActionButtonWhite buttonText={buttonText} action={onReserveOrder}/>
                         </div>
                       </div>
 
@@ -629,13 +630,13 @@ export function StayDetailsPage() {
                                 </p>
                             </div>
                             <div className='stay-summory-spanish flex column center align-left border-bottom pad-box'>
-                                <h3>About this place</h3>
+                                <h2>About this place</h2>
                                 <p className='air-cover-txt'>
                                    {stay.summary}
                                 </p>
                             </div>
                             <div className='stay-amenities border-bottom pad-box' id="amenities">
-                                <h3>What this place offers</h3>
+                                <h2>What this place offers</h2>
                                 <AmenitiesPreviewGridList amenityList={stay.amenities}/>
                                 <div>
                                 <button className='white-btn' onClick={onShowAmenities}>Show all {stay.amenities.length} amenities</button>
@@ -683,7 +684,6 @@ export function StayDetailsPage() {
                                                 countDown={countDownPetCounter}
                                                 counter={petCounter}
                                                 lastOne={true}/>
-
                                 </div>
                             )}
                         </div>
@@ -705,24 +705,16 @@ export function StayDetailsPage() {
                             onReserveOrder = {onReserveOrder}
                             onPickedDate={onPickedDate}
                             totalGuestNumber={totalGuestNumber}  />
-
-
                             </div>
                         </div>
-                       {/* {<ReservationContainer
+                        {/* {<ReservationContainer
                         onReserveOrder= {onReserveOrder}
                         onPickedCheckInDate={onPickedCheckInDate}
                         onPickedCheckOutDate={onPickedCheckOutDate}
                         pickedCheckInDate={pickedCheckInDate}
                         pickedCheckOutDate={pickedCheckOutDate}
                         totalGuestNumber={totalGuestNumber}  />} */}
-
                     </div>
-
-
-
-
-
 
                     <div className='reviews pad-box flex column border-bottom' id="reviews">
                         <h2><span>{fetchSVG("star")}</span> {reviewMidScore} • {stay.reviews.length} reviews</h2>
@@ -739,8 +731,6 @@ export function StayDetailsPage() {
                             </div>
                         </div>
                         <ReviewsPreviewGridList reviewList={stay.reviews}/>
-
-
                     <div>
                     <button className='white-btn' onClick={onShowReviews}>Show all {stay.reviews.length} reviews</button>
                     </div>

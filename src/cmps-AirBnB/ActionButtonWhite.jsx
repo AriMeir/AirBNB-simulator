@@ -4,7 +4,7 @@ export function ActionButtonWhite({ action, buttonText }) {
 
   return (
     <div onClick={() => action()}>
-      <button className='demo-login-button '>
+      <button className='demo-login-button'>
         <span>
           {buttonText}
         </span>

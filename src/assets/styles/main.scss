@@ -68,9 +68,9 @@
 
 
     // fonts
-    --main-fnt:arial;
-    --host-fnt :cereal-medium;
-    --sub-fnt :cereal-light;
+    --main-fnt:AirbnbCereal;
+    --host-fnt :AirbnbCereal;
+    --sub-fnt :AirbnbCereal;
 
 
 
@@ -102,3 +102,8 @@
     --reserv-shad:0 6px 16px rgba(0, 0, 0, 0.12);
 
   }
+
+  @font-face {
+    font-family: "AirbnbCereal";
+    src: url(../fonts/AirbnbCerealVF_W_Wght.2d9d32865ef1262644c455b3ead871e9.woff2) format("woff2");
+}
