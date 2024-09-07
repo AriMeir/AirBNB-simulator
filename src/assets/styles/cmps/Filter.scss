@@ -180,7 +180,7 @@
 .dynamic-filter-component {
     width: 100%;
     background-color: white;
-    border-radius: 8px;
+    border-radius: 40px;
 }
 .check-in-out{
     min-width: 40%;
@@ -188,9 +188,9 @@
 .locations-photos{
     column-gap: 5px;
     column-gap: 15px;
-    margin-top: 30px;
+    margin-top: 15px;
     grid-template-columns: repeat(3, 1fr);
-    row-gap: 24px;
+    row-gap: 10px;
 }
 .main-location-filter {
     padding: 20px;
@@ -198,21 +198,28 @@
 
   .locations-filter-header {
     font-size: 1.0rem;
-    margin-bottom: 10px;
     font-weight: bold;
+    margin-left: 10px;
   }
 
   .region {
     text-align: center;
-  }
-
+    background-color: transparent;
+    border-radius: 10px;
+    height: 148px;
+    width: 118px;  }
+.region:hover{
+    background-color: #ededed;
+}
   .region-photo-container {
-    width: 100%;
+    width: 90%;
     height: 100px;
     overflow: hidden;
     border-radius: 10px;
     cursor: pointer;
-
+    margin-left: 6px;
+    border: 0.5px solid #222;
+    margin-top: 10px;
   }
 
    .region-photo-container:hover{
@@ -223,13 +230,16 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 10px;
   }
 
   .region-name {
     margin-top: 10px;
     text-align: left;
     line-height: 1.125rem;
-    font-size: 0.875em;
+    font-size: 14px;
+    margin-left: 8px;
+    font-weight: 400;
   }
 .css-1juxbee-MuiButtonBase-root-MuiPickersDay-root-MuiDateRangePickerDay-day.Mui-selected{
 background-color: rgb(34, 34, 34) !important;

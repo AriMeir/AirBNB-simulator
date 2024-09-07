@@ -1,4 +1,4 @@
-import { SliderComp } from "./CategoriesSlider";
+import { CategoriesSlider } from "./CategoriesSlider";
 import { useNavigate } from 'react-router-dom';
 
 const categories_pic = [
@@ -95,7 +95,7 @@ export function Categories() {
 
     return (
         <div className="categories-container full main-content">
-            <SliderComp
+            <CategoriesSlider
                 data={categories_pic}
                 onCategoryClick={handleCategoryClick}
             />

@@ -1,16 +1,11 @@
-
 import { useSelector } from 'react-redux';
 import { svgIcons } from './Svgs';
 
 
 
 export function UserMenuDropDown() {
-    const user = useSelector(storeState => storeState.userModule.user)
-    console.log("We are here", user)
-    
+  const user = useSelector(storeState => storeState.userModule.user)
 
-  
-  
   return (
     <section className="user-menu flex">
       <div className='user-dropdown'>{svgIcons.UserMenuDropDown}</div>
