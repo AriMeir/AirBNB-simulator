@@ -21,18 +21,18 @@ export function TripTable({ tripList, onOrderByPriceDown, onOrderByPriceUp, onOr
 
     const getStatusDot = (status) => {
         let color = "";
-        switch (status.toLowerCase()) {
-            case "pending":
+        switch (status) {
+            case "Pending":
                 color = "rgb(255, 196, 0)";
                 break;
-            case "approved":
-                color = "rgb(0, 255, 0)";
+            case "Approved":
+                color = "rgb(103, 194, 58)";
                 break;
-            case "canceled":
-                color = "rgb(255, 0, 0)";
+            case "Canceled":
+                color = "rgb(245, 108, 108)";
                 break;
-            case "rejected":
-                color = "rgb(255, 0, 0)";
+            case "Rejected":
+                color = "rgb(245, 108, 108)";
                 break;
             default:
                 color = "gray";

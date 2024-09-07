@@ -36,7 +36,7 @@ async function query(filterBy) {
                     trips.sort((a, b) => a.totalPrice - b.totalPrice);
                 }
             } else if (filterBy.by === "status") {
-                const statusOrder = ["approved", "pending", "canceled", "rejected"];
+                const statusOrder = ["Approved", "Pending", "Canceled", "Rejected"];
                 if (filterBy.order === "up") {
                     trips.sort((a, b) => statusOrder.indexOf(a.status) - statusOrder.indexOf(b.status));
                 } else if (filterBy.order === "down") {
@@ -88,7 +88,7 @@ async function save(trip) {
     async function cancelTrip(tripId) {
         return storageService.get(STORAGE_KEY,tripId).then(trip => {
             if (trip) {
-                trip.status = 'canceled'
+                trip.status = 'Canceled'
                 return storageService.put(STORAGE_KEY,trip)
             } else {
                 throw new Error('Trip not found')
@@ -98,10 +98,10 @@ async function save(trip) {
     async function approveTrip(tripId) {
         return storageService.get(STORAGE_KEY,tripId).then(trip => {
             if (trip) {
-                if (trip.status === 'canceled') {
-                    throw new Error('Trip is already canceled')
+                if (trip.status === 'Canceled') {
+                    throw new Error('Trip is already Canceled')
                 }
-                trip.status = 'approved'
+                trip.status = 'Approved'
                 return storageService.put(STORAGE_KEY,trip)
             } else {
                 throw new Error('Trip not found')
@@ -111,10 +111,10 @@ async function save(trip) {
     async function rejectTrip(tripId) {
         return storageService.get(STORAGE_KEY,tripId).then(trip => {
             if (trip) {
-                if (trip.status === 'canceled') {
-                    throw new Error('Trip is already canceled')
+                if (trip.status === 'Canceled') {
+                    throw new Error('Trip is already Canceled')
                 }
-                trip.status = 'rejected'
+                trip.status = 'Rejected'
                 return storageService.put(STORAGE_KEY,trip)
             } else {
                 throw new Error('Trip not found')

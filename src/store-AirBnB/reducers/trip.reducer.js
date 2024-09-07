@@ -32,23 +32,23 @@ export function tripReducer(state = initialState, action) {
             newState = { ...state, trips: [...state.trips, action.trip] }
             break
         case CANCEL_TRIP:
-            trips = state.trips.map(trip => 
-                trip._id === action.tripId ? { ...trip, status: 'canceled' } : trip
+            trips = state.trips.map(trip =>
+                trip._id === action.tripId ? { ...trip, status: 'Canceled' } : trip
             );
             newState = { ...state, trips };
-            break;      
+            break;
         case APPROVE_TRIP:
-            trips = state.trips.map(trip => 
-                trip._id === action.tripId ? { ...trip, status: 'approved' } : trip
+            trips = state.trips.map(trip =>
+                trip._id === action.tripId ? { ...trip, status: 'Approved' } : trip
             );
             newState = { ...state, trips };
-            break;      
+            break;
         case REJECT_TRIP:
-            trips = state.trips.map(trip => 
-                trip._id === action.tripId ? { ...trip, status: 'rejected' } : trip
+            trips = state.trips.map(trip =>
+                trip._id === action.tripId ? { ...trip, status: 'Rejected' } : trip
             );
             newState = { ...state, trips };
-            break;      
+            break;
         case UPDATE_TRIP:
             trips = state.trips.map(trip => (trip._id === action.trip._id) ? action.trip : trip)
             newState = { ...state, trips }

@@ -28,7 +28,7 @@ export const orders = [
       city:"New York"
     },
     msgs: [],
-    status: "pending" // approved, rejected
+    status: "Pending" // Approved, Rejected
   }
 ]
 export const orders1 =
@@ -62,7 +62,7 @@ export const orders1 =
       city:"New York"
     },
     msgs: [],
-    status: "pending" // approved, rejected, canceled
+    status: "Pending" // Approved, Rejected, Canceled
   }
 
 export const orders2 =
@@ -96,7 +96,7 @@ export const orders2 =
       city:"LA"
     },
     msgs: [],
-    status: "approved" // approved, rejected, canceled
+    status: "Approved" // Approved, Rejected, Canceled
   }
 
 export const orders3 =
@@ -130,7 +130,7 @@ export const orders3 =
       city:"Toronto"
     },
     msgs: [],
-    status: "rejected" // approved, rejected, canceled
+    status: "Rejected" // Approved, Rejected, Canceled
   }
 
 export const orders4 =
@@ -164,5 +164,5 @@ export const orders4 =
       city:"Sau Paulo"
     },
     msgs: [],
-    status: "canceled" // approved, rejected, canceled
+    status: "Canceled" // Approved, Rejected, Canceled
   }

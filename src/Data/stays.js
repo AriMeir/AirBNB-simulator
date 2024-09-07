@@ -728,7 +728,7 @@ export const stay14 = {
 //       price: 80.00
 //     },
 //     msgs: [],
-//     status: "pending" // approved, rejected
+//     status: "Pending" // Approved, Rejected
 //   }
 // ]
 // export const orders1 =
@@ -752,7 +752,7 @@ export const stay14 = {
 //       price: 80.00
 //     },
 //     msgs: [],
-//     status: "pending" // approved, rejected
+//     status: "Pending" // Approved, Rejected
 //   }
 
 // export const orders2 =
@@ -776,7 +776,7 @@ export const stay14 = {
 //       price: 80.00
 //     },
 //     msgs: [],
-//     status: "complete" // approved, rejected
+//     status: "complete" // Approved, Rejected
 //   }
 
 

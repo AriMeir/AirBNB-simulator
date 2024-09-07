@@ -7,24 +7,22 @@ import { OrderTheader } from "./OrderTheader";
 
 export function OrderTable({ orders, onOrderByPriceDown, onOrderByPriceUp, onOrderByStatusUp ,onOrderByStatusDown ,onOrderByDateUp ,onOrderByDateDown, onApproveOrder,onRejectOrder }) {
 
-
-
     if (orders.length === 0) return <p>loading...</p>;
 
     const getStatusDot = (status) => {
         let color = "";
-        switch (status.toLowerCase()) {
-            case "pending":
+        switch (status) {
+            case "Pending":
                 color = "rgb(255, 196, 0)";
                 break;
-            case "approved":
-                color = "rgb(0, 255, 0)";
+            case "Approved":
+                color = "rgb(103, 194, 58)";
                 break;
-            case "canceled":
-                color = "rgb(255, 0, 0)";
+            case "Canceled":
+                color = "rgb(245, 108, 108)";
                 break;
-            case "rejected":
-                color = "rgb(255, 0, 0)";
+            case "Rejected":
+                color = "rgb(245, 108, 108)";
                 break;
             default:
                 color = "gray";
@@ -62,7 +60,7 @@ export function OrderTable({ orders, onOrderByPriceDown, onOrderByPriceUp, onOrd
                             <td><StayCard country={order.loc.country} city={order.loc.city} name={order.stay.name} imgUrl={order.stay.imgUrl}/></td>
                             <td>${order.totalPrice}.00</td>
                             <td>{getStatusDot(order.status)}</td>
-                            <td><div className="buttons-order-div flex row space-between align-center"><button className="white-btn green-btn" onClick={() => onApproveOrder(order._id)}>Accept</button>
+                            <td><div className="buttons-order-div flex row space-between align-center"><button className="white-btn green-btn" onClick={() => onApproveOrder(order._id)}>Approve</button>
                              <button className="white-btn red-btn" onClick={() => onRejectOrder(order._id)}>Reject</button> </div></td>
                         </tr>
                     ))}
