@@ -47,8 +47,7 @@
     width: 100%;
     padding: 0 15px;
     margin: auto;
-    max-width: 1200px;
-
+    max-width: 1154px;
 }
 .second-header .anchor-links{
     height: 100%;
@@ -56,13 +55,13 @@
 }
 .second-header .anchor-links .anchor-link {
     color: #212121;
-
-    font-size: .875rem;
+    font-size: 14px;
     margin-left: 24px;
     cursor: pointer;
     position: relative;
     text-decoration: none;
     transition: color 0.3s ease;
+    font-weight: bold;
 }
 .second-header .book-it{
     min-width: 200px;
@@ -72,8 +71,7 @@
     min-width: 100px
 }
 .header-reserve-button-container{
-    min-width: 100px
-
+    // max-width: 234px;
 }
 
 .second-header .anchor-links .anchor-link::before {

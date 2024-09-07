@@ -17,6 +17,7 @@ import { AmenitiesPreviewGridList } from '../cmps-AirBnB/AmenitiesPreviewGridLis
 import { ReviewsPreviewGridList } from '../cmps-AirBnB/ReviewsPreviewGridList';
 import { ActionButton } from '../cmps-AirBnB/ActionButton';
 import { authService } from '../services-AirBnB/auth.service';
+import { ActionButtonWhite } from '../cmps-AirBnB/ActionButtonWhite';
 const reviews = [
   {
     "id": "r1",
@@ -568,7 +569,7 @@ export function StayDetailsPage() {
                           <span>{fetchSVG("star")} {reviewMidScore} • {stay.reviews.length} reviews  </span>
                         </div>
                         <div className='header-reserve-button-container flex align-center'>
-                        <ActionButton buttonText={buttonText} action={onReserveOrder}/>
+                        <ActionButtonWhite buttonText={buttonText} action={onReserveOrder}/>
                         </div>
                       </div>
 
