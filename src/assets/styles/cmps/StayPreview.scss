@@ -48,6 +48,10 @@
     font-family: 'AirbnbCereal',sans-serif;
     margin-bottom: -4px;
 }
+.card-review {
+    font-weight: 400;
+    font-size: 14px;
+}
 
 .card-price{
     margin-top: 5px;
@@ -66,7 +70,6 @@
     border-radius: 5%;
     aspect-ratio: 1.05 / 1;
     width: 100%;
-    // max-width: 314px;
     background-size: cover;
 }
 

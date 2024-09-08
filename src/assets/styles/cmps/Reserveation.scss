@@ -59,7 +59,6 @@
     display: flex;
     cursor: pointer;
     flex-direction: column;
-
     border-top: 1px solid #00000050;
     padding: 7px 12px;
     color: gray;
@@ -78,7 +77,6 @@
   input {
     border: none;
     padding: 0 0;
-    // width: 50%;
     outline: none;
   }
 
@@ -125,7 +123,6 @@
     width: 100%;
     height: 100%;
     z-index: 1;
-    // border: 1px solid rgba(128, 128, 128, 0.753);
   }
 
   .content {
@@ -171,7 +168,6 @@
     font-size: 16px;
     line-height: 20px;
     font-weight: 600;
-
   }
 
   p.footer {
@@ -219,8 +215,6 @@
     padding-inline-start: 20px;
     padding-top: 10px;
     padding: 1rem;
-
-
 }
 .date-picker-in-date-picker-modal{
     display: flex;

@@ -5,7 +5,7 @@
     position: fixed;
     width: 100%;
     background-color: white;
-    padding-top: 100px;
+    padding-top: 95px;
     margin: auto;
     display: flex;
 }
@@ -17,7 +17,7 @@
     justify-items: center;
     width: 100%;
     display: flex;
-    padding: 4px 80px;
+    padding: 0px 76px;
 }
 
 .wrapper {
@@ -38,11 +38,9 @@
 
 .slick-track {
     display: flex;
-    //
 }
 
 .slick-slide {
-    // width: auto !important;
 }
 
 .prev_category, .next_category {
@@ -63,13 +61,13 @@
 }
 
 .prev_category {
-    bottom: 23px;
+    bottom: 22px;
     left: -4px;
 }
 
 .next_category {
-    right: -4px;
-    top: 8px;
+    right: 0px;
+    top: 9px;
 }
 
 .slick-dots li button {

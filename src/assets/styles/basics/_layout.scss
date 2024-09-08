@@ -2,8 +2,6 @@
     display: grid;
     grid-template-columns: 76px 1fr 76px;
     color: black;
-    /* overflow-x: hidden; */
-
 
     > * {
         grid-column: 2;
@@ -48,25 +46,6 @@
             --breakpoint-grid_columns: 1;
         }
     }
-
-    // @include for-narrow-layout {
-    //     grid-template-columns:
-    //         minmax(20px, 1fr)
-    //         minmax(auto, $mobile-breakpoint)
-    //         minmax(20px, 1fr);
-    // }
-    // @include for-normal-layout {
-    //     grid-template-columns:
-    //         minmax(20px, 1fr)
-    //         minmax(auto, $narrow-breakpoint)
-    //         minmax(20px, 1fr);
-    // }
-    // @include for-wide-layout {
-    //     grid-template-columns:
-    //         minmax(20px, 1fr)
-    //         minmax(auto, $normal-breakpoint)
-    //         minmax(20px, 1fr);
-    // }
 }
 
 .card-grid {

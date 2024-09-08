@@ -194,15 +194,15 @@
 }
 .main-location-filter {
     padding: 20px;
-  }
+}
 
-  .locations-filter-header {
+.locations-filter-header {
     font-size: 1.0rem;
     font-weight: bold;
     margin-left: 10px;
-  }
+}
 
-  .region {
+.region {
     text-align: center;
     background-color: transparent;
     border-radius: 10px;
@@ -211,36 +211,36 @@
 .region:hover{
     background-color: #ededed;
 }
-  .region-photo-container {
+.region-photo-container {
     width: 90%;
     height: 100px;
     overflow: hidden;
     border-radius: 10px;
     cursor: pointer;
     margin-left: 6px;
-    border: 0.5px solid #222;
+    border: 0.5px solid #a6a5a5;
     margin-top: 10px;
-  }
+}
 
-   .region-photo-container:hover{
-        border: 0.5px solid black;
-   }
+.region-photo-container:hover{
+    border: 0.5px solid black;
+}
 
-  .region-photo {
+.region-photo {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
-  }
+}
 
-  .region-name {
+.region-name {
     margin-top: 10px;
     text-align: left;
     line-height: 1.125rem;
     font-size: 14px;
     margin-left: 8px;
     font-weight: 400;
-  }
+}
 .css-1juxbee-MuiButtonBase-root-MuiPickersDay-root-MuiDateRangePickerDay-day.Mui-selected{
 background-color: rgb(34, 34, 34) !important;
 }
@@ -252,9 +252,8 @@ background-color: rgb(34, 34, 34) !important;
     background-color: rgb(34, 34, 34) !important;
 }
 .css-1ny3jyh-MuiDateRangePickerDay-root {
-
     color: #fff;
-     background-color: rgb(247, 247, 247) !important;
+    background-color: rgb(247, 247, 247) !important;
 }
 .css-f8wito-MuiDateRangePickerDay-root {
     color: #fff;

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 
 export function ActionButton({ action, buttonText }) {
-  
+
   return (
     <div className="btn-container" onClick={() => action()}>
       <div className="cell"></div>

@@ -8,30 +8,29 @@
     border: none;
     display: grid;
     grid-template: repeat(10, 1fr) / repeat(10, 1fr);
-  
+
     @for $i from 0 to 10 {
       .cell:nth-child(10n + #{$i + 1}):hover ~ .content {
         --positionX: #{$i};
       }
-  
+
       .cell:nth-child(n + #{10 * $i + 1}):nth-child(-n + #{10 * ($i + 1)}):hover
         ~ .content {
         --positionY: #{$i};
       }
     }
   }
-  
+
   .cell {
     width: 100%;
     height: 100%;
     z-index: 1;
-    // border: 1px solid rgba(128, 128, 128, 0.753);
   }
-  
+
   .content {
     --positionX: 0;
     --positionY: 5;
-  
+
     position: absolute;
     top: 0;
     right: 0;
@@ -42,7 +41,7 @@
     align-items: center;
     height: 100%;
     border-radius: 8px;
-  
+
     background-image: radial-gradient(
       circle at calc((0 + var(--positionX, 0)) * 10%)
         calc((0 + var(--positionY, 0)) * 5%),
@@ -54,7 +53,7 @@
       rgb(189, 30, 89) 100%
     );
   }
-  
+
   .action-btn {
     padding: 0 0;
     margin: 0 0;
@@ -63,7 +62,7 @@
     background-color: transparent;
     border: none;
   }
-  
+
   .action-btn span {
     padding: 0 0;
     margin: 0 0;
