@@ -1,7 +1,7 @@
 import { Outlet, useLocation } from "react-router";
-import { DynamicHeader } from "../cmps-AirBnB/DynamicHeader";
+import { DynamicHeader } from "../cmps/DynamicHeader";
 import { useNavigate } from "react-router";
-import { LoginDisplay } from "../cmps-AirBnB/LoginDisplay"
+import { LoginDisplay } from "../cmps/LoginDisplay"
 import { useSelector } from 'react-redux';
 import { login } from "../store-AirBnB/actions/user.actions";
 

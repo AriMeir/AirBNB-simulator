@@ -1,11 +1,11 @@
-import { tripService } from '../../services-AirBnB/trip.service'
+import { tripService } from '../../services/trip.service'
 import { store } from '../../store-AirBnB/store'
 import { ADD_TRIP, REMOVE_TRIP, SET_TRIPS, SET_TRIP, UPDATE_TRIP, CANCEL_TRIP, APPROVE_TRIP, REJECT_TRIP /* ADD_TRIP_MSG */ } from '../reducers/trip.reducer'
 
 export async function loadTrips(filterBy) {
     try {
         const trips = await tripService.query(filterBy)
-        
+
         store.dispatch(getCmdSetTrips(trips))
     } catch (err) {
         console.log('Cannot load trips', err)

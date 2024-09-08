@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { StayCard } from "./StayCard";
 import { UserCard } from "./UserCard";
-import { utilService } from "../services-AirBnB/util.service";
+import { utilService } from "../services/util.service";
 import { OrderTheader } from "./OrderTheader";
 
 

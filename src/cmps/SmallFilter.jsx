@@ -1,5 +1,5 @@
 import { IoSearch } from "react-icons/io5";
-import { utilService } from "../services-AirBnB/util.service";
+import { utilService } from "../services/util.service";
 export function SmallFilter({onLittleFilterClick, location, checkIn, checkOut, guests}) {
     return (
         <div className='filter-container flex row flex-start align-center' >

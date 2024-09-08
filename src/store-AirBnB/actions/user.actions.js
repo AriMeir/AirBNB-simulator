@@ -1,6 +1,6 @@
 
 import { SET_USER} from '../reducers/user.reducer'
-import { authService } from '../../services-AirBnB/auth.service'
+import { authService } from '../../services/auth.service'
 import { store } from '../../store-AirBnB/store'
 
 export async function login(credentials) {

@@ -1,9 +1,9 @@
-import { Header } from "../cmps-AirBnB/Header";
+import { Header } from "../cmps/Header";
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-import { ActionButton } from '../cmps-AirBnB/ActionButton';
-import { ActionButtonWhite } from '../cmps-AirBnB/ActionButtonWhite';
+import { ActionButton } from '../cmps/ActionButton';
+import { ActionButtonWhite } from '../cmps/ActionButtonWhite';
 import * as Yup from 'yup';
-import { authService } from "../services-AirBnB/auth.service";
+import { authService } from "../services/auth.service";
 
 export function LoginDisplay({hostLogin, guestLogin}) {
 

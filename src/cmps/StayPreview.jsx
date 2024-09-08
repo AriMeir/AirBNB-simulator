@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { unitTestReducer } from '../store-AirBnB/reducers/stay.reducer'
 import { useSelector } from 'react-redux';
 import { loadStays, loadStay, addStay, updateStay, removeStay } from '../store-AirBnB/actions/stay.actions';
-import { stayService } from '../services-AirBnB/stay.service';
+import { stayService } from '../services/stay.service';
 import { svgIcons } from './Svgs';
 import { StayGallerySlider } from "./StayGallerySlider";
 
@@ -58,12 +58,15 @@ export function StayPreview({ stay, onClick, onHeartClick }) {
                 </div>
             </div>
             <div className='card-bottom full'>
-                <div className='card-header'>
-                    <div>{stay.loc.country}, {stay.loc.city}</div>
-                    <div className='star-reviews'>{svgIcons.starReview}
-                        <p>{(getRandomNumber(3.8, 4)).toFixed(1)}</p>
-                    </div>
+            <div className='card-header'>
+                <div>{stay.loc.country}, {stay.loc.city}</div>
+                <div className='star-reviews'>
+                    {svgIcons.starReview}
+                    <p>
+                        <span className="card-review">{(getRandomNumber(3.8, 4)).toFixed(1)}</span>
+                    </p>
                 </div>
+            </div>
                 <p>{Math.floor(getRandomNumber(80, 2000))} kilometers away</p>
                 <p>{getRandomDateRange()}</p>
                 <p className='card-price'><strong>${stay.price}</strong> night</p>

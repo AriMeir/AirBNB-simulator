@@ -1,13 +1,9 @@
-
-
 /* Login Container */
 .login-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-
     padding: 20px;
 }
 
@@ -31,7 +27,6 @@
 
 /* Form Title */
 .form-title {
-
     font-size: 24px;
     font-weight: 600;
     color: #333;
@@ -66,14 +61,11 @@
     display: block; /* Ensure block-level element */
 }
 
-
 .error-message {
     color: #e74c3c;
     font-size: 12px;
     margin-top: 5px;
 }
-
-
 
 .submit-button:disabled {
     background-color: #cccccc;
@@ -97,4 +89,16 @@
 .demo-login-button:hover{
     background-color: #c1c1c1;
     color: white;
+}
+
+.login-page{
+    margin-top: 100px;
+}
+
+.form-container{
+    width: 100%;
+
+}
+.demo-signup-buttons{
+    width: 100%;
 }

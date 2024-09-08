@@ -1,10 +1,6 @@
 * {
     box-sizing: border-box;
-
-
 }
-
-
 
 ::selection {
 
@@ -65,12 +61,6 @@ h6{
     font-size: 0.875rem;
     letter-spacing: .007em;
 }
-// .header {
-//     width: 100%;
-// }
-// section, main, footer {
-//     padding: 5px;
-// }
 
 img {
     width: 100%;
@@ -184,6 +174,9 @@ a:hover {
 }
 .bold {
     font-weight: bold;
+}
+.light-bold {
+    font-weight: 500;
 }
 .underline {
     text-decoration: underline;
