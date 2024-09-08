@@ -1,10 +1,10 @@
-import {Header} from '../cmps-AirBnB/Header'
+import {Header} from '../cmps/Header'
 import { Outlet, useParams } from 'react-router'
-import {Categories} from '../cmps-AirBnB/Categories'
-import {StayIndex} from '../cmps-AirBnB/StayIndex'
-import {Footer} from '../cmps-AirBnB/Footer'
+import {Categories} from '../cmps/Categories'
+import {StayIndex} from '../cmps/StayIndex'
+import {Footer} from '../cmps/Footer'
 import { useEffect, useState } from 'react'
-import { DynamicHeader } from '../cmps-AirBnB/DynamicHeader'
+import { DynamicHeader } from '../cmps/DynamicHeader'
 
 export function HomePage() {
     const {stayId} = useParams()

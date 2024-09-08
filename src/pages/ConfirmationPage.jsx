@@ -1,12 +1,12 @@
-import { Header } from "../cmps-AirBnB/Header";
+import { Header } from "../cmps/Header";
 import { IoIosArrowBack } from "react-icons/io";
-import { LoginDisplay } from "../cmps-AirBnB/LoginDisplay"
+import { LoginDisplay } from "../cmps/LoginDisplay"
 import { fetchSVG } from '../store-AirBnB/svg/SvgStore';
 import { login } from "../store-AirBnB/actions/user.actions";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { ActionButton } from "../cmps-AirBnB/ActionButton";
-import { authService } from "../services-AirBnB/auth.service";
+import { ActionButton } from "../cmps/ActionButton";
+import { authService } from "../services/auth.service";
 import { useSelector } from "react-redux";
 
 export function ConfirmationPage({ onConfirmTrip, reviewMidScore, stay }) {
@@ -35,11 +35,11 @@ export function ConfirmationPage({ onConfirmTrip, reviewMidScore, stay }) {
       }
 
     }
-    
+
     async function hostLogin() {
       try {
           await login('ari')
-          
+
       } catch(e) {
           throw new Error ('There has been a problem logging in as Ari Host')
       }

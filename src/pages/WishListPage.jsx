@@ -1,6 +1,6 @@
-import { Header } from "../cmps-AirBnB/Header";
-import { StayIndex } from "../cmps-AirBnB/StayIndex";
-import {Footer} from '../cmps-AirBnB/Footer'
+import { Header } from "../cmps/Header";
+import { StayIndex } from "../cmps/StayIndex";
+import {Footer} from '../cmps/Footer'
 
 export function WishListPage() {
     return (

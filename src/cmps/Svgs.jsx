@@ -1,5 +1,5 @@
 // import React from 'react';
-// import { svgService } from '../services-AirBnB/svgs.service';
+// import { svgService } from '../services/svgs.service';
 
 // const SvgIcon = ({ iconName}) => {
 //     const svg = svgService.getSvg(iconName)

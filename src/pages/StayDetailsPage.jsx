@@ -1,23 +1,23 @@
 
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { ConfirmationPage } from './ConfirmationPage';
-import { AmenitiesPopup } from '../cmps-AirBnB/AmenitiesPopup';
+import { AmenitiesPopup } from '../cmps/AmenitiesPopup';
 import { useState, useEffect } from 'react';
 import { loadStay } from '../store-AirBnB/actions/stay.actions';
 import { useSelector } from 'react-redux';
-import { GuestCounter } from '../cmps-AirBnB/GuestCounter';
-import { ReviewScoreBar } from '../cmps-AirBnB/ReviewScoreBar';
-import { ReviewPopUp } from '../cmps-AirBnB/ReviewPopUp';
-import { MapComponent } from '../cmps-AirBnB/MapComponent';
+import { GuestCounter } from '../cmps/GuestCounter';
+import { ReviewScoreBar } from '../cmps/ReviewScoreBar';
+import { ReviewPopUp } from '../cmps/ReviewPopUp';
+import { MapComponent } from '../cmps/MapComponent';
 import { addTrip } from '../store-AirBnB/actions/trip.actions';
 import { fetchSVG } from '../store-AirBnB/svg/SvgStore';
-import { BasicRangeShortcuts } from '../cmps-AirBnB/BasicRangeShortcuts';
-import { Reservation } from '../cmps-AirBnB/Reservation';
-import { AmenitiesPreviewGridList } from '../cmps-AirBnB/AmenitiesPreviewGridList';
-import { ReviewsPreviewGridList } from '../cmps-AirBnB/ReviewsPreviewGridList';
-import { ActionButton } from '../cmps-AirBnB/ActionButton';
-import { authService } from '../services-AirBnB/auth.service';
-import { ActionButtonWhite } from '../cmps-AirBnB/ActionButtonWhite';
+import { BasicRangeShortcuts } from '../cmps/BasicRangeShortcuts';
+import { Reservation } from '../cmps/Reservation';
+import { AmenitiesPreviewGridList } from '../cmps/AmenitiesPreviewGridList';
+import { ReviewsPreviewGridList } from '../cmps/ReviewsPreviewGridList';
+import { ActionButton } from '../cmps/ActionButton';
+import { authService } from '../services/auth.service';
+import { ActionButtonWhite } from '../cmps/ActionButtonWhite';
 const reviews = [
   {
     "id": "r1",

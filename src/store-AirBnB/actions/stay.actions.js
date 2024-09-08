@@ -1,4 +1,4 @@
-import { stayService } from '../../services-AirBnB/stay.service'
+import { stayService } from '../../services/stay.service'
 import { store } from '../../store-AirBnB/store'
 import { ADD_STAY, REMOVE_STAY, SET_STAYS, SET_STAY, UPDATE_STAY, ADD_STAY_MSG } from '../reducers/stay.reducer'
 

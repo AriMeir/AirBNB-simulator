@@ -1,7 +1,7 @@
-import { DynamicHeader } from "../cmps-AirBnB/DynamicHeader"
+import { DynamicHeader } from "../cmps/DynamicHeader"
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-import { LoginDisplay } from "../cmps-AirBnB/LoginDisplay";
-import { ActionButton } from '../cmps-AirBnB/ActionButton'
+import { LoginDisplay } from "../cmps/LoginDisplay";
+import { ActionButton } from '../cmps/ActionButton'
 import { login } from "../store-AirBnB/actions/user.actions";
 import { useNavigate } from "react-router";
 import * as Yup from 'yup';
@@ -39,4 +39,3 @@ export function LoginPage() {
         </>
     )
 }
-

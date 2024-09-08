@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { unitTestReducer } from '../store-AirBnB/reducers/stay.reducer'
 import { useSelector } from 'react-redux';
 import { loadStays, loadStay, addStay, updateStay, removeStay } from '../store-AirBnB/actions/stay.actions';
-import { stayService } from '../services-AirBnB/stay.service';
+import { stayService } from '../services/stay.service';
 import { svgIcons } from './Svgs';
 import { StayGallerySlider } from "./StayGallerySlider";
 

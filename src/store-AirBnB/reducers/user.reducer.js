@@ -1,4 +1,4 @@
-import { authService } from "../../services-AirBnB/auth.service"
+import { authService } from "../../services/auth.service"
 
 export const SET_USER = 'SET_USER'
 
