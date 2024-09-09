@@ -1,0 +1,18 @@
+[
+  {
+    "_id": "u101",
+    "fullname": "Einav Sharf",
+    "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/female/10.jpg",
+    "username": "einav",
+    "type": "guest",
+    "password": "secret"
+  },
+  {
+    "_id": "u102",
+    "fullname": "Ari Meir",
+    "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/68.jpg",
+    "username": "ari",
+    "type": "host",
+    "password": "secret"
+  }
+]

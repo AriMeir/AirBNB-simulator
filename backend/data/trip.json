@@ -1,0 +1,162 @@
+[
+  {
+    "host": {
+      "hostId": "u102",
+      "hostName": "Ari Meir",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/68.jpg"
+    },
+    "buyer": {
+      "_id": "u101",
+      "fullname": "Einav Sharf",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/female/10.jpg"
+    },
+    "totalPrice": 160,
+    "startDate": "2025/10/13",
+    "endDate": "2025/10/17",
+    "guests": {
+      "adults": 1,
+      "kids": 2
+    },
+    "stay": {
+      "id": "h102",
+      "name": "House Of Uncle My",
+      "price": 80,
+      "imgUrl": "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg"
+    },
+    "loc": {
+      "country": "US",
+      "city": "New York"
+    },
+    "msgs": [],
+    "status": "rejected"
+    
+  },
+  {
+    
+    "host": {
+      "hostId": "u102",
+      "hostName": "Ari Meir",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/68.jpg"
+    },
+    "buyer": {
+      "_id": "u101",
+      "fullname": "Einav Sharf",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/female/10.jpg"
+    },
+    "totalPrice": 160,
+    "startDate": "2025/10/13",
+    "endDate": "2025/10/17",
+    "guests": {
+      "adults": 1,
+      "kids": 2
+    },
+    "stay": {
+      "id": "h102",
+      "name": "House Of Uncle My",
+      "price": 80,
+      "imgUrl": "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg"
+    },
+    "loc": {
+      "country": "US",
+      "city": "New York"
+    },
+    "msgs": [],
+    "status": "pending"
+  },
+  {
+    
+    "host": {
+      "hostId": "u102",
+      "hostName": "Ari Meir",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/68.jpg"
+    },
+    "buyer": {
+      "_id": "u101",
+      "fullname": "Rita Ora",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/female/11.jpg"
+    },
+    "totalPrice": 200,
+    "startDate": "2024/10/12",
+    "endDate": "2024/10/15",
+    "guests": {
+      "adults": 2,
+      "kids": 2
+    },
+    "stay": {
+      "id": "h107",
+      "name": "House Of Joy",
+      "price": 80,
+      "imgUrl": "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436827/znh7gqzbwb4wm6bdziy7.jpg"
+    },
+    "loc": {
+      "country": "US",
+      "city": "LA"
+    },
+    "msgs": [],
+    "status": "approved"
+  },
+  {
+    
+    "host": {
+      "hostId": "u102",
+      "hostName": "Ari Meir",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/68.jpg"
+    },
+    "buyer": {
+      "_id": "u201",
+      "fullname": "Tzvika Pik",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/67.jpg"
+    },
+    "totalPrice": 400,
+    "startDate": "2024/08/13",
+    "endDate": "2024/08/20",
+    "guests": {
+      "adults": 2,
+      "kids": 3
+    },
+    "stay": {
+      "id": "h103",
+      "name": "Apartment with view",
+      "price": 70,
+      "imgUrl": "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436983/pivldxmrxssnhyzixhes.jpg"
+    },
+    "loc": {
+      "country": "Canada",
+      "city": "Toronto"
+    },
+    "msgs": [],
+    "status": "rejected"
+  },
+  {
+    
+    "host": {
+      "hostId": "u102",
+      "hostName": "Ari Meir",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/68.jpg"
+    },
+    "buyer": {
+      "_id": "u201",
+      "fullname": "Bibi Netaniahu",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/13.jpg"
+    },
+    "totalPrice": 350,
+    "startDate": "2024/09/02",
+    "endDate": "2024/09/08",
+    "guests": {
+      "adults": 2,
+      "kids": 3
+    },
+    "stay": {
+      "id": "h108",
+      "name": "Apartment near the sea",
+      "price": 105,
+      "imgUrl": "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436509/rii32aibnhkoeejsohie.jpg"
+    },
+    "loc": {
+      "country": "Brazil",
+      "city": "São Paulo"
+    },
+    "msgs": [],
+    "status": "canceled"
+  }
+]
