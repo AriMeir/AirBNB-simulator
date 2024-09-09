@@ -1,12 +1,14 @@
 
 import { storageService } from './async-storage.service'
 import { Children } from 'react'
+import axios from 'axios';
 import { httpService } from './http.service'
 import { utilService } from './util.service'
 import { orders1, orders2, orders3, orders4 } from '../Data/orders'
 
 
 const STORAGE_KEY = 'trips'
+const URL = 'http://localhost:3030/api/trip'
 
 export const tripService = {
     query,
@@ -23,9 +25,19 @@ window.cs = tripService
 _createTrips()
 
 async function query(filterBy) {
-    let trips = await storageService.query(STORAGE_KEY);
+    /* let trips = await storageService.query(STORAGE_KEY); */
+    let url;
+    if(filterBy) {
+    const { filterType, order, by} = filterBy;
+    url = `${URL}?filterType=${filterType}&order=${order}&by=${by}`;
+    } else {
+        url = `${URL}`
+    }
+    
+    const response = await axios.get(url);
+    return response.data
 
-    if (filterBy) {
+   /*  if (filterBy) {
         console.log("I'm here, starting to filter");
         // Order
         if (filterBy.filterType === "order") {
@@ -60,11 +72,12 @@ async function query(filterBy) {
         }
     }
 
-    return trips;
+    return trips; */
 }
 
-function getById(tripId) {
-    return storageService.get(tripId)
+async function getById(tripId) {
+    const response = await axios.get(`${URL}/${tripId}`)
+    return response.data
 }
 
 async function remove(tripId) {

@@ -17,7 +17,7 @@ export const stayService = {
     getEmptyStay
 }
 window.cs = stayService
-_createStays()
+
 
 
 async function query(filterBy) {
