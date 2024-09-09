@@ -98,6 +98,9 @@ async function save(trip) {
     const savedMsg = await storageService.post(`trip/${tripId}/msg`, {txt})
     return savedMsg
 } */
+    async function changeTripStatus(statusToSave){
+        
+    }
     async function cancelTrip(tripId) {
         return storageService.get(STORAGE_KEY,tripId).then(trip => {
             if (trip) {
