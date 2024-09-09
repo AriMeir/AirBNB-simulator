@@ -1,0 +1,517 @@
+
+[
+  {
+    "name": "Luxury Urban Loft",
+    "type": "House",
+    "imgUrls": ["https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436993/yzxnnw83e9qyas022au4.jpg",
+                "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436390/om97cgufeacwlric2r5w.jpg",
+                "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436948/vgfxpvmcpd2q40qxtuv3.jpg",
+                "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436821/b4ejulqdhsvyseyfnfr0.jpg",
+                "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436571/fvqbazrysqpymjlhhdqu.jpg"],
+    "price": 325,
+    "summary": "Luxury Urban Loft - This chic loft in a trendy neighborhood boasts high ceilings, industrial decor, and a rooftop terrace with cityscape views.",
+    "capacity": 4,
+    "amenities": [],
+    "labels": [
+      "Bed & breakfasts","Luxe","Top of the world"
+    ],
+    "host": {
+      "id": "u102",
+      "fullname": "Ari Meir",
+      "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/68.jpg"
+    },
+    "loc": {
+      "region": null,
+      "country": "Portugal",
+      "countryCode": "PT",
+      "city": "Lisbon",
+      "address": "17 Kombo st",
+      "lat": 39.399872,
+      "lng": -8.224454
+    },
+    "reviews": [],
+    "likedByUsers": []
+  },
+  {
+    
+    "name": "Cozy Downtown Apartment",
+    "type": "Apartment",
+    "imgUrls": [
+        "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg",
+        "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436827/znh7gqzbwb4wm6bdziy7.jpg",
+        "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436281/doubvhbpwjfx81yfzpxq.jpg",
+        "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436453/ndl8odasqgnyquvsbalp.jpg",
+        "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663437040/oarfkdxx7gyyvcynvwko.jpg"
+    ],
+    "price": 203,
+    "summary": "Cozy Downtown Apartment - Located in the heart of the city, this modern apartment offers stunning skyline views, a fully equipped kitchen, and easy access to local attractions.",
+    "capacity": 2,
+    "amenities": [],
+    "labels": [
+        "Farms",
+        "Skiing",
+        "Amazing pools"
+    ],
+    "host": {
+        "id": "u102",
+        "fullname": "Ari Meir",
+        "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/68.jpg"
+    },
+    "loc": {
+        "region": "United States",
+        "country": "United States",
+        "countryCode": "US",
+        "city": "LA",
+        "address": "17 Kombo st",
+        "lat": 34.052235,
+        "lng": -118.243683
+    },
+    "reviews": [],
+    "likedByUsers": []
+},
+{
+  
+  "name": "Beachfront Bungalow",
+  "type": "House",
+  "imgUrls": [
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436937/mkbcjfockxezgrvimska.jpg",
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663437308/p80ndulkcghpcfsnvjdo.jpg",
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663437330/mmhkmfvg8o3freucyekc.jpg",
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663437330/mmhkmfvg8o3freucyekc.jpg",
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436797/hzfu8ihyoecadrermn14.jpg"
+  ],
+  "price": 194,
+  "summary": "Beachfront Bungalow - Enjoy the serene sound of waves in this charming bungalow right on the beach. Perfect for a romantic getaway or a relaxing vacation.",
+  "capacity": 3,
+  "amenities": [],
+  "labels": [
+    "Lakefront",
+    "Islands",
+    "Tropical"
+  ],
+  "host": {
+    "id": "u102",
+    "fullname": "Ari Meir",
+    "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/68.jpg"
+  },
+  "loc": {
+    "region": "United States",
+    "country": "United States",
+    "countryCode": "US",
+    "city": "New York",
+    "address": "17 Kombo St",
+    "lat": 40.712776,
+    "lng": -74.005974
+  },
+  "reviews": [],
+  "likedByUsers": []
+},
+{
+  
+  "name": "Mountain Cabin Retreat",
+  "type": "Apartment",
+  "imgUrls": [
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436385/sorbz7rdtxacu1ds9vel.jpg",
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436993/yzxnnw83e9qyas022au4.jpg",
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663437327/epcnh2tzpafwmvi3srcp.jpg",
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436588/cxkvvaext8m0kjuaxcrk.jpg",
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436359/abuiyexl2xyemq8uon4s.jpg"
+  ],
+  "price": 387,
+  "summary": "Mountain Cabin Retreat - Nestled in the mountains, this rustic cabin features a wood-burning fireplace, hiking trails, and breathtaking views of the valley below.",
+  "capacity": 7,
+  "amenities": [],
+  "labels": [
+    "Vineyards",
+    "Mansions",
+    "Lake"
+  ],
+  "host": {
+    "id": "u102",
+    "fullname": "Ari Meir",
+    "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/68.jpg"
+  },
+  "loc": {
+    "region": null,
+    "country": "Canada",
+    "countryCode": "CA",
+    "city": "Toronto",
+    "address": "17 Kombo st",
+    "lat": 43.653225,
+    "lng": -79.383186
+  },
+  "reviews": [],
+  "likedByUsers": []
+},
+{
+  
+  "name": "Historic Victorian Home",
+  "type": "Villa",
+  "imgUrls": [
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436496/ihozxprafjzuhil9qhh4.jpg",
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436600/rt3ldgx1xfqct3961yjz.jpg",
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436204/wzbrvr4mcsuub6gvwbry.jpg",
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436523/ptcgbydjsamgf67a0npw.jpg",
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663437358/cy8kzj8jeofwkev6tlq9.jpg"
+  ],
+  "price": 444,
+  "summary": "Historic Victorian Home - Experience a piece of history in this beautifully restored Victorian house, complete with antique furnishings and a lush garden.",
+  "capacity": 12,
+  "amenities": [],
+  "labels": [
+    "Beach",
+    "Beachfront",
+    "Vineyards",
+    "Mansions"
+  ],
+  "host": {
+    "id": "u102",
+    "fullname": "Ari Meir",
+    "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/68.jpg"
+  },
+  "loc": {
+    "region": "South America",
+    "country": "Brazil",
+    "countryCode": "BR",
+    "city": "São Paulo",
+    "address": "17 Kombo st",
+    "lat": -23.5506507,
+    "lng": -46.6333824
+  },
+  "reviews": [],
+  "likedByUsers": []
+},{
+  
+  "name": "Countryside Cottage",
+  "type": "House",
+  "imgUrls": [
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436952/aef9ajipinpjhkley1e3.jpg",
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663437282/qy0p7yyaukasripzwc7w.jpg",
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436867/yocip4igdbruuh2grzpf.jpg",
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436509/rii32aibnhkoeejsohie.jpg",
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436983/pivldxmrxssnhyzixhes.jpg"
+  ],
+  "price": 98,
+  "summary": "Countryside Cottage - Escape to the peaceful countryside in this quaint cottage surrounded by rolling hills and picturesque farmland.",
+  "capacity": 6,
+  "amenities": [],
+  "labels": [
+    "Surfing",
+    "Bed & breakfasts",
+    "Luxe"
+  ],
+  "host": {
+    "id": "u102",
+    "fullname": "Ari Meir",
+    "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/68.jpg"
+  },
+  "loc": {
+    "region": "South America",
+    "country": "Argentina",
+    "countryCode": "AR",
+    "city": "Buenos Aires",
+    "address": "17 Kombo st",
+    "lat": -34.6073387,
+    "lng": -58.4432852
+  },
+  "reviews": [],
+  "likedByUsers": []
+},
+{
+  
+  "name": "Modern Studio Apartment",
+  "type": "Apartment",
+  "imgUrls": [
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436993/yzxnnw83e9qyas022au4.jpg",
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436993/yzxnnw83e9qyas022au4.jpg",
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436937/mkbcjfockxezgrvimska.jpg",
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436385/sorbz7rdtxacu1ds9vel.jpg",
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436496/ihozxprafjzuhil9qhh4.jpg"
+  ],
+  "price": 153,
+  "summary": "Modern Studio Apartment - Ideal for solo travelers or couples, this sleek studio offers all the modern amenities, including a smart TV and high-speed Wi-Fi.",
+  "capacity": 2,
+  "amenities": [],
+  "labels": [
+    "Earth homes",
+    "Amazing views",
+    "Desert"
+  ],
+  "host": {
+    "id": "u102",
+    "fullname": "Ari Meir",
+    "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/68.jpg"
+  },
+  "loc": {
+    "region": "France",
+    "country": "France",
+    "countryCode": "FR",
+    "city": "Paris",
+    "address": "17 Kombo st",
+    "lat": 48.8534951,
+    "lng": 2.3483915
+  },
+  "reviews": [],
+  "likedByUsers": []
+},
+{
+  
+  "name": "Tropical Villa with Pool",
+  "type": "Villa",
+  "imgUrls": [
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436827/znh7gqzbwb4wm6bdziy7.jpg",
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436390/om97cgufeacwlric2r5w.jpg",
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663437308/p80ndulkcghpcfsnvjdo.jpg",
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436993/yzxnnw83e9qyas022au4.jpg",
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436600/rt3ldgx1xfqct3961yjz.jpg"
+  ],
+  "price": 100,
+  "summary": "Tropical Villa with Pool - Luxurious villa in a tropical paradise, featuring a private pool, lush gardens, and close proximity to sandy beaches.",
+  "capacity": 8,
+  "amenities": [],
+  "labels": [
+    "Skiing",
+    "Amazing pools",
+    "Earth homes"
+  ],
+  "host": {
+    "id": "u102",
+    "fullname": "Ari Meir",
+    "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/68.jpg"
+  },
+  "loc": {
+    "region": null,
+    "country": "Germany",
+    "countryCode": "DE",
+    "city": "Berlin",
+    "address": "17 Kombo st",
+    "lat": 52.510885,
+    "lng": 13.3989367
+  },
+  "reviews": [],
+  "likedByUsers": []
+},
+{
+  
+  "name": "Family-Friendly Suburban House",
+  "type": "House",
+  "imgUrls": [
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436281/doubvhbpwjfx81yfzpxq.jpg",
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436948/vgfxpvmcpd2q40qxtuv3.jpg",
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663437330/mmhkmfvg8o3freucyekc.jpg",
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663437327/epcnh2tzpafwmvi3srcp.jpg",
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436204/wzbrvr4mcsuub6gvwbry.jpg"
+  ],
+  "price": 300,
+  "summary": "Family-Friendly Suburban House - Spacious home in a quiet suburb, perfect for families with children. Features a large backyard, play area, and nearby parks.",
+  "capacity": 6,
+  "amenities": [],
+  "labels": [
+    "Lake",
+    "Treehouses",
+    "Farms"
+  ],
+  "host": {
+    "id": "u102",
+    "fullname": "Ari Meir",
+    "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/68.jpg"
+  },
+  "loc": {
+    "region": "Italy",
+    "country": "Italy",
+    "countryCode": "IT",
+    "city": "Rome",
+    "address": "17 Kombo st",
+    "lat": 41.8933203,
+    "lng": 12.4829321
+  },
+  "reviews": [],
+  "likedByUsers": []
+},{
+  
+  "name": "Elegant Downtown Condo",
+  "type": "Apartment",
+  "imgUrls": [
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436993/yzxnnw83e9qyas022au4.jpg",
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436204/wzbrvr4mcsuub6gvwbry.jpg",
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436571/fvqbazrysqpymjlhhdqu.jpg",
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436821/b4ejulqdhsvyseyfnfr0.jpg",
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436948/vgfxpvmcpd2q40qxtuv3.jpg"
+  ],
+  "price": 230,
+  "summary": "Elegant Downtown Condo - Stylish condo in the city center, with access to a pool, gym, and concierge services. Close to shopping and dining options.",
+  "capacity": 4,
+  "amenities": [],
+  "labels": [
+    "Earth homes",
+    "Amazing views",
+    "Desert"
+  ],
+  "host": {
+    "id": "u102",
+    "fullname": "Ari Meir",
+    "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/68.jpg"
+  },
+  "loc": {
+    "region": null,
+    "country": "Spain",
+    "countryCode": "ES",
+    "city": "Madrid",
+    "address": "17 Kombo st",
+    "lat": 40.4167047,
+    "lng": -3.7035825
+  },
+  "reviews": [],
+  "likedByUsers": []
+},
+{
+  
+  "name": "Spacious Downtown Penthouse",
+  "type": "Villa",
+  "imgUrls": [
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436993/yzxnnw83e9qyas022au4.jpg",
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436204/wzbrvr4mcsuub6gvwbry.jpg",
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436948/vgfxpvmcpd2q40qxtuv3.jpg",
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436821/b4ejulqdhsvyseyfnfr0.jpg",
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436571/fvqbazrysqpymjlhhdqu.jpg"
+  ],
+  "price": 425,
+  "summary": "Spacious Downtown Penthouse - This expansive penthouse offers panoramic city views, a gourmet kitchen, and stylish decor, perfect for an upscale urban experience.",
+  "capacity": 10,
+  "amenities": [],
+  "labels": [
+    "Earth homes",
+    "Amazing views",
+    "Desert"
+  ],
+  "host": {
+    "id": "u102",
+    "fullname": "Ari Meir",
+    "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/68.jpg"
+  },
+  "loc": {
+    "region": null,
+    "country": "Thailand",
+    "countryCode": "TH",
+    "city": "Bangkok",
+    "address": "17 Kombo st",
+    "lat": 13.7524938,
+    "lng": 100.4935089
+  },
+  "reviews": [],
+  "likedByUsers": []
+},
+{
+  
+  "name": "Eco-Friendly Tiny House",
+  "type": "House",
+  "imgUrls": [
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436993/yzxnnw83e9qyas022au4.jpg",
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436204/wzbrvr4mcsuub6gvwbry.jpg",
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436571/fvqbazrysqpymjlhhdqu.jpg",
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436571/fvqbazrysqpymjlhhdqu.jpg",
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436993/yzxnnw83e9qyas022au4.jpg"
+  ],
+  "price": 322,
+  "summary": "Eco-Friendly Tiny House - Stay green in this eco-friendly tiny house made from sustainable materials, with solar power and a minimalist design.",
+  "capacity": 3,
+  "amenities": [],
+  "labels": [
+    "Islands",
+    "Tropical",
+    "Camping"
+  ],
+  "host": {
+    "id": "u102",
+    "fullname": "Ari Meir",
+    "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/68.jpg"
+  },
+  "loc": {
+    "region": "Middle East",
+    "country": "Israel",
+    "countryCode": "IL",
+    "city": "Tel Aviv",
+    "address": "17 Kombo st",
+    "lat": 32.0852997,
+    "lng": 34.7818064
+  },
+  "reviews": [],
+  "likedByUsers": []
+},
+{
+  
+  "name": "Lakefront Log Cabin",
+  "type": "House",
+  "imgUrls": [
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436993/yzxnnw83e9qyas022au4.jpg",
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436571/fvqbazrysqpymjlhhdqu.jpg",
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436571/fvqbazrysqpymjlhhdqu.jpg",
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436993/yzxnnw83e9qyas022au4.jpg",
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436571/fvqbazrysqpymjlhhdqu.jpg"
+  ],
+  "price": 260,
+  "summary": "Lakefront Log Cabin - Unwind in this cozy log cabin right on the lake, with opportunities for fishing, kayaking, and enjoying the great outdoors.",
+  "capacity": 2,
+  "amenities": [],
+  "labels": [
+    "Surfing",
+    "Bed & breakfasts",
+    "Luxe",
+    "Top of the world"
+  ],
+  "host": {
+    "id": "u102",
+    "fullname": "Ari Meir",
+    "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/68.jpg"
+  },
+  "loc": {
+    "region": null,
+    "country": "Netherlands",
+    "countryCode": "NL",
+    "city": "Amsterdam",
+    "address": "17 Kombo st",
+    "lat": 52.3730796,
+    "lng": 4.8924534
+  },
+  "reviews": [],
+  "likedByUsers": []
+},
+{
+  
+  "name": "Tropical Villa with Pool",
+  "type": "Villa",
+  "imgUrls": [
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436821/b4ejulqdhsvyseyfnfr0.jpg",
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436948/vgfxpvmcpd2q40qxtuv3.jpg",
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436571/fvqbazrysqpymjlhhdqu.jpg",
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436993/yzxnnw83e9qyas022au4.jpg",
+    "https://res.cloudinary.com/dmtlr2viw/image/upload/v1663436948/vgfxpvmcpd2q40qxtuv3.jpg"
+  ],
+  "price": 200,
+  "summary": "Tropical Villa with Pool - Luxurious villa in a tropical paradise, featuring a private pool, lush gardens, and close proximity to sandy beaches.",
+  "capacity": 8,
+  "amenities": [],
+  "labels": [
+    "Surfing",
+    "Bed & breakfasts",
+    "Luxe",
+    "Top of the world"
+  ],
+  "host": {
+    "id": "u102",
+    "fullname": "Ari Meir",
+    "imgUrl": "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/68.jpg"
+  },
+  "loc": {
+    "region": null,
+    "country": "Japan",
+    "countryCode": "JP",
+    "city": "Tokyo",
+    "address": "17 Kombo st",
+    "lat": 35.6821936,
+    "lng": 139.762221
+  },
+  "reviews": [],
+  "likedByUsers": []
+}
+]
