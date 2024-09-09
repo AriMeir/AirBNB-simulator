@@ -55,12 +55,13 @@
 .second-header .anchor-links .anchor-link {
     color: #212121;
     font-size: 14px;
-    margin-left: 24px;
+    /* margin-left: 24px; */
     cursor: pointer;
     position: relative;
     text-decoration: none;
     transition: color 0.3s ease;
-    font-weight: bold;
+    font-weight: 500;
+    margin-right: 24px;
 }
 .second-header .book-it{
     min-width: 200px;
@@ -70,6 +71,7 @@
     min-width: 100px
 }
 .header-reserve-button-container{
+    min-width: 100px
 }
 
 .second-header .anchor-links .anchor-link::before {

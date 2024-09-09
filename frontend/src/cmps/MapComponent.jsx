@@ -47,7 +47,7 @@ export function MapComponent({ country, city, lat, lng }) {
         <div className="map flex column align-left pad-box border-bottom">
             <h2>Where you'll be</h2>
             <div className="map-preview" ></div>
-            <p className="address-text bold">{`${country}, ${city}`}</p>
+            <p className="address-text light-bold">{`${country}, ${city}`}</p>
             <p>
                 Lexington, Kentucky is the second-largest city in Kentucky next to
                 Louisville, and is located in the heart of the Bluegrass region.
