@@ -18,18 +18,19 @@ export const tripService = {
     getEmptyTrip,
     cancelTrip,
     approveTrip,
-    rejectTrip
+    rejectTrip,
+    updateTrip
 }
 window.cs = tripService
 
-_createTrips()
+
 
 async function query(filterBy) {
     /* let trips = await storageService.query(STORAGE_KEY); */
     let url;
     if(filterBy) {
-    const { filterType, order, by} = filterBy;
-    url = `${URL}?filterType=${filterType}&order=${order}&by=${by}`;
+        const { filterType, order, by} = filterBy;
+        url = `${URL}?filterType=${filterType}&order=${order}&by=${by}`;
     } else {
         url = `${URL}`
     }
@@ -98,8 +99,9 @@ async function save(trip) {
     const savedMsg = await storageService.post(`trip/${tripId}/msg`, {txt})
     return savedMsg
 } */
-    async function changeTripStatus(statusToSave){
-        
+    async function updateTrip(statusToSave){
+        const response = await axios.put(`${URL}`, statusToSave)
+        return response.data
     }
     async function cancelTrip(tripId) {
         return storageService.get(STORAGE_KEY,tripId).then(trip => {

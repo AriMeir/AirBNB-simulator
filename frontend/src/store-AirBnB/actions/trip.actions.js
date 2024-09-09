@@ -73,11 +73,10 @@ export async function addTrip(trip) {
     }
 }
 
-export async function updateTrip(trip) {
+export async function updateTrip(tripStatus) {
     try {
-        const savedTrip = await tripService.save(trip)
-        console.log('Updated Trip:', savedTrip)
-        store.dispatch(getCmdUpdateTrip(savedTrip))
+        const updatedTrip = await tripService.updateTrip(tripStatus)
+        store.dispatch(getCmdUpdateTrip(updatedTrip))
         return savedTrip
     } catch (err) {
         console.log('Cannot save trip', err)
