@@ -85,14 +85,10 @@ async function remove(tripId) {
     return storageService.delete(tripId)
 }
 async function save(trip) {
-    var savedTrip
-    if (trip._id) {
-        savedTrip = await storageService.put(STORAGE_KEY, trip)
-
-    } else {
-        savedTrip = await storageService.post(STORAGE_KEY, trip)
-    }
-    return savedTrip
+    
+    /* savedTrip = await storageService.post(STORAGE_KEY, trip) */
+    const response = await axios.post(`${URL}`,trip)
+    return response.data
 }
 
 /* async function addTripMsg(tripId, txt) {
