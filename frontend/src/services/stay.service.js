@@ -3,9 +3,11 @@ import { stay1,stay2,stay3,stay4,stay5,stay6,stay7,stay8,stay9,stay10,stay11,sta
 import { storageService } from './async-storage.service'
 import { httpService } from './http.service'
 import { utilService } from './util.service'
+import axios from 'axios';
 
 
 const STORAGE_KEY = 'stay'
+const URL = 'http://localhost:3030/api/stay'
 
 export const stayService = {
     query,
@@ -19,9 +21,13 @@ _createStays()
 
 
 async function query(filterBy) {
-    let stays = await storageService.query(STORAGE_KEY)
+    
+    const { category, location, checkIn, checkOut, totalGuests } = filterBy;
+    const url = `${URL}?category=${category}&location=${location}&checkIn=${checkIn}&checkOut=${checkOut}&totalGuests=${totalGuests}`;
+    const response = await axios.get(url);
+    return response.data
 
-    if (filterBy) {
+    /* if (filterBy) {
         if (filterBy.category) {
             stays = stays.filter(stay => stay.labels.includes(filterBy.category))
         }
@@ -36,11 +42,13 @@ async function query(filterBy) {
             stays = stays.filter(stay => stay.likedByUsers.length > 0)
         }
     }
-    return stays
+    return stays */
 }
 
-function getById(stayId) {
-    return storageService.get(STORAGE_KEY,stayId)
+async function getById(stayId) {
+    const response = await axios.get(`${URL}/${stayId}`)
+    return response.data
+    
 }
 
 async function remove(stayId) {

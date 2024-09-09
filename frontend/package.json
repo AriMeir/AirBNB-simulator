@@ -19,7 +19,7 @@
     "@redux-devtools/extension": "^3.3.0",
     "ag-charts-react": "^10.1.0",
     "antd": "^5.19.1",
-    "axios": "^1.5.0",
+    "axios": "^1.7.7",
     "dayjs": "^1.11.11",
     "formik": "^2.4.6",
     "moment": "^2.30.1",
