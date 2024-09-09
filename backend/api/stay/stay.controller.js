@@ -5,17 +5,17 @@ import { stayService } from './stay.service.js';
 export async function getStays(req, res) {
     try {
         const filterBy = {
-            location: req.query.location || '',
+            location: req.query.location === "I'm Flexible" ? null : req.query.location || '',
             checkIn: req.query.checkIn || '',
             checkOut: req.query.checkOut || '',
             totalGuests: +req.query.totalGuests || 0,
             category: req.query.category || '',
-        }
-        console.log()
-        const stays = await stayService.query(filterBy)
-        res.send(stays)
+        };
+
+        const stays = await stayService.query(filterBy);
+        res.send(stays);
     } catch (err) {
-        res.status(400).send(`Couldn't get stays`)
+        res.status(400).send(`Couldn't get stays`);
     }
 }
 
