@@ -569,7 +569,7 @@ export function StayDetailsPage() {
                           <span>{fetchSVG("star")} {reviewMidScore} • {stay.reviews.length} reviews  </span>
                         </div>
                         <div className='header-reserve-button-container flex align-center'>
-                        <ActionButtonWhite buttonText={buttonText} action={onReserveOrder}/>
+                        <ActionButton buttonText={buttonText} action={onReserveOrder}/>
                         </div>
                       </div>
 
