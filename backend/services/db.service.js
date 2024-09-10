@@ -1,29 +1,31 @@
-
 import { MongoClient } from 'mongodb'
-export const dbService = {
-    getCollection
-}
-// Connection URL
-const url = 'mongodb://localhost:27017'
-// Database Name
-const dbName = 'Airbnb'
+
+import { config } from '../config/index.js'
+/* import { logger } from './logger.service.js' */
+
+export const dbService = { getCollection }
 
 var dbConn = null
 
 async function getCollection(collectionName) {
-    const db = await _connect()
-    return db.collection(collectionName)
+	try {
+		const db = await _connect()
+		const collection = await db.collection(collectionName)
+		return collection
+	} catch (err) {
+		/* logger.error('Failed to get Mongo collection', err) */
+		throw err
+	}
 }
 
 async function _connect() {
-    if (dbConn) return dbConn
-    try {
-        const client = await MongoClient.connect(url)
-        const db = client.db(dbName)
-        dbConn = db
-        return db
-    } catch (err) {
-        console.log('Cannot Connect to DB', err)
-        throw err
-    }
+	if (dbConn) return dbConn
+    
+	try {
+		const client = await MongoClient.connect(config.dbURL)
+		return dbConn = client.db(config.dbName)
+	} catch (err) {
+		/* logger.error('Cannot Connect to DB', err) */
+		throw err
+	}
 }
