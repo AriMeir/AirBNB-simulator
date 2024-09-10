@@ -7,7 +7,7 @@ export function MapComponent({ country, city, lat, lng }) {
             const existingScript = document.getElementById('googleMaps');
             if (!existingScript) {
                 const script = document.createElement('script');
-                script.src = `https://maps.googleapis.com/maps/api/js?key=KeyHere&callback=initMap`;
+                script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyClqOPNqyGdEiMafLkXgBCTF2KMD1LIRyI&callback=initMap`;
                 script.id = 'googleMaps';
                 document.body.appendChild(script);
                 script.onload = () => {
