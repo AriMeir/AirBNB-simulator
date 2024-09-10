@@ -349,6 +349,7 @@ export function StayDetailsPage() {
 
     useEffect(() => {
       loadCurrentStay(stayId)
+      console.log(stay)
     })
 
 
@@ -369,6 +370,7 @@ export function StayDetailsPage() {
 
     async function loadCurrentStay(stayId){
       await loadStay(stayId)
+      
     }
 
 
@@ -579,11 +581,11 @@ export function StayDetailsPage() {
                     <h1 className='stay-title'>{stay.name}</h1>
 
                     <div className='img-container' id="photos">
-                        <div className='img'><img src={stay?.imgUrls[0]}/></div>
-                        <div className='img'><img src={stay?.imgUrls[1]}/></div>
-                        <div className='img'><img src={stay?.imgUrls[2]}/></div>
-                        <div className='img'><img src={stay?.imgUrls[3]}/></div>
-                        <div className='img'><img src={stay?.imgUrls[4]}/></div>
+                        <div className='img'><img src={stay.imgUrls[0]}/></div>
+                        <div className='img'><img src={stay.imgUrls[1]}/></div>
+                        <div className='img'><img src={stay.imgUrls[2]}/></div>
+                        <div className='img'><img src={stay.imgUrls[3]}/></div>
+                        <div className='img'><img src={stay.imgUrls[4]}/></div>
                     </div>
                     <div id="targetDiv"></div> {/*for the second header*/ }
                     <div className='mid-section grid border-bottom'>
