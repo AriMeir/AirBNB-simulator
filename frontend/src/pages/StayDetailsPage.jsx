@@ -369,6 +369,7 @@ export function StayDetailsPage() {
 
 
     async function loadCurrentStay(stayId){
+      console.log(stayId)
       await loadStay(stayId)
       console.log(stay)
     }
