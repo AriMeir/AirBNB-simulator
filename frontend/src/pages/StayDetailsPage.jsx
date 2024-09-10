@@ -273,6 +273,7 @@ export function StayDetailsPage() {
     const [searchParams, setSearchParams] = useSearchParams();
     const [pickedCheckInDate, setPickedCheckInDate] = useState(searchParams.get('checkIn')|| '')
     const [pickedCheckOutDate, setPickedCheckOutDate] = useState(searchParams.get('checkOut')|| '')
+    const [pickedTotalGuests, setPickedTotalGuests] = useState(searchParams.get('totalGuests')|| '')
 
 
     // format jul-12-2024
@@ -350,7 +351,7 @@ export function StayDetailsPage() {
 
     useEffect(() => {
       loadCurrentStay(stayId)
-      
+
     },[])
 
 
@@ -370,7 +371,7 @@ export function StayDetailsPage() {
 
 
     async function loadCurrentStay(stayId){
-      await loadStay(stayId)  
+      await loadStay(stayId)
     }
 
 
@@ -488,7 +489,7 @@ export function StayDetailsPage() {
               city: stay.loc.city
             },
             msgs: [],
-            status: "Pending" // Approved, Rejected
+            status: "pending" // Approved, Rejected
         }
         await addTrip(newTrip)
 
@@ -595,7 +596,7 @@ export function StayDetailsPage() {
                                     <div className='host-details-text flex-column-left just-cont-left'>
                                         <h2>{stay.name + " " + stay.type + " by " + stay.host.fullname}</h2>
                                         <h6>{"Superhost 10 years hosting"}</h6>
-                                        <span className='lil-info'>2 guests • 1 bedroom • 2 beds • 1 bath</span>
+                                        <span className='lil-info'>{pickedTotalGuests} Guests • 2 bedroom • 4 beds • 1 bath</span>
                                     </div>
                                     <div className='host-detail-img'><img src={stay.host.imgUrl}/></div>
                                 </div>
@@ -706,7 +707,7 @@ export function StayDetailsPage() {
                             guestCounter={guestCounter}
                             onReserveOrder = {onReserveOrder}
                             onPickedDate={onPickedDate}
-                            totalGuestNumber={totalGuestNumber}  />
+                            totalGuestNumber={pickedTotalGuests}  />
                             </div>
                         </div>
                         {/* {<ReservationContainer
