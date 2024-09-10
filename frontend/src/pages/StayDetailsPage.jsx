@@ -350,7 +350,7 @@ export function StayDetailsPage() {
     useEffect(() => {
       loadCurrentStay(stayId)
       console.log(stay)
-    })
+    },[])
 
 
     useEffect(() => {
