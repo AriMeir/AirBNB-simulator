@@ -358,7 +358,7 @@ export function StayDetailsPage() {
     useEffect(() => {
       const calculateAverageRating = (reviews) => {
           const totalRates = reviews.reduce((sum, review) => sum + review.rate, 0);
-          return (totalRates / reviews.length).toFixed(1); // Format to 1 decimal place
+          return (totalRates / reviews?.length).toFixed(1); // Format to 1 decimal place
       }
       if (stay) {
         setReviewMidScore(calculateAverageRating(stay.reviews));
@@ -566,7 +566,7 @@ export function StayDetailsPage() {
                       <div className='book-it flex '>
                         <div className='book-it-details  flex-column-center-left  '>
                           <h4>{stay.price}$ night</h4>
-                          <span>{fetchSVG("star")} {reviewMidScore} • {stay.reviews.length} reviews  </span>
+                          <span>{fetchSVG("star")} {reviewMidScore} • {stay?.reviews?.length} reviews  </span>
                         </div>
                         <div className='header-reserve-button-container flex align-center'>
                         <ActionButton buttonText={buttonText} action={onReserveOrder}/>
@@ -639,7 +639,7 @@ export function StayDetailsPage() {
                                 <h2>What this place offers</h2>
                                 <AmenitiesPreviewGridList amenityList={stay.amenities}/>
                                 <div>
-                                <button className='white-btn' onClick={onShowAmenities}>Show all {stay.amenities.length} amenities</button>
+                                <button className='white-btn' onClick={onShowAmenities}>Show all {stay?.amenities?.length} amenities</button>
                                 </div>
 
                             </div>
@@ -693,7 +693,7 @@ export function StayDetailsPage() {
                             buttonText={buttonText}
                             reviewMidScore={reviewMidScore}
                             clearDates={clearDates}
-                            reviewNumber={stay.reviews.length}
+                            reviewNumber={stay?.reviews?.length}
                             pickedCheckInDate={pickedCheckInDate}
                             pickedCheckOutDate={pickedCheckOutDate}
                             totalPrice={totalPrice}
@@ -717,7 +717,7 @@ export function StayDetailsPage() {
                     </div>
 
                     <div className='reviews pad-box flex column border-bottom' id="reviews">
-                        <h2><span>{fetchSVG("star")}</span> {reviewMidScore} • {stay.reviews.length} reviews</h2>
+                        <h2><span>{fetchSVG("star")}</span> {reviewMidScore} • {stay?.reviews?.length} reviews</h2>
                         <div className='review-bar grid'>
                             <div className='first-review-column'>
                                 <ReviewScoreBar header={'Cleanliness'} score={3.7}/>
@@ -732,7 +732,7 @@ export function StayDetailsPage() {
                         </div>
                         <ReviewsPreviewGridList reviewList={stay.reviews}/>
                     <div>
-                    <button className='white-btn' onClick={onShowReviews}>Show all {stay.reviews.length} reviews</button>
+                    <button className='white-btn' onClick={onShowReviews}>Show all {stay?.reviews?.length} reviews</button>
                     </div>
                     </div>
                     {showReviews && <ReviewPopUp onClose={onCloseReviews} reviewList={stay.reviews}/>}
