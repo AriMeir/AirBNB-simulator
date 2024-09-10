@@ -1,7 +1,7 @@
 import { OrderTable } from "./OrderTable";
 import { loadTrips } from "../store-AirBnB/actions/trip.actions";
 import { useEffect } from "react";
-import { approveTrip, rejectTrip } from "../store-AirBnB/actions/trip.actions";
+import { updateTrip } from "../store-AirBnB/actions/trip.actions";
 import { useSelector } from "react-redux";
 
 export function OrderIndex() {
@@ -36,7 +36,11 @@ export function OrderIndex() {
     }
     function onApproveOrder(orderId) {
         try{
-            approveTrip(orderId)
+            const tripStatus = {
+                _id:orderId,
+                status:"approved"
+            }
+            updateTrip(tripStatus)
         } catch (e) {
             console.log("Error canceling trip", e)
         }
@@ -44,7 +48,11 @@ export function OrderIndex() {
     }
     function onRejectOrder(orderId) {
         try{
-            rejectTrip(orderId)
+            const tripStatus = {
+                _id:orderId,
+                status:"rejected"
+            }
+            updateTrip(tripStatus)
         } catch (e) {
             console.log("Error canceling trip", e)
         }

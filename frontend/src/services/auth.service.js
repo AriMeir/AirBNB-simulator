@@ -1,5 +1,6 @@
+import axios from 'axios';
 import { users } from '../Data/users';
-
+const URL = 'http://localhost:3030/api/auth'
 const SESSION_KEY = 'user';
 
 export const authService = {
@@ -8,16 +9,18 @@ export const authService = {
   getCurrentUser
 };
 
-async function login(name = '') {
-  if (name === 'einav') {
-      sessionStorage.setItem(SESSION_KEY, JSON.stringify(users[0]));
-  } else if (name === 'ari') {
-    sessionStorage.setItem(SESSION_KEY, JSON.stringify(users[1]));
+async function login(name) {
+  const username = {
+    username:name
   }
+  const response = await axios.post(`${URL}/login`,username)
+  console.log(response.data)
+  sessionStorage.setItem(SESSION_KEY, JSON.stringify(response.data));
   return getCurrentUser()
 }
 
 async function logout() {
+  const response = await axios.post(`${URL}/logout`)
   sessionStorage.removeItem(SESSION_KEY);
 }
 

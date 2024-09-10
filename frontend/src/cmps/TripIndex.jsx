@@ -1,6 +1,6 @@
 
 import { TripTable } from "./TripTable";
-import { loadTrips, cancelTrip } from "../store-AirBnB/actions/trip.actions";
+import { loadTrips, updateTrip } from "../store-AirBnB/actions/trip.actions";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
 
@@ -36,7 +36,11 @@ export function TripIndex() {
     }
     function onCancelOrder(orderId) {
         try{
-            cancelTrip(orderId)
+            const tripStatus = {
+                _id:orderId,
+                status:"canceled"
+            }
+            updateTrip(tripStatus)
         } catch (e) {
             console.log("Error canceling trip", e)
         }
