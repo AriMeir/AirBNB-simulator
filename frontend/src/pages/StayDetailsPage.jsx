@@ -349,7 +349,7 @@ export function StayDetailsPage() {
 
     useEffect(() => {
       loadCurrentStay(stayId)
-    })
+    },[])
 
 
     useEffect(() => {
