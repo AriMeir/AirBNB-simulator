@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { users } from '../Data/users';
-const URL = 'http://localhost:3030/api/auth'
+const URL = process.env.NODE_ENV === "production" ? "/api/auth" : 'http://localhost:3030/api/auth'
 const SESSION_KEY = 'user';
 
 export const authService = {
