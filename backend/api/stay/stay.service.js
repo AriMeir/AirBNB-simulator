@@ -47,6 +47,7 @@ async function getById(stayId) {
         const stay = await collection.findOne({ _id: new ObjectId(stayId) });
 
         if (!stay) throw `Couldn't find stay with _id ${stayId}`;
+        console.log(stay)
 
         // Assuming reviews and amenities are stored separately and need to be fetched
         const reviewsCollection = await dbService.getCollection('reviews');

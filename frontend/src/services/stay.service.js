@@ -7,7 +7,7 @@ import axios from 'axios';
 
 
 const STORAGE_KEY = 'stay'
-const URL = process.env.NODE_ENV === "production" ? 'api/stay' : 'http://localhost:3030/api/stay'
+const URL = process.env.NODE_ENV === "production" ? '/api/stay' : 'http://localhost:3030/api/stay'
 
 export const stayService = {
     query,

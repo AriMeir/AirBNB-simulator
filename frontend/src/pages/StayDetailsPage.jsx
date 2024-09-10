@@ -269,6 +269,7 @@ export function StayDetailsPage() {
     // format 13/2/2024
     const {stayId} = useParams()
     const stay = useSelector(storeState => storeState.stayModule.stay)
+    console.log(stay)
     const [searchParams, setSearchParams] = useSearchParams();
     const [pickedCheckInDate, setPickedCheckInDate] = useState(searchParams.get('checkIn')|| '')
     const [pickedCheckOutDate, setPickedCheckOutDate] = useState(searchParams.get('checkOut')|| '')
@@ -369,9 +370,7 @@ export function StayDetailsPage() {
 
 
     async function loadCurrentStay(stayId){
-      console.log(stayId)
-      await loadStay(stayId)
-      console.log(stay)
+      await loadStay(stayId)  
     }
 
 

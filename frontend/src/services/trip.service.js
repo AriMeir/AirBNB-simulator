@@ -8,7 +8,7 @@ import { orders1, orders2, orders3, orders4 } from '../Data/orders'
 
 
 const STORAGE_KEY = 'trips'
-const URL = process.env.NODE_ENV === "production" ? 'api/trip' : 'http://localhost:3030/api/trip'
+const URL = process.env.NODE_ENV === "production" ? '/api/trip' : 'http://localhost:3030/api/trip'
 
 export const tripService = {
     query,
