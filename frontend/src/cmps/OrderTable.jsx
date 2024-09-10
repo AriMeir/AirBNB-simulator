@@ -12,16 +12,16 @@ export function OrderTable({ orders, onOrderByPriceDown, onOrderByPriceUp, onOrd
     const getStatusDot = (status) => {
         let color = "";
         switch (status) {
-            case "Pending":
+            case "pending":
                 color = "rgb(255, 196, 0)";
                 break;
-            case "Approved":
+            case "approved":
                 color = "rgb(103, 194, 58)";
                 break;
-            case "Canceled":
+            case "canceled":
                 color = "rgb(245, 108, 108)";
                 break;
-            case "Rejected":
+            case "rejected":
                 color = "rgb(245, 108, 108)";
                 break;
             default:

@@ -1,18 +1,12 @@
-import React from 'react';
-import { useEffect, useState } from 'react';
-import { unitTestReducer } from '../store-AirBnB/reducers/stay.reducer'
-import { useSelector } from 'react-redux';
-import { loadStays, loadStay, addStay, updateStay, removeStay } from '../store-AirBnB/actions/stay.actions';
-import { stayService } from '../services/stay.service';
+import React, { useEffect, useState } from 'react';
 import { svgIcons } from './Svgs';
 import { StayGallerySlider } from "./StayGallerySlider";
 
-
 export function StayPreview({ stay, onClick, onHeartClick }) {
-
-    const [isHeartPressed, setIsHeartPressed] = useState(false)
-    const [randomNumber, setRandomNumber] = useState(null)
-    const [dateRange, setDateRange] = useState('')
+    const [isHeartPressed, setIsHeartPressed] = useState(false);
+    const [randomNumber] = useState(() => getRandomNumber(80, 2000))
+    const [dateRange] = useState(() => getRandomDateRange())
+    const [reviewScore] = useState(() => getRandomNumber(3.8, 4).toFixed(1))
 
     const handleHeartClick = (e) => {
         e.stopPropagation()
@@ -21,33 +15,23 @@ export function StayPreview({ stay, onClick, onHeartClick }) {
     };
 
     function getRandomNumber(min, max) {
-        return Math.random() * (max - min + 1) + min;
+        return Math.random() * (max - min + 1) + min
     }
 
     function getRandomDateRange() {
-        const startDate = new Date(2024, 0, 1) // January 1st, 2024
-        const endDate = new Date(2024, 11, 31) // December 31st, 2024
-        const range = Math.floor(Math.random() * 31)
+        const startDate = new Date(2024, 0, 1); // January 1st, 2024
+        const endDate = new Date(2024, 11, 31); // December 31st, 2024
+        const range = Math.floor(Math.random() * 31);
         const start = new Date(startDate.getTime() + Math.random() * (endDate.getTime() - startDate.getTime()))
-        const end = new Date(start.getTime() + range * 24 * 60 * 60 * 1000)
+        const end = new Date(start.getTime() + range * 24 * 60 * 60 * 1000);
         const formatDate = (date) => date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
         return `${formatDate(start)} - ${formatDate(end)}`
     }
 
-    const shuffleArray = (array) => {
-       /*  let currentIndex = array.length, randomIndex
-        while (currentIndex !== 0) {
-            randomIndex = Math.floor(Math.random() * currentIndex)
-            currentIndex--
-            [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
-        } */
-        return array
-    }
-
-    const StayGallery = shuffleArray(stay.imgUrls.map((url, index) => ({
+    const StayGallery = stay.imgUrls.map((url, index) => ({
         title: `StayImg${index + 1}`,
         image: url
-    })))
+    }));
 
     return (
         <div className='stay-preview' onClick={onClick}>
@@ -58,19 +42,19 @@ export function StayPreview({ stay, onClick, onHeartClick }) {
                 </div>
             </div>
             <div className='card-bottom full'>
-            <div className='card-header'>
-                <div>{stay.loc.country}, {stay.loc.city}</div>
-                <div className='star-reviews'>
-                    {svgIcons.starReview}
-                    <p>
-                        <span className="card-review">{(getRandomNumber(3.8, 4)).toFixed(1)}</span>
-                    </p>
+                <div className='card-header'>
+                    <div>{stay.loc.country}, {stay.loc.city}</div>
+                    <div className='star-reviews'>
+                        {svgIcons.starReview}
+                        <p>
+                            <span className="card-review">{reviewScore}</span>
+                        </p>
+                    </div>
                 </div>
-            </div>
-                <p>{Math.floor(getRandomNumber(80, 2000))} kilometers away</p>
-                <p>{getRandomDateRange()}</p>
+                <p>{Math.floor(randomNumber)} kilometers away</p>
+                <p>{dateRange}</p>
                 <p className='card-price'><strong>${stay.price}</strong> night</p>
             </div>
         </div>
-    );
+    )
 }

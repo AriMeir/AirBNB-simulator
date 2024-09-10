@@ -151,13 +151,14 @@
 .header-filter .host-span {
     position: relative; /* Necessary for the underline effect */
     padding-bottom: 5px; /* Adds some space below the text */
-
+    font-weight: 500;
     font-size: 1rem;
     cursor: pointer; /* Changes the cursor to a pointer */
     transition: color 0.3s ease; /* Optional: Smooth color transition */
 }
 .header-filter .first{
     margin-right: 30px;
+    font-weight: 500;
 }
 
 .header-filter .host-span::after {

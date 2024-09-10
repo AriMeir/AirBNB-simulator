@@ -7,12 +7,12 @@ import { fetchSVG } from "../store-AirBnB/svg/SvgStore";
 
 
 
-export function Reservation({reviewMidScore,onReserveOrder, guestCounter,onPickedDate, pickedCheckInDate, pickedCheckOutDate, nights, price, singlePrice, fee, totalPrice, reviewNumber, clearDates, buttonText}) {
+export function Reservation({reviewMidScore,onReserveOrder,guestCounter, totalGuestNumber,onPickedDate, pickedCheckInDate, pickedCheckOutDate, nights, price, singlePrice, fee, totalPrice, reviewNumber, clearDates, buttonText}) {
     const [showGuestCounter, setShowGuestCounter] = useState(false)
     const [showdatePickerModal, setShowdatePickerModal] = useState(false)
 
     function toggleShowDateModal(){
-        setShowdatePickerModal(prev => !prev)  
+        setShowdatePickerModal(prev => !prev)
     }
     return (
       <section className="order-container">
@@ -20,7 +20,7 @@ export function Reservation({reviewMidScore,onReserveOrder, guestCounter,onPicke
           <p><span className="cost">${singlePrice}</span> / night</p>
           <p>{fetchSVG("star")}{reviewMidScore} <span className="reviews">({reviewNumber} reviews)</span></p>
         </div>
-  
+
         <div className="order-data">
           <div className="date-picker" >
             <div className="date-input"  onClick={toggleShowDateModal}>
@@ -34,13 +34,13 @@ export function Reservation({reviewMidScore,onReserveOrder, guestCounter,onPicke
             {showdatePickerModal && <div className="date-picker-modal">
                <DatePickerReservationModal clearDates={clearDates} toggleShowDateModal={toggleShowDateModal} onPickedDate={onPickedDate} pickedCheckInDate={pickedCheckInDate} pickedCheckOutDate={pickedCheckOutDate}/>
             </div>}
-           
-            
+
+
           </div>
-  
+
           <div className="guest-input" onClick={()=> {setShowGuestCounter(prev => !prev)}}>
             <label>GUESTS</label>
-            <p>{guestCounter.totalGuestNumber}</p>
+            <p>{totalGuestNumber? totalGuestNumber : "Add guests"}</p>
             <svg viewBox="0 0 320 512" width="100" title="angle-down">
               <path d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z" />
             </svg>
@@ -50,8 +50,8 @@ export function Reservation({reviewMidScore,onReserveOrder, guestCounter,onPicke
             </div>}
           </div>
         </div>
-  
-        <ActionButton 
+
+        <ActionButton
           action={onReserveOrder}
           buttonText={buttonText} />
 
@@ -60,7 +60,7 @@ export function Reservation({reviewMidScore,onReserveOrder, guestCounter,onPicke
         </div>
         <div className="reservation-prices grid">
             <h4 className="text-left">${singlePrice} x {nights} nights</h4>
-            <h4 className="text-right">${price}</h4> 
+            <h4 className="text-right">${price}</h4>
             <h4 className="text-left">Service fee</h4>
             <h4 className="text-right">${fee}</h4>
         </div>
@@ -68,8 +68,7 @@ export function Reservation({reviewMidScore,onReserveOrder, guestCounter,onPicke
         <h4 className="text-left">Total</h4>
         <h4 className="text-right">${totalPrice}</h4>
         </div></>}
-        
+
       </section>
     );
   }
-  
