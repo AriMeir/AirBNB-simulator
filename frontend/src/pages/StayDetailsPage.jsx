@@ -349,7 +349,7 @@ export function StayDetailsPage() {
 
     useEffect(() => {
       loadCurrentStay(stayId)
-      console.log(stay)
+      
     },[])
 
 
@@ -370,7 +370,7 @@ export function StayDetailsPage() {
 
     async function loadCurrentStay(stayId){
       await loadStay(stayId)
-      
+      console.log(stay)
     }
 
 
